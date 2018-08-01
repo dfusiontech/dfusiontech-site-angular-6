@@ -1,0 +1,188 @@
+/*-------------------------------------------------
+    MIXINS
+---------------------------------------------------*/
+
+// .user-select( none );
+.user-select ( @select ) {
+    -webkit-touch-callout:  @select;
+    -webkit-user-select:    @select;
+    -khtml-user-select:     @select;
+    -moz-user-select:       @select;
+    -ms-user-select:        @select;
+    user-select:            @select;
+}
+
+// .box-sizing ( border-box )
+.box-sizing ( @sizing ) {
+    -webkit-box-sizing: @sizing;
+    -moz-box-sizing:    @sizing;
+    box-sizing:         @sizing;
+}
+
+// .background-size ( 100% 100% );
+.background-size ( @size ) {
+    -webkit-background-size:@size;
+    -khtml-background-size: @size;
+    -moz-background-size:   @size;
+    -o-background-size:     @size;
+    background-size:        @size;
+}
+
+// .text-shadow( 2px 2px 3px rgba(0, 0, 0, 0.35) ); || .text-shadow();
+.text-shadow ( @props: 0 1px 3px rgba(0, 0, 0, 0.25) ) {
+    text-shadow: @props;
+}
+
+// .box-shadow ( 2px 2px 10px rgba(0,0,0,0.5) ); || .box-shadow();
+.box-shadow ( @props: 0 0 10px rgba(0,0,0,0.5) ) {
+    -webkit-box-shadow: @props;
+    -moz-box-shadow:    @props;
+    box-shadow:         @props;
+}
+
+// .inner-shadow( 0 0 10px rgba(0,0,0,0.5) ); || .inner-shadow();
+.inner-shadow ( @props: 0 0 10px rgba(0,0,0,0.5) ) {
+    .box-shadow( inset @props );
+}
+
+// .border-radius( 7px );
+.border-radius ( @radius: 5px ) {
+    -webkit-border-radius:  @radius;
+    -moz-border-radius:     @radius;
+    border-radius:          @radius;
+}
+
+// .opacity( 0.8 ); || .opacity( 0.8 );
+.opacity ( @opacity: 0.5 ) {
+    -webkit-opacity:    @opacity;
+    -moz-opacity:       @opacity;
+    opacity:            @opacity;
+}
+
+// .animation( blink, 500ms, infinite, ease-in-out );
+.animation ( @name, @duration: 300ms, @delay: 0, @ease: ease ) {
+    -webkit-animation: @name @duration @delay @ease;
+    -moz-animation:    @name @duration @delay @ease;
+    -ms-animation:     @name @duration @delay @ease;
+    animation:         @name @duration @delay @ease;
+}
+// .animation-delay( .6s );
+.animation-delay ( @delay ) {
+    animation-delay: @delay;
+    -o-animation-delay: @delay;
+    -ms-animation-delay: @delay;
+    -moz-animation-delay: @delay;
+    -webkit-animation-delay: @delay;
+}
+// .keyframes( blink, { 0% { background: red; } 100%{ background: green; } });
+.keyframes( @name; @arguments ) {
+    @keyframes @name { @arguments(); }
+    @-o-keyframes @name { @arguments(); }
+    @-ms-keyframes @name { @arguments(); }
+    @-moz-keyframes @name { @arguments(); }
+    @-webkit-keyframes @name { @arguments(); }
+}
+
+// .transition ( padding-top 0.5s ease );
+.transition ( @transition: all 0.5s ease ) {
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
+    transition:         @transition;
+}
+
+// .transform( rotate(45deg) );
+.transform ( @transform ){
+    -webkit-transform:  @transform;
+    -moz-transform:     @transform;
+    -ms-transform:      @transform;
+    -o-transform:       @transform;
+    transform:          @transform;
+}
+
+.transition-transform(@transition) {
+    -webkit-transition: -webkit-transform @transition;
+    -moz-transition: -moz-transform @transition;
+    -o-transition: -o-transform @transition;
+    transition: transform @transition;
+}
+
+// .transform-origin( top, center ); || .transform-origin();
+.transform-origin ( @x:center, @y:center ) {
+    -webkit-transform-origin: @x @y;
+    -moz-transform-origin:    @x @y;
+    -ms-transform-origin:     @x @y;
+    -o-transform-origin:      @x @y;
+    transform-origin:         @x @y;
+}
+
+// .translate( 45px, 15px ); || .translate( 45px );
+.translate ( @x, @y: 0 ) {
+    .transform( translate( @x, @y ) );
+}
+
+
+// .translate3d( 20px, 30px, 40px ); || .translate3d( 20px );
+.translate3d ( @x, @y: 0, @z: 0 ) {
+    .transform( translate3d( @x, @y, @z ) );
+}
+
+// .rotate( 90deg );
+.rotate ( @deg ) {
+    .transform( rotate(@deg) );
+}
+
+// .scale( 2, 3 ); || .scale( 2 );
+.scale ( @factor-x, @factor-y: true ) {
+    .if() when ( @factor-y ) { @factor-y: @factor-x; }.if;
+    @scale: scale(@factor-x, @factor-y);
+    .transform( @scale );
+}
+
+// .skew( 45deg, 15deg ); || .skew( 45deg );
+.skew ( @deg-x, @deg-y: true ) {
+    .if() when ( @deg-y ) { @deg-y: @deg-x; }.if;
+    @skew: skew( @deg-x, @deg-y );
+    .transform( @skew );
+}
+
+// .perspective( 100 ); || .perspective();
+.perspective ( @value: 1000 ) {
+    -webkit-perspective:@value;
+    -moz-perspective:   @value;
+    -ms-perspective:    @value;
+    perspective:        @value;
+}
+
+// .horizontal-gradient( #000, #FFF, 0%, 100% );
+.horizontal-gradient ( @start-color: #333; @end-color: #555; @start-percent: 0%; @end-percent: 100% ) {
+    background-image: -webkit-linear-gradient(left, color-stop(@start-color @start-percent), color-stop(@end-color @end-percent)); // Safari 5.1-6, Chrome 10+
+    background-image: -o-linear-gradient(left, @start-color @start-percent, @end-color @end-percent); // Opera 12
+    background-image: linear-gradient(to right, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@start-color),argb(@end-color))); // IE9 and down
+}
+
+// .vertical-gradient( #000, #FFF, 0%, 100% );
+.vertical-gradient ( @start-color: #333; @end-color: #555; @start-percent: 0%; @end-percent: 100% ) {
+    background-image: -webkit-linear-gradient(top, color-stop(@start-color @start-percent), color-stop(@end-color @end-percent)); // Safari 5.1-6, Chrome 10+
+    background-image: -o-linear-gradient(top, @start-color @start-percent, @end-color @end-percent); // Opera 12
+    background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+    background-repeat: repeat-y;
+}
+
+.background-opacity(@color, @opacity) {
+    @rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+
+    background-color: @rgba-color;
+
+    // Hack for IE8:
+    background: none\9; // Only IE8
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d')", argb(@rgba-color),argb(@rgba-color))); // IE9 and down
+    // Problem: Filter gets applied twice in IE9.
+    // Solution:
+    &:not([dummy]) {
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled='false'); // Only IE9
+    }
+}

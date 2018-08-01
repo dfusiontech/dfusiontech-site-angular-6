@@ -1,0 +1,48 @@
+.def-preloader {
+    padding: 0;
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    vertical-align: middle;
+    &>*{ vertical-align: middle; }
+    &:after {
+        content: '';
+        height: 100%;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+    }
+}
+
+#SPW {
+    position: relative;
+    width: 234px;
+    height: 28px;
+
+    margin: auto;
+    display: inline-block;
+    vertical-align: middle;
+
+    .sp {
+        top:0;
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        .scale(.3);
+        .border-radius( 19px );
+        background-color: rgb(0, 0, 0);
+        .animation( playSP, 1500ms, infinite, normal );
+        .keyframes( playSP, {
+            0% { .scale(1); background-color: rgb(0,0,0); }
+            100%{ .scale(.3); background-color: rgb(255,255,255); }
+        });
+    }
+    #SP_1 { left: 0; .animation-delay( .6s ); }
+    #SP_2 { left: 29px; .animation-delay( .75s ); }
+    #SP_3 { left: 58px; .animation-delay( .9s ); }
+    #SP_4 { left: 88px; .animation-delay( 1.05s ); }
+    #SP_5 { left: 117px; .animation-delay( 1.2s ); }
+    #SP_6 { left: 146px; .animation-delay( 1.35s ); }
+    #SP_7 { left: 175px; .animation-delay( 1.5s ); }
+    #SP_8 { left: 205px; .animation-delay( 1.65s ); }
+}

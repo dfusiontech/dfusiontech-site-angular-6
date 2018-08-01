@@ -1,0 +1,94 @@
+
+.clearfix { zoom: 1; }
+.clearfix:before,
+.clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+
+* {
+    // background
+    // -------------------------
+    .black-bg { background-color: @black; }
+    .grey-bg { background-color: @grey; }
+    .fff-bg { background-color: @white; }
+    .brown-bg { background-color: @brown; }
+    .red-bg { background-color: @red; }
+    .green-bg { background-color: @green; }
+
+    // text
+    // -------------------------
+    .black-text { color: @black; }
+    .grey-text { color: @grey; }
+    .fff-text { color: @white; }
+    .red-text { color: @red; }
+    .green-text { color: @green; }
+
+    .text-nowrap { white-space: nowrap; }
+    .text-no {
+        text-decoration: line-through;
+        text-decoration-color: red;
+    }
+    // ADDITION
+    // ----------------------
+    // fix toastr
+    #toast-container { z-index: 1000000; }
+    // select items fix for modal window preview (1050 and up)
+    md-backdrop.md-select-backdrop,
+    md-backdrop.md-datepicker-calendar-pane { z-index: 1100; }
+    .md-select-menu-container { z-index: 1101; }
+    .md-datepicker-calendar-pane { z-index: 1101; }
+    // select items fix for angular-material-time-picker
+    .md-dialog-container { z-index: 1101; }
+
+    .ideal-img {
+        width: 100%;
+        display: block;
+    }
+
+    .oh { overflow: hidden; }
+    .ov { overflow: visible; }
+    .transition { .transition(); }
+    .collapse-height { height: 0!important; }
+    .no-selection { .user-select ( none ); }
+
+    .align-middle {
+        vertical-align: middle;
+        &>*{ vertical-align: middle; }
+        &>.align-bottom { vertical-align: bottom; }
+        &:after {
+            content: '';
+            height: 100%;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+        }
+    }
+
+    .border- {
+        @radius: 3px;
+        .radius ( @name, @r ) {
+            &@{name} {
+                .border-radius( @r );
+                &>*:first-child { .border-radius( @r 0 0 0 ); }
+                &>*:last-child { .border-radius( 0 0 0 @r ); }
+            }
+        }
+        // .border-radius-low
+        .radius( radius-low, @radius );
+        // .border-radius-midle
+        .radius( radius-midle, @radius*2 );
+        // .border-radius-huge
+        .radius( radius-huge, @radius*3 );
+    }
+
+    // ability to totate items
+    // .rotate-45
+    .rotate-helper ( @deg ) { .rotate-@{deg} { .rotate(@deg+0deg); } }
+    .rotate-helper(45);
+    .rotate-helper(90);
+    .rotate-helper(135);
+    .rotate-helper(180);
+    .rotate-helper(225);
+    .rotate-helper(270);
+    .rotate-helper(315);
+
+}

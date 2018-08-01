@@ -1,0 +1,89 @@
+//
+// Variables
+// --------------------------------------------------
+//==Grid
+
+@desktop-hd-point-x:1444px;
+@desktop-hd-point:  1200px;
+@desktop-point:     992px;
+@tablet-point:      766px; // not 768
+@mobile-point:      480px;
+@mobile-point-x:    320px;
+
+// height of the footer with fixed height
+@footer-height: 111px;
+
+//== Colors
+@black:             #000000;
+@grey:              #98A2AD;
+@white:             #FFFFFF;
+
+@red:               #EC1B24;
+@pink:              #FF3057;
+@blue:              #2196f3;
+@bluish:            #E9F6FC;
+@yellow:            #FFAC29;
+@purple:            #9c27b0;
+@green:             #70B871;
+@green-aqua:        #4DBFA3;
+@dark-green-aqua:   #19BBA2;
+@orange:            #E7927A;
+@light-blue:        #00B3E4;
+@blue-green:        #7BBDA2;
+@lighten-purple:    #702277;
+@dark-purple:       #7A3DCE;
+@brown:             #292929;
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+@body-bg:               @white;
+//** Global text color on `<body>`.
+@text-color:            @black;
+
+//** Global textual link color.
+@link-color:            #03A9F4;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 15%);
+//** Link hover decoration.
+@link-hover-decoration: underline;
+
+//== Typography
+@font-family-extra:      /*Roboto,*/ "Roboto-Condensed";
+@font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-extra, @font-family-sans-serif;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            floor((@font-size-base * 3.22)); // ~45px
+@font-size-h2:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h3:            ceil((@font-size-base * 1.86)); // ~26px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+@font-size-h7:            ceil((@font-size-base * 0.72)); // ~10px
+@font-size-h8:            ceil((@font-size-base * 0.57)); // ~8px
+
+@font-weight-thin: 100;
+@font-weight-light: 300;
+@font-weight-base: 400;
+@font-weight-medium: 500;
+@font-weight-bold: 700;
+@font-weight-black: 900;
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+//** By default, this inherits from the `<body>`.
+@headings-font-family:    @font-family-base;
+@headings-font-weight:    @font-weight-light;
+@headings-line-height:    1.1;
+@headings-color:          inherit;

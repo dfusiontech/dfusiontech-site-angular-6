@@ -1,0 +1,46 @@
+/* base layout behavior */
+html {
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+
+    // temporary varaibles
+    @header-height: 100px;
+    @footer-height: 100px;
+
+    //
+    #layout {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        position: relative;
+
+        #header {
+            overflow: hidden;
+            // test props to separate page root components
+            background: red;
+            height: @header-height;
+        }
+
+        #main {
+            // not known error with ui-view display: block
+            // display: block;
+            // overflow: hidden;
+            // NOTE alternate solution
+            width: 100%;
+            display: inline-block;
+            // test props to separate page root components
+            background: green;
+            min-height: ~'calc(100vh - '@header-height + @footer-height~')';
+        }
+
+        #footer {
+            overflow: hidden;
+            // test props to separate page root components
+            background: blue;
+            height: @footer-height;
+        }
+
+    }
+
+}

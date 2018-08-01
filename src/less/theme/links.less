@@ -1,0 +1,49 @@
+a, .link {
+    color: @link-color;
+    text-decoration: none;
+    transition-duration: 0.225s;
+
+    &:hover,
+    &:focus {
+        color: @link-hover-color;
+        text-decoration: @link-hover-decoration;
+    }
+    &.disabled,
+    &[disabled],
+    &[disabled="disabled"] {
+        pointer-events: none;
+        cursor: default !important;
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+// <span class="link">Text</span>
+.alt-link {
+    @link-alt-color: @blue;
+    @link-alt-hover-color: @bluish;
+    @link-alt-active-color: @purple; //@pink
+    @link-alt-visited-color: @purple;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    color: @link-alt-color;
+
+    &>.fa, &>i, &>small {
+        color: @link-alt-color;
+    }
+    &:hover, &>.fa:hover, &>i:hover, &>small:hover {
+        text-decoration: underline;
+        color: @link-alt-hover-color;
+    }
+    &:visited, &>.fa:visited, &>i:visited, &>small:visited {
+        // color: @link-alt-visited-color;
+    }
+    &:focus, &>.fa:focus, &>i:focus, &>small:focus {
+        // color: @link-alt-visited-color;
+    }
+    &:active, &>.fa:active, &>i:active, &>small:active {
+        color: @link-alt-active-color;
+    }
+}
