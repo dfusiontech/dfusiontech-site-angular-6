@@ -3,19 +3,19 @@
 // --------------------------------------------------
 //==Grid
 
-@desktop-hd-point-x:1444px;
+//@desktop-hd-point-x:1444px;
 @desktop-hd-point:  1200px;
-@desktop-point:     992px;
-@tablet-point:      766px; // not 768
-@mobile-point:      480px;
+//@desktop-point:     992px;
+@tablet-point:      768px;
+//@mobile-point:      480px;
 @mobile-point-x:    320px;
 
 // height of the footer with fixed height
-@footer-height: 111px;
+@footer-height: 115px;
 
 //== Colors
 @black:             #000000;
-@grey:              #98A2AD;
+@grey:              #808080;
 @white:             #FFFFFF;
 
 @red:               #EC1B24;
@@ -33,6 +33,36 @@
 @lighten-purple:    #702277;
 @dark-purple:       #7A3DCE;
 @brown:             #292929;
+
+//## dFusionTech colors
+@malachite:         #0DD35F;
+@light-malachite:   #CDFFD5;
+@dark-malachite:    #00AE48;
+//** 50 shades of dFusion grey
+@darkest-grey:      #333333;
+@darker-grey:       #4F4F4F;
+@dark-grey:         #828282;
+@light-grey:        #F0F0F0;
+@lighter-grey:      #F2F2F2;
+@lightest-grey:     #F6F6F6;
+
+@disabled-grey:     #BDBDBD;
+@headline-black:    @darkest-grey;
+@quote-grey:        #DADADA;
+//** on date and img description
+@date-grey:         @dark-grey;
+//** on blocks headline(main page) + rectangle behind the first screen
+@headline-grey:     @light-grey;
+//** on longitudinal lines and borders
+@lines-grey:        @lighter-grey;
+//** on social icons
+@icon-grey:         #E0E0E0;
+@icon-hover-grey:   @disabled-grey;
+//** on
+@icon-black:        @darkest-grey;
+@icon-hover-black:  @black;
+
+
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
@@ -40,14 +70,12 @@
 //** Background color for `<body>`.
 @body-bg:               @white;
 //** Global text color on `<body>`.
-@text-color:            @black;
+@text-color:            @darker-grey;
 
 //** Global textual link color.
-@link-color:            #03A9F4;
+@link-color:            @darkest-grey;
 //** Link hover color set via `darken()` function.
-@link-hover-color:      darken(@link-color, 15%);
-//** Link hover decoration.
-@link-hover-decoration: underline;
+@link-hover-color:      @black;
 
 //== Typography
 @font-family-extra:      /*Roboto,*/ "Roboto-Condensed";
