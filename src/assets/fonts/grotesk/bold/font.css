@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'HKGrotesk';
+  src: url('assets/font/grotesk/bold/HKGrotesk-Bold.eot');
+  src: url('assets/font/grotesk/bold/HKGrotesk-Bold.woff2') format('woff2'),
+       url('assets/font/grotesk/bold/HKGrotesk-Bold.woff') format('woff'),
+       url('assets/font/grotesk/bold/HKGrotesk-Bold.otf') format('otf'),
+       url('assets/font/grotesk/bold/HKGrotesk-Bold.ttf') format('ttf'),
+       url('assets/font/grotesk/bold/HKGrotesk-Bold.svg#HKGrotesk-Bold') format('svg'),
+       url('assets/font/grotesk/bold/HKGrotesk-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
