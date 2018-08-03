@@ -1,0 +1,42 @@
+@d-btn-color:                  @white;
+@d-btn-background:         @malachite;
+
+@d-btn-color-hover:        @malachite;
+@d-btn-background-hover:       @white;
+@d-btn-border-color-hover: @malachite;
+/*
+ * Example of using d-btn
+ *
+ * Using custom bootstrap class "btn" to set custom properties, and overwriting some of them
+ * by creating d-btn that corresponds to design.
+ *
+ * To set disabled style the "boolean" variable must be equal to true.
+ *
+ * template example
+ * <button [ngClass]="{ 'disabled': boolean }" [disabled]="boolean" type="button" class="btn d-btn">BUTTON</button>
+ */
+.btn {
+    &.d-btn {
+        margin: 0 auto;
+        font-size: 1.1rem;
+        padding: 0.5rem 2.2rem;
+        display: block;
+        background-color: @d-btn-background;
+        border: 2px solid transparent;
+        color: @d-btn-color;
+        font-weight: @font-weight-base;
+        .border-radius ( 3px );
+        .transition ( all 0.3s ease-in-out );
+        &:hover, &:focus, &:active, &.active {
+            background-color: @d-btn-background-hover;
+            color: @d-btn-color-hover;
+            border-color: @d-btn-border-color-hover;
+        }
+        &.disabled {
+            cursor: not-allowed;
+            background-color: @grey;
+            color: @white;
+            border-color: transparent;
+        }
+    }
+}
