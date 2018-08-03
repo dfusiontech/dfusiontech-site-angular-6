@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav class="navbar">
+                <a class="navbar-brand" href="javascript:void(0);">
+                    <img src="assets/images/mobile-logo.png" alt="">
+                    Bootstrap
+                </a>
+                <a
+                    role="button"
+                    class="trigger"
+                    href="javascript:void(0);"
+                    (click)="menuTrigger=!menuTrigger"
+                    [ngClass]="{ 'trigger-show': menuTrigger }"
+                        >
+                    <span class="trigger-line"></span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col fff-bg">
+            <div [ngbCollapse]="!menuTrigger">
+                <ul class="navbar-nav text-center">
+                    <li>
+                        <a class="nav-link" href="javascript:void(0);">CASES</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="javascript:void(0);">THOUGHTS</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="javascript:void(0);">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a class="nav-link"href="javascript:void(0);">CONTACTS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

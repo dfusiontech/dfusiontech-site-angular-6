@@ -1,4 +1,5 @@
 import { HomePage } from "./home.page";
+import { HeaderComponentt } from "../../components/header.component";
 
 /**
  * Metada of home state
@@ -8,5 +9,8 @@ import { HomePage } from "./home.page";
 export const homeState = {
     name: 'home',
     url: '/home',
-    component: HomePage,
+    views: {
+        header: { component: HeaderComponentt },
+        $default: { component: HomePage },
+    },
 };

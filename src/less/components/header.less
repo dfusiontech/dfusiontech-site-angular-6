@@ -1,0 +1,56 @@
+.trigger {
+    width: 30px;
+    height: 12px;
+    padding: 11px 0;
+    font-size: 0;
+    box-sizing: content-box;
+}
+
+.trigger-line {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 4px;
+    vertical-align: bottom;
+    background: black;
+    transition: background .3s .5s;
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: black;
+        transform-origin: 50% 50%;
+        transition: top .3s .3s,transform .3s;
+    }
+    &::before {
+        top: 10px;
+    }
+    &::after {
+        top: -10px;
+    }
+}
+
+.trigger-show .trigger-line {
+    width: 28px;
+    background: 0 0;
+    transition: background 0s linear;
+}
+
+.trigger-show .trigger-line::before,
+.trigger-show .trigger-line::after {
+    width: 28px;
+    top: 0;
+    left: 0;
+    transition: top .3s,transform .3s .5s;
+}
+
+.trigger-show .trigger-line::before {
+    transform: rotate3d(0,0,1,45deg);
+}
+
+.trigger-show .trigger-line::after {
+    transform: rotate3d(0,0,1,-45deg);
+}
