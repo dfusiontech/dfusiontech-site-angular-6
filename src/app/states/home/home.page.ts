@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 
 @Component({
-  selector: '[id="home"]',
-  templateUrl: './home.html'
+    selector: '[id="home"]',
+    templateUrl: './home.html'
 })
 export class HomePage implements OnInit {
     /**

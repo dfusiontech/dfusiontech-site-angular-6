@@ -1,0 +1,63 @@
+#footer {
+    //overflow: hidden;
+    // test props to separate page root components
+    background: @body-bg;
+    min-height: @footer-height;
+
+    border-top: solid 1px @icon-grey;
+
+    .footer-wrapper {
+        margin: 0;
+        padding: 9px 0;
+
+        @media (max-width: 575.98px) {
+            padding: 20px 0px;
+        }
+
+        .footer-col {
+
+            @media (max-width: 575.98px) {
+                padding: 0 10px;
+            }
+
+            .footer-col-headline {
+                margin: 10px 0;
+                color: @headline-black;
+                line-height: 15px;
+                font-weight: 600;
+            }
+
+            .footer-link {
+                line-height: 23px;
+            }
+
+            .social-link {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                font-size: 17px;
+                color: @icon-grey;
+                text-align: center;
+                margin-right: 20px;
+
+                &:hover {
+                    color: @icon-hover-grey;
+                }
+
+                i {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+
+            @media (max-width: 575.98px) {
+                margin-bottom: 25px;
+            }
+
+
+            :last-child.social-link {
+                margin: 0;
+            }
+        }
+    }
+}
