@@ -3,10 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 
 @Component({
-    selector: '[id="home"]',
-    templateUrl: './home.html'
+    // selector: '',
+    templateUrl: './cases.html'
 })
-export class HomePage implements OnInit {
+export class CasesPage implements OnInit {
     /**
      * using vm to define publick data of the page
      * and deleagate prepared properties
@@ -30,11 +30,9 @@ export class HomePage implements OnInit {
      *
      *
      */
-    public goLogin () {
-        this.state.go('login');
+    public goHome () {
+        this.state.go('home');
     }
 
-    ngOnInit() {
-  }
-
+    ngOnInit() {}
 }

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RootModule, UIRouterModule } from "@uirouter/angular";
 // app states
 import { homeState } from "./home/home.state";
+import { casesState } from "./cases/cases.state";
 import { loginState } from "./login/login.state";
 import { LayoutComponent } from "./layout.component";
 import { FooterComponent } from "./../components/footer/footer.component";
@@ -19,6 +20,7 @@ export const routing: RootModule = {
     otherwise: homeState.url,
     states: [
         homeState,
+        casesState,
         loginState
     ],
 };
@@ -34,6 +36,7 @@ export const routing: RootModule = {
       FooterComponent,
       LayoutComponent,
       homeState.component,
+      casesState.component,
       loginState.component
   ],
   // define dependencies for all page components
