@@ -8,5 +8,5 @@ import { CasesPage } from "./cases.page";
 export const casesState = {
     name: 'cases',
     url: '/cases',
-    component: CasesPage,
+    component: CasesPage
 };

@@ -5,9 +5,12 @@ import { RootModule, UIRouterModule } from "@uirouter/angular";
 // app states
 import { homeState } from "./home/home.state";
 import { casesState } from "./cases/cases.state";
-import { loginState } from "./login/login.state";
+import { casesItemState } from "./case-item/cases-item.state";
+import { thoughtsState } from "./thoughts/thoughts.state";
+
 import { LayoutComponent } from "./layout.component";
 import { FooterComponent } from "./../components/footer/footer.component";
+import {thoughtsItemState} from "./thoughts-item/thoughts-item.state";
 
 /**
  * define all pages within application
@@ -21,7 +24,10 @@ export const routing: RootModule = {
     states: [
         homeState,
         casesState,
-        loginState
+        casesItemState,
+        thoughtsState,
+        thoughtsItemState,
+
     ],
 };
 
@@ -37,7 +43,10 @@ export const routing: RootModule = {
       LayoutComponent,
       homeState.component,
       casesState.component,
-      loginState.component
+      casesItemState.component,
+      thoughtsState.component,
+      thoughtsItemState.component,
+
   ],
   // define dependencies for all page components
   imports: [
