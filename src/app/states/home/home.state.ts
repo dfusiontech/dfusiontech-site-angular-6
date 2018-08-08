@@ -1,7 +1,7 @@
 import { HomePage } from "./home.page";
 
 /**
- * Metada of home state
+ * Metadata of home state
  *
  *
  */

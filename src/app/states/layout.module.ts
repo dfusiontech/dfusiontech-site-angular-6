@@ -4,9 +4,15 @@ import { CommonModule } from '@angular/common';
 import { RootModule, UIRouterModule } from "@uirouter/angular";
 // app states
 import { homeState } from "./home/home.state";
-import { loginState } from "./login/login.state";
+import { casesState } from "./cases/cases.state";
+import { casesItemState } from "./case-item/cases-item.state";
+import { thoughtsState } from "./thoughts/thoughts.state";
+import { aboutUsState } from "./about-us/about-us.state";
+import { contactsState } from "./contacts/contacts.state";
+
 import { LayoutComponent } from "./layout.component";
 import { FooterComponent } from "./../components/footer/footer.component";
+import { thoughtsItemState } from "./thoughts-item/thoughts-item.state";
 
 /**
  * define all pages within application
@@ -19,7 +25,12 @@ export const routing: RootModule = {
     otherwise: homeState.url,
     states: [
         homeState,
-        loginState
+        casesState,
+        casesItemState,
+        thoughtsState,
+        thoughtsItemState,
+        aboutUsState,
+        contactsState
     ],
 };
 
@@ -29,21 +40,26 @@ export const routing: RootModule = {
  *
  */
 @NgModule({
-  // define list of all page components
-  declarations: [
-      FooterComponent,
-      LayoutComponent,
-      homeState.component,
-      loginState.component
-  ],
-  // define dependencies for all page components
-  imports: [
-    CommonModule,
-    UIRouterModule.forRoot(routing)
-  ],
-  // define outgoing modules
-  exports: [
-    UIRouterModule
-  ]
+    // define list of all page components
+    declarations: [
+        FooterComponent,
+        LayoutComponent,
+        homeState.component,
+        casesState.component,
+        casesItemState.component,
+        thoughtsState.component,
+        thoughtsItemState.component,
+        aboutUsState.component,
+        contactsState.component
+    ],
+    // define dependencies for all page components
+    imports: [
+        CommonModule,
+        UIRouterModule.forRoot(routing)
+    ],
+    // define outgoing modules
+    exports: [
+        UIRouterModule
+    ]
 })
 export class LayoutModule { }
