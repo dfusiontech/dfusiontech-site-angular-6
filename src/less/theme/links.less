@@ -6,13 +6,14 @@ a, .link {
     &:hover,
     &:focus {
         color: @link-hover-color;
+        text-decoration: none;
     }
     &.disabled,
     &[disabled],
     &[disabled="disabled"] {
         pointer-events: none;
         cursor: default !important;
-        &:focus {
+        &:focus, &:hover {
             text-decoration: none;
         }
     }

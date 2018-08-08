@@ -1,12 +1,12 @@
 // outsource
-import { Component, OnInit } from '@angular/core';
-import { StateService } from '@uirouter/angular';
+import { Component, OnInit } from "@angular/core";
+import { StateService } from "@uirouter/angular";
 
 @Component({
-    selector: '[id="home"]',
-    templateUrl: './home.html'
+    selector: '[id="aboutUs"]',
+    templateUrl: './about-us.html'
 })
-export class HomePage implements OnInit {
+export class AboutUsPage implements OnInit {
     /**
      * using vm to define publick data of the page
      * and deleagate prepared properties
@@ -25,16 +25,6 @@ export class HomePage implements OnInit {
 
     }
 
-    /**
-     * example of programmatically redirect
-     *
-     *
-     */
-    public goLogin () {
-        this.state.go('login');
-    }
-
     ngOnInit() {
-  }
-
+    }
 }
