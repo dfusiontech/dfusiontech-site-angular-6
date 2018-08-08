@@ -1,56 +1,138 @@
-.trigger {
-    width: 30px;
-    height: 12px;
-    padding: 11px 0;
-    font-size: 0;
-    box-sizing: content-box;
-}
+#header {
+    // set local variables
+    @header-height: 95px;
+    @header-height-mobile: 57px;
+    @menu-border-hover: @malachite;
+    @menu-border-size: 4px;
+    // highlight place for header, because header fixed-top
+    .dft-header-height {
+        min-height: @header-height;
+        @media (max-width: 576px) {
+            min-height: @header-height-mobile;
+        }
+    }
+    // set fixed of navigation
+    .dft-nav-params {
+        height: @header-height;
+        @media (max-width: 576px) {
+            height: @header-height-mobile;
+        }
+        background-color: @white;
+    }
+    // set logo height equal to header height
+    .dft-logo-size {
+        height: @header-height;
+        @media (max-width: 576px) {
+            height: @header-height-mobile;
+        }
+    }
 
-.trigger-line {
-    position: relative;
-    display: inline-block;
-    width: 30px;
-    height: 4px;
-    vertical-align: bottom;
-    background: black;
-    transition: background .3s .5s;
-    &::before,
-    &::after{
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 4px;
+    // set menu properties
+    #dFusionNav {
+        background: @white;
+        @media (max-width: 576px) {
+            position: fixed;
+            min-height: calc( 100vh - @header-height-mobile);
+            min-width: 100%;
+            top: @header-height-mobile;
+            left: 0;
+        }
+    }
+
+    // overwriting custom properties of bootstrap class to remove needless padding
+    .navbar {
+        padding: 0;
+    }
+    //
+    .dft-navbar-width {
+        min-width: 80%;
+    }
+    // menu behaviour
+    @media (min-width: 576px) {
+        .dft-menu-behavior {
+            // set menu height equal to header height corresponding to design
+            height: @header-height;
+            &>li {
+                border-top: @menu-border-size solid transparent;
+                border-bottom: @menu-border-size solid transparent;
+                &:hover {
+                    transition: ease-out 0.5s;
+                    border-top: @menu-border-size solid @menu-border-hover;
+                }
+            }
+        }
+    }
+
+    // overwriting custom bootstrap classes to implement transition effect on menu on mobile desktop
+    @media (max-width: 576px) {
+        .collapse:not(.show) {
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            transition: ease-out 0.5s, opacity 250ms ease-out;
+        }
+        .navbar-collapse {
+            transition: ease-out 0.5s, opacity 250ms ease-out;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    // Implementing animation behaviour of menu button corresponding to design
+    .trigger {
+        width: 30px;
+        height: 9px;
+        padding: 13px 0;
+        font-size: 0;
+        box-sizing: content-box;
+    }
+
+    .trigger-line {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 3px;
+        vertical-align: bottom;
         background: black;
-        transform-origin: 50% 50%;
-        transition: top .3s .3s,transform .3s;
+        transition: background .3s .5s;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: black;
+            transform-origin: 50% 50%;
+            transition: top .3s .3s,transform .3s;
+        }
+        &::before {
+            top: 9px;
+        }
+        &::after {
+            top: -9px;
+        }
     }
-    &::before {
-        top: 10px;
+
+    .trigger-show .trigger-line {
+        width: 28px;
+        background: 0 0;
+        transition: background 0s linear;
     }
-    &::after {
-        top: -10px;
+
+    .trigger-show .trigger-line::before,
+    .trigger-show .trigger-line::after {
+        width: 28px;
+        top: 0;
+        left: 0;
+        transition: top .3s,transform .3s .5s;
     }
-}
 
-.trigger-show .trigger-line {
-    width: 28px;
-    background: 0 0;
-    transition: background 0s linear;
-}
+    .trigger-show .trigger-line::before {
+        transform: rotate3d(0,0,1,45deg);
+    }
 
-.trigger-show .trigger-line::before,
-.trigger-show .trigger-line::after {
-    width: 28px;
-    top: 0;
-    left: 0;
-    transition: top .3s,transform .3s .5s;
-}
-
-.trigger-show .trigger-line::before {
-    transform: rotate3d(0,0,1,45deg);
-}
-
-.trigger-show .trigger-line::after {
-    transform: rotate3d(0,0,1,-45deg);
+    .trigger-show .trigger-line::after {
+        transform: rotate3d(0,0,1,-45deg);
+    }
 }

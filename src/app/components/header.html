@@ -1,42 +1,99 @@
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <nav class="navbar">
-                <a class="navbar-brand" href="javascript:void(0);">
-                    <img src="assets/images/mobile-logo.png" alt="">
-                    Bootstrap
-                </a>
-                <a
-                    role="button"
-                    class="trigger"
-                    href="javascript:void(0);"
-                    (click)="menuTrigger=!menuTrigger"
-                    [ngClass]="{ 'trigger-show': menuTrigger }"
-                        >
-                    <span class="trigger-line"></span>
-                </a>
-            </nav>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col fff-bg">
-            <div [ngbCollapse]="!menuTrigger">
-                <ul class="navbar-nav text-center">
-                    <li>
-                        <a class="nav-link" href="javascript:void(0);">CASES</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="javascript:void(0);">THOUGHTS</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="javascript:void(0);">ABOUT US</a>
-                    </li>
-                    <li>
-                        <a class="nav-link"href="javascript:void(0);">CONTACTS</a>
-                    </li>
-                </ul>
+<!-- Set default height of header to highlight place for fixed header-->
+<div class="dft-header-height" >
+    <div class="fixed-top container">
+        <div class="row">
+            <div class="col">
+                <!-- Removed default padding of navbar class,because we already have needed indent with gutter width -->
+                <nav class="navbar navbar-expand-sm navbar-light dft-nav-params">
+                    <a
+                        href="javascript:void(0);"
+                        class="navbar-brand"
+                            >
+                        <img src="assets/images/dft-logo.png" alt="dft logo" class="dft-logo-size">
+                    </a>
+                    <a
+                        role="button"
+                        class="trigger d-block d-sm-none"
+                        (click)="menuTrigger=!menuTrigger"
+                        [ngClass]="{ 'trigger-show': menuTrigger }"
+                            >
+                        <span class="trigger-line"></span>
+                    </a>
+                    <!--  Menu wrapper -->
+                    <div
+                        id="dFusionNav"
+                        preventParentScroll
+                        [ngbCollapse]="!menuTrigger"
+                        class="collapse navbar-collapse justify-content-end"
+                            >
+                        <ul class="navbar-nav text-center dft-navbar-width justify-content-around dft-menu-behavior">
+                            <!-- Using d-flex vs m-auto in inner element for content vertical alignment -->
+                            <li class="nav-item d-flex">
+                                <a
+                                    class="nav-link m-auto"
+                                    href="javascript:void(0);"
+                                        >
+                                    CASES
+                                </a>
+                            </li>
+                            <li class="nav-item d-flex">
+                                <a
+                                    class="nav-link m-auto"
+                                    href="javascript:void(0);"
+                                        >
+                                    THOUGHTS
+                                </a>
+                            </li>
+                            <li class="nav-item d-flex">
+                                <a
+                                    class="nav-link m-auto"
+                                    href="javascript:void(0);"
+                                        >
+                                    ABOUT US
+                                </a>
+                            </li>
+                            <li class="nav-item d-flex">
+                                <a
+                                    class="nav-link m-auto"
+                                    href="javascript:void(0);"
+                                        >
+                                    CONTACTS
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- Need socials in header only in mobile version -->
+                        <div class="d-block d-sm-none">
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link"
+                                        href="javascript:void(0);"
+                                            >
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link"
+                                        href="javascript:void(0);"
+                                            >
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- implement there extra-icon -->
+                                    <a
+                                        class="nav-link"
+                                        href="javascript:void(0);"
+                                            >
+                                        CLUTCH
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
 </div>
-
