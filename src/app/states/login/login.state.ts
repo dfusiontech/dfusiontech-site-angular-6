@@ -1,4 +1,5 @@
 import { LoginPage } from './login.page';
+import { HeaderComponent } from "../../components/header.component";
 
 /**
  * Metada of home state
@@ -8,7 +9,10 @@ import { LoginPage } from './login.page';
 export const loginState = {
     name: 'login',
     url: '/login',
-    component: LoginPage,
+    views: {
+        header: { component: HeaderComponent },
+        $default: { component: LoginPage },
+    },
     // resolve: [
     //     {
     //         token: 'people',

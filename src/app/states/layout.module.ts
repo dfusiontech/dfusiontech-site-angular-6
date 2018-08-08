@@ -7,9 +7,12 @@ import { RootModule, UIRouterModule } from "@uirouter/angular";
 import { homeState } from "./home/home.state";
 import { loginState } from "./login/login.state";
 // Components
-import { HeaderComponentt } from "../components/header.component";
+import { HeaderComponent } from "../components/header.component";
 import { HomePage } from "./home/home.page";
-
+import { LoginPage } from "./login/login.page";
+import { LayoutComponent } from "./layout.component";
+// outsource
+import { PreventParentScrollModule } from "ngx-prevent-parent-scroll";
 
 /**
  * define all pages within application
@@ -34,13 +37,15 @@ export const routing: RootModule = {
 @NgModule({
   // define list of all page components
   declarations: [
-      HeaderComponentt,
+      HeaderComponent,
       HomePage,
-      loginState.component
+      LoginPage,
+      LayoutComponent
   ],
   // define dependencies for all page components
   imports: [
-    CommonModule,
+      CommonModule,
+      PreventParentScrollModule,
       NgbModule.forRoot(),
       UIRouterModule.forRoot(routing)
   ],
