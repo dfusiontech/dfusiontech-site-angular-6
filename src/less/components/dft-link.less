@@ -1,0 +1,13 @@
+/*
+ * local styles for links
+ *
+ * Example:
+ * <a href="variable" class="dft-link"></a>
+ */
+.dft-link {
+    color: @link-color;
+    &:hover, &:focus, &:active, &.active {
+        text-decoration: none;
+        color: @link-hover-color;
+    }
+}
