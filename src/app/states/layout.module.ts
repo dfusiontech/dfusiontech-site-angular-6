@@ -5,7 +5,8 @@ import { RootModule, UIRouterModule } from "@uirouter/angular";
 // app states
 import { homeState } from "./home/home.state";
 import { loginState } from "./login/login.state";
-
+import { LayoutComponent } from "./layout.component";
+import { FooterComponent } from "./../components/footer/footer.component";
 
 /**
  * define all pages within application
@@ -30,6 +31,8 @@ export const routing: RootModule = {
 @NgModule({
   // define list of all page components
   declarations: [
+      FooterComponent,
+      LayoutComponent,
       homeState.component,
       loginState.component
   ],
