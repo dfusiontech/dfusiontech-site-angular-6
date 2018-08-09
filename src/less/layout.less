@@ -14,15 +14,6 @@ html {
         min-height: 100%;
         position: relative;
 
-        #header {
-            overflow: hidden;
-            // test props to separate page root components
-            background: red;
-            height: @header-height;
-            position: relative;
-            z-index: 2;
-        }
-
         #main {
             position: relative;
             z-index: 2;
@@ -33,7 +24,7 @@ html {
             width: 100%;
             display: inline-block;
             // test props to separate page root components
-            //background: @white;
+            background: none;
             min-height: ~'calc(100vh - '@header-height + @footer-height~')';
         }
 

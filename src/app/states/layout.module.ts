@@ -1,7 +1,9 @@
 // outsource
 import { NgModule } from '@angular/core';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { CommonModule } from '@angular/common';
 import { RootModule, UIRouterModule } from "@uirouter/angular";
+import { PreventParentScrollModule } from "ngx-prevent-parent-scroll";
 // app states
 import { homeState } from "./home/home.state";
 import { casesState } from "./cases/cases.state";
@@ -9,10 +11,19 @@ import { casesItemState } from "./case-item/cases-item.state";
 import { thoughtsState } from "./thoughts/thoughts.state";
 import { aboutUsState } from "./about-us/about-us.state";
 import { contactsState } from "./contacts/contacts.state";
-
+import { thoughtsItemState } from "./thoughts-item/thoughts-item.state";
+// Components
+import { HeaderComponent } from "../components/header/header.component";
 import { LayoutComponent } from "./layout.component";
 import { FooterComponent } from "./../components/footer/footer.component";
-import { thoughtsItemState } from "./thoughts-item/thoughts-item.state";
+// pages
+import { HomePage } from "./home/home.page";
+import { CasesPage } from "./cases/cases.page";
+import { CasesItemPage } from "./case-item/cases-item.page";
+import { ThoughtsPage} from "./thoughts/thoughts.page";
+import { ThoughtsItemPage } from "./thoughts-item/thoughts-item.page";
+import { AboutUsPage } from "./about-us/about-us.page";
+import { ContactsPage } from "./contacts/contacts.page";
 
 /**
  * define all pages within application
@@ -42,19 +53,22 @@ export const routing: RootModule = {
 @NgModule({
     // define list of all page components
     declarations: [
+        HeaderComponent,
         FooterComponent,
         LayoutComponent,
-        homeState.component,
-        casesState.component,
-        casesItemState.component,
-        thoughtsState.component,
-        thoughtsItemState.component,
-        aboutUsState.component,
-        contactsState.component
+        HomePage,
+        CasesPage,
+        CasesItemPage,
+        ThoughtsPage,
+        ThoughtsItemPage,
+        AboutUsPage,
+        ContactsPage
     ],
     // define dependencies for all page components
     imports: [
         CommonModule,
+        PreventParentScrollModule,
+        NgbModule.forRoot(),
         UIRouterModule.forRoot(routing)
     ],
     // define outgoing modules

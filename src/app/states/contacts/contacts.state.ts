@@ -1,4 +1,5 @@
 import { ContactsPage } from "./contacts.page";
+import { HeaderComponent } from "../../components/header/header.component";
 
 /**
  * Metadata of home state
@@ -8,5 +9,8 @@ import { ContactsPage } from "./contacts.page";
 export const contactsState = {
     name: 'contacts',
     url: '/contacts',
-    component: ContactsPage,
+    views: {
+        header: { component: HeaderComponent },
+        $default: { component: ContactsPage },
+    }
 };
