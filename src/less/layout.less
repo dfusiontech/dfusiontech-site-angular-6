@@ -19,9 +19,13 @@ html {
             // test props to separate page root components
             background: red;
             height: @header-height;
+            position: relative;
+            z-index: 2;
         }
 
         #main {
+            position: relative;
+            z-index: 2;
             // unknown error with ui-view display: block
             // display: block;
             // overflow: hidden;
@@ -29,10 +33,145 @@ html {
             width: 100%;
             display: inline-block;
             // test props to separate page root components
-            background: @white;
+            //background: @white;
             min-height: ~'calc(100vh - '@header-height + @footer-height~')';
         }
 
+        #footer {
+            position: relative;
+            z-index: 2;
+        }
+
+        .wrap-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 1;
+
+            .line-bg {
+                position: absolute;
+
+                top: 0;
+                width: 1px;
+                height: 100%;
+                background: @lines-grey;
+
+                @when700: ~"(min-width: 700px)";
+                @when1000: ~"(min-width: 1000px)";
+
+                &.line1 {
+                    left: 3%;     // md 2.79 // lg 2.04
+                    @media @when700 {
+                        left: 2.79%;
+                    }
+                    @media @when1000 {
+                        left: 2.04%;
+                    }
+                }
+                &.line2 {
+                    left: 14.31%;            // lg 8.79
+                    display: none;
+                    @media @when1000 {
+                        left: 8.79%;
+                    }
+                }
+                &.line3 {
+                    left: 15.54%;
+                    display: none;
+                }
+                &.line4 {
+                    left: 26.67%; // md 25.91// lg 22.29
+                    @media @when700 {
+                        left: 25.91%;
+                    }
+                    @media @when1000 {
+                        left: 22.29%;
+                    }
+                }
+                &.line5 {
+                    left: 29.04%;
+                    display: none;
+                }
+                &.line6 {
+                    left: 37.51%;            // lg 35.79
+                    display: none;
+                    @media @when1000 {
+                        left: 35.79%;
+                    }
+                }
+                &.line7 {
+                    left: 42.54%;
+                    display: none;
+                }
+                &.line8 {
+                    left: 50%;    // md 49.11// lg 49.29
+                    @media @when700 {
+                        left: 49.11%;
+                    }
+                    @media @when1000 {
+                        left: 49.29%;
+                    }
+                }
+                &.line9 {
+                    left: 56.04%;
+                    display: none;
+                }
+                &.line10 {
+                    left: 60.71%;            // lg 62.79
+                    display: none;
+                    @media @when1000 {
+                        left: 62.79%;
+                    }
+                }
+                &.line11 {
+                    left: 69.54%;
+                    display: none;
+                }
+                &.line12 {
+                    left: 73.67%; // md 72.31// lg 76.29
+                    @media @when700 {
+                        left: 72.31%;
+                    }
+                    @media @when1000 {
+                        left: 76.29%;
+                    }
+                }
+                &.line13 {
+                    left: 83.04%;
+                    display: none;
+                }
+                &.line14 {
+                    right: 15%;            // lg 9.4
+                    display: none;
+                    @media @when1000 {
+                        right: 9.4%;
+                    }
+                }
+                &.line15 {
+                    right: 3%;    // md 2.79 // lg 2.04
+                    @media @when700 {
+                        right: 2.79%;
+                    }
+                    @media @when1000 {
+                        right: 2.04%; /////////////// ! not symmetrical
+                    }
+                }
+
+                &.show700 {
+                    @media @when700 {
+                        display: block;
+                    }
+                }
+
+                &.show1000 {
+                    @media @when1000 {
+                        display: block;
+                    }
+                }
+            }
+        }
 
     }
 
