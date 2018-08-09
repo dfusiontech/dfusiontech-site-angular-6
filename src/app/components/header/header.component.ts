@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
     // initially menu icon isn't triggered
-    public menuTrigger = false;
+    public menuToggler = false;
 
     constructor() {}
     ngOnInit() {

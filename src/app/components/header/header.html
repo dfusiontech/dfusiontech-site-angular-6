@@ -1,101 +1,95 @@
-<!-- Set default height of header to highlight place for fixed header-->
-<div class="dft-header-height" >
-    <div class="fixed-top container">
-        <div class="row">
-            <div class="col">
-                <!-- Removed default padding of navbar class,because we already have needed indent with gutter width -->
-                <nav class="navbar navbar-expand-sm navbar-light dft-nav-params">
-                    <a
-                        href="javascript:void(0);"
-                        class="navbar-brand"
-                            >
-                        <img src="assets/images/dft-logo.png" alt="dft logo" class="dft-logo-size">
-                    </a>
-                    <a
-                        role="button"
-                        class="trigger d-block d-sm-none"
-                        (click)="menuTrigger=!menuTrigger"
-                        [ngClass]="{ 'trigger-show': menuTrigger }"
-                            >
-                        <span class="trigger-line"></span>
-                    </a>
-                    <!--  Menu wrapper -->
-                    <div
-                        id="dFusionNav"
-                        preventParentScroll
-                        [ngbCollapse]="!menuTrigger"
-                        class="collapse navbar-collapse justify-content-end font-weight-bold"
-                            >
-                        <ul class="navbar-nav text-center dft-navbar-width justify-content-around dft-menu-behavior">
-                            <!-- Using d-flex vs m-auto in inner element for content vertical alignment -->
-                            <li class="nav-item d-flex mt-2">
-                                <a
-                                    uiSref="cases"
-                                    class="nav-link dft-link m-auto"
-                                        >
-                                    CASES
-                                </a>
-                            </li>
-                            <li class="nav-item d-flex mt-2">
-                                <a
-                                    uiSref="thoughts"
-                                    class="nav-link dft-link m-auto"
-                                        >
-                                    THOUGHTS
-                                </a>
-                            </li>
-                            <li class="nav-item d-flex mt-2">
-                                <a
-                                    uiSref="aboutUs"
-                                    class="nav-link dft-link m-auto"
-                                        >
-                                    ABOUT US
-                                </a>
-                            </li>
-                            <li class="nav-item d-flex mt-2">
-                                <a
-                                    uiSref="contacts"
-                                    class="nav-link dft-link m-auto"
-                                        >
-                                    CONTACTS
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- Need socials in header only in mobile version -->
-                        <div class="d-block d-sm-none mt-3">
-                            <ul class="nav justify-content-center">
-                                <li class="nav-item mr-4">
-                                    <a
-                                        target="_blank"
-                                        class="nav-link social-link"
-                                        href="https://www.facebook.com/dfusiontechinc"
-                                            >
-                                        <i class="fa fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li class="nav-item mr-4">
-                                    <a
-                                        target="_blank"
-                                        class="nav-link social-link"
-                                        href="https://www.linkedin.com/company/dfusion-tech"
-                                            >
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li class="nav-item mr-4">
-                                    <a
-                                        target="_blank"
-                                        class="nav-link social-link"
-                                        href="https://clutch.co/profile/dfusiontech"
-                                            >
-                                        <i class="dft dft-clutch-logo"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+<!-- Set default header height to highlight place for fixed header-->
+<div class="dft-header">
+    <nav class="navbar navbar-expand-md fixed-top dft-navbar">
+        <div class="container">
+            <a
+                uiSref="home"
+                class="navbar-brand"
+                    >
+                <img src="assets/images/dft-logo.png" alt="dft logo" class="dft-logo">
+            </a>
+            <a
+                role="button"
+                class="toggle d-block d-md-none"
+                (click)="menuToggler=!menuToggler"
+                [ngClass]="{ 'toggle-show': menuToggler }"
+                    >
+                <span class="toggle-line"></span>
+            </a>
+            <!--  Menu wrapper -->
+            <div
+                preventParentScroll
+                [ngbCollapse]="!menuToggler"
+                class="collapse navbar-collapse dft-navbar-collapse justify-content-end font-weight-bold"
+                    >
+                <ul class="navbar-nav text-center justify-content-around dft-list">
+                    <!-- Using d-flex vs m-auto in inner element for content vertical alignment -->
+                    <li class="nav-item d-flex">
+                        <a
+                            uiSref="cases"
+                            class="nav-link dft-link m-auto"
+                                >
+                            CASES
+                        </a>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <a
+                            uiSref="thoughts"
+                            class="nav-link dft-link m-auto"
+                                >
+                            THOUGHTS
+                        </a>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <a
+                            uiSref="aboutUs"
+                            class="nav-link dft-link m-auto"
+                                >
+                            ABOUT US
+                        </a>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <a
+                            uiSref="contacts"
+                            class="nav-link dft-link m-auto"
+                                >
+                            CONTACTS
+                        </a>
+                    </li>
+                </ul>
+                <!-- Need socials in header only in mobile version -->
+                <div class="d-block d-md-none mt-3">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item mr-4">
+                            <a
+                                target="_blank"
+                                class="nav-link social-link"
+                                href="https://www.facebook.com/dfusiontechinc"
+                                    >
+                                <i class="fa fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a
+                                target="_blank"
+                                class="nav-link social-link"
+                                href="https://www.linkedin.com/company/dfusion-tech"
+                                    >
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a
+                                target="_blank"
+                                class="nav-link social-link"
+                                href="https://clutch.co/profile/dfusiontech"
+                                    >
+                                <i class="dft dft-clutch-logo"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    </nav>
 </div>

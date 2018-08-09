@@ -2,37 +2,38 @@
     // set local variables
     @header-height: 95px;
     @header-height-mobile: 57px;
-    @menu-border-hover: @malachite;
-    @menu-border-size: 4px;
+    @list-border-hover: @malachite;
+    @list-border-size: 4px;
+    @list-item-offset: 10px;
     @social-link-color: @icon-grey;
     @social-link-hover: @icon-hover-grey;
     // highlight place for header, because header fixed-top
-    .dft-header-height {
+    .dft-header {
         min-height: @header-height;
-        @media (max-width: 576px) {
+        @media (max-width: @tablet-point) {
             min-height: @header-height-mobile;
         }
     }
-    // set fixed of navigation
-    .dft-nav-params {
+    // set navbar properties ( navbar fixed )
+    .dft-navbar {
         height: @header-height;
-        @media (max-width: 576px) {
+        @media (max-width: @tablet-point) {
             height: @header-height-mobile;
         }
         background-color: @white;
     }
     // set logo height equal to header height
-    .dft-logo-size {
+    .dft-logo {
         height: @header-height;
-        @media (max-width: 576px) {
+        @media (max-width: @tablet-point) {
             height: @header-height-mobile;
         }
     }
 
-    // set menu properties
-    #dFusionNav {
+    // set dropdown navbar properties
+    .dft-navbar-collapse {
         background: @white;
-        @media (max-width: 576px) {
+        @media (max-width: @tablet-point) {
             position: fixed;
             min-height: calc( 100vh - @header-height-mobile);
             min-width: 100%;
@@ -40,39 +41,33 @@
             left: 0;
         }
     }
-
-    // overwriting custom properties of bootstrap class to remove needless padding
-    .navbar {
-        padding: 0;
-        // need to overwrite navbar custom behavior on mobile to fill right and left
-        // spaces between navbar with background color
-        @media (max-width: 576px) {
-            margin: 0 -15px;
-            padding: 0 15px;
-        }
-    }
     //
-    .dft-navbar-width {
+    .dft-list {
         min-width: 80%;
-    }
-    // menu behaviour
-    @media (min-width: 576px) {
-        .dft-menu-behavior {
+        // menu behaviour
+        @media (min-width: @tablet-point) {
             // set menu height equal to header height corresponding to design
             height: @header-height;
             &>li {
-                border-top: @menu-border-size solid transparent;
-                border-bottom: @menu-border-size solid transparent;
+                border-top: @list-border-size solid transparent;
+                border-bottom: @list-border-size solid transparent;
                 &:hover {
                     transition: ease-out 0.5s;
-                    border-top: @menu-border-size solid @menu-border-hover;
+                    border-top: @list-border-size solid @list-border-hover;
                 }
+            }
+        }
+        @media (max-width: @tablet-point) {
+            // set offset between menu items
+            &>li {
+                margin-top: @list-item-offset;
             }
         }
     }
 
+
     // overwriting custom bootstrap classes to implement transition effect on menu on mobile desktop
-    @media (max-width: 576px) {
+    @media (max-width: @tablet-point) {
         .collapse:not(.show) {
             display: block;
             visibility: hidden;
@@ -97,7 +92,7 @@
     }
 
     // Implementing animation behaviour of menu button corresponding to design
-    .trigger {
+    .toggle {
         width: 30px;
         height: 9px;
         padding: 13px 0;
@@ -105,7 +100,7 @@
         box-sizing: content-box;
     }
 
-    .trigger-line {
+    .toggle-line {
         position: relative;
         display: inline-block;
         width: 30px;
@@ -132,25 +127,25 @@
         }
     }
 
-    .trigger-show .trigger-line {
+    .toggle-show .toggle-line {
         width: 28px;
         background: 0 0;
         transition: background 0s linear;
     }
 
-    .trigger-show .trigger-line::before,
-    .trigger-show .trigger-line::after {
+    .toggle-show .toggle-line::before,
+    .toggle-show .toggle-line::after {
         width: 28px;
         top: 0;
         left: 0;
         transition: top .3s,transform .3s .5s;
     }
 
-    .trigger-show .trigger-line::before {
+    .toggle-show .toggle-line::before {
         transform: rotate3d(0,0,1,45deg);
     }
 
-    .trigger-show .trigger-line::after {
+    .toggle-show .toggle-line::after {
         transform: rotate3d(0,0,1,-45deg);
     }
 }
