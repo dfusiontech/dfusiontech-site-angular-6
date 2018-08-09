@@ -1,17 +1,5 @@
-<div class="wrap-lines">
-
-</div>
-<!-- Common header can be component => selector: '[id="header"]', -->
-<header id="header">
-    <h1> Header </h1>
-    <br/>
-    <a uiSref="home" uiSrefActive="active"> home </a>
-    <a uiSref="cases" uiSrefActive="active"> cases </a>
-    <a uiSref="thoughts" uiSrefActive="active"> thoughts </a>
-    <a uiSref="aboutUs" uiSrefActive="active"> about us </a>
-    <a uiSref="contacts" uiSrefActive="active"> contacts </a>
-    <br/>
-</header>
+<div class="wrap-lines"></div>
+<ui-view id="header" name="header"></ui-view>
 <!-- place to render page content based on url -->
 <ui-view id="main">
     <div class="def-preloader">

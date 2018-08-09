@@ -1,4 +1,5 @@
 import { AboutUsPage } from "./about-us.page";
+import { HeaderComponent } from "../../components/header/header.component";
 
 /**
  * Metadata of home state
@@ -8,5 +9,8 @@ import { AboutUsPage } from "./about-us.page";
 export const  aboutUsState = {
     name: 'aboutUs',
     url: '/aboutUs',
-    component: AboutUsPage
+    views: {
+        header: { component: HeaderComponent },
+        $default: { component: AboutUsPage },
+    }
 };

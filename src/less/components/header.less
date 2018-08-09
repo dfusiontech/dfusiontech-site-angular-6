@@ -1,0 +1,152 @@
+#header {
+    // set local variables
+    @header-height: 95px;
+    @header-height-mobile: 57px;
+    @list-border-hover: @malachite;
+    @list-border-size: 4px;
+    @list-item-offset: 10px;
+    @social-link-color: @icon-grey;
+    @social-link-hover: @icon-hover-grey;
+    // highlight place for header, because header fixed-top
+    .dft-header {
+        min-height: @header-height;
+        @media @lsmscreen {
+            min-height: @header-height-mobile;
+        }
+    }
+    // set navbar properties ( navbar fixed )
+    .dft-navbar {
+        background-color: @white;
+        height: @header-height;
+        @media @lsmscreen {
+
+            height: @header-height-mobile;
+        }
+    }
+    // set logo height equal to header height
+    .dft-logo {
+        height: @header-height;
+        @media @lsmscreen {
+            height: @header-height-mobile;
+        }
+    }
+
+    // set dropdown navbar properties
+    .dft-navbar-collapse {
+        background: @white;
+        @media @lsmscreen {
+            position: fixed;
+            min-height: calc( 100vh - @header-height-mobile);
+            min-width: 100%;
+            top: @header-height-mobile;
+            left: 0;
+        }
+    }
+    //
+    .dft-list {
+        min-width: 80%;
+        // menu behaviour
+        @media (min-width: @tablet-point) {
+            // set menu height equal to header height corresponding to design
+            height: @header-height;
+            &>li {
+                border-top: @list-border-size solid transparent;
+                border-bottom: @list-border-size solid transparent;
+                &:hover {
+                    transition: ease-out 0.5s;
+                    border-top: @list-border-size solid @list-border-hover;
+                }
+            }
+        }
+        @media (max-width: @tablet-point) {
+            // set offset between menu items
+            &>li {
+                margin-top: @list-item-offset;
+            }
+        }
+    }
+
+
+    // overwriting custom bootstrap classes to implement transition effect on menu on mobile desktop
+    @media @lsmscreen {
+        .collapse:not(.show) {
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            transition: ease-out 0.5s, opacity 250ms ease-out;
+        }
+        .navbar-collapse {
+            transition: ease-out 0.5s, opacity 250ms ease-out;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    // set social link behaviour
+    .social-link {
+        width: 24px;
+        height: 24px;
+        font-size: 17px;
+        color: @social-link-color;
+        &:hover {
+            color: @social-link-hover;
+        }
+    }
+
+    // Implementing animation behaviour of menu button corresponding to design
+    .toggle {
+        width: 30px;
+        height: 9px;
+        padding: 13px 0;
+        font-size: 0;
+        box-sizing: content-box;
+    }
+
+    .toggle-line {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 3px;
+        vertical-align: bottom;
+        background: black;
+        transition: background .3s .5s;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: black;
+            transform-origin: 50% 50%;
+            transition: top .3s .3s,transform .3s;
+        }
+        &::before {
+            top: 9px;
+        }
+        &::after {
+            top: -9px;
+        }
+    }
+
+    .toggle-show .toggle-line {
+        width: 28px;
+        background: 0 0;
+        transition: background 0s linear;
+    }
+
+    .toggle-show .toggle-line::before,
+    .toggle-show .toggle-line::after {
+        width: 28px;
+        top: 0;
+        left: 0;
+        transition: top .3s,transform .3s .5s;
+    }
+
+    .toggle-show .toggle-line::before {
+        transform: rotate3d(0,0,1,45deg);
+    }
+
+    .toggle-show .toggle-line::after {
+        transform: rotate3d(0,0,1,-45deg);
+    }
+}
