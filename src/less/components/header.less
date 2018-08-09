@@ -10,22 +10,23 @@
     // highlight place for header, because header fixed-top
     .dft-header {
         min-height: @header-height;
-        @media (max-width: @tablet-point) {
+        @media @lsmscreen {
             min-height: @header-height-mobile;
         }
     }
     // set navbar properties ( navbar fixed )
     .dft-navbar {
+        background-color: @white;
         height: @header-height;
-        @media (max-width: @tablet-point) {
+        @media @lsmscreen {
+
             height: @header-height-mobile;
         }
-        background-color: @white;
     }
     // set logo height equal to header height
     .dft-logo {
         height: @header-height;
-        @media (max-width: @tablet-point) {
+        @media @lsmscreen {
             height: @header-height-mobile;
         }
     }
@@ -33,7 +34,7 @@
     // set dropdown navbar properties
     .dft-navbar-collapse {
         background: @white;
-        @media (max-width: @tablet-point) {
+        @media @lsmscreen {
             position: fixed;
             min-height: calc( 100vh - @header-height-mobile);
             min-width: 100%;
@@ -67,7 +68,7 @@
 
 
     // overwriting custom bootstrap classes to implement transition effect on menu on mobile desktop
-    @media (max-width: @tablet-point) {
+    @media @lsmscreen {
         .collapse:not(.show) {
             display: block;
             visibility: hidden;

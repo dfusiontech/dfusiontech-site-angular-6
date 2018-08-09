@@ -8,14 +8,20 @@
                     >
                 <img src="assets/images/dft-logo.png" alt="dft logo" class="dft-logo">
             </a>
-            <a
+            <!--aria-expanded="false"-->
+            <button class="navbar-toggler toggle" type="button" aria-label="Toggle navigation"
+                    (click)="menuToggler=!menuToggler"
+                    [ngClass]="{ 'toggle-show': menuToggler }">
+                <span class="toggle-line"></span>
+            </button>
+            <!--<a
                 role="button"
                 class="toggle d-block d-md-none"
                 (click)="menuToggler=!menuToggler"
                 [ngClass]="{ 'toggle-show': menuToggler }"
                     >
                 <span class="toggle-line"></span>
-            </a>
+            </a>-->
             <!--  Menu wrapper -->
             <div
                 preventParentScroll
