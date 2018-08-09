@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 
 @Component({
-  selector: '[id="home"]',
-  templateUrl: './home.html'
+    selector: '[id="home"]',
+    templateUrl: './home.html'
 })
 export class HomePage implements OnInit {
     /**
@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
      */
     public vm = {
 
-    }
+    };
 
     /**
      * constructor holder to define what exactly past in public vm object

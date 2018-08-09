@@ -1,8 +1,7 @@
 import { HomePage } from "./home.page";
-import { HeaderComponent } from "../../components/header.component";
-
+import { HeaderComponent } from "../../components/header/header.component";
 /**
- * Metada of home state
+ * Metadata of home state
  *
  *
  */

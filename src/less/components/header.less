@@ -4,6 +4,8 @@
     @header-height-mobile: 57px;
     @menu-border-hover: @malachite;
     @menu-border-size: 4px;
+    @social-link-color: @icon-grey;
+    @social-link-hover: @icon-hover-grey;
     // highlight place for header, because header fixed-top
     .dft-header-height {
         min-height: @header-height;
@@ -42,6 +44,12 @@
     // overwriting custom properties of bootstrap class to remove needless padding
     .navbar {
         padding: 0;
+        // need to overwrite navbar custom behavior on mobile to fill right and left
+        // spaces between navbar with background color
+        @media (max-width: 576px) {
+            margin: 0 -15px;
+            padding: 0 15px;
+        }
     }
     //
     .dft-navbar-width {
@@ -75,6 +83,16 @@
             transition: ease-out 0.5s, opacity 250ms ease-out;
             visibility: visible;
             opacity: 1;
+        }
+    }
+    // set social link behaviour
+    .social-link {
+        width: 24px;
+        height: 24px;
+        font-size: 17px;
+        color: @social-link-color;
+        &:hover {
+            color: @social-link-hover;
         }
     }
 

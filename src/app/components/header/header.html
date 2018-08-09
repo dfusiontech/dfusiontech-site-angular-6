@@ -24,69 +24,71 @@
                         id="dFusionNav"
                         preventParentScroll
                         [ngbCollapse]="!menuTrigger"
-                        class="collapse navbar-collapse justify-content-end"
+                        class="collapse navbar-collapse justify-content-end font-weight-bold"
                             >
                         <ul class="navbar-nav text-center dft-navbar-width justify-content-around dft-menu-behavior">
                             <!-- Using d-flex vs m-auto in inner element for content vertical alignment -->
-                            <li class="nav-item d-flex">
+                            <li class="nav-item d-flex mt-2">
                                 <a
-                                    class="nav-link m-auto"
-                                    href="javascript:void(0);"
+                                    uiSref="cases"
+                                    class="nav-link dft-link m-auto"
                                         >
                                     CASES
                                 </a>
                             </li>
-                            <li class="nav-item d-flex">
+                            <li class="nav-item d-flex mt-2">
                                 <a
-                                    class="nav-link m-auto"
-                                    href="javascript:void(0);"
+                                    uiSref="thoughts"
+                                    class="nav-link dft-link m-auto"
                                         >
                                     THOUGHTS
                                 </a>
                             </li>
-                            <li class="nav-item d-flex">
+                            <li class="nav-item d-flex mt-2">
                                 <a
-                                    class="nav-link m-auto"
-                                    href="javascript:void(0);"
+                                    uiSref="aboutUs"
+                                    class="nav-link dft-link m-auto"
                                         >
                                     ABOUT US
                                 </a>
                             </li>
-                            <li class="nav-item d-flex">
+                            <li class="nav-item d-flex mt-2">
                                 <a
-                                    class="nav-link m-auto"
-                                    href="javascript:void(0);"
+                                    uiSref="contacts"
+                                    class="nav-link dft-link m-auto"
                                         >
                                     CONTACTS
                                 </a>
                             </li>
                         </ul>
                         <!-- Need socials in header only in mobile version -->
-                        <div class="d-block d-sm-none">
+                        <div class="d-block d-sm-none mt-3">
                             <ul class="nav justify-content-center">
-                                <li class="nav-item">
+                                <li class="nav-item mr-4">
                                     <a
-                                        class="nav-link"
-                                        href="javascript:void(0);"
+                                        target="_blank"
+                                        class="nav-link social-link"
+                                        href="https://www.facebook.com/dfusiontechinc"
                                             >
-                                        <i class="fa fa-facebook"></i>
+                                        <i class="fa fa-facebook-f"></i>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item mr-4">
                                     <a
-                                        class="nav-link"
-                                        href="javascript:void(0);"
+                                        target="_blank"
+                                        class="nav-link social-link"
+                                        href="https://www.linkedin.com/company/dfusion-tech"
                                             >
                                         <i class="fa fa-linkedin"></i>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <!-- implement there extra-icon -->
+                                <li class="nav-item mr-4">
                                     <a
-                                        class="nav-link"
-                                        href="javascript:void(0);"
+                                        target="_blank"
+                                        class="nav-link social-link"
+                                        href="https://clutch.co/profile/dfusiontech"
                                             >
-                                        CLUTCH
+                                        <i class="dft dft-clutch-logo"></i>
                                     </a>
                                 </li>
                             </ul>

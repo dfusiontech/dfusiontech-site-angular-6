@@ -3,12 +3,30 @@
 // --------------------------------------------------
 //==Grid
 
-//@desktop-hd-point-x:1444px;
+@desktop-hd-point-x:1444px;
 @desktop-hd-point:  1200px;
-//@desktop-point:     992px;
+@desktop-point:     992px;
 @tablet-point:      768px;
-//@mobile-point:      480px;
+@mobile-point:      480px;
 @mobile-point-x:    320px;
+
+/* Large desktops and laptops */
+@lgscreen: ~"(min-width: @desktop-hd-point)";
+
+/* Portrait tablets and medium desktops */
+@mdscreen: ~"(max-width: @desktop-point)";
+
+/* Portrait tablets and small desktops (gsm mean greater than small) */
+@gsmscreen: ~"(min-width: @tablet-point)";
+
+/* Landscape phones and portrait tablets (lsm mean less than small) */
+@lsmscreen: ~"(max-width: 767px)";
+
+/* Landscape phones (extra small)*/
+@xsscreen: ~"(max-width: @mobile-point)";
+
+/* Smallest old phones (extra extra small)*/
+@xxsscreen: ~"(max-width: @mobile-point-x)";
 
 // height of the footer with fixed height
 @footer-height: 115px;
@@ -35,6 +53,8 @@
 @brown:             #292929;
 
 //## dFusionTech colors
+
+//** dFusion brand colors
 @malachite:         #0DD35F;
 @light-malachite:   #CDFFD5;
 @dark-malachite:    #00AE48;
@@ -45,20 +65,23 @@
 @light-grey:        #F0F0F0;
 @lighter-grey:      #F2F2F2;
 @lightest-grey:     #F6F6F6;
-
+//** button disabled
 @disabled-grey:     #BDBDBD;
+
 @headline-black:    @darkest-grey;
+//** on big quotes '' some headline ,,
 @quote-grey:        #DADADA;
 //** on date and img description
 @date-grey:         @dark-grey;
-//** on blocks headline(main page) + rectangle behind the first screen
+//** on blocks headline(main page -> CASES/THOUGHTS)
+//** & rectangle behind the "first screen"
 @headline-grey:     @light-grey;
 //** on longitudinal lines and borders
 @lines-grey:        @lighter-grey;
 //** on social icons
 @icon-grey:         #E0E0E0;
 @icon-hover-grey:   @disabled-grey;
-//** on
+//** on carousel arrows / mobile menu
 @icon-black:        @darkest-grey;
 @icon-hover-black:  @black;
 
@@ -78,32 +101,31 @@
 @link-hover-color:      @black;
 
 //== Typography
-@font-family-extra:      /*Roboto,*/ "Roboto-Condensed";
 @font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-@font-family-base:        @font-family-extra, @font-family-sans-serif;
+//** Base sites fonts
+@font-family-base:        "HKGroteskPro", @font-family-sans-serif;
 
-@font-size-base:          14px;
-@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-base:          15px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // 18.75px
+@font-size-small:         ceil((@font-size-base * 0.85)); // 12.75px
 
-@font-size-h1:            floor((@font-size-base * 3.22)); // ~45px
-@font-size-h2:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h3:            ceil((@font-size-base * 1.86)); // ~26px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
-@font-size-h5:            @font-size-base;
-@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
-@font-size-h7:            ceil((@font-size-base * 0.72)); // ~10px
-@font-size-h8:            ceil((@font-size-base * 0.57)); // ~8px
+@font-size-h1:            floor((@font-size-base * 3.2)); // 48.00px => 48px
+@font-size-h2:            floor((@font-size-base * 2.6)); // 39.00px => 39px
+@font-size-h3:            ceil((@font-size-base * 1.86)); // 27.90px => 28px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // 18.75px => 19px
+@font-size-h5:            @font-size-base;                // 15.00px => 15px
+@font-size-h6:            ceil((@font-size-base * 0.85)); // 12.75px => 13px
+@font-size-h7:            ceil((@font-size-base * 0.72)); // 10.80px => 11px
+@font-size-h8:            ceil((@font-size-base * 0.57)); //  8.55px =>  9px
 
-@font-weight-thin: 100;
-@font-weight-light: 300;
-@font-weight-base: 400;
-@font-weight-medium: 500;
-@font-weight-bold: 700;
-@font-weight-black: 900;
+@font-weight-light:     300;
+@font-weight-base:      400;
+@font-weight-medium:    500;
+@font-weight-semi:      600;
+@font-weight-bold:      700;
 
 //** Unit-less `line-height` for use in components like buttons.
 @line-height-base:        1.428571429; // 20/14
@@ -114,4 +136,4 @@
 @headings-font-family:    @font-family-base;
 @headings-font-weight:    @font-weight-light;
 @headings-line-height:    1.1;
-@headings-color:          inherit;
+@headings-color:          @headline-black;

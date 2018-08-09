@@ -6,7 +6,6 @@ html {
 
     // temporary varaibles
     @header-height: 100px;
-    @footer-height: 100px;
 
     //
     #layout {
@@ -16,23 +15,17 @@ html {
         position: relative;
 
         #main {
-            // not known error with ui-view display: block
+            // unknown error with ui-view display: block
             // display: block;
             // overflow: hidden;
             // NOTE alternate solution
             width: 100%;
             display: inline-block;
             // test props to separate page root components
-            background: green;
+            background: @white;
             min-height: ~'calc(100vh - '@header-height + @footer-height~')';
         }
 
-        #footer {
-            overflow: hidden;
-            // test props to separate page root components
-            background: blue;
-            height: @footer-height;
-        }
 
     }
 
