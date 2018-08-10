@@ -7,38 +7,50 @@
     @list-item-offset: 10px;
     @social-link-color: @icon-grey;
     @social-link-hover: @icon-hover-grey;
+    @bg-on-navbar-toggle: @white;
+    @dft-navbar-transition-behavior: ease-out 0.5s, opacity 250ms ease-out;
 
     // set navbar properties ( navbar fixed )
     .dft-navbar {
-        background-color: @white;
+        //background-color: transparent;
         height: @header-height;
+        // animate change of bg after toggling menu
+        transition: @dft-navbar-transition-behavior;
+        padding: 0;
+        align-items: flex-start;
+        // fix for navbar container flex child vertical position
+        & > .container {
+            align-items: flex-start;
+        }
         @media @lsmscreen {
             height: @header-height-mobile;
+            padding: 0 1rem;
         }
     }
     // set logo height equal to header height
     .dft-logo {
-        // set z-index for logo to be displayed above the lines corresponding to design
-        z-index: 3;
+        padding: 0;
+        @media @lsmscreen {
+            transition: @dft-navbar-transition-behavior;
+            visibility: visible;
+            opacity: 1;
+            &.hide-logo {
+                visibility: hidden;
+                opacity: 0;
+                transition: ease-out 0.5s, opacity 250ms ease-out;
+            }
+        }
         .dft-logo-wrap {
             height: @dft-logo-desktop;
             @media @lsmscreen {
                 height: @dft-logo-mobile;
-                transition: ease-out 0.5s, opacity 250ms ease-out;
-                visibility: visible;
-                opacity: 1;
-                &.hide-logo {
-                    visibility: hidden;
-                    opacity: 0;
-                    transition: ease-out 0.5s, opacity 250ms ease-out;
-                }
             }
         }
     }
 
     // set dropdown navbar properties
     .dft-navbar-collapse {
-        background: @white;
+        //background: transparent;
         @media @lsmscreen {
             position: fixed;
             min-height: calc( 100vh - @header-height-mobile);
@@ -47,11 +59,13 @@
             left: 0;
         }
     }
-    //
+    // background behavior on toggle
+    .dft-navbar-on-toggle {
+        background-color: @bg-on-navbar-toggle;
+        transition: @dft-navbar-transition-behavior;
+    }
     .dft-list {
         min-width: 80%;
-        // set z-index to be able to use, because of implemented lines that goes above navbar
-        z-index: 3;
         // menu behaviour
         @media @gsmscreen {
             &>li>.dft-link {
@@ -78,10 +92,10 @@
             display: block;
             visibility: hidden;
             opacity: 0;
-            transition: ease-out 0.5s, opacity 250ms ease-out;
+            transition: @dft-navbar-transition-behavior;
         }
         .navbar-collapse {
-            transition: ease-out 0.5s, opacity 250ms ease-out;
+            transition: @dft-navbar-transition-behavior;
             visibility: visible;
             opacity: 1;
         }
@@ -107,6 +121,10 @@
         // set on focus behaviour to remove outline effect on button
         &:focus {
             outline: none;
+        }
+        // fix toogle behavior on small desktop
+        @media @lsmscreen {
+            margin-top: .5rem;
         }
     }
 

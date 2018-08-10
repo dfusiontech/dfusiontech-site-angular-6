@@ -1,35 +1,17 @@
-<nav class="navbar navbar-expand-md fixed-top dft-navbar">
+<nav
+    [ngClass]="{ 'dft-navbar-on-toggle': menuToggler }"
+    class="navbar navbar-expand-md fixed-top dft-navbar"
+        >
     <div class="container">
-        <!-- Hide lines when menu is open -->
-        <div
-            class="wrap-lines"
-            [ngClass]="{ 'invisible': menuToggler }"
-                >
-            <div class="line-bg line1"></div>
-            <div class="line-bg line2 show700"></div>
-            <div class="line-bg line3 show1000"></div>
-            <div class="line-bg line4"></div>
-            <div class="line-bg line5 show1000"></div>
-            <div class="line-bg line6 show700"></div>
-            <div class="line-bg line7 show1000"></div>
-            <div class="line-bg line8"></div>
-            <div class="line-bg line9 show1000"></div>
-            <div class="line-bg line10 show700"></div>
-            <div class="line-bg line11 show1000"></div>
-            <div class="line-bg line12"></div>
-            <div class="line-bg line13 show1000"></div>
-            <div class="line-bg line14 show700"></div>
-            <div class="line-bg line15"></div>
-        </div>
         <a
             uiSref="home"
             class="navbar-brand dft-logo"
+            [ngClass]="{ 'hide-logo': menuToggler }"
                 >
             <img
                 alt="dft logo"
                 class="dft-logo-wrap"
                 src="assets/images/dft-logo.png"
-                [ngClass]="{ 'hide-logo': menuToggler }"
                     >
         </a>
         <button
@@ -45,6 +27,7 @@
         <div
             preventParentScroll
             [ngbCollapse]="!menuToggler"
+            [ngClass]="{ 'dft-navbar-on-toggle': menuToggler }"
             class="collapse navbar-collapse dft-navbar-collapse justify-content-end font-weight-bold"
                 >
             <ul class="navbar-nav text-center justify-content-around dft-list">
