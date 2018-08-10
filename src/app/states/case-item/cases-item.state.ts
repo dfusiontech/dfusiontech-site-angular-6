@@ -1,4 +1,5 @@
 import { CasesItemPage } from "./cases-item.page";
+import { HeaderComponent } from "../../components/header/header.component";
 
 /**
  * Metadata of cases state
@@ -8,6 +9,9 @@ import { CasesItemPage } from "./cases-item.page";
 export const casesItemState = {
     name: 'casesItem',
     url: '/casesItem', // there should be single case name or number
-    component: CasesItemPage
+    views: {
+        header: { component: HeaderComponent },
+        $default: { component: CasesItemPage },
+    }
 };
 
