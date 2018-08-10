@@ -7,7 +7,8 @@
     @list-item-offset: 10px;
     @social-link-color: @icon-grey;
     @social-link-hover: @icon-hover-grey;
-    @bg-on-navbar-toggle: @white;
+    @navbar-bg-on-scroll: @white;
+    @navbar-bg-on-toggle: @white;
     @dft-navbar-transition-behavior: ease-out 0.5s, opacity 250ms ease-out;
 
     // set navbar properties ( navbar fixed )
@@ -61,7 +62,11 @@
     }
     // background behavior on toggle
     .dft-navbar-on-toggle {
-        background-color: @bg-on-navbar-toggle;
+        background-color: @navbar-bg-on-toggle;
+        transition: @dft-navbar-transition-behavior;
+    }
+    .dft-navbar-on-scroll {
+        background-color: @navbar-bg-on-scroll;
         transition: @dft-navbar-transition-behavior;
     }
     .dft-list {

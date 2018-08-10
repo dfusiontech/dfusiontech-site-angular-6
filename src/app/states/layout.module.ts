@@ -15,7 +15,7 @@ import { thoughtsItemState } from "./thoughts-item/thoughts-item.state";
 // Components
 import { HeaderComponent } from "../components/header/header.component";
 import { LayoutComponent } from "./layout.component";
-import { FooterComponent } from "./../components/footer/footer.component";
+import { FooterComponent } from "../components/footer/footer.component";
 // pages
 import { HomePage } from "./home/home.page";
 import { CasesPage } from "./cases/cases.page";
