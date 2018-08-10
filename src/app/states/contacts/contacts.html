@@ -7,8 +7,12 @@
             </h2>
         </div>
     </div>
+    <!--THERE SHOULD BE ANCHOR TO FORM-->
+    <a href="javascript:void(null)" (click)="vm.scroll(contactUs)" class="anchor-to-form"><i class="dft dft-arrow-down"></i></a>
 </section>
 
 <section class="form-wrapper">
-
+    <form #contactUs>
+        <button [ngClass]="{ 'disabled': true }" [disabled]="true" type="button" class="btn dft-btn">BUTTON</button>
+    </form>
 </section>

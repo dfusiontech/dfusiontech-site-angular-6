@@ -18,13 +18,16 @@
 .btn {
     &.dft-btn {
         margin: 0 auto;
-        font-size: 1.1rem;
-        padding: 0.5rem 2.2rem;
+        font-size: 16px;
+        //padding: 0.5rem 2.2rem;
         display: block;
         background-color: @d-btn-background;
         border: 2px solid transparent;
         color: @d-btn-color;
-        font-weight: @font-weight-base;
+        font-weight: 500;
+        box-sizing: border-box;
+        width: 151px;
+        height: 44px;
         .border-radius ( 3px );
         .transition ( all 0.3s ease-in-out );
         &:hover, &:focus, &:active, &.active {
@@ -34,9 +37,13 @@
         }
         &.disabled {
             cursor: not-allowed;
-            background-color: @grey;
+            background-color: @disabled-grey;
             color: @white;
             border-color: transparent;
+        }
+        @media @lsmscreen {
+            width: 154.26px;
+            height: 45px;
         }
     }
 }

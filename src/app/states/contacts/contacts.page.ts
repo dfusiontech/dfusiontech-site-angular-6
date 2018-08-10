@@ -13,7 +13,9 @@ export class ContactsPage implements OnInit {
      *
      */
     public vm = {
-
+        scroll: function(element) {
+            element.scrollIntoView();
+        }
     };
 
     /**
