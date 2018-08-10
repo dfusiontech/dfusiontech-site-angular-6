@@ -4,6 +4,126 @@
     {
       "icon": {
         "paths": [
+          "M335.603 513.28l-335.586 349.030v164.25l493.548-513.28-493.548-513.28v164.25l335.586 349.030z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 496,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "arrow-right"
+        ]
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 14,
+        "id": 5,
+        "prevSize": 32,
+        "code": 59650,
+        "name": "arrow-right"
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M160.397 510.72l335.586-349.030v-164.25l-493.548 513.28 493.548 513.28v-164.25l-335.586-349.030z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 496,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "arrow-left"
+        ]
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 20,
+        "id": 6,
+        "prevSize": 32,
+        "code": 59651,
+        "name": "arrow-left"
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 1
+    },
+    {
+      "icon": {
+        "paths": [
+          "M1056 329.010l718.95 691.298h338.33l-1057.28-1016.615-1057.28 1016.615h338.33l718.95-691.298z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 2112,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "arrow-up"
+        ]
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 16,
+        "id": 4,
+        "prevSize": 32,
+        "code": 59652,
+        "name": "arrow-up"
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 2
+    },
+    {
+      "icon": {
+        "paths": [
+          "M1056 694.99l-718.95-691.298h-338.33l1057.28 1016.615 1057.28-1016.615h-338.33l-718.95 691.298z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 2112,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "arrow-down"
+        ]
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 17,
+        "id": 7,
+        "prevSize": 32,
+        "code": 59653,
+        "name": "arrow-down"
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 3
+    },
+    {
+      "icon": {
+        "paths": [
           "M577.086 0v677.137c0 2.592 0 5.184 0 7.776 0 102.141-91.15 185.097-203.376 185.097-28.483 0-55.258-5.184-79.756-15.035v0.518c-71.21-29.035-120.772-93.845-120.772-169.024 0-102.141 91.15-185.099 203.376-185.099 23.925 0 46.712 3.63 67.791 10.889l59.247-138.953c-41.586-14.517-86.022-22.295-133.305-22.295-204.515 0-370.292 150.879-370.292 337.012 0 142.583 96.846 263.907 234.139 313.681v-0.518c41.586 14.517 86.592 22.813 133.875 22.813 78.615 0 151.534-22.295 211.352-60.143l72.349 20.739 139.003 39.404v-871.048h376.557l61.526-152.952h-651.714z",
           "M853.38 349.975l-0.57 162.284h164.067l69.501-162.284h-232.998z"
         ],
@@ -19,7 +139,7 @@
       },
       "attrs": [],
       "properties": {
-        "order": 6,
+        "order": 18,
         "id": 1,
         "name": "dfusiontech-logo",
         "prevSize": 32,
@@ -27,7 +147,7 @@
       },
       "setIdx": 0,
       "setId": 2,
-      "iconIdx": 0
+      "iconIdx": 4
     },
     {
       "icon": {
@@ -49,7 +169,7 @@
         {}
       ],
       "properties": {
-        "order": 7,
+        "order": 19,
         "id": 0,
         "name": "clutch-logo",
         "prevSize": 32,
@@ -57,7 +177,7 @@
       },
       "setIdx": 0,
       "setId": 2,
-      "iconIdx": 1
+      "iconIdx": 5
     }
   ],
   "height": 1024,
