@@ -19,6 +19,12 @@ export class HeaderComponent implements OnInit {
 
     constructor() {}
     ngOnInit() {
+        // find out initial desktop width
+        if ( window.innerWidth > this.headerRestructuringPoint ) {
+            this.headerHeight = this.desktopHeaderHeight;
+        } else {
+            this.headerHeight = this.mobileHeaderHeight;
+        }
     }
     // find out width of current desktop and set needed header height value and transmit it to on scroll event
     @HostListener('window:resize') onResize() {
