@@ -1,33 +1,38 @@
 #header {
     // set local variables
-    @header-height: 95px;
-    @header-height-mobile: 57px;
+    @dft-logo-desktop: 95px;
+    @dft-logo-mobile: @header-height-mobile;
     @list-border-hover: @malachite;
     @list-border-size: 4px;
     @list-item-offset: 10px;
     @social-link-color: @icon-grey;
     @social-link-hover: @icon-hover-grey;
-    // highlight place for header, because header fixed-top
-    .dft-header {
-        min-height: @header-height;
-        @media @lsmscreen {
-            min-height: @header-height-mobile;
-        }
-    }
+
     // set navbar properties ( navbar fixed )
     .dft-navbar {
         background-color: @white;
         height: @header-height;
         @media @lsmscreen {
-
             height: @header-height-mobile;
         }
     }
     // set logo height equal to header height
     .dft-logo {
-        height: @header-height;
-        @media @lsmscreen {
-            height: @header-height-mobile;
+        // set z-index for logo to be displayed above the lines corresponding to design
+        z-index: 3;
+        .dft-logo-wrap {
+            height: @dft-logo-desktop;
+            @media @lsmscreen {
+                height: @dft-logo-mobile;
+                transition: ease-out 0.5s, opacity 250ms ease-out;
+                visibility: visible;
+                opacity: 1;
+                &.hide-logo {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: ease-out 0.5s, opacity 250ms ease-out;
+                }
+            }
         }
     }
 
@@ -45,28 +50,28 @@
     //
     .dft-list {
         min-width: 80%;
+        // set z-index to be able to use, because of implemented lines that goes above navbar
+        z-index: 3;
         // menu behaviour
-        @media (min-width: @tablet-point) {
-            // set menu height equal to header height corresponding to design
-            height: @header-height;
-            &>li {
+        @media @gsmscreen {
+            &>li>.dft-link {
+                // set menu height equal to header height corresponding to design
+                height: @header-height;
                 border-top: @list-border-size solid transparent;
                 border-bottom: @list-border-size solid transparent;
-                &:hover {
+                &:hover, &.active, &:active {
                     transition: ease-out 0.5s;
                     border-top: @list-border-size solid @list-border-hover;
                 }
             }
         }
-        @media (max-width: @tablet-point) {
+        @media @lsmscreen {
             // set offset between menu items
             &>li {
                 margin-top: @list-item-offset;
             }
         }
     }
-
-
     // overwriting custom bootstrap classes to implement transition effect on menu on mobile desktop
     @media @lsmscreen {
         .collapse:not(.show) {
@@ -99,6 +104,10 @@
         padding: 13px 0;
         font-size: 0;
         box-sizing: content-box;
+        // set on focus behaviour to remove outline effect on button
+        &:focus {
+            outline: none;
+        }
     }
 
     .toggle-line {
