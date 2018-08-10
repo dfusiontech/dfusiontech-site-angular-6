@@ -1,17 +1,21 @@
 <div class="wrap-lines">
-
+    <div class="line-bg line1"></div>
+    <div class="line-bg line2 show700"></div>
+    <div class="line-bg line3 show1000"></div>
+    <div class="line-bg line4"></div>
+    <div class="line-bg line5 show1000"></div>
+    <div class="line-bg line6 show700"></div>
+    <div class="line-bg line7 show1000"></div>
+    <div class="line-bg line8"></div>
+    <div class="line-bg line9 show1000"></div>
+    <div class="line-bg line10 show700"></div>
+    <div class="line-bg line11 show1000"></div>
+    <div class="line-bg line12"></div>
+    <div class="line-bg line13 show1000"></div>
+    <div class="line-bg line14 show700"></div>
+    <div class="line-bg line15"></div>
 </div>
-<!-- Common header can be component => selector: '[id="header"]', -->
-<header id="header">
-    <h1> Header </h1>
-    <br/>
-    <a uiSref="home" uiSrefActive="active"> home </a>
-    <a uiSref="cases" uiSrefActive="active"> cases </a>
-    <a uiSref="thoughts" uiSrefActive="active"> thoughts </a>
-    <a uiSref="aboutUs" uiSrefActive="active"> about us </a>
-    <a uiSref="contacts" uiSrefActive="active"> contacts </a>
-    <br/>
-</header>
+<ui-view id="header" name="header"></ui-view>
 <!-- place to render page content based on url -->
 <ui-view id="main">
     <div class="def-preloader">
