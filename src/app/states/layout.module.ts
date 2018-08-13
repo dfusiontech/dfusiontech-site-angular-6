@@ -24,6 +24,7 @@ import { ThoughtsPage} from "./thoughts/thoughts.page";
 import { ThoughtsItemPage } from "./thoughts-item/thoughts-item.page";
 import { AboutUsPage } from "./about-us/about-us.page";
 import { ContactsPage } from "./contacts/contacts.page";
+import {CasesService} from "../services/Cases.service";
 
 /**
  * define all pages within application
@@ -71,6 +72,7 @@ export const routing: RootModule = {
         NgbModule.forRoot(),
         UIRouterModule.forRoot(routing)
     ],
+    providers: [CasesService],
     // define outgoing modules
     exports: [
         UIRouterModule

@@ -1,6 +1,7 @@
 // outsource
 import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
+import { CasesService } from "../../services/Cases.service";
 
 @Component({
     selector: '[id="cases"]',
@@ -21,7 +22,7 @@ export class CasesPage implements OnInit {
      *
      *
      */
-    constructor ( private state: StateService ) {
+    constructor ( private state: StateService, private casesService: CasesService) {
 
     };
 
@@ -38,6 +39,10 @@ export class CasesPage implements OnInit {
             this.state.go('casesItem');
         }
     };
+
+    showCases () {
+        this.casesService.getCases()
+    }
 
     ngOnInit() {};
 }
