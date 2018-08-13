@@ -10,10 +10,20 @@
     @navbar-bg-on-scroll: @white;
     @navbar-bg-on-toggle: @white;
     @dft-navbar-transition-behavior: ease-out 0.5s, opacity 250ms ease-out;
-
+    // implement animation on lines behavior
+    .wrap-lines {
+        visibility: visible;
+        opacity: 1;
+        transition: @dft-navbar-transition-behavior;
+        &.hide-lines {
+            visibility: hidden;
+            opacity: 0;
+            transition: @dft-navbar-transition-behavior;
+        }
+    }
     // set navbar properties ( navbar fixed )
     .dft-navbar {
-        background-color: transparent;
+        background-color: @white;
         height: @header-height;
         // animate change of bg after toggling menu
         transition: @dft-navbar-transition-behavior;
@@ -30,6 +40,8 @@
     }
     // set logo height equal to header height
     .dft-logo {
+        // prevent overwriting of lines correspondint to design
+        z-index: 3;
         padding: 0;
         @media @lsmscreen {
             transition: @dft-navbar-transition-behavior;
@@ -70,6 +82,9 @@
         transition: @dft-navbar-transition-behavior;
     }
     .dft-list {
+        // prevent overwriting of lines corresponding to design
+        z-index: 3;
+        // set width corresponding to design
         min-width: 80%;
         // menu behaviour
         @media @gsmscreen {
