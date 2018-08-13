@@ -13,7 +13,7 @@
 
     // set navbar properties ( navbar fixed )
     .dft-navbar {
-        //background-color: transparent;
+        background-color: transparent;
         height: @header-height;
         // animate change of bg after toggling menu
         transition: @dft-navbar-transition-behavior;
@@ -38,7 +38,7 @@
             &.hide-logo {
                 visibility: hidden;
                 opacity: 0;
-                transition: ease-out 0.5s, opacity 250ms ease-out;
+                transition: @dft-navbar-transition-behavior;
             }
         }
         .dft-logo-wrap {
@@ -51,7 +51,7 @@
 
     // set dropdown navbar properties
     .dft-navbar-collapse {
-        //background: transparent;
+        background: transparent;
         @media @lsmscreen {
             position: fixed;
             min-height: calc( 100vh - @header-height-mobile);
