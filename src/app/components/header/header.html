@@ -1,101 +1,127 @@
-<!-- Set default header height to highlight place for fixed header-->
-<div class="dft-header">
-    <nav class="navbar navbar-expand-md fixed-top dft-navbar">
-        <div class="container">
-            <a
-                uiSref="home"
-                class="navbar-brand"
+<nav
+    class="navbar navbar-expand-md fixed-top dft-navbar"
+    [ngClass]="{ 'dft-navbar-on-toggle': menuToggler, 'dft-navbar-on-scroll': isScrolled }"
+        >
+    <div class="container">
+        <!-- Hide lines when menu is open -->
+        <div
+            class="wrap-lines"
+            [ngClass]="{ 'hide-lines': menuToggler || isScrolled }"
+                >
+            <div class="line-bg line1"></div>
+            <div class="line-bg line2 show700"></div>
+            <div class="line-bg line3 show1000"></div>
+            <div class="line-bg line4"></div>
+            <div class="line-bg line5 show1000"></div>
+            <div class="line-bg line6 show700"></div>
+            <div class="line-bg line7 show1000"></div>
+            <div class="line-bg line8"></div>
+            <div class="line-bg line9 show1000"></div>
+            <div class="line-bg line10 show700"></div>
+            <div class="line-bg line11 show1000"></div>
+            <div class="line-bg line12"></div>
+            <div class="line-bg line13 show1000"></div>
+            <div class="line-bg line14 show700"></div>
+            <div class="line-bg line15"></div>
+        </div>
+        <a
+            uiSref="home"
+            class="navbar-brand dft-logo"
+            [ngClass]="{ 'hide-logo': menuToggler }"
+                >
+            <img
+                alt="dft logo"
+                class="dft-logo-wrap"
+                src="assets/images/dft-logo.png"
                     >
-                <img src="assets/images/dft-logo.png" alt="dft logo" class="dft-logo">
-            </a>
-            <!--aria-expanded="false"-->
-            <button class="navbar-toggler toggle" type="button" aria-label="Toggle navigation"
-                    (click)="menuToggler=!menuToggler"
-                    [ngClass]="{ 'toggle-show': menuToggler }">
-                <span class="toggle-line"></span>
-            </button>
-            <!--<a
-                role="button"
-                class="toggle d-block d-md-none"
-                (click)="menuToggler=!menuToggler"
-                [ngClass]="{ 'toggle-show': menuToggler }"
-                    >
-                <span class="toggle-line"></span>
-            </a>-->
-            <!--  Menu wrapper -->
-            <div
-                preventParentScroll
-                [ngbCollapse]="!menuToggler"
-                class="collapse navbar-collapse dft-navbar-collapse justify-content-end font-weight-bold"
-                    >
-                <ul class="navbar-nav text-center justify-content-around dft-list">
-                    <!-- Using d-flex vs m-auto in inner element for content vertical alignment -->
-                    <li class="nav-item d-flex">
+        </a>
+        <button
+            type="button"
+            class="navbar-toggler toggle"
+            aria-label="Toggle navigation"
+            (click)="menuToggler=!menuToggler"
+            [ngClass]="{ 'toggle-show': menuToggler }"
+                >
+            <span class="toggle-line"></span>
+        </button>
+        <!--  Menu wrapper -->
+        <div
+            preventParentScroll
+            [ngbCollapse]="!menuToggler"
+            [ngClass]="{ 'dft-navbar-on-toggle': menuToggler }"
+            class="collapse navbar-collapse dft-navbar-collapse justify-content-end font-weight-bold"
+                >
+            <ul class="navbar-nav text-center justify-content-around dft-list">
+                <!-- Using d-flex vs m-auto in inner element for content vertical alignment -->
+                <li class="nav-item">
+                    <a
+                        uiSref="cases"
+                        uiSrefActive="active"
+                        class="nav-link dft-link d-flex"
+                            >
+                        <span class="m-auto">CASES</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        uiSref="thoughts"
+                        uiSrefActive="active"
+                        class="nav-link dft-link d-flex"
+                            >
+                        <span class="m-auto">THOUGHTS</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        uiSref="aboutUs"
+                        uiSrefActive="active"
+                        class="nav-link dft-link d-flex"
+                            >
+                        <span class="m-auto">ABOUT US</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        uiSref="contacts"
+                        uiSrefActive="active"
+                        class="nav-link dft-link d-flex"
+                            >
+                        <span class="m-auto">CONTACTS</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Need socials in header only in mobile version -->
+            <div class="d-block d-md-none mt-3">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item mr-4">
                         <a
-                            uiSref="cases"
-                            class="nav-link dft-link m-auto"
+                            target="_blank"
+                            class="nav-link social-link"
+                            href="https://www.facebook.com/dfusiontechinc"
                                 >
-                            CASES
+                            <i class="fa fa-facebook-f"></i>
                         </a>
                     </li>
-                    <li class="nav-item d-flex">
+                    <li class="nav-item mr-4">
                         <a
-                            uiSref="thoughts"
-                            class="nav-link dft-link m-auto"
+                            target="_blank"
+                            class="nav-link social-link"
+                            href="https://www.linkedin.com/company/dfusion-tech"
                                 >
-                            THOUGHTS
+                            <i class="fa fa-linkedin"></i>
                         </a>
                     </li>
-                    <li class="nav-item d-flex">
+                    <li class="nav-item mr-4">
                         <a
-                            uiSref="aboutUs"
-                            class="nav-link dft-link m-auto"
+                            target="_blank"
+                            class="nav-link social-link"
+                            href="https://clutch.co/profile/dfusiontech"
                                 >
-                            ABOUT US
-                        </a>
-                    </li>
-                    <li class="nav-item d-flex">
-                        <a
-                            uiSref="contacts"
-                            class="nav-link dft-link m-auto"
-                                >
-                            CONTACTS
+                            <i class="dft dft-clutch-logo"></i>
                         </a>
                     </li>
                 </ul>
-                <!-- Need socials in header only in mobile version -->
-                <div class="d-block d-md-none mt-3">
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item mr-4">
-                            <a
-                                target="_blank"
-                                class="nav-link social-link"
-                                href="https://www.facebook.com/dfusiontechinc"
-                                    >
-                                <i class="fa fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item mr-4">
-                            <a
-                                target="_blank"
-                                class="nav-link social-link"
-                                href="https://www.linkedin.com/company/dfusion-tech"
-                                    >
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item mr-4">
-                            <a
-                                target="_blank"
-                                class="nav-link social-link"
-                                href="https://clutch.co/profile/dfusiontech"
-                                    >
-                                <i class="dft dft-clutch-logo"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
-    </nav>
-</div>
+    </div>
+</nav>

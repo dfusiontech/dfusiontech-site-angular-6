@@ -4,13 +4,13 @@ html {
     min-height: 100%;
     position: relative;
 
-    // temporary varaibles
-    @header-height: 100px;
-
-    //
     #layout {
         margin: 0;
-        padding: 0;
+        // highlight place for header
+        padding: @header-height 0 0 0;
+        @media @lsmscreen {
+            padding: @header-height-mobile 0 0 0;
+        }
         min-height: 100%;
         position: relative;
 
@@ -28,6 +28,9 @@ html {
             // test props to separate page root components
             background: none;
             min-height: ~'calc(100vh - '@header-height + @footer-height~')';
+            @media @lsmscreen {
+                min-height: ~'calc(100vh - '@header-height-mobile + @footer-height~')';
+            }
         }
 
         #footer {
