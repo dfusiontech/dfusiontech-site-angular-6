@@ -2,8 +2,6 @@
     position: relative;
 
 
-
-
     .heading-block {
         position: relative;
         width: 100%;
@@ -43,9 +41,9 @@
         .anchor-to-form {
             display: block;
             position: absolute;
-            width: 4%;
+            width: 3%;
             bottom: 15.5px;
-            left: calc(50% - 2%);
+            left: calc(50% - 1.5%);
             text-align: center;
 
             @media @lsmscreen {
@@ -57,11 +55,36 @@
             }
 
         }
-
     }
 
-    .form-wrapper {
+    .contact-block {
         margin: 0 -16px;
-        background-color: @headline-grey;
+        background-color: @lighter-grey;
+        padding: 0 16px;
+        .form-wrapper {
+            padding: 75px 170px 30px;
+            font-size: 16px;
+
+            @media @lsmscreen {
+                padding: 70px 80px;
+            }
+
+            @media @xxsscreen {
+
+            }
+
+            input, textarea {
+                border-radius: 0;
+                border: none;
+                outline: none !important;
+                box-shadow: none;
+            }
+
+            textarea {
+                height: 256px;
+                resize: none;
+            }
+        }
     }
+
 }
