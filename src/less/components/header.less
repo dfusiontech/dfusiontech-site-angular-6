@@ -9,7 +9,7 @@
     @social-link-hover: @icon-hover-grey;
     @navbar-bg-on-scroll: @white;
     @navbar-bg-on-toggle: @white;
-    @dft-navbar-transition-behavior: ease-out 0.5s, opacity 250ms ease-out;
+    @dft-navbar-transition-behavior: opacity 250ms ease-out;
 
     // set navbar properties ( navbar fixed )
     .dft-navbar {
@@ -97,10 +97,10 @@
             display: block;
             visibility: hidden;
             opacity: 0;
-            transition: @dft-navbar-transition-behavior;
+            //transition: @dft-navbar-transition-behavior;
         }
         .navbar-collapse {
-            transition: @dft-navbar-transition-behavior;
+            //transition: @dft-navbar-transition-behavior;
             visibility: visible;
             opacity: 1;
         }
