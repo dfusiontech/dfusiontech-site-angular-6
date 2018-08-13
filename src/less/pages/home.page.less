@@ -1,0 +1,56 @@
+#home {
+    .heading-block {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 45px 0 50px;
+        margin-bottom: 70px;
+
+        .grey-rectangle {
+            position: absolute;
+            left: -16px;
+            top: 0;
+            background-color: @headline-grey;
+            width: 45%;
+            height: 100%;
+        }
+
+        .heading-cover {
+            position: relative;
+            background: @white;
+            text-align: center;
+            padding: 71px 48px 59px;
+
+            @media @xxsscreen {
+                margin: 0 -15px;
+            }
+
+            h2 {
+                font-weight: 500;
+                line-height: 56px;
+
+                .heading-link {
+                    color: @malachite;
+                }
+            }
+        }
+
+        .anchor-to-form {
+            display: block;
+            position: absolute;
+            width: 3%;
+            bottom: 15.5px;
+            left: calc(50% - 1.5%);
+            text-align: center;
+
+            @media @lsmscreen {
+                display: none;
+            }
+
+            .dft {
+                max-width: 100%;
+            }
+
+        }
+    }
+}
