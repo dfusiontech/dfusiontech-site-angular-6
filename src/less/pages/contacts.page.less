@@ -1,57 +1,6 @@
 #contacts {
     position: relative;
 
-    .heading-block {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding: 45px 0 50px;
-        margin-bottom: 70px;
-
-
-        .heading-cover {
-            position: relative;
-            background: @white;
-            text-align: center;
-            padding: 71px 48px 59px;
-
-            @media @lsmscreen {
-                margin: 0 -15px;
-            }
-
-            @media @xsscreen {
-                margin: 0 -15px;
-            }
-
-            h2 {
-                font-weight: 500;
-                line-height: 56px;
-
-                .heading-link {
-                    color: @malachite;
-                }
-            }
-        }
-
-        .anchor-to-form {
-            display: block;
-            position: absolute;
-            width: 3%;
-            bottom: 15.5px;
-            left: calc(50% - 1.5%);
-            text-align: center;
-
-            @media @lsmscreen {
-                display: none;
-            }
-
-            .dft {
-                max-width: 100%;
-            }
-
-        }
-    }
-
     .contact-block {
         //margin: 0 -16px;
         background-color: @lighter-grey;
@@ -78,6 +27,23 @@
             textarea {
                 height: 256px;
                 resize: none;
+            }
+
+            @media (min-width: @desktop-point) {
+                .form-group.col-md-12.col-lg-6 {
+                    #inputName {
+                        width: calc(100% - 9px);
+                    }
+
+                    #inputEmail {
+                        margin-left: 11px;
+                        width: calc(100% - 11px);
+                    }
+
+                    label[for='inputEmail'] {
+                        margin-left: 11px;
+                    }
+                }
             }
         }
     }
