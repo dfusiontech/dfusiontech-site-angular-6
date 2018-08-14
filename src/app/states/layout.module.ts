@@ -4,6 +4,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { CommonModule } from '@angular/common';
 import { RootModule, UIRouterModule } from "@uirouter/angular";
 import { PreventParentScrollModule } from "ngx-prevent-parent-scroll";
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 // app states
 import { homeState } from "./home/home.state";
 import { casesState } from "./cases/cases.state";
@@ -15,7 +16,7 @@ import { thoughtsItemState } from "./thoughts-item/thoughts-item.state";
 // Components
 import { HeaderComponent } from "../components/header/header.component";
 import { LayoutComponent } from "./layout.component";
-import { FooterComponent } from "./../components/footer/footer.component";
+import { FooterComponent } from "../components/footer/footer.component";
 // pages
 import { HomePage } from "./home/home.page";
 import { CasesPage } from "./cases/cases.page";
@@ -67,6 +68,7 @@ export const routing: RootModule = {
     ],
     // define dependencies for all page components
     imports: [
+        NgxPageScrollModule,
         CommonModule,
         PreventParentScrollModule,
         NgbModule.forRoot(),
