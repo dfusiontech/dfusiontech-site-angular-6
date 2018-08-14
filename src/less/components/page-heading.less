@@ -1,0 +1,66 @@
+
+.heading-block {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 45px 0 50px;
+    margin-bottom: 70px;
+
+    .heading-wrapper {
+        position: relative;
+        background: @white;
+        text-align: center;
+        padding: 71px 48px 59px;
+
+        @media @lsmscreen {
+            margin: 0 -15px;
+        }
+
+        @media @xsscreen {
+            margin: 0 -15px;
+        }
+
+        h1 {
+            font-size: 64px;
+            line-height: 83px;
+            font-weight: 500;
+
+            @media @lsmscreen {
+                font-size: 40px;
+                line-height: 52px;
+            }
+
+            @media @xsscreen {
+                font-size: 30px;
+                line-height: 39px;
+            }
+        }
+
+        h2 {
+            font-weight: 500;
+            line-height: 56px;
+
+            .heading-link {
+                color: @malachite;
+            }
+        }
+    }
+
+    .anchor-to-form {
+        display: block;
+        position: absolute;
+        width: 3%;
+        bottom: 15.5px;
+        left: calc(50% - 1.5%);
+        text-align: center;
+
+        @media @lsmscreen {
+            display: none;
+        }
+
+        .dft {
+            max-width: 100%;
+        }
+
+    }
+}
