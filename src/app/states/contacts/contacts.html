@@ -1,39 +1,61 @@
-<section class="heading-block">
-    <div class="grey-rectangle"></div>
-    <div class="container">
-        <div class="heading-cover">
-            <h2>
-                Hey! Looking for software development or support partner? (Follow us on <a class="heading-link" href="https://clutch.co/profile/dfusiontech" target="_blank">Clutch</a>, like us on <a class="heading-link" href="https://www.facebook.com/dfusiontechinc" target="_blank">Facebook</a>) Get in touch via <a class="heading-link" href="https://www.linkedin.com/company/dfusion-tech" target="_blank">LinkedIn</a>, visit our <a class="heading-link" href="https://goo.gl/maps/LU4zi2fKxPL2" target="_blank">Office</a>
-            </h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <section class="heading-block grey-rectangle">
+                    <div class=""></div>
+                    <div class="heading-wrapper">
+                        <h2>
+                            Hey! Looking for software development or support partner? (Follow us on <a class="heading-link" href="https://clutch.co/profile/dfusiontech" target="_blank">Clutch</a>, like us on <a class="heading-link" href="https://www.facebook.com/dfusiontechinc" target="_blank">Facebook</a>) Get in touch via <a class="heading-link" href="https://www.linkedin.com/company/dfusion-tech" target="_blank">LinkedIn</a>, visit our <a class="heading-link" href="https://goo.gl/maps/LU4zi2fKxPL2" target="_blank">Office</a>
+                        </h2>
+                    </div>
+                    <a pageScroll pageScrolllTarget="#contactUs" [pageScrollOffset]="77" href="#contactUs" class="anchor-to-form"><i class="dft dft-arrow-down"></i></a>
+                </section>
+            </div>
         </div>
     </div>
-    <a pageScroll pageScrolllTarget="#contactUs" [pageScrollOffset]="77" href="#contactUs" class="anchor-to-form"><i class="dft dft-arrow-down"></i></a>
-</section>
+    <div class="row contact-block">
+        <div class="col-md-12">
+            <div class="container">
+                <section class="form-wrapper" id="contactUs">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-12 col-lg-6">
+                                <label for="inputName">What’s your name?</label>
+                                <!--[ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"-->
+                                <input type="text"
+                                       placeholder=""
+                                       id="inputName"
+                                       class="form-control"
+                                        >
+                            </div>
+                            <div class="form-group col-md-12 col-lg-6">
+                                <label for="inputEmail">Your email</label>
+                                <!--[ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"-->
+                                <input type="email"
+                                       placeholder="example@gmail.com"
+                                       id="inputEmail"
+                                       class="form-control"
+                                        >
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="inputMessage">Message</label>
+                                <textarea type="text"
+                                          placeholder=""
+                                          id="inputMessage"
+                                          class="form-control"
+                                            ></textarea>
+                            </div>
+                        </div>
 
-<section class="contact-block" id="contactUs">
-    <div class="container">
-        <div class="form-wrapper">
-            <!--[formGroup]="contactForm" (ngSubmit)="onSubmit()"-->
-            <form  >
-                <div class="form-row">
-                    <div class="form-group col-md-12 col-lg-6">
-                        <label for="inputName">What’s your name?</label>
-                        <input type="text" class="form-control" id="inputName" placeholder="">
-                    </div>
-                    <div class="form-group col-md-12 col-lg-6">
-                        <label for="inputEmail">Email</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="inputMessage">Message</label>
-                        <textarea type="text" class="form-control" id="inputMessage" placeholder="" height="300px"> </textarea>
-                    </div>
-                </div>
-
-                <button [ngClass]="{ 'disabled' : true }" [disabled]="true" type="submit" class="btn dft-btn"> BUTTON </button>
-            </form>
+                        <button type="submit" class="btn dft-btn disabled"> BUTTON </button>
+                    </form>
+                </section>
+            </div>
         </div>
     </div>
-</section>
+</div>
+
+
