@@ -41,7 +41,7 @@ export class CasesPage implements OnInit {
     };
 
     showCases () {
-        this.casesService.getCases()
+        this.casesService.getCases().then(data => console.log(data))
     }
 
     ngOnInit() {};
