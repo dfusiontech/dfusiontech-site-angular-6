@@ -1,7 +1,6 @@
 #contacts {
     position: relative;
 
-
     .heading-block {
         position: relative;
         width: 100%;
@@ -9,14 +8,6 @@
         padding: 45px 0 50px;
         margin-bottom: 70px;
 
-        .grey-rectangle {
-            position: absolute;
-            left: -16px;
-            top: 0;
-            background-color: @headline-grey;
-            width: 45%;
-            height: 100%;
-        }
 
         .heading-cover {
             position: relative;
@@ -24,7 +15,11 @@
             text-align: center;
             padding: 71px 48px 59px;
 
-            @media @xxsscreen {
+            @media @lsmscreen {
+                margin: 0 -15px;
+            }
+
+            @media @xsscreen {
                 margin: 0 -15px;
             }
 
@@ -58,9 +53,9 @@
     }
 
     .contact-block {
-        margin: 0 -16px;
+        //margin: 0 -16px;
         background-color: @lighter-grey;
-        padding: 0 16px;
+        //padding: 0 16px;
         .form-wrapper {
             padding: 75px 170px 30px;
             font-size: 16px;

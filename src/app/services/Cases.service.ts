@@ -4,19 +4,18 @@ import { CaseModel } from "../models/case.model";
 
 @Injectable()
 export class CasesService {
-    public error = false;
     constructor() {}
     public getCases() {
         const casesList = [];
         let promise = new Promise((resolve, reject) => {
             setTimeout(() => {
-                if (this.error) {
-                    reject('error');
-                } else {
+                if ( CasesConstant ) {
                     for ( let i = 0; i < CasesConstant.length; i++ ) {
                         casesList.push(new CaseModel( CasesConstant[i] ))
                     }
                     resolve( casesList );
+                } else {
+                    reject('error');
                 }
             }, 1000);
         });
