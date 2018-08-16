@@ -1,5 +1,10 @@
-
-// grey rectangle behind some block size depends on parent of element which have this class
+/**## grey rectangle behind some block size depends on parent of element which have this class
+ *
+ *
+ *
+ *
+ *
+ */
 .grey-rectangle {
     &:before {
         content: '';
@@ -45,4 +50,50 @@
     }
 }
 
+/**## Black horizontal line under element
+ * Using:
+ * 1) add class .horiz-line to the element after which you want line to be;
+ * 2) use additional class which define size of line(one of following):
+ *    .s --- small (30px);
+ *    .m --- medium (53px);
+ *    .l --- long (103px);
+ *
+ * EXAMPLE:
+ *
+ * <span class="horiz-line m"> Under that span will be black line </span>
+ *
+ */
+.horiz-line {
+    position: relative;
+    padding-bottom: 28px;
+    &:before {
+        content: ' ';
+        height: 3px;
+        background-color: @darkest-grey;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    &.s:before {
+        width: 30px;
+    }
+    &.m:before {
+        width: 53px;
+    }
+    &.l:before {
+        width: 103px;
+    }
+}
 
+/**
+ *
+ *
+ *
+ */
+.date {
+    display: block;
+    line-height: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: @date-grey;
+}
