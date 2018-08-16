@@ -1,0 +1,166 @@
+#thoughts {
+
+    .heading-block {
+        margin-bottom: 50px;
+
+        .heading-description {
+            max-width: 40.5%;
+            max-height: 60%;
+
+            overflow: hidden;
+
+            transition: all ease 250ms;
+
+            .description-headline {
+                font-size: 34px;
+                margin-bottom: 20px;
+            }
+
+            .description {
+                margin-bottom: 10px;
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+            @media @mdscreen {
+                max-width: 50%;
+                max-height: 90%; // 80%
+                padding: 20px;
+
+                .description {
+                    position: relative;
+                    max-height: 81px;
+                    overflow: hidden;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+                .description-headline {
+                    margin-bottom: 10px;
+                }
+            }
+
+            @media @xsscreen {
+                position: relative;
+                margin: 0;
+                max-width: 100%;
+                width: 100%;
+
+                .description-headline {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        @media @xxsscreen {
+            margin-bottom: 10px;
+        }
+    }
+
+    .thoughts-wrapper {
+        position: relative;
+        transition: all ease 250ms;
+
+        @media @lsmscreen {
+            margin: 0 -15px;
+        }
+
+        .thought {
+            margin-bottom: 45px;
+
+            .thought-title {
+                height: 224px;
+                width: 100%;
+                overflow: hidden;
+                text-align: center;
+
+                a {
+                    background-color: @white;
+                    background-origin: content-box;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        display: block;
+                        width: auto;
+                        height: auto;
+                    }
+                }
+
+
+
+                @media @lsmscreen {
+                    max-height: 212px;
+                }
+
+                @media @xsscreen {
+                    max-height: 226px;
+                }
+            }
+
+            .thought-description {
+                min-height: 200px;
+                height: auto;
+                position: relative;
+                padding: 30px 0 15px 25px;
+                background-color: @white;
+                transition: all ease 250ms;
+
+                .description-headline {
+                    font-size: 24px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .description {
+                    font-size: 16px;
+                    max-height: 72px;
+                    overflow: hidden;
+                }
+
+                @media @mdscreen {
+                    padding: 20px 20px 15px 20px ;
+
+                    .description {
+                        position: relative;
+                        overflow: hidden;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                    }
+                    .description-headline {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                @media @xsscreen {
+                    margin: 0;
+                    max-width: 100%;
+                    width: 100%;
+
+                    .description-headline {
+                        margin-bottom: 10px;
+                    }
+
+                    .description {
+                        max-height: none;
+                    }
+                }
+            }
+
+            &.last-thought {
+                margin-bottom: 90px;
+
+                @media @lsmscreen {
+                    margin-bottom: 70px;
+                }
+
+                @media @xsscreen {
+                    margin-bottom: 100px;
+                }
+            }
+        }
+    }
+}
