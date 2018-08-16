@@ -2,9 +2,8 @@
     <div class="row">
         <div class="col-md-12">
             <div class="container">
-                <section class="heading-block grey-rectangle left">
-                    <div class=""></div>
-                    <div class="heading-cover">
+                <section class="heading-block grey-rectangle">
+                    <div class="heading-wrapper">
                         <h2>
                             Hey! Looking for software development or support partner? (Follow us on <a class="heading-link" href="https://clutch.co/profile/dfusiontech" target="_blank">Clutch</a>, like us on <a class="heading-link" href="https://www.facebook.com/dfusiontechinc" target="_blank">Facebook</a>) Get in touch via <a class="heading-link" href="https://www.linkedin.com/company/dfusion-tech" target="_blank">LinkedIn</a>, visit our <a class="heading-link" href="https://goo.gl/maps/LU4zi2fKxPL2" target="_blank">Office</a>
                         </h2>
@@ -18,26 +17,39 @@
         <div class="col-md-12">
             <div class="container">
                 <section class="form-wrapper" id="contactUs">
-                    <!--[formGroup]="contactForm" (ngSubmit)="onSubmit()"-->
-                    <form  >
+                    <form>
                         <div class="form-row">
                             <div class="form-group col-md-12 col-lg-6">
                                 <label for="inputName">What’s your name?</label>
-                                <input type="text" class="form-control" id="inputName" placeholder="">
+                                <!--[ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"-->
+                                <input type="text"
+                                       placeholder=""
+                                       id="inputName"
+                                       class="form-control"
+                                        >
                             </div>
                             <div class="form-group col-md-12 col-lg-6">
-                                <label for="inputEmail">Email</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="">
+                                <label for="inputEmail">Your email</label>
+                                <!--[ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"-->
+                                <input type="email"
+                                       placeholder="example@gmail.com"
+                                       id="inputEmail"
+                                       class="form-control"
+                                        >
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <label for="inputMessage">Message</label>
-                                <textarea type="text" class="form-control" id="inputMessage" placeholder="" height="300px"> </textarea>
+                                <textarea type="text"
+                                          placeholder=""
+                                          id="inputMessage"
+                                          class="form-control"
+                                            ></textarea>
                             </div>
                         </div>
 
-                        <button [ngClass]="{ 'disabled' : true }" [disabled]="true" type="submit" class="btn dft-btn"> BUTTON </button>
+                        <button type="submit" class="btn dft-btn disabled"> BUTTON </button>
                     </form>
                 </section>
             </div>
