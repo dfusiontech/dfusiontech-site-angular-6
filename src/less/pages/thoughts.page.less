@@ -3,6 +3,10 @@
     .heading-block {
         margin-bottom: 50px;
 
+        .heading-title a {
+            display: block;
+        }
+
         .heading-description {
             max-width: 40.5%;
             max-height: 60%;
@@ -104,7 +108,7 @@
                 min-height: 200px;
                 height: auto;
                 position: relative;
-                padding: 30px 0 15px 25px;
+                padding: 30px 30px 15px 30px;
                 background-color: @white;
                 transition: all ease 250ms;
 
@@ -113,6 +117,7 @@
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    margin-bottom: 15px;
                 }
 
                 .description {
@@ -127,8 +132,6 @@
                     .description {
                         position: relative;
                         overflow: hidden;
-                        -webkit-line-clamp: 2;
-                        -webkit-box-orient: vertical;
                     }
                     .description-headline {
                         margin-bottom: 10px;
