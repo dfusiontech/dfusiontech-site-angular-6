@@ -11,7 +11,7 @@
                     href="javascript:void(0);"
                     class="d-inline-block case-item"
                         >
-                    <div class="row mb-5 pt-5">
+                    <div class="row">
                         <div class="col-md-7 col-lg-8">
                             <img
                                 class="case-img"
@@ -20,7 +20,7 @@
                             >
                         </div>
                         <div class="col-md-5 col-lg-4 d-flex align-items-center">
-                            <div class="case-content bigger-indent">
+                            <div class="case-content first-case-indent">
                                 <h2 class="text-uppercase h3">{{ casesList[0].title }}</h2>
                                 <p class="m-0 pb-4 pt-2">{{ casesList[0].description }}</p>
                             </div>
@@ -33,7 +33,7 @@
                             href="javascript:void(0);"
                             class="d-inline-block case-item"
                                 >
-                            <div class="row mb-5">
+                            <div class="row">
                                 <div class="col-md-5 d-flex align-items-center">
                                     <div class="case-content move-right less-indent hover-green-bg">
                                         <h2 class="text-uppercase h3">{{ casesList[1].title }}</h2>
@@ -56,7 +56,7 @@
                             href="javascript:void(0);"
                             class="d-inline-block case-item"
                                 >
-                            <div class="row mb-5">
+                            <div class="row">
                                 <div class="col-md-7">
                                     <img
                                         alt="Lincoln Center"
@@ -73,13 +73,16 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 mb-5">
+                    <div class="col-lg-4">
                         <a
                             href="javascript:void(0);"
                             class="d-inline-block case-item"
                                 >
                             <div class="row">
-                                <div class="col-md-5 col-lg-12 d-flex justify-content-end case-offset-bottom">
+                                <div
+                                    class="col-md-5 col-lg-12 d-flex justify-content-end"
+                                    [ngClass]="{ 'case-offset-bottom': !caseMobileBehavior }"
+                                        >
                                     <div class="case-content compresed-case-content bigger-indent hover-purple-bg move-bottom">
                                         <h2 class="text-uppercase h3">{{ casesList[3].title }}</h2>
                                         <p class="m-0 pb-4 pt-2">{{ casesList[3].description }}</p>
@@ -103,7 +106,7 @@
                     href="javascript:void(0);"
                     class="d-inline-block case-item"
                         >
-                    <div class="row mb-5">
+                    <div class="row">
                         <div class="col-md-5 col-lg-4 d-flex align-items-center">
                             <div
                                 class="case-content bigger-indent hover-red-bg"
@@ -127,9 +130,9 @@
                 </a>
                 <a
                     href="javascript:void(0);"
-                    class="d-inline-block case-item"
+                    class="d-inline-block case-item last-case-item "
                         >
-                    <div class="row mb-5">
+                    <div class="row">
                         <div
                             class="col-md-7 col-lg-8"
                             [ngClass]="{ 'order-first': caseMobileBehavior }"
@@ -154,7 +157,7 @@
                         </div>
                     </div>
                 </a>
-                <div class="row mb-5">
+                <div class="row">
                     <div class="col-12 fff-bg text-center dft-chat-wrapper">
                         <h2
                             class="font-weight-bold"

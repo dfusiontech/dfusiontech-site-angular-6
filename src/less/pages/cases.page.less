@@ -3,7 +3,16 @@
     position: relative;
 
     .cases-list {
+        // indent on mobile corresponding to design
+        padding: 40px;
+        @media @lsmscreen {
+           padding-top: 24px;
+        }
         .case-item {
+            margin-bottom: 40px;
+            &.last-case-item {
+                margin-bottom: 0;
+            }
             .case-img {
                 // set fixed height corresponding to design
                 height: 376px;
@@ -16,13 +25,21 @@
                 background-color: @white;
                 position: relative;
                 transition: @dft-cases-transition-behavior;
+                // indent on mobile corresponding to design
                 @media @lsmscreen {
                     > p {
-                        padding-bottom: 80px!important;
+                        padding-bottom: 70px!important;
+                    }
+                }
+                &.first-case-indent {
+                    padding: 30px 21px 38px;
+                    // set indent on mobile corresponding to design
+                    @media @lsmscreen {
+                        padding: 30px 3px 38px;
                     }
                 }
                 &.bigger-indent {
-                    padding: 30px 21px 38px;
+                    padding: 30px 27px 38px;
                     // set indent on mobile corresponding to design
                     @media @lsmscreen {
                         padding: 30px 3px 38px;
@@ -39,7 +56,7 @@
                     }
                 }
                 &.less-indent {
-                    padding: 18px 25px;
+                    padding: 18px 27px;
                     // set indent on mobile corresponding to design
                     @media @lsmscreen {
                         padding: 30px 3px 38px;
@@ -55,10 +72,10 @@
             // need to implement this offset to set case block (witch positioned vertical) align with other
             // elements corresponding to design
             .case-offset-bottom {
-                margin: 38px 0;
+                margin: 62px 0;
                 // start from 991px to fix behavior on breakepoint
                 @media ( max-width: 991px ) {
-                    margin: 20px 0;
+                    margin: 10px 0;
                 }
             }
             &:hover {
@@ -102,11 +119,11 @@
                     }
                     &.move-bottom {
                         @media ( min-width: 1199px ) {
-                            transform: translateY(25%)!important;
+                            transform: translateY(45%)!important;
                         }
                         // fix transform behavior on interval between 991px and 1199px
                         @media ( max-width: 1199px ) and ( min-width: 991px ) {
-                            transform: translateY(30%)!important;
+                            transform: translateY(45%)!important;
                         }
                         // fix transform behavior on 992px
                         @media ( max-width: 991px ) {
@@ -121,6 +138,11 @@
         }
     }
     .dft-chat-wrapper {
+        // set offset corresponding to design
+        margin: 70px 0;
+        @media @lsmscreen {
+            margin: 60px 0 76px;
+        }
         // set indent corresponding to design
         padding: 51px;
         border: 2px solid @lightest-grey;
