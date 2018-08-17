@@ -1,0 +1,122 @@
+@content-padding-lg: 100px;
+@content-padding-md: 60px;
+@content-padding-sm: 40px;
+@content-padding-xs: 20px;
+
+#thoughtsitem {
+    .content-wrapper {
+        position: relative;
+        transform: translateY(-300px);
+        margin: 0 100px;
+        padding: 30px @content-padding-lg 70px;
+        background-color: white;
+        overflow: hidden;
+
+        .date {
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+        }
+
+        .plain-text {
+            font-size: 16px;
+            line-height: 2;
+            margin: 20px 0;
+        }
+
+        h2 {
+            padding-top: 20px;
+            font-size: 28px;
+        }
+
+        .dft-list {
+            padding: 10px 0 10px 45px;
+            margin: 0;
+            li {
+                padding: 0 0 10px 15px;
+                font-size: 16px;
+                line-height: 1.5;
+                font-weight: bold;
+                span {
+                    font-weight: normal;
+                }
+            }
+        }
+
+        .thought-image {
+            width: calc(100% + 200px);
+            height: auto;
+            margin: 0 -100px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            img {
+                visibility: hidden;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .thought-image-description {
+            text-align: center;
+            padding: 20px 0;
+            color: @dark-grey;
+            font-size: 16px;
+            line-height: 1.15;
+            span {
+                font-style: italic;
+                font-weight: 500;
+            }
+        }
+
+        .quote-wrapper {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            font-style: italic;
+            width: 100%;
+            padding: 0 20px;
+
+            .quote {
+                max-width: 600px;
+
+                @media @lsmscreen {
+                    font-size: 24px;
+                }
+            }
+        }
+
+
+        @media @mdscreen {
+            transform: translateY(-220px);
+            margin: 0 70px;
+            padding: 30px @content-padding-md 70px;
+        }
+
+        @media @lsmscreen {
+            transform: translateY(-130px);
+            margin: 0 35px;
+            padding: 20px @content-padding-sm 15px;
+        }
+
+        @media @xsscreen {
+            transform: translateY(0);
+            margin: 0 -30px;
+            padding: @content-padding-xs;
+            .date {
+                margin-bottom: 25px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+        }
+    }
+}
+@content-padding-lg: 100px;
+@content-padding-md: 60px;
+@content-padding-sm: 40px;
+@content-padding-xs: 20px;
