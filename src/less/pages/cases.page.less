@@ -31,14 +31,14 @@
                         padding-bottom: 70px!important;
                     }
                 }
-                &.first-case-indent {
+                &.case-content-medium {
                     padding: 30px 21px 38px;
                     // set indent on mobile corresponding to design
                     @media @lsmscreen {
                         padding: 30px 3px 38px;
                     }
                 }
-                &.bigger-indent {
+                &.case-content-large {
                     padding: 30px 27px 38px;
                     // set indent on mobile corresponding to design
                     @media @lsmscreen {
@@ -55,7 +55,7 @@
                         max-width: 100%;
                     }
                 }
-                &.less-indent {
+                &.case-content-small {
                     padding: 18px 27px;
                     // set indent on mobile corresponding to design
                     @media @lsmscreen {
@@ -67,15 +67,6 @@
                     width: 103px;
                     content: '';
                     border-bottom: 3px solid black;
-                }
-            }
-            // need to implement this offset to set case block (witch positioned vertical) align with other
-            // elements corresponding to design
-            .case-offset-bottom {
-                margin: 62px 0;
-                // start from 991px to fix behavior on breakepoint
-                @media ( max-width: 991px ) {
-                    margin: 10px 0;
                 }
             }
             &:hover {
