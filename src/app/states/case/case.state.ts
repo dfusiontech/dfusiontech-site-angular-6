@@ -1,4 +1,4 @@
-import { CasesItemPage } from "./cases-item.page";
+import { CasePage } from "./case.page";
 import { HeaderComponent } from "../../components/header/header.component";
 
 /**
@@ -6,12 +6,12 @@ import { HeaderComponent } from "../../components/header/header.component";
  *
  *
  */
-export const casesItemState = {
+export const caseState = {
     name: 'casesItem',
     url: '/casesItem', // there should be single case name or number
     views: {
         header: { component: HeaderComponent },
-        $default: { component: CasesItemPage },
+        $default: { component: CasePage },
     }
 };
 

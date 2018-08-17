@@ -8,7 +8,7 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
 // app states
 import { homeState } from "./home/home.state";
 import { casesState } from "./cases/cases.state";
-import { casesItemState } from "./case-item/cases-item.state";
+import { caseState } from "./case/case.state";
 import { thoughtsState } from "./thoughts/thoughts.state";
 import { aboutUsState } from "./about-us/about-us.state";
 import { contactsState } from "./contacts/contacts.state";
@@ -20,12 +20,12 @@ import { FooterComponent } from "../components/footer/footer.component";
 // pages
 import { HomePage } from "./home/home.page";
 import { CasesPage } from "./cases/cases.page";
-import { CasesItemPage } from "./case-item/cases-item.page";
+import { CasePage } from "./case/case.page";
 import { ThoughtsPage} from "./thoughts/thoughts.page";
 import { ThoughtsItemPage } from "./thoughts-item/thoughts-item.page";
 import { AboutUsPage } from "./about-us/about-us.page";
 import { ContactsPage } from "./contacts/contacts.page";
-import {CasesService} from "../services/Cases.service";
+import { CasesService } from "../services/Cases.service";
 
 /**
  * define all pages within application
@@ -39,7 +39,7 @@ export const routing: RootModule = {
     states: [
         homeState,
         casesState,
-        casesItemState,
+        caseState,
         thoughtsState,
         thoughtsItemState,
         aboutUsState,
@@ -60,7 +60,7 @@ export const routing: RootModule = {
         LayoutComponent,
         HomePage,
         CasesPage,
-        CasesItemPage,
+        CasePage,
         ThoughtsPage,
         ThoughtsItemPage,
         AboutUsPage,

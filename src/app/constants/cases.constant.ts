@@ -37,6 +37,6 @@ export const CasesConstant = [
         description: 'The best way to learn multiplication table with fun and engaging way for children. ' +
         'Intended for the improvement and testing of children calculation skills and engaging way for children.',
         date: 'may 4, 2018',
-        img: 'assets/images/pages/cases/unreel-me.jpg'
+        img: 'assets/images/pages/cases/worldtv.jpg'
     }
 ];

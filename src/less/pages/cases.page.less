@@ -2,132 +2,119 @@
     @dft-cases-transition-behavior: 500ms ease-out;
     position: relative;
 
-    .heading-case {
-        position: relative;
-        width: 100%;
-        height: auto;
-        // set indent corresponding to design
-        padding-top: 46px;
-    }
-
-    .cases-wrapper {
-        .case-img {
-            // set fixed height corresponding to design
-            height: 376px;
-            max-width: 100%;
-            @media @lsmscreen {
-                height: 247px;
-            }
-        }
-        .case-content {
-            position: relative;
-            transition: @dft-cases-transition-behavior;
-            margin-top: 30px;
-            padding: 30px 21px 38px;
-            // compressing content corresponding to design
-            &.compresed-content {
-                padding: 30px 43px 38px;
-                // fix behavior on interval and at 992px ( breakepoint )
-                @media ( max-width: 991px ) {
-                    padding: 29px 14px 38px;
-                }
-                // removing right and left padding on small desktops corresponding to design
+    .cases-list {
+        .case-item {
+            .case-img {
+                // set fixed height corresponding to design
+                height: 376px;
+                max-width: 100%;
                 @media @lsmscreen {
-                    padding: 30px 3px 38px;
+                    height: 247px;
                 }
             }
-            &.less-indent {
-                padding: 18px 21px;
-                // removing right and left padding on small desktops corresponding to design
-                @media @lsmscreen {
-                    padding: 18px 3px;
-                }
-            }
-            &:after {
-                display: block;
-                width: 103px;
-                content: '';
-                border-bottom: 3px solid black;
-            }
-            // removing right and left padding on small desktops corresponding to design
-            @media @lsmscreen {
-                padding: 30px 3px 38px;
-            }
-        }
-        // need to implement this offset to set case block (witch positioned vertical) align with other
-        // elements (witch positioned vertical) corresponding to design
-        .case-offset-bottom {
-            // fix offset behavior on 1199px
-            @media ( min-width: 1200px ) {
-                margin-bottom: 4rem!important;
-            }
-            @media ( max-width: 1199px ) {
-                margin-bottom: 2rem;
-            }
-            // fix behavior on 992px ( breakepoint )
-            @media ( max-width: 991px ) {
-                margin-bottom: 4rem!important;
-            }
-            @media ( min-width: 991px ) {
-                margin-bottom: 2rem;
-            }
-        }
-        &:hover {
             .case-content {
-                // set content over image on hover
-                z-index: 1;
-                background-color: #00B3E4;
-                &.hover-green-bg {
-                    background-color: #20c997;
-                }
-                &.hover-orange-bg {
-                    background-color: #fd7e14;
-                }
-                &.hover-purple-bg {
-                    background-color: #9c27b0;
-                }
-                &.hover-red-bg {
-                    background-color: #bd2130;
-                }
-                &.hover-blue-bg {
-                    background-color: cornflowerblue;
-                }
-                color: @white;
+                background-color: @white;
+                position: relative;
                 transition: @dft-cases-transition-behavior;
-                transform: translateX(-20%);
                 @media @lsmscreen {
-                    transform: translateY(-20%);
+                    > p {
+                        padding-bottom: 80px!important;
+                    }
                 }
-                // overwrite default color
-                h2 {
-                    color: @white;
+                &.bigger-indent {
+                    padding: 30px 21px 38px;
+                    // set indent on mobile corresponding to design
+                    @media @lsmscreen {
+                        padding: 30px 3px 38px;
+                    }
+                }
+                // compressing content corresponding to design
+                &.compresed-case-content {
+                    max-width: 75%;
+                    @media ( max-width: 1199px ) {
+                        max-width: 95%;
+                    }
+                    @media @lsmscreen {
+                        max-width: 100%;
+                    }
+                }
+                &.less-indent {
+                    padding: 18px 25px;
+                    // set indent on mobile corresponding to design
+                    @media @lsmscreen {
+                        padding: 30px 3px 38px;
+                    }
                 }
                 &:after {
-                    border-bottom: 3px solid white;
+                    display: block;
+                    width: 103px;
+                    content: '';
+                    border-bottom: 3px solid black;
                 }
-                &.move-right {
-                    transform: translateX(20%);
+            }
+            // need to implement this offset to set case block (witch positioned vertical) align with other
+            // elements corresponding to design
+            .case-offset-bottom {
+                margin: 38px 0;
+                // start from 991px to fix behavior on breakepoint
+                @media ( max-width: 991px ) {
+                    margin: 20px 0;
+                }
+            }
+            &:hover {
+                .case-content {
+                    // set content over image on hover
+                    z-index: 1;
+                    background-color: #00B3E4;
+                    &.hover-green-bg {
+                        background-color: #20c997;
+                    }
+                    &.hover-orange-bg {
+                        background-color: #fd7e14;
+                    }
+                    &.hover-purple-bg {
+                        background-color: #9c27b0;
+                    }
+                    &.hover-red-bg {
+                        background-color: #bd2130;
+                    }
+                    &.hover-blue-bg {
+                        background-color: cornflowerblue;
+                    }
+                    color: @white;
+                    transition: @dft-cases-transition-behavior;
+                    transform: translateX(-29%);
                     @media @lsmscreen {
                         transform: translateY(-20%);
                     }
-                }
-                &.move-bottom {
-                    @media ( min-width: 1199px ) {
-                        transform: translateY(25%)!important;
+                    // overwrite default color
+                    h2 {
+                        color: @white;
                     }
-                    // fix transform behavior on interval between 991px and 1199px
-                    @media ( max-width: 1199px ) and ( min-width: 991px ) {
-                        transform: translateY(15%)!important;
+                    &:after {
+                        border-bottom: 3px solid white;
                     }
-                    @media ( min-width: 991px ) {
-                        transform: translateY(15%);
+                    &.move-right {
+                        transform: translateX(29%);
+                        @media @lsmscreen {
+                            transform: translateY(-20%);
+                        }
                     }
-                    // fix transform behavior on 992px
-                    @media ( max-width: 991px ) {
-                        transform: translateX(20%)!important;
-                    }
-                    @media @lsmscreen {
-                        transform: translateY(-20%)!important;
+                    &.move-bottom {
+                        @media ( min-width: 1199px ) {
+                            transform: translateY(25%)!important;
+                        }
+                        // fix transform behavior on interval between 991px and 1199px
+                        @media ( max-width: 1199px ) and ( min-width: 991px ) {
+                            transform: translateY(30%)!important;
+                        }
+                        // fix transform behavior on 992px
+                        @media ( max-width: 991px ) {
+                            transform: translateX(25%)!important;
+                        }
+                        @media @lsmscreen {
+                            transform: translateY(-20%)!important;
+                        }
                     }
                 }
             }
@@ -146,17 +133,10 @@
 
     }
     .grey-rectangle {
+        position: relative;
         &:before {
             // set background size corresponding to design for big desktops
-            height: 127%;
-            // set background size corresponding to design for medium desktops
-            @media @mdscreen {
-                height: 108%;
-            }
-            // removing background corresponding to design
-            @media @lsmscreen {
-                background-color: transparent;
-            }
+            height: 600px;
         }
     }
 }
