@@ -4,9 +4,12 @@
 
     .cases-list {
         // indent on mobile corresponding to design
-        padding: 40px;
+        padding-top: 40px;
         @media @lsmscreen {
-           padding-top: 24px;
+            padding-top: 24px;
+            // fix content and header align on small desktop
+            margin: 0 -15px;
+            width: calc(100% + 30px);
         }
         .case-item {
             margin-bottom: 40px;
