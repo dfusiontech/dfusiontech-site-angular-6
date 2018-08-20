@@ -1,0 +1,35 @@
+/**## Black horizontal line under element
+ *
+ * USAGE:
+ * 1) add class .horizontal-line to the element after which you want line to be;
+ * 2) use additional class which define size of line(one of following):
+ *    .s --- small (30px);
+ *    .m --- medium (53px);
+ *    .l --- long (103px);
+ *
+ * EXAMPLE:
+ *
+ * <span class="horizontal-line m"> Under that span will be black line </span>
+ *
+ */
+.horizontal-line {
+    position: relative;
+    padding-bottom: 28px;
+    &:before {
+        content: ' ';
+        height: 3px;
+        background-color: @darkest-grey;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    &.s:before {
+        width: 30px;
+    }
+    &.m:before {
+        width: 53px;
+    }
+    &.l:before {
+        width: 103px;
+    }
+}
