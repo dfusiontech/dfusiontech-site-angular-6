@@ -11,25 +11,27 @@
 @mobile-point-x:    320px;
 
 /* Large desktops and laptops */
-@lgscreen: ~"(min-width: @desktop-hd-point)";
+@lgscreen: ~"(min-width: @{desktop-hd-point})";
 
 /* Portrait tablets and medium desktops */
-@mdscreen: ~"(max-width: @desktop-point)";
+@mdscreen: ~"(max-width: @{desktop-point})";
 
 /* Portrait tablets and small desktops (gsm mean greater than small) */
-@gsmscreen: ~"(min-width: @tablet-point)";
+@gsmscreen: ~"(min-width: @{tablet-point})";
 
 /* Landscape phones and portrait tablets (lsm mean less than small) */
 @lsmscreen: ~"(max-width: 767px)";
 
 /* Landscape phones (extra small)*/
-@xsscreen: ~"(max-width: @mobile-point)";
+@xsscreen: ~"(max-width: @{mobile-point})";
 
 /* Smallest old phones (extra extra small)*/
-@xxsscreen: ~"(max-width: @mobile-point-x)";
+@xxsscreen: ~"(max-width: @{mobile-point-x})";
 
 // height of the footer with fixed height
 @footer-height: 115px;
+@header-height: 77px;
+@header-height-mobile: 57px;
 
 //== Colors
 @black:             #000000;
@@ -75,7 +77,7 @@
 @date-grey:         @dark-grey;
 //** on blocks headline(main page -> CASES/THOUGHTS)
 //** & rectangle behind the "first screen"
-@headline-grey:     @light-grey;
+@headline-grey:     @lightest-grey;
 //** on longitudinal lines and borders
 @lines-grey:        @lighter-grey;
 //** on social icons

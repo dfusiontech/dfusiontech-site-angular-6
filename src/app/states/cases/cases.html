@@ -1,10 +1,194 @@
-
-<h1> I am the Cases page !!! =) </h1>
-
-<h2>There will be list of links to each case soon</h2>
-
-<h3> <a (click)="goToCase(0)"> first case ( function goToCase(0) ) </a> </h3>
-
-<h3> <a (click)="goToCase(1)"> second case ( function goToCase(1) ) </a> </h3>
-
-
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <!-- Adding grey background area on big desktops -->
+            <div
+                *ngIf="casesList"
+                class="container cases-list"
+                [ngClass]="{ 'grey-rectangle': !caseMobileBehavior }"
+                    >
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a
+                            href="javascript:void(0);"
+                            class="d-inline-block case-item"
+                                >
+                            <div class="row d-flex align-items-center">
+                                <div class="col-md-7 col-lg-8">
+                                    <img
+                                        class="case-img"
+                                        alt="Unreel.me project"
+                                        [src]="casesList[0].img"
+                                            >
+                                </div>
+                                <div class="col-md-5 col-lg-4">
+                                    <div class="case-content case-content-medium">
+                                        <h2 class="text-uppercase h3">{{ casesList[0].title }}</h2>
+                                        <p class="m-0 pb-4 pt-2">{{ casesList[0].description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <a
+                            href="javascript:void(0);"
+                            class="d-inline-block case-item"
+                                >
+                            <div class="row d-flex align-items-center">
+                                <div class="col-md-5 ">
+                                    <div class="case-content move-right case-content-small hover-green-bg">
+                                        <h2 class="text-uppercase h3">{{ casesList[1].title }}</h2>
+                                        <p class="m-0 pb-4 pt-2">{{ casesList[1].description }}</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-md-7"
+                                    [ngClass]="{ 'order-first': caseMobileBehavior }"
+                                        >
+                                    <img
+                                        alt="Bottles waiting"
+                                        class="case-img w-100"
+                                        [src]="casesList[1].img"
+                                            >
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            href="javascript:void(0);"
+                            class="d-inline-block case-item"
+                                >
+                            <div class="row d-flex align-items-center">
+                                <div class="col-md-7">
+                                    <img
+                                        alt="Lincoln Center"
+                                        class="case-img w-100"
+                                        [src]="casesList[2].img"
+                                            >
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="case-content hover-orange-bg case-content-small">
+                                        <h2 class="text-uppercase h3">{{ casesList[2].title }}</h2>
+                                        <p class="m-0 pb-4 pt-2">{{ casesList[2].description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4" [ngClass]="{ 'd-flex align-items-end': !caseMediumDesktopBehavior }">
+                        <a
+                            href="javascript:void(0);"
+                            class="d-inline-block case-item"
+                                >
+                            <div
+                                class="row"
+                                [ngClass]="{ 'd-flex align-items-center': caseMediumDesktopBehavior }"
+                                    >
+                                <div
+                                    class="col-md-5 col-lg-12"
+                                    [ngClass]="{ 'd-flex justify-content-end': !caseMediumDesktopBehavior }"
+                                        >
+                                    <div class="case-content compresed-case-content case-content-large hover-purple-bg move-bottom">
+                                        <h2 class="text-uppercase h3">{{ casesList[3].title }}</h2>
+                                        <p class="m-0 pb-4 pt-2">{{ casesList[3].description }}</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-md-7 col-lg-12"
+                                    [ngClass]="{ 'order-first': caseMobileBehavior }"
+                                        >
+                                    <img
+                                        alt="Codefresh"
+                                        class="case-img w-100"
+                                        [src]="casesList[3].img"
+                                            >
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a
+                            href="javascript:void(0);"
+                            class="d-inline-block case-item"
+                                >
+                            <div class="row">
+                                <div class="col-md-5 col-lg-4 d-flex align-items-center">
+                                    <div
+                                        class="case-content case-content-large hover-red-bg"
+                                        [ngClass]="{ 'move-left': caseMediumDesktopBehavior, 'move-right': !caseMediumDesktopBehavior }"
+                                            >
+                                        <h2 class="text-uppercase h3">{{ casesList[4].title }}</h2>
+                                        <p class="m-0 pb-4 pt-2">{{ casesList[4].description }}</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-md-7 col-lg-8"
+                                    [ngClass]="{ 'order-first': caseMediumDesktopBehavior }"
+                                        >
+                                    <img
+                                        alt="Almentor"
+                                        class="case-img"
+                                        [src]="casesList[4].img"
+                                            >
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a
+                            href="javascript:void(0);"
+                            class="d-inline-block case-item last-case-item "
+                                >
+                            <div class="row">
+                                <div
+                                    class="col-md-7 col-lg-8"
+                                    [ngClass]="{ 'order-first': caseMobileBehavior }"
+                                        >
+                                    <img
+                                        alt="WorldTV"
+                                        class="case-img"
+                                        [src]="casesList[5].img"
+                                            >
+                                </div>
+                                <div
+                                    class="col-md-5 col-lg-4 d-flex align-items-center"
+                                    [ngClass]="{ 'order-first': caseMediumDesktopBehavior }"
+                                        >
+                                    <div
+                                        class="case-content case-content-large hover-blue-bg"
+                                        [ngClass]="{ 'move-right': caseMediumDesktopBehavior }"
+                                            >
+                                        <h2 class="text-uppercase h3">{{ casesList[5].title }}</h2>
+                                        <p class="m-0 pb-4 pt-2">{{ casesList[5].description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 fff-bg text-center dft-chat-wrapper">
+                        <h2
+                            class="font-weight-bold"
+                            [ngClass]="{ 'h4': caseMobileBehavior }"
+                                >
+                            HAVE PROJECT FOR US?
+                        </h2>
+                        <a
+                            uiSref="contacts"
+                            class="btn dft-btn mx-auto chat-content"
+                                >
+                            LET'S CHAT
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
