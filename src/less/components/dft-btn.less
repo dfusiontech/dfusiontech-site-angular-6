@@ -1,9 +1,13 @@
-@d-btn-color:                  @white;
-@d-btn-background:         @malachite;
+@dft-btn-color:                  @white;
+@dft-btn-background:         @malachite;
 
-@d-btn-color-hover:        @malachite;
-@d-btn-background-hover:       @white;
-@d-btn-border-color-hover: @malachite;
+@dft-btn-color-hover:        @malachite;
+@dft-btn-background-hover:       @white;
+@dft-btn-border-color-hover: @malachite;
+
+@dft-btn-border-size: 2px;
+@dft-btn-height: 40px;
+@dft-btn-width: 151px;
 /*
  * Example of using dft-btn
  *
@@ -13,27 +17,50 @@
  * To set disabled style the "boolean" variable must be equal to true.
  *
  * template example
- * <button [ngClass]="{ 'disabled': boolean }" [disabled]="boolean" type="button" class="btn dft-btn">BUTTON</button>
+ * <button [ngClass]="{ 'disabled': boolean }" [disabled]="boolean" type="button" class="btn dft-btn">
+ *          <span class="dft-btn-label">BUTTON</span>
+ *          <div class="slider"></div>
+ * </button>
  */
 .btn {
     &.dft-btn {
-
+        position: relative;
         font-size: 16px;
-        //padding: 0.5rem 2.2rem;
         display: block;
-        background-color: @d-btn-background;
-        border: 2px solid transparent;
-        color: @d-btn-color;
+        background-color: @dft-btn-background;
+        border: @dft-btn-border-size solid transparent;
+        color: @dft-btn-color;
         font-weight: 500;
         box-sizing: border-box;
-        width: 151px;
-        height: 44px;
+        height: @dft-btn-height;
+        width: @dft-btn-width;
         .border-radius ( 0px );
-        .transition ( all 0.3s ease-in-out );
+        .transition ( 0.3s ease-in-out );
+        .slider {
+            background: transparent;
+            top: 0;
+            // to get needed animation effect this slider fit button size
+            width: calc( @dft-btn-width - @dft-btn-border-size*2 );
+            height: calc( @dft-btn-height - @dft-btn-border-size*2 );
+            position: absolute;
+            // set initial slider place to get effect corresponding to design
+            left: calc( -@dft-btn-width + -@dft-btn-border-size );
+            transform: skew(30deg);
+            -webkit-transform: skew(30deg);
+            .transition ( 0.3s ease-in-out );
+        }
+        .dft-btn-label {
+            // to prevent overwriting of button label by slider
+            position: relative;
+            z-index: 1;
+        }
         &:hover, &:focus, &:active, &.active {
-            background-color: @d-btn-background-hover;
-            color: @d-btn-color-hover;
-            border-color: @d-btn-border-color-hover;
+            color: @dft-btn-color-hover;
+            border-color: @dft-btn-border-color-hover;
+        }
+        &:hover > .slider {
+            transform: translateX( calc( @dft-btn-width + @dft-btn-border-size ) );
+            background-color: white;
         }
         &.disabled {
             cursor: not-allowed;
@@ -41,9 +68,7 @@
             color: @white;
             border-color: transparent;
         }
-        @media @lsmscreen {
-            width: 154.26px;
-            height: 45px;
-        }
     }
 }
+
+
