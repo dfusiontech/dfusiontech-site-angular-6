@@ -6,7 +6,7 @@ import { HeaderComponent } from "../../components/header/header.component";
  *
  *
  */
-export const caseState = {
+export const casePageState = {
     name: 'case-page',
     url: '/case-page', // there should be single case name or number
     views: {

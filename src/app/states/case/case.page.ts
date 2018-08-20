@@ -4,7 +4,7 @@ import { StateService } from "@uirouter/angular";
 
 @Component({
     selector: '[id="case-page"]',
-    templateUrl: './case.html'
+    templateUrl: './case-page.html'
 })
 export class CasePage implements OnInit {
     /**
