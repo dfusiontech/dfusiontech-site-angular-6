@@ -26,6 +26,7 @@ import { ThoughtsItemPage } from "./thoughts-item/thoughts-item.page";
 import { AboutUsPage } from "./about-us/about-us.page";
 import { ContactsPage } from "./contacts/contacts.page";
 import { CasesService } from "../services/Cases.service";
+import { LetsChatComponent } from "../components/let's-chat/lets-chat.component";
 
 /**
  * define all pages within application
@@ -57,6 +58,7 @@ export const routing: RootModule = {
     declarations: [
         HeaderComponent,
         FooterComponent,
+        LetsChatComponent,
         LayoutComponent,
         HomePage,
         CasesPage,
