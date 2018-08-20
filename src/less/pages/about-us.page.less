@@ -1,10 +1,119 @@
 #aboutus {
+
+    .heading-block {
+        max-height: 1030px;
+        padding-bottom: 0;
+
+        .heading-title {
+            padding: 95px 60px;
+            transition: padding 100ms ease;
+
+            @media @lsmscreen {
+                padding: 75px 20px;
+            }
+
+            @media @xsscreen {
+                padding: 40px 25px 25px;
+            }
+        }
+
+        @media @lsmscreen {
+            margin: 0 -15px 60px;
+        }
+
+        @media @xsscreen {
+            padding-bottom: 55px;
+        }
+    }
+
     .picture-rectangle {
         &:before {
+            content: '';
+            position: absolute;
+            right: 52%;
+            top: 0;
             background-image: url('../../assets/images/pages/about-us/heading-bg.png');
-            content: ' ';
-            width: 100px;
-            height: 100px;
+            background-size: auto 100%;
+            background-position: center;
+            left: -135px;
+            height: 100%;
+            transition: width 100ms ease;
+
+            @media @mdscreen {
+                right: 55%;
+            }
+
+            @media @lsmscreen {
+                right: 55%;
+            }
+
+            @media @mobile-point {
+                right: 55%;
+            }
+
+            @media @xsscreen {
+                right: 55%;
+                left: -20px;
+            }
         }
+    }
+
+    .thesis {
+        color: @black;
+        font-size: 15px;
+        font-weight: 300;
+        margin-bottom: 30px;
+    }
+
+    .heading-about {
+        background-color: @white;
+        overflow: hidden;
+        max-height: 590px;
+
+        .theses-wrapper {
+            width: 52%;
+            padding: 40px 65px;
+
+            :last-child {
+                margin-bottom: 0;
+            }
+
+            @media (max-width: @desktop-hd-point) {
+                padding: 30px 60px;
+
+                .two {
+                    display: none;
+                }
+            }
+
+            @media @mdscreen {
+                padding: 15px 60px;
+                width: 55%;
+
+                .one {
+                    margin-bottom: 0;
+                }
+
+                .three {
+                    display: none;
+                }
+            }
+
+            @media @lsmscreen {
+                padding: 10px 40px;
+
+            }
+
+            @media @xsscreen {
+                display: none;
+                .one {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .hidden-theses {
+
     }
 }
