@@ -1,0 +1,39 @@
+/**
+ * dFusion tech list component represented by class
+ *
+ * USAGE:
+ *
+ * 1) add class .dft-list to list (ul/ol tag);
+ * 2) add .dft-li class to all list items (li tags);
+ * 3) place span tag with class .dft-li-text into list items;
+ *
+ * EXAMPLE:
+ *
+ * <ol class="dft-list">
+ *     <li class="dft-li">
+ *         <span class="dft-li-text">
+ *             Some point
+ *         </span>
+ *     </li>
+ *     <li class="dft-li">
+ *         <span class="dft-li-text">
+ *             Another point
+ *         </span>
+ *     </li>
+ * </ol>
+ */
+.dft-list {
+    padding: 10px 0 10px 45px;
+    margin: 0;
+
+    .dft-li {
+        padding: 0 0 10px 15px;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: bold;
+
+        .dft-li-text {
+            font-weight: normal;
+        }
+    }
+}
