@@ -10,7 +10,7 @@ export class LetsChatComponent implements OnInit {
 
     constructor() {}
     ngOnInit() {
-        if ( window.innerWidth > this.mobileRestructuringPoint ) {
+        if ( window.innerWidth < this.mobileRestructuringPoint ) {
             this.caseMobileBehavior = true;
         } else {
             this.caseMobileBehavior = false;
@@ -19,7 +19,7 @@ export class LetsChatComponent implements OnInit {
     }
     // find out width of current desktop and set needed header height value and transmit it to on scroll event
     @HostListener('window:resize') onResize() {
-        if ( window.innerWidth > this.mobileRestructuringPoint ) {
+        if ( window.innerWidth < this.mobileRestructuringPoint ) {
             this.caseMobileBehavior = true;
         } else {
             this.caseMobileBehavior = false;
