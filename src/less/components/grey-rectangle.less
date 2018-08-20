@@ -1,0 +1,49 @@
+/**
+ *## Grey Rectangle behind some block;
+ *
+ * size depends on parent of element which have this class
+ */
+.grey-rectangle {
+    &:before {
+        content: '';
+        position: absolute;
+
+        right: 52%;
+        top: 0;
+        background-color: @headline-grey;
+        left: -135px;
+        height: 100%;
+        transition: width 100ms ease;
+
+        @media @mdscreen {
+            right: 55%;
+            left: -135px;
+        }
+
+        @media @lsmscreen {
+            right: 55%;
+            left: -135px;
+        }
+
+        @media @mobile-point {
+            right: 55%;
+            left: -135px;
+        }
+    }
+    &.left {
+        &:before {
+            left: -135px;
+            right: auto;
+            @media @mdscreen {
+                left: -135px;
+                right: auto;
+            }
+            @media @lsmscreen {
+                left: -135px;
+            }
+            @media @mobile-point {
+                left: -135px;
+            }
+        }
+    }
+}

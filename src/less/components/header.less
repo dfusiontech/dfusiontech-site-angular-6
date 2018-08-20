@@ -2,7 +2,7 @@
     // set local variables
     @dft-logo-desktop: 95px;
     @dft-logo-mobile: @header-height-mobile;
-    @list-border-hover: @malachite;
+    @nav-item-border-hover: @malachite;
     @list-border-size: 4px;
     @list-item-offset: 10px;
     @social-link-color: @icon-grey;
@@ -83,7 +83,7 @@
         transition: @dft-navbar-transition-behavior;
         box-shadow: 0px 3px 9px rgba(0,0,0,.1);
     }
-    .dft-list {
+    .dft-list-horizontal {
         // prevent overwriting of lines corresponding to design
         z-index: 3;
         // set width corresponding to design
@@ -91,13 +91,24 @@
         // menu behaviour
         @media @gsmscreen {
             &>li>.dft-link {
+                position: relative;
                 // set menu height equal to header height corresponding to design
                 height: @header-height;
-                border-top: @list-border-size solid transparent;
-                border-bottom: @list-border-size solid transparent;
-                &:hover, &.active, &:active {
-                    transition: ease-out 0.5s;
-                    border-top: @list-border-size solid @list-border-hover;
+                // implementing animation corresponding to design
+                &:after{
+                    top:0;
+                    content:"";
+                    display:block;
+                    height:4px;
+                    left:50%;
+                    position:absolute;
+                    background:@nav-item-border-hover;
+                    transition:width .3s ease 0s,left .3s ease 0s;
+                    width:0;
+                }
+                &:hover:after, &.active:after, &.active:after, &:active:after {
+                    width:100%;
+                    left:0;
                 }
             }
         }
