@@ -1,43 +1,51 @@
 // outsource
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
+import { CasesService } from "../../services/Cases.service";
 
 @Component({
     selector: '[id="cases"]',
     templateUrl: './cases.html'
 })
 export class CasesPage implements OnInit {
-    /**
-     * using vm to define public data of the page
-     * and delegate prepared properties
-     *
-     */
-    public vm = {
+    public casesList;
+    public caseMobileBehavior;
+    public caseMediumDesktopBehavior;
+    public caseRestructuringPointMobile = 768;
+    public caseRestructuringPointDesktop = 992;
+    constructor ( private state: StateService, private casesService: CasesService) {};
 
-    };
-
-    /**
-     * constructor holder to define what exactly past in public vm object
-     *
-     *
-     */
-    constructor ( private state: StateService ) {
-
-    };
-
-
-    /**
-     * example of programmatically redirect
-     *
-     *
-     */
-    public goToCase (caseId) { // Here should be logic of opening different cases (maybe here should be called service)
-        if(caseId == 0) {
-            this.state.go('casesItem');
-        } else if(caseId == 1) {
-            this.state.go('casesItem');
+    ngOnInit() {
+        this.casesService.getCases().then(data => {
+            console.log(data);
+            this.casesList = data;
+            console.log(this.casesList);
+        });
+        // changing cases content order on mobile
+        if ( window.innerWidth < this.caseRestructuringPointMobile ) {
+            this.caseMobileBehavior = true;
+        } else {
+            this.caseMobileBehavior = false;
+        }
+        // changing cases content order on medium desktop
+        if ( window.innerWidth < this.caseRestructuringPointDesktop ) {
+            this.caseMediumDesktopBehavior = true;
+        } else {
+            this.caseMediumDesktopBehavior = false;
         }
     };
 
-    ngOnInit() {};
+    @HostListener('window:resize') onResize() {
+        if ( window.innerWidth < this.caseRestructuringPointMobile ) {
+            this.caseMobileBehavior = true;
+        } else {
+            this.caseMobileBehavior = false;
+        }
+        // for medium desktop
+        if ( window.innerWidth < this.caseRestructuringPointDesktop ) {
+            this.caseMediumDesktopBehavior = true;
+        } else {
+            this.caseMediumDesktopBehavior = false;
+        }
+    }
 }

@@ -3,10 +3,10 @@ import { Component, OnInit } from "@angular/core";
 import { StateService } from "@uirouter/angular";
 
 @Component({
-    selector: '[id="casesItem"]',
-    templateUrl: './cases-item.html'
+    selector: '[id="case"]',
+    templateUrl: './case.html'
 })
-export class CasesItemPage implements OnInit {
+export class CasePage implements OnInit {
     /**
      * using vm to define public data of the page
      * and delegate prepared properties
