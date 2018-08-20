@@ -84,10 +84,15 @@
         width: 103px;
     }
 }
-
-/**
+/**## Class decorator for dates
  *
+ * USAGE:
  *
+ * Add class .date to element
+ *
+ * EXAMPLE:
+ *
+ * <span class="date">may 4, 2018</span>
  *
  */
 .date {
@@ -96,4 +101,39 @@
     font-size: 14px;
     text-transform: uppercase;
     color: @date-grey;
+}
+
+.quote-signs {
+    position: relative;
+    padding: 0 40px;
+
+    &:before, &:after {
+        font-family: '@{icomoon-font-family}' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        font-size: 24.89px;
+        color: @quote-grey;
+    }
+    &:before {
+        //margin-right: 1.3456em;
+        top: 0;
+        left: 0;
+        content: @dft-quote-open;
+    }
+
+    &:after {
+        //margin-right: -1.3456em;
+        bottom: 0;
+        right: 0;
+        content: @dft-quote-close;
+    }
 }

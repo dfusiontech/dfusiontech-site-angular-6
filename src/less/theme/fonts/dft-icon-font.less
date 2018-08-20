@@ -36,7 +36,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.dft-quote-open {
+    &:before {
+        content: @dft-quote-open;
+    }
+}
+.dft-quote-close {
+    &:before {
+        content: @dft-quote-close;
+    }
+}
 .dft-arrow-right {
     &:before {
         content: @dft-arrow-right;
