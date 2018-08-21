@@ -1,6 +1,278 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <!-- Adding grey background area on large desktops -->
+            <div
+                class="container"
+                [ngClass]="{ 'grey-rectangle': caseXlgDesktopBehavior }"
+                    >
+                <div class="case-wrapper">
+                    <!-- Setting place for absolutely positioned heading description content on big desktop -->
+                    <div class="row"  [ngClass]="{ 'heading-case-size': !caseMobileDesktopBehavior }">
+                        <div class="col-12">
+                            <img
+                                alt="unreel.me"
+                                class="heading-case-img"
+                                src="assets/images/pages/case-page/unreel.me.jpg"
+                                    >
+                        </div>
+                        <!-- Changing behavior of this content on small desktops corresponding to design -->
+                        <div [ngClass]="{ 'col-12': caseMobileDesktopBehavior }" >
+                            <div class="heading-case-description">
+                                <h2 class="h1 mb-2">
+                                    Unreel.me
+                                </h2>
+                                <p>
+                                    This project is a complex of Back-End and Front- End applications that manage different
+                                    technologies and integrates with a couple of 3rd party media content providers. The main
+                                    purpose of the system is to build 'next generation’s' tool for content owners to distribute
+                                    and monetize their media and to become a convenient and flexible tool for the media consumers.
+                                    Therefore, the goal of the system is to become sweet home for Content Creators and a Playground for Fans!
+                                </p>
+                                <span class="heading-case-subscription horizontal-line l">
+                                    unreel.me
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="case-content">
+                                <h2 class="mb-3">Challenge</h2>
+                                <p class="mb-4">
+                                    Later on, the team grew up on our side and some Back-End and Frontend developers had
+                                    joined the team; we also had our own DevOps Engineer on the project. The goal set
+                                    was also expanded and we started to get tasks on the new media content generation
+                                    and automation of the applications lifecycle.
+                                </p>
+                                <p>
+                                    For that moment, our team had also involved the development of the predictive
+                                    engine- integration with the 3rd party systems and media content analysis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 grey-rectangle-long">
+                            <div class="position-relative">
+                                <img
+                                    alt="project"
+                                    class="img-fluid w-100"
+                                    src="assets/images/pages/case-page/screenshot-project-1.jpg"
+                                        >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Removing border corresponding to design -->
+                            <div class="case-content hide-border">
+                                <h2 class="mb-3">Solution</h2>
+                                <p class="mb-4">
+                                    By then, the Back- End application was only able to find YouTube videos by YouTube’s
+                                    channel ID using a single thread at that time. Our main goal was to highly extend
+                                    the Back-End functionality and provide an ability to use scalable multi-thread and
+                                    multi-node application’s configuration.
+                                </p>
+                                <p class="mb-5">
+                                    Our team had started with a single Back-End Developer who became a part of the
+                                    international development team. Our team had started with a single Back-End
+                                    Developer who became a part of the international development team.
+                                </p>
+                                <dl
+                                    class="row text-center align-items-center justify-content-center"
+                                        >
+                                    <dt class="h2 col-12 mb-3">Technology Stack</dt>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="java"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/Java.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="spring"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/spring.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="api google"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/api-google.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="amazon"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/AWS.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="swagger"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/swagger.png"
+                                                >
+                                    </dd>
+                                    <!-- Corresponding to design need to separate those content on medium desktop -->
+                                    <div class="w-100" [ngClass]="{ 'd-none': caseMobileDesktopBehavior || caseXlgDesktopBehavior }"></div>
 
-<h1> I am the page of Single Case !!! =) </h1>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="rest facebook"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/restfb.png"
+                                                >
+                                    </dd>
+                                    <!-- Corresponding to design need to separate those content on extra large desktop -->
+                                    <div class="w-100" [ngClass]="{ 'd-none': !caseXlgDesktopBehavior }"></div>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="JRAW"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/jra.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="jUnit"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/jUnit.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="mockito"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/Mockito.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="node"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/Node.png"
+                                                >
+                                    </dd>
+                                    <!-- Corresponding to design need to separate those content on medium desktop -->
+                                    <div class="w-100" [ngClass]="{ 'd-none': caseMobileDesktopBehavior || caseXlgDesktopBehavior }"></div>
 
-<h2> <a href="#/cases"> cases (href) </a> </h2>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="FFmpeg"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/FFmpeg.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="algolia"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/algolia.png"
+                                                >
+                                    </dd>
 
-<h2 uiSrefActive="active"> <a uiSref="home"> home (uiSref) </a> </h2>
+                                    <!-- Corresponding to design need to separate those content on extra large desktop -->
+                                    <div class="w-100" [ngClass]="{ 'd-none': !caseXlgDesktopBehavior }"></div>
+
+                                    <!-- on large screen there would be seven columns inline -->
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="mongoose"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/mongoose.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="prediction"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/prediction.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="express"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/express.png"
+                                                >
+                                    </dd>
+
+                                    <!-- Corresponding to design need to separate those content on medium desktop -->
+                                    <div class="w-100" [ngClass]="{ 'd-none': caseMobileDesktopBehavior || caseXlgDesktopBehavior }"></div>
+
+                                    <dd class="col-4 col-md col-xl mb-5">
+                                        <img
+                                            alt="rabbitmq"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/rabbitmq.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-3 col-md col-xl mb-5">
+                                        <img
+                                            alt="bootstrap"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/bootstrap.png"
+                                                >
+                                    </dd>
+
+                                    <!-- Corresponding to design need to separate those content on small desktop -->
+                                    <div class="w-100" [ngClass]="{ 'd-none': !caseMobileDesktopBehavior }"></div>
+
+                                    <dd class="col-3 col-md col-xl mb-5">
+                                        <img
+                                            alt="angular"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/angular.png"
+                                                >
+                                    </dd>
+                                    <dd class="col-2 col-md col-xl mb-5">
+                                        <img
+                                            alt="ui"
+                                            class="img-fluid"
+                                            src="assets/images/pages/case-page/technology-stack/ui.png"
+                                                >
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 grey-rectangle-long big">
+                            <div class="position-relative pt-5 pb-5">
+                                <img
+                                    alt="project"
+                                    class="img-fluid w-100"
+                                    src="assets/images/pages/case-page/screenshot-project-2.jpg"
+                                        >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 fff-bg text-center dft-chat-wrapper">
+                            <div>
+                                <h2
+                                    class="font-weight-bold"
+                                    [ngClass]="{ 'h4': caseMobileDesktopBehavior }"
+                                        >
+                                    HAVE PROJECT FOR US?
+                                </h2>
+                                <a
+                                    uiSref="contacts"
+                                    class="d-inline-block btn dft-btn mx-auto chat-content"
+                                        >
+                                    <span class="dft-btn-label">LET'S CHAT</span>
+                                    <div class="slider"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
