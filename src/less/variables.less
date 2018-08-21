@@ -28,6 +28,17 @@
 /* Smallest old phones (extra extra small)*/
 @xxsscreen: ~"(max-width: @{mobile-point-x})";
 
+/* Additional class for bootstrap utilities */
+@media (min-width: @mobile-point) {
+    .d-xs-block {
+        display: block !important;
+    }
+
+    .d-xs-none {
+        display: none !important;
+    }
+}
+
 // height of the footer with fixed height
 @footer-height: 115px;
 @header-height: 77px;
