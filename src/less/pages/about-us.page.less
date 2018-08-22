@@ -307,6 +307,10 @@
                     height: 240px;
 
                 }
+
+                @media @xsscreen {
+                    height: 115px;
+                }
             }
 
             .vertical {
@@ -357,6 +361,19 @@
 
                 @media @lsmscreen {
                     height: 510px;
+                }
+
+                @media @xsscreen {
+                    height: 260px;
+
+                    img, &.Eugene img {
+                        width: 115px;
+
+                    }
+
+                    &.Oleg .col-12:not(.business-card) {
+                        //text-align: right;
+                    }
                 }
             }
         }
