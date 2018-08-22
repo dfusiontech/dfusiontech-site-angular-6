@@ -8,7 +8,7 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
 // app states
 import { homeState } from "./home/home.state";
 import { casesState } from "./cases/cases.state";
-import { caseState } from "./case/case.state";
+import { casePageState } from "./case/case-page.state";
 import { thoughtsState } from "./thoughts/thoughts.state";
 import { aboutUsState } from "./about-us/about-us.state";
 import { contactsState } from "./contacts/contacts.state";
@@ -26,6 +26,7 @@ import { ThoughtsItemPage } from "./thoughts-item/thoughts-item.page";
 import { AboutUsPage } from "./about-us/about-us.page";
 import { ContactsPage } from "./contacts/contacts.page";
 import { CasesService } from "../services/Cases.service";
+import { LetsChatComponent } from "../components/let's-chat/lets-chat.component";
 
 /**
  * define all pages within application
@@ -33,13 +34,13 @@ import { CasesService } from "../services/Cases.service";
  *
  */
 export const routing: RootModule = {
-    // useHash: false, // html5mode - without #
-    useHash: true, // with #
+    useHash: false, // html5mode - without #
+    // useHash: true, // with #
     otherwise: homeState.url,
     states: [
         homeState,
         casesState,
-        caseState,
+        casePageState,
         thoughtsState,
         thoughtsItemState,
         aboutUsState,
@@ -57,6 +58,7 @@ export const routing: RootModule = {
     declarations: [
         HeaderComponent,
         FooterComponent,
+        LetsChatComponent,
         LayoutComponent,
         HomePage,
         CasesPage,
