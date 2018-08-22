@@ -153,9 +153,14 @@
     .thoughts-wrapper {
         position: relative;
         transition: all ease 250ms;
+        margin-bottom: 100px;
 
         @media @lsmscreen {
-            margin: 0 -15px;
+            margin: 0 -15px 70px;
+        }
+
+        @media @xsscreen {
+            margin-bottom: 60px;
         }
 
         .thought {
