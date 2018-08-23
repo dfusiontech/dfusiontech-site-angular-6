@@ -8,13 +8,14 @@
         .form-wrapper {
             padding: 75px 170px 30px;
             font-size: 16px;
+            transition: padding 250ms ease;
 
             @media @lsmscreen {
                 padding: 70px 80px;
             }
 
-            @media @xxsscreen {
-
+            @media @xsscreen {
+                padding: 50px 0 ;
             }
 
             input, textarea {
@@ -22,6 +23,7 @@
                 border: none;
                 outline: none !important;
                 box-shadow: none;
+                //transition: width 250ms ease;
             }
 
             textarea {
