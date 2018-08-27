@@ -1,4 +1,5 @@
 #home {
+    position: relative;
     @dft-cases-transition-behavior: 500ms ease-out;
     overflow: hidden;
 
@@ -22,9 +23,9 @@
 
     .cases-list {
         // indent on mobile corresponding to design
-        padding-top: 40px;
+        //padding-top: 40px;
         @media @lsmscreen {
-            padding-top: 24px;
+            //padding-top: 24px;
             // fix content and header align on small desktop
             margin: 0 -15px;
             width: calc(100% + 30px);
@@ -258,29 +259,6 @@
                 @media @xsscreen {
                     margin-bottom: 100px;
                 }
-            }
-        }
-    }
-
-    .grey-rectangle-long {
-        &:before {
-            content: '';
-            position: absolute;
-            top: 20%;
-            background-color: @headline-grey;
-            right: -135px;
-            left: -135px;
-            height: 50%;
-        }
-        &.big {
-            &:before {
-                content: '';
-                position: absolute;
-                background-color: @headline-grey;
-                top: 0;
-                right: -135px;
-                left: -135px;
-                height: 100%;
             }
         }
     }

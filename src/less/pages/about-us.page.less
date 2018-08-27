@@ -240,8 +240,18 @@
             }
         }
     }
+    // changing margin-bottom due to unique layout
+    .grey-headline {
+        margin-bottom: -0.6em;
+    }
 
     .team-leaders {
+
+        @media @lsmscreen {
+            margin-left: -15px;
+            margin-right: -15px;
+            width: calc(100% + 30px);
+        }
         .col-12 {
             //background-color: deeppink;
             //max-height: 450px;

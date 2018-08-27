@@ -4,13 +4,14 @@
  * size depends on parent of element which have this class
  */
 .grey-rectangle {
+    position: relative;
     &:before {
         content: '';
         position: absolute;
 
         right: 52%;
         top: 0;
-        background-color: @headline-grey;
+        background-color: @rectangle-grey;
         left: -135px;
         height: 100%;
         transition: width 100ms ease;
@@ -44,6 +45,29 @@
             }
             @media @mobile-point {
                 left: -135px;
+            }
+        }
+    }
+
+    &-long {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            background-color: @rectangle-grey;
+            right: -135px;
+            left: -135px;
+            height: 50%;
+        }
+        &.big {
+            &:before {
+                content: '';
+                position: absolute;
+                background-color: @rectangle-grey;
+                top: 0;
+                right: -135px;
+                left: -135px;
+                height: 100%;
             }
         }
     }
