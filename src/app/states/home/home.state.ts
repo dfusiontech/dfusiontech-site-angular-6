@@ -1,12 +1,15 @@
 import { HomePage } from "./home.page";
-
+import { HeaderComponent } from "../../components/header/header.component";
 /**
- * Metada of home state
+ * Metadata of home state
  *
  *
  */
 export const homeState = {
     name: 'home',
     url: '/home',
-    component: HomePage,
+    views: {
+        header: { component: HeaderComponent },
+        $default: { component: HomePage },
+    },
 };

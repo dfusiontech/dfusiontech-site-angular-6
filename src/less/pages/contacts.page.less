@@ -1,0 +1,51 @@
+#contacts {
+    position: relative;
+
+    .contact-block {
+        //margin: 0 -16px;
+        background-color: @lighter-grey;
+        //padding: 0 16px;
+        .form-wrapper {
+            padding: 75px 170px 30px;
+            font-size: 16px;
+
+            @media @lsmscreen {
+                padding: 70px 80px;
+            }
+
+            @media @xxsscreen {
+
+            }
+
+            input, textarea {
+                border-radius: 0;
+                border: none;
+                outline: none !important;
+                box-shadow: none;
+            }
+
+            textarea {
+                height: 256px;
+                resize: none;
+            }
+
+            @media (min-width: @desktop-point) {
+                .form-group.col-md-12.col-lg-6 {
+                    #inputName {
+                        width: calc(100% - 9px);
+                    }
+
+                    #inputEmail {
+                        margin-left: 11px;
+                        width: calc(100% - 11px);
+                    }
+
+                    label[for='inputEmail'] {
+                        margin-left: 11px;
+                    }
+                }
+            }
+        }
+    }
+
+}

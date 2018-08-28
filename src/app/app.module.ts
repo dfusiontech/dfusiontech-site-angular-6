@@ -6,9 +6,7 @@ import { LayoutModule } from "./states/layout.module";
 import { LayoutComponent } from './states/layout.component';
 
 @NgModule({
-  declarations: [
-    LayoutComponent,
-  ],
+  declarations: [],
   imports: [
     BrowserModule,
     LayoutModule

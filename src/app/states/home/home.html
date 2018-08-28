@@ -1,8 +1,183 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <section class="heading-block grey-rectangle">
+                    <div class="heading-title">
+                        <h1>
+                            it doesn’t matter where you start — try us and we’ll bring you up
+                        </h1>
+                    </div>
+                    <a pageScroll pageScrolllTarget="#lets-chat" [pageScrollOffset]="77" href="#lets-chat" class="anchor-to-form"><i class="dft dft-arrow-down"></i></a>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <section class="cases" *ngIf="casesList">
+                    <!-- Wrapper to fix content behavior on small desktop-->
+                    <div class="cases-list">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a
+                                    uiSref="case-page"
+                                    class="d-inline-block case-item"
+                                >
+                                    <div class="row align-items-center">
+                                        <div class="col-md-7 col-lg-8">
+                                            <img
+                                                class="case-img"
+                                                alt="Unreel.me project"
+                                                [src]="casesList[0].img"
+                                            >
+                                        </div>
+                                        <div class="col-md-5 col-lg-4">
+                                            <div class="case-content case-content-medium">
+                                                <h2 class="text-uppercase h3">{{ casesList[0].title }}</h2>
+                                                <p class="m-0 pb-4 pt-2">{{ casesList[0].description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <a
+                                    uiSref="case-page"
+                                    class="d-inline-block case-item"
+                                >
+                                    <div class="row align-items-center">
+                                        <div class="col-md-5 ">
+                                            <div class="case-content move-right case-content-small hover-green-bg">
+                                                <h2 class="text-uppercase h3">{{ casesList[1].title }}</h2>
+                                                <p class="m-0 pb-4 pt-2">{{ casesList[1].description }}</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-md-7"
+                                            [ngClass]="{ 'order-first': caseMobileBehavior }"
+                                        >
+                                            <img
+                                                alt="Bottles waiting"
+                                                class="case-img w-100"
+                                                [src]="casesList[1].img"
+                                            >
+                                        </div>
+                                    </div>
+                                </a>
+                                <a
+                                    uiSref="case-page"
+                                    class="d-inline-block case-item"
+                                >
+                                    <div class="row align-items-center">
+                                        <div class="col-md-7">
+                                            <img
+                                                alt="Lincoln Center"
+                                                class="case-img w-100"
+                                                [src]="casesList[2].img"
+                                            >
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="case-content hover-orange-bg case-content-small">
+                                                <h2 class="text-uppercase h3">{{ casesList[2].title }}</h2>
+                                                <p class="m-0 pb-4 pt-2">{{ casesList[2].description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4" [ngClass]="{ 'd-flex align-items-end': !caseMediumDesktopBehavior }">
+                                <a
+                                    uiSref="case-page"
+                                    class="d-inline-block case-item"
+                                >
+                                    <div
+                                        class="row"
+                                        [ngClass]="{ 'align-items-center': caseMediumDesktopBehavior }"
+                                    >
+                                        <div
+                                            class="col-md-5 col-lg-12"
+                                            [ngClass]="{ 'd-flex justify-content-end': !caseMediumDesktopBehavior }"
+                                        >
+                                            <div class="case-content compresed-case-content case-content-large hover-purple-bg move-bottom">
+                                                <h2 class="text-uppercase h3">{{ casesList[3].title }}</h2>
+                                                <p class="m-0 pb-4 pt-2">{{ casesList[3].description }}</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-md-7 col-lg-12"
+                                            [ngClass]="{ 'order-first': caseMobileBehavior }"
+                                        >
+                                            <img
+                                                alt="Codefresh"
+                                                class="case-img w-100"
+                                                [src]="casesList[3].img"
+                                            >
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <section id="lets-chat"></section>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 grey-rectangle-long">
+            <div class="container">
+                <section class="thoughts-wrapper">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="thought">
+                                <div class="thought-title">
+                                    <a uiSref="thoughtsItem" title="Business model v.1" style="background-image: url('../../../assets/images/thoughts-page/business-1.png');"></a>
+                                </div>
+                                <div class="thought-description">
+                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="Business model v.1">Business model v.1</a></h3>
+                                    <p class="description">This project is a complex of Back-End and Front- End applications that manages different technologies and ..</p>
+                                    <span class="date horizontal-line m">may 4, 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="thought">
+                                <div class="thought-title">
+                                    <a uiSref="thoughtsItem" title="The story of one project..." style="background-image: url('../../../assets/images/thoughts-page/story-1.png');"></a>
+                                </div>
+                                <div class="thought-description">
+                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="The story of one project...">The story of one project...</a></h3>
+                                    <p class="description">During our 8-years of experience working on Java development, we’ve never shared our successful projects..</p>
+                                    <span class="date horizontal-line m">may 4, 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="thought">
+                                <div class="thought-title">
+                                    <a uiSref="thoughtsItem" title="Lincoln Center" style="background-image: url('../../../assets/images/thoughts-page/lincoln-center-1.png');"></a>
+                                </div>
+                                <div class="thought-description">
+                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="Lincoln Center">Lincoln Center</a></h3>
+                                    <p class="description">Lincoln Center - The world’s leading performing arts center. Located in the heart of New York City on a 16-acr…</p>
+                                    <span class="date horizontal-line m">may 4, 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h1> I am the Home page !!! =) </h1>
-
-<h2> <a href="#/login"> login (href) </a> </h2>
-
-<h2> <a (click)="goLogin()"> login (function) </a> </h2>
-
-<h2 uiSrefActive="active"> <a uiSref="login"> login (uiSref) </a> </h2>

@@ -1,0 +1,214 @@
+#header {
+    // set local variables
+    @dft-logo-desktop: 95px;
+    @dft-logo-mobile: @header-height-mobile;
+    @nav-item-border-hover: @malachite;
+    @list-border-size: 4px;
+    @list-item-offset: 10px;
+    @social-link-color: @icon-grey;
+    @social-link-hover: @icon-hover-grey;
+    @navbar-bg-on-scroll: @white;
+    @navbar-bg-on-toggle: @white;
+    @dft-navbar-transition-behavior: opacity 250ms ease-out;
+    // implement animation on lines behavior
+    .wrap-lines {
+        visibility: visible;
+        opacity: 1;
+        transition: @dft-navbar-transition-behavior;
+        &.hide-lines {
+            visibility: hidden;
+            opacity: 0;
+            transition: @dft-navbar-transition-behavior;
+        }
+    }
+    // set navbar properties ( navbar fixed )
+    .dft-navbar {
+        background-color: @white;
+        height: @header-height;
+        // animate change of bg after toggling menu
+        transition: @dft-navbar-transition-behavior;
+        padding: 0;
+        align-items: flex-start;
+        // fix for navbar container flex child vertical position
+        & > .container {
+            align-items: flex-start;
+        }
+        @media @lsmscreen {
+
+            height: @header-height-mobile;
+            padding: 0 1rem;
+        }
+    }
+    // set logo height equal to header height
+    .dft-logo {
+        // prevent overwriting of lines correspondint to design
+        z-index: 3;
+        padding: 0;
+        @media @lsmscreen {
+            transition: @dft-navbar-transition-behavior;
+            visibility: visible;
+            opacity: 1;
+            &.hide-logo {
+                visibility: hidden;
+                opacity: 0;
+                transition: @dft-navbar-transition-behavior;
+            }
+        }
+        .dft-logo-wrap {
+            height: @dft-logo-desktop;
+            @media @lsmscreen {
+                height: @dft-logo-mobile;
+            }
+        }
+    }
+
+    // set dropdown navbar properties
+    .dft-navbar-collapse {
+        background: transparent;
+        @media @lsmscreen {
+            position: fixed;
+            min-height: calc( 100vh - @header-height-mobile);
+            min-width: 100%;
+            top: @header-height-mobile;
+            left: 0;
+        }
+    }
+    // background behavior on toggle
+    .dft-navbar-on-toggle {
+        background-color: @navbar-bg-on-toggle;
+        transition: @dft-navbar-transition-behavior;
+    }
+    .dft-navbar-on-scroll {
+        background-color: @navbar-bg-on-scroll;
+        transition: @dft-navbar-transition-behavior;
+        box-shadow: 0px 3px 9px rgba(0,0,0,.1);
+    }
+    .dft-list-horizontal {
+        // prevent overwriting of lines corresponding to design
+        z-index: 3;
+        // set width corresponding to design
+        min-width: 80%;
+        // menu behaviour
+        @media @gsmscreen {
+            &>li>.dft-link {
+                position: relative;
+                // set menu height equal to header height corresponding to design
+                height: @header-height;
+                // implementing animation corresponding to design
+                &:after{
+                    top:0;
+                    content:"";
+                    display:block;
+                    height:4px;
+                    left:50%;
+                    position:absolute;
+                    background:@nav-item-border-hover;
+                    transition:width .3s ease 0s,left .3s ease 0s;
+                    width:0;
+                }
+                &:hover:after, &.active:after, &.active:after, &:active:after {
+                    width:100%;
+                    left:0;
+                }
+            }
+        }
+        @media @lsmscreen {
+            // set offset between menu items
+            &>li {
+                margin-top: @list-item-offset;
+            }
+        }
+    }
+
+
+    // overwriting custom bootstrap classes to implement transition effect on menu on mobile desktop
+    @media @lsmscreen {
+        .collapse:not(.show) {
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            //transition: @dft-navbar-transition-behavior;
+        }
+        .navbar-collapse {
+            //transition: @dft-navbar-transition-behavior;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    // set social link behaviour
+    .social-link {
+        width: 24px;
+        height: 24px;
+        font-size: 17px;
+        color: @social-link-color;
+        &:hover {
+            color: @social-link-hover;
+        }
+    }
+
+    // Implementing animation behaviour of menu button corresponding to design
+    .toggle {
+        width: 30px;
+        height: 9px;
+        padding: 13px 0;
+        font-size: 0;
+        box-sizing: content-box;
+        // set on focus behaviour to remove outline effect on button
+        &:focus {
+            outline: none;
+        }
+        // fix toogle behavior on small desktop
+        @media @lsmscreen {
+            margin-top: .5rem;
+        }
+    }
+
+    .toggle-line {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 3px;
+        vertical-align: bottom;
+        background: black;
+        transition: background .3s .5s;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: black;
+            transform-origin: 50% 50%;
+            transition: top .3s .3s,transform .3s;
+        }
+        &::before {
+            top: 9px;
+        }
+        &::after {
+            top: -9px;
+        }
+    }
+
+    .toggle-show .toggle-line {
+        width: 28px;
+        background: 0 0;
+        transition: background 0s linear;
+    }
+
+    .toggle-show .toggle-line::before,
+    .toggle-show .toggle-line::after {
+        width: 28px;
+        top: 0;
+        left: 0;
+        transition: top .3s,transform .3s .5s;
+    }
+
+    .toggle-show .toggle-line::before {
+        transform: rotate3d(0,0,1,45deg);
+    }
+
+    .toggle-show .toggle-line::after {
+        transform: rotate3d(0,0,1,-45deg);
+    }
+}

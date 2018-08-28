@@ -1,0 +1,109 @@
+
+.heading-block {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 45px 0 50px;
+    margin-bottom: 70px;
+    transition: all ease 250ms;
+
+    @media @lsmscreen { // .horizontal-alignment
+        margin: 0 -15px 10px;
+        width: calc(100% + 30px);
+    }
+
+    @media @xsscreen { // .horizontal-alignment
+        margin: 0 -15px 10px;
+        padding: 24px 0 40px;
+    }
+
+    .heading-title {
+        position: relative;
+        background: @white;
+        text-align: center;
+        padding: 71px 48px 59px;
+        transition: all ease 250ms;
+
+
+        // additional class for heading which contain img as bg
+        &.inner-img {
+            padding: 0;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        h1 {
+            font-size: 64px;
+            line-height: 1.3;
+            font-weight: 500;
+
+            @media @lsmscreen {
+                font-size: 40px;
+            }
+
+            @media @xsscreen {
+                font-size: 30px;
+            }
+        }
+
+        h2 {
+            font-weight: 500;
+            line-height: 56px;
+
+            .heading-link {
+                color: @malachite;
+            }
+        }
+    }
+
+    .heading-description {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        max-height: 80%;
+        background-color: @white;
+        padding: 30px;
+
+        .description-headline {
+            font-weight: 700;
+            @media @lsmscreen {
+
+                line-height: normal;
+            }
+        }
+
+        .description {
+            color: @darkest-grey;
+        }
+
+        .date {
+            display: block;
+            line-height: normal;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: @date-grey;
+        }
+    }
+
+    .anchor-to-form {
+        display: block;
+        position: absolute;
+        width: 3%;
+        bottom: 15.5px;
+        left: calc(50% - 1.5%);
+        text-align: center;
+
+        @media @lsmscreen {
+            display: none;
+        }
+
+        .dft {
+            max-width: 100%;
+        }
+
+    }
+}

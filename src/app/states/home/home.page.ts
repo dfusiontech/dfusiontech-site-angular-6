@@ -1,40 +1,51 @@
 // outsource
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import { StateService } from '@uirouter/angular';
+import { CasesService } from "../../services/Cases.service";
 
 @Component({
-  selector: '[id="home"]',
-  templateUrl: './home.html'
+    selector: '[id="home"]',
+    templateUrl: './home.html'
 })
 export class HomePage implements OnInit {
-    /**
-     * using vm to define publick data of the page
-     * and deleagate prepared properties
-     *
-     */
-    public vm = {
-
-    }
-
-    /**
-     * constructor holder to define what exactly past in public vm object
-     *
-     *
-     */
-    constructor ( private state: StateService ) {
-
-    }
-
-    /**
-     * example of programmatically redirect
-     *
-     *
-     */
-    public goLogin () {
-        this.state.go('login');
-    }
+    public casesList;
+    public caseMobileBehavior;
+    public caseMediumDesktopBehavior;
+    public caseRestructuringPointMobile = 768;
+    public caseRestructuringPointDesktop = 992;
+    constructor ( private state: StateService, private casesService: CasesService) {};
 
     ngOnInit() {
-  }
+        this.casesService.getCases().then(data => {
+            console.log(data);
+            this.casesList = data;
+            console.log(this.casesList);
+        });
+        // changing cases content order on mobile
+        if ( window.innerWidth < this.caseRestructuringPointMobile ) {
+            this.caseMobileBehavior = true;
+        } else {
+            this.caseMobileBehavior = false;
+        }
+        // changing cases content order on medium desktop
+        if ( window.innerWidth < this.caseRestructuringPointDesktop ) {
+            this.caseMediumDesktopBehavior = true;
+        } else {
+            this.caseMediumDesktopBehavior = false;
+        }
+    };
 
+    @HostListener('window:resize') onResize() {
+        if ( window.innerWidth < this.caseRestructuringPointMobile ) {
+            this.caseMobileBehavior = true;
+        } else {
+            this.caseMobileBehavior = false;
+        }
+        // for medium desktop
+        if ( window.innerWidth < this.caseRestructuringPointDesktop ) {
+            this.caseMediumDesktopBehavior = true;
+        } else {
+            this.caseMediumDesktopBehavior = false;
+        }
+    }
 }
