@@ -1,6 +1,7 @@
 // outsource
 import { Component, HostListener, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
+
 import { CasesService } from "../../services/Cases.service";
 
 @Component({

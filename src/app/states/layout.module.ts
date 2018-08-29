@@ -23,6 +23,7 @@ import { CasesPage } from "./cases/cases.page";
 import { CasePage } from "./case/case.page";
 import { ThoughtsPage} from "./thoughts/thoughts.page";
 import { ThoughtsItemPage } from "./thoughts-item/thoughts-item.page";
+import { ThoughtsService } from "../services/Thoughts.service";
 import { AboutUsPage } from "./about-us/about-us.page";
 import { ContactsPage } from "./contacts/contacts.page";
 import { CasesService } from "../services/Cases.service";
@@ -76,7 +77,10 @@ export const routing: RootModule = {
         NgbModule.forRoot(),
         UIRouterModule.forRoot(routing)
     ],
-    providers: [CasesService],
+    providers: [
+        CasesService,
+        ThoughtsService
+    ],
     // define outgoing modules
     exports: [
         UIRouterModule

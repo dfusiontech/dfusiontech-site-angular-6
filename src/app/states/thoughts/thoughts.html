@@ -14,93 +14,37 @@
                         <span class="date horizontal-line m">may 4, 2018</span>
                     </div>
                 </section>
-                <section class="thoughts-wrapper">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6">
+                <section class="thoughts-wrapper"
+                         *ngIf="thoughtsList"
+                        >
+                    <ul class="list-unstyled row">
+                        <li class="col-lg-4 col-sm-6" *ngFor="let thought of thoughtsList">
                             <div class="thought">
                                 <div class="thought-title">
-                                    <a uiSref="thoughtsItem" title="Business model v.1" style="background-image: url('../../../assets/images/thoughts-page/business-1.png');"></a>
+                                    <a uiSref="thoughtsItem"
+
+                                       [attr.title]="thought.title"
+                                       style="background-image: url('../../../assets/images/thoughts-page/business-1.png');"
+                                       [ngStyle]="{ 'background-image': 'url(' + thought.img + ')'}"
+                                            >
+                                    </a>
                                 </div>
                                 <div class="thought-description">
-                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="Business model v.1">Business model v.1</a></h3>
-                                    <p class="description">This project is a complex of Back-End and Front- End applications that manages different technologies and ..</p>
-                                    <span class="date horizontal-line m">may 4, 2018</span>
+                                    <h3 class="description-headline">
+                                        <a uiSref="thoughtsItem" [attr.title]="thought.title">
+                                            {{ thought.title }}
+                                        </a>
+                                    </h3>
+                                    <p class="description">
+                                        {{ thought.description }}
+                                    </p>
+                                    <span class="date horizontal-line m">
+                                        {{ thought.date }}
+                                    </span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="thought">
-                                <div class="thought-title">
-                                    <a uiSref="thoughtsItem" title="The story of one project..." style="background-image: url('../../../assets/images/thoughts-page/story-1.png');"></a>
-                                </div>
-                                <div class="thought-description">
-                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="The story of one project...">The story of one project...</a></h3>
-                                    <p class="description">During our 8-years of experience working on Java development, we’ve never shared our successful projects..</p>
-                                    <span class="date horizontal-line m">may 4, 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="thought">
-                                <div class="thought-title">
-                                    <a uiSref="thoughtsItem" title="Lincoln Center" style="background-image: url('../../../assets/images/thoughts-page/lincoln-center-1.png');"></a>
-                                </div>
-                                <div class="thought-description">
-                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="Lincoln Center">Lincoln Center</a></h3>
-                                    <p class="description">Lincoln Center - The world’s leading performing arts center. Located in the heart of New York City on a 16-acr…</p>
-                                    <span class="date horizontal-line m">may 4, 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="thought">
-                                <div class="thought-title">
-                                    <a uiSref="thoughtsItem" title="Business model v.1" style="background-image: url('../../../assets/images/thoughts-page/business-2.png');"></a>
-                                </div>
-                                <div class="thought-description">
-                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="Business model v.1">Business model v.1</a></h3>
-                                    <p class="description">This project is a complex of Back-End and Front- End applications that manages different technologies and ..</p>
-                                    <span class="date horizontal-line m">may 4, 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="thought">
-                                <div class="thought-title">
-                                    <a uiSref="thoughtsItem" title="The story of one project..." style="background-image: url('../../../assets/images/thoughts-page/story-2.png');"></a>
-                                </div>
-                                <div class="thought-description">
-                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="The story of one project...">The story of one project...</a></h3>
-                                    <p class="description">During our 8-years of experience working on Java development, we’ve never shared our successful projects..</p>
-                                    <span class="date horizontal-line m">may 4, 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="thought">
-                                <div class="thought-title">
-                                    <a uiSref="thoughtsItem" title="Lincoln Center" style="background-image: url('../../../assets/images/thoughts-page/lincoln-center-2.png');"></a>
-                                </div>
-                                <div class="thought-description">
-                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="Lincoln Center">Lincoln Center</a></h3>
-                                    <p class="description">Lincoln Center - The world’s leading performing arts center. Located in the heart of New York City on a 16-acr…</p>
-                                    <span class="date horizontal-line m">may 4, 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="thought last-thought">
-                                <div class="thought-title">
-                                    <a uiSref="thoughtsItem" title="Lincoln Center" style="background-image: url('../../../assets/images/thoughts-page/lincoln-center-3.png');"></a>
-                                </div>
-                                <div class="thought-description">
-                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="Lincoln Center">Lincoln Center</a></h3>
-                                    <p class="description">Lincoln Center - The world’s leading performing arts center. Located in the heart of New York City on a 16-acr…</p>
-                                    <span class="date horizontal-line m">may 4, 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </section>
             </div>
         </div>

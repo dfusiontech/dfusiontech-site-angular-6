@@ -79,46 +79,9 @@
     }
 
     .grey-rectangle {
-        position: relative;
         &:before {
             // set background size corresponding to design for big desktops
             height: 600px;
-        }
-    }
-    .grey-rectangle-long {
-        &:before {
-            content: '';
-            position: absolute;
-            top: 33%;
-            background-color: @headline-grey;
-            right: -135px;
-            left: -135px;
-            height: 35%;
-        }
-        &.big {
-            &:before {
-                content: '';
-                position: absolute;
-                background-color: @headline-grey;
-                top: 0;
-                right: -135px;
-                left: -135px;
-                height: 100%;
-            }
-        }
-    }
-    .dft-chat-wrapper {
-        // fix alignment with header
-        margin: 0 15px;
-        max-width: calc(100% - 30px);
-        // set indent corresponding to design
-        padding: 51px;
-        border: 2px solid @lightest-grey;
-        .chat-content {
-            margin-top: 40px;
-            @media @lsmscreen {
-                margin-top: 22px;
-            }
         }
     }
 }
