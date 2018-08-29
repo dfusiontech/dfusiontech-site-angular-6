@@ -121,21 +121,22 @@
         @media @mdscreen {
 
                 .list-unstyled {
+                    // bring url's to html and set here styles to show bg on md as max
                     li:first-child {
                         .advantage-picture-wrapper {
-                            background-image: url('../../assets/images/pages/about-us/advantage1-md.png');
+                            background-image: url('@{assets-folder}/images/pages/about-us/advantage1-md.png');
                         }
                     }
 
                     li:not(:first-child):not(:last-child) {
                         .advantage-picture-wrapper {
-                            background-image: url('../../assets/images/pages/about-us/advantage2-md.png');
+                            background-image: url('@{assets-folder}/images/pages/about-us/advantage2-md.png');
                         }
                     }
 
                     li:last-child {
                         .advantage-picture-wrapper {
-                            background-image: url('../../assets/images/pages/about-us/advantage3-md.png')
+                            background-image: url('@{assets-folder}/images/pages/about-us/advantage3-md.png')
                         }
                     }
                 }
