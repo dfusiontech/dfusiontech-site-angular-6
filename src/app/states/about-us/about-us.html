@@ -118,10 +118,10 @@
                         <div class="col-12 offset-lg-1 col-lg-4">
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="horizontal clearfix">
+                                    <div class="horizontal clearfix" #horizontal [ngStyle]="{'height.px' : vertical.offsetWidth }">
                                         <div class="row">
                                             <div class="col-6">
-                                                <img class="float-left"
+                                                <img
                                                      src="../../../assets/images/pages/about-us/leaders/Igor.png"
                                                      alt="Igor Kalosha"
                                                 >
@@ -138,7 +138,7 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="vertical d-block d-lg-none clearfix Eugene">
+                                    <div class="vertical d-block d-lg-none clearfix Eugene" [ngStyle]="{'height.px' : horizontal.offsetWidth}">
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="business-card">
@@ -159,7 +159,7 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="vertical clearfix Oleg">
+                                    <div class="vertical clearfix Oleg" #vertical [ngStyle]="{'height.px' : horizontal.offsetWidth}">
                                         <div class="row">
                                             <div class="col-12">
                                                 <img src="../../../assets/images/pages/about-us/leaders/Oleg.png"
@@ -184,7 +184,7 @@
                         <div class="col-12 col-lg-6">
                             <div class="row">
                                 <div class="col-4 d-none d-lg-block">
-                                    <div class="vertical clearfix Eugene">
+                                    <div class="vertical clearfix Eugene" [ngStyle]="{'height.px' : horizontal.offsetWidth}">
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="business-card">
@@ -207,7 +207,7 @@
                                 <div class="col-12 col-lg-8">
                                     <div class="row">
                                         <div class="col-12">
-                                            <div class="horizontal clearfix">
+                                            <div class="horizontal clearfix" [ngStyle]="{'height.px' : vertical.offsetWidth}">
                                                 <div class="row">
                                                     <div class="col-6">
                                                         <img
@@ -216,7 +216,7 @@
                                                         >
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="business-card float-right">
+                                                        <div class="business-card">
                                                             <span class="name">Marina Kotenko</span>
                                                             <span class="position horizontal-line s">
                                                                 Head of Business Development
@@ -227,16 +227,17 @@
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <div class="horizontal clearfix">
+                                            <div class="horizontal Vadim clearfix" [ngStyle]="{'height.px' : vertical.offsetWidth}">
                                                 <div class="row">
-                                                    <div class="col-6">
+                                                    <div class="col-6 order-2 order-lg-1">
                                                         <img
                                                             src="../../../assets/images/pages/about-us/leaders/Vadim.png"
                                                             alt="Vadim Kalosha"
                                                         >
                                                     </div>
-                                                    <div class="col-6">
-                                                        <div class="business-card float-right">
+                                                    <div class="col-6 order-1 order-lg-2">
+
+                                                        <div class="business-card ">
                                                             <span class="name">Vadim Kalosha</span>
                                                             <span class="position horizontal-line s">
                                                                 VP of Engineering
@@ -249,7 +250,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-8">
-                                    <div class="horizontal clearfix">
+                                    <div class="horizontal clearfix" [ngStyle]="{'height.px' : vertical.offsetWidth}">
                                         <div class="row">
                                             <div class="col-6">
                                                 <img src="../../../assets/images/pages/about-us/leaders/Sergey.png"
@@ -257,7 +258,7 @@
                                                 >
                                             </div>
                                             <div class="col-6">
-                                                <div class="business-card float-right">
+                                                <div class="business-card">
                                                     <span class="name">Sergey Perekhrest</span>
                                                     <span class="position horizontal-line s">
                                                         Lead of Front-End Development
