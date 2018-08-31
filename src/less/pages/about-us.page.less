@@ -267,6 +267,15 @@
                     padding-bottom: 20px;
                 }
 
+                @media (max-width: 1200px) {
+                    .name {
+                        font-size: 18px;
+                    }
+                    .position {
+                        font-size: 14px;
+                    }
+                }
+
                 @media @mdscreen {
                     .name {
                         font-size: 30px;
@@ -325,19 +334,19 @@
 
                 .business-card {
                     height: 100%;
-                    padding: 10px 10px 20px 0;
+                    padding: 20px 10px 20px 0;
                     //margin-left: -15px;
                     //width: calc(100% + 15px);
                 }
 
                 @media (min-width: 992px) {
                     .business-card {
-                        margin-left: -15px;
+                        margin-left: -10px;
                     }
 
                     &.reverse {
                         .business-card {
-                            //padding-left: 15px;
+                            padding-left: 20px;
                         }
                     }
                 }
@@ -394,7 +403,7 @@
                 .business-card {
                     width: 100%;
                     height: 100%;
-                    padding: 10px 10px 20px 10px;
+                    padding: 20px 10px 20px 20px;
                 }
 
                 &.reverse {
@@ -404,6 +413,12 @@
                         position: absolute;
                         bottom: 0;
                         width: calc(100% - 30px);
+                    }
+                }
+
+                &:not(.reverse) {
+                    .business-card {
+                        padding: 5px 10px 20px 20px;
                     }
                 }
 
