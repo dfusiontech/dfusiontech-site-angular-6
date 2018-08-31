@@ -79,6 +79,8 @@
 @lightest-grey:     #F6F6F6;
 //** button disabled
 @disabled-grey:     #BDBDBD;
+//** invalid outline/boxshadow
+@invalid-red:       #FF0000;
 
 @headline-black:    @darkest-grey;
 //** on big quotes '' some headline ,,
@@ -151,4 +153,9 @@
 @headings-line-height:    1.1;
 @headings-color:          @headline-black;
 
+//**
 @assets-folder: '/assets';
+@fonts-folder: '@{assets-folder}/fonts';
+
+//** Override Font Awesome font path
+@fa-font-path: @fonts-folder;
