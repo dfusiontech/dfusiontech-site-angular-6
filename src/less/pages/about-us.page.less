@@ -356,10 +356,16 @@
                     &-md {
                         @media @mdscreen {
                             flex-direction: row-reverse;
+                            .leader-img {
+                                text-align: right;
+                            }
                         }
 
                         @media (min-width: 992px) {
                             flex-direction: row;
+                            .leader-img {
+                                text-align: left;
+                            }
                         }
                     }
                 }
@@ -407,7 +413,7 @@
 
                 @media (max-width: 480px) {
                     .business-card {
-                        padding: 10px 10px 20px 10px;
+                        padding: 20px 10px 20px 10px;
                     }
                     &.reverse {
                         .business-card {
