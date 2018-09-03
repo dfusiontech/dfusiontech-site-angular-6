@@ -1,8 +1,8 @@
 #aboutus {
 
     // Value of margins & gutter width on different media points [>=992px] | [<=991px] | [<=576px]
-    @business-card-gutter-lg: 10px;
-    @business-card-gutter-md: 12.5px;
+    @business-card-gutter-lg: 7px;
+    @business-card-gutter-md: 13px;
     @business-card-gutter-xs: 15px;
 
     // Value of padding in each business card
@@ -293,7 +293,7 @@
         }
         .col-12 {
 
-            .business-card {
+            .business-card-description {
                 overflow: hidden;
 
                 .name {
@@ -356,11 +356,21 @@
                 display: flex;
                 align-items: stretch;
                 justify-content: space-between;
-
+                position: relative;
                 background-color: @white;
-                border: @lines-grey solid 1px;
+                //border: @lines-grey solid 1px;
                 margin-bottom: @business-card-gutter-lg;
                 margin-top: @business-card-gutter-lg;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid @lines-grey;
+                    //border: 1px solid red;
+                }
 
                 &.reverse {
                     flex-direction: row-reverse;
@@ -396,7 +406,7 @@
                     }
                 }
 
-                .business-card {
+                .business-card-description {
                     max-height: 100%;
                     width: auto;
                     flex-grow: 2;
@@ -405,7 +415,7 @@
 
                 //@media (min-width: 992px) {
                 //    &.reverse {
-                //        .business-card {
+                //        .business-card-description {
                 //            //padding-left: 20px;
                 //        }
                 //    }
@@ -415,7 +425,7 @@
                     margin-bottom: @business-card-gutter-md;
                     margin-top: @business-card-gutter-md;
 
-                    .business-card {
+                    .business-card-description {
                         padding: @business-card-padding-md;
                     }
                 }
@@ -426,11 +436,11 @@
                 }
 
                 @media (max-width: 480px) {
-                    .business-card {
+                    .business-card-description {
                         padding: @business-card-padding-xs;
                     }
                     &.reverse, &.reverse-md {
-                        .business-card {
+                        .business-card-description {
                             padding-left: @business-card-gutter-xs;
                         }
                     }
@@ -442,10 +452,22 @@
                 align-items: stretch;
                 justify-content: space-between;
                 flex-direction: column;
+                position: relative;
                 background-color: @white;
-                border: @lines-grey solid 1px;
+                //border: @lines-grey solid 1px;
                 margin-bottom: @business-card-gutter-lg;
                 margin-top: @business-card-gutter-lg;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid @lines-grey;
+                    //border: 1px solid red;
+                }
 
                 &.reverse {
                     flex-direction: column-reverse;
@@ -461,7 +483,7 @@
                     }
                 }
 
-                .business-card {
+                .business-card-description {
                     width: 100%;
                     padding: @business-card-padding-lg;
                     flex-grow: 2;
@@ -470,14 +492,14 @@
                 @media @mdscreen {
                     margin-bottom: @business-card-gutter-md;
                     margin-top: @business-card-gutter-md;
-                    .business-card {
+                    .business-card-description {
                         padding: @business-card-padding-md;
                         padding-top: @business-card-gutter-md*2;
                     }
                 }
 
                 @media @lsmscreen {
-                    .business-card {
+                    .business-card-description {
                         padding: @business-card-padding-xs;
                         padding-left: @business-card-gutter-xs;
                         padding-top: @business-card-gutter-xs*2;
