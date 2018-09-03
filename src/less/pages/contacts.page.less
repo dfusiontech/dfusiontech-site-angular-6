@@ -23,7 +23,15 @@
                 border: none;
                 outline: none !important;
                 box-shadow: none;
-                //transition: width 250ms ease;
+
+                &:focus {
+                    box-shadow: 0 0 0 2px @malachite;
+                }
+
+                &.is-invalid {
+                    box-shadow: 0 0 0 2px @invalid-red;
+                }
+                //transition: width 250ms ease; rgba(13, 211, 95, 1)
             }
 
             textarea {
@@ -43,6 +51,10 @@
                     }
 
                     label[for='inputEmail'] {
+                        margin-left: 11px;
+                    }
+
+                    .invalid-email {
                         margin-left: 11px;
                     }
                 }

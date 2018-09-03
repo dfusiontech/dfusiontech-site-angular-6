@@ -24,6 +24,7 @@
  */
 .btn {
     &.dft-btn {
+        overflow: hidden;
         position: relative;
         font-size: 16px;
         display: block;
@@ -53,14 +54,26 @@
             position: relative;
             z-index: 1;
         }
-        &:hover, &:focus, &:active, &.active {
+        &:hover {
             color: @dft-btn-color-hover;
             border-color: @dft-btn-border-color-hover;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
         }
         &:hover > .slider {
             transform: translateX( calc( @dft-btn-width + @dft-btn-border-size ) );
             background-color: white;
         }
+
+        &:active, &.active {
+            color: @dft-btn-color;
+            border-color: @dft-btn-border-color-hover;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+
         &.disabled {
             cursor: not-allowed;
             background-color: @disabled-grey;

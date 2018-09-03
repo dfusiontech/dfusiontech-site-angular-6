@@ -247,20 +247,20 @@
     }
 
     .team-leaders {
-
-        @media @lsmscreen {
-            //margin-left: -15px;
-            //margin-right: -15px;
-            //width: calc(100% + 30px);
+        &.team-leaders-small-grid {
+            .row {
+                .row-gutter(5px);
+            }
         }
         .col-12 {
-            //background-color: deeppink;
-            //max-height: 450px;
 
             .business-card {
+                max-height: 100%;
+                overflow: hidden;
+
                 .name {
                     display: block;
-                    font-size: 24px;
+                    font-size: 22px;
                     line-height: 1.2;
                     text-transform: uppercase;
                     font-weight: 700;
@@ -268,21 +268,58 @@
 
                 .position {
                     line-height: 1.2;
+                    padding-bottom: 20px;
                 }
 
-                @media @lsmscreen {
-                    height: 240px;
+                @media (max-width: 1200px) {
+                    .name {
+                        font-size: 18px;
+                    }
+                    .position {
+                        font-size: 14px;
+                    }
+                }
+
+                @media @mdscreen {
+                    .name {
+                        font-size: 30px;
+                    }
+
+                    .position {
+                        //line-height: 1.2;
+                        font-size: 18px;
+                    }
+                }
+
+                @media @xsscreen {
+                    .name {
+                        font-size: 25px;
+                    }
+
+                    .position {
+                        //line-height: 1.2;
+                        font-size: 16px;
+                    }
+                }
+
+                @media (max-width: 480px) {
+
 
                     .name {
                         font-size: 18px;
                     }
+
+                    .position {
+                        font-size: 15px;
+                    }
                 }
+
             }
 
             .horizontal {
                 background-color: @white;
                 border: @lines-grey solid 1px;
-                height: 160px;
+                //height: 160px;
                 margin-bottom: 15px;
                 margin-top: 15px;
                 position: relative;
@@ -302,25 +339,47 @@
                 .business-card {
                     height: 100%;
                     padding: 20px 10px 20px 0;
-                    margin-left: -15px;
-                    width: calc(100% + 15px);
+                    //margin-left: -15px;
+                    //width: calc(100% + 15px);
+                }
+
+                @media (min-width: 992px) {
+                    .business-card {
+                        margin-left: -10px;
+                    }
+
+                    &.reverse {
+                        .business-card {
+                            padding-left: 20px;
+                        }
+                    }
                 }
 
                 @media (max-width: @desktop-hd-point) {
-                    height: 129.98px;
+                    //height: 129.98px;
                 }
 
                 @media @mdscreen {
-                    height: 330px;
+                    .business-card {
+                        padding: 20px 10px 20px 10px;
+                    }
                 }
 
                 @media @lsmscreen {
-                    height: 240px;
+                }
 
+                @media (max-width: 480px) {
+                    .business-card {
+                        padding: 10px 10px 20px 0;
+                    }
+                    &.reverse, &.reverse {
+                        .business-card {
+                            padding-left: 10px;
+                        }
+                    }
                 }
 
                 @media @xsscreen {
-                    height: 115px;
                 }
             }
 
@@ -328,7 +387,7 @@
                 position: relative;
                 background-color: @white;
                 border: @lines-grey solid 1px;
-                height: 350px;
+                //height: 350px;
                 margin-bottom: 15px;
                 margin-top: 15px;
 
@@ -348,11 +407,10 @@
                 .business-card {
                     width: 100%;
                     height: 100%;
-                    padding: 20px 0 20px 10px;
+                    padding: 20px 10px 20px 20px;
                 }
 
-                &.Eugene {
-
+                &.reverse {
                     img {
                         //float: right;
                         //margin-top: 50%;
@@ -362,29 +420,43 @@
                     }
                 }
 
+                &:not(.reverse) {
+                    .business-card {
+                        padding: 5px 10px 20px 20px;
+                    }
+                }
+
+                @media @lgscreen {
+
+                }
+
                 @media (max-width: @desktop-hd-point) {
-                    height: 289.98px;
+                    //height: 289.98px;
                 }
 
                 @media @mdscreen {
-                    height: 690px;
+                    .business-card {
+                        padding: 20px 10px 20px 10px;
+                    }
                 }
 
                 @media @lsmscreen {
-                    height: 510px;
+                    .business-card {
+                        padding: 20px 10px 20px 10px;
+                    }
                 }
 
                 @media @xsscreen {
-                    height: 260px;
+                    //height: 260px;
 
-                    img, &.Eugene img {
-                        width: 115px;
+                    //img, &.reverse img {
+                    //    width: 115px;
+                    //
+                    //}
 
-                    }
-
-                    &.Oleg .col-12:not(.business-card) {
-                        //text-align: right;
-                    }
+                    //&.Oleg .col-12:not(.business-card) {
+                    //    //text-align: right;
+                    //}
                 }
             }
         }
