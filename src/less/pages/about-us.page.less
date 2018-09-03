@@ -5,6 +5,11 @@
     @business-card-gutter-md: 12.5px;
     @business-card-gutter-xs: 15px;
 
+    // Value of padding in each business card
+    @business-card-padding-lg: @business-card-gutter-lg*2 @business-card-gutter-lg*1 @business-card-gutter-lg*2 @business-card-gutter-lg*2; // 20px  10px  20px 20px
+    @business-card-padding-md: @business-card-gutter-md*2 @business-card-gutter-md*1 @business-card-gutter-md*2 @business-card-gutter-md*2; // 25px 12.5px 25px 25px
+    @business-card-padding-xs: @business-card-gutter-xs*1 @business-card-gutter-xs*1 @business-card-gutter-xs*1 @business-card-gutter-xs*1; // 15px  15px  15px 30px
+
     .thesis {
         color: @black;
         font-size: 15px;
@@ -275,7 +280,15 @@
     .team-leaders {
         &.team-leaders-small-grid {
             .row {
-                .row-gutter(@business-card-gutter-lg, @business-card-gutter-md, @business-card-gutter-xs);
+                .row-gutter(@business-card-gutter-lg);
+
+                @media @mdscreen {
+                    .row-gutter(@business-card-gutter-md);
+                }
+
+                @media @xsscreen {
+                    .row-gutter(@business-card-gutter-xs);
+                }
             }
         }
         .col-12 {
@@ -328,8 +341,6 @@
                 }
 
                 @media (max-width: 480px) {
-
-
                     .name {
                         font-size: 18px;
                     }
@@ -389,44 +400,40 @@
                     max-height: 100%;
                     width: auto;
                     flex-grow: 2;
-                    padding: 20px 10px 20px 20px;
+                    padding: @business-card-padding-lg;
                 }
 
-                @media (min-width: 992px) {
-                    .business-card {
-                        //margin-left: -10px;
-                    }
-
-                    &.reverse {
-                        .business-card {
-                            padding-left: 20px;
-                        }
-                    }
-                }
+                //@media (min-width: 992px) {
+                //    &.reverse {
+                //        .business-card {
+                //            //padding-left: 20px;
+                //        }
+                //    }
+                //}
 
                 @media @mdscreen {
                     margin-bottom: @business-card-gutter-md;
                     margin-top: @business-card-gutter-md;
 
                     .business-card {
-                        padding: 20px 10px 20px 10px;
-                    }
-                }
-
-                @media (max-width: 480px) {
-                    .business-card {
-                        padding: 20px 10px 20px 10px;
-                    }
-                    &.reverse {
-                        .business-card {
-                            padding-left: 10px;
-                        }
+                        padding: @business-card-padding-md;
                     }
                 }
 
                 @media @xsscreen {
                     margin-bottom: @business-card-gutter-xs;
                     margin-top: @business-card-gutter-xs;
+                }
+
+                @media (max-width: 480px) {
+                    .business-card {
+                        padding: @business-card-padding-xs;
+                    }
+                    &.reverse, &.reverse-md {
+                        .business-card {
+                            padding-left: @business-card-gutter-xs;
+                        }
+                    }
                 }
             }
 
@@ -442,14 +449,6 @@
 
                 &.reverse {
                     flex-direction: column-reverse;
-                    .leader-img {
-                        position: relative;
-                        img {
-                            //position: absolute;
-                            left: 0;
-                            bottom: 0;
-                        }
-                    }
                 }
 
                 .leader-img {
@@ -464,7 +463,7 @@
 
                 .business-card {
                     width: 100%;
-                    padding: 20px 10px 20px 20px;
+                    padding: @business-card-padding-lg;
                     flex-grow: 2;
                 }
 
@@ -472,31 +471,22 @@
                     margin-bottom: @business-card-gutter-md;
                     margin-top: @business-card-gutter-md;
                     .business-card {
-                        padding: 20px 10px 20px 10px;
+                        padding: @business-card-padding-md;
+                        padding-top: @business-card-gutter-md*2;
                     }
                 }
 
                 @media @lsmscreen {
                     .business-card {
-                        padding: 20px 10px 20px 10px;
+                        padding: @business-card-padding-xs;
+                        padding-left: @business-card-gutter-xs;
+                        padding-top: @business-card-gutter-xs*2;
                     }
                 }
 
                 @media @xsscreen {
                     margin-bottom: @business-card-gutter-xs;
                     margin-top: @business-card-gutter-xs;
-                }
-            }
-
-            .verrev {
-
-
-                .leader-img {
-
-                }
-
-                .business-card {
-
                 }
             }
         }
