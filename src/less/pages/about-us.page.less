@@ -1,5 +1,10 @@
 #aboutus {
 
+    // Value of margins & gutter width on different media points [>=992px] | [<=991px] | [<=576px]
+    @business-card-gutter-lg: 10px;
+    @business-card-gutter-md: 12.5px;
+    @business-card-gutter-xs: 15px;
+
     .thesis {
         color: @black;
         font-size: 15px;
@@ -270,7 +275,7 @@
     .team-leaders {
         &.team-leaders-small-grid {
             .row {
-                .row-gutter(5px);
+                .row-gutter(@business-card-gutter-lg, @business-card-gutter-md, @business-card-gutter-xs);
             }
         }
         .col-12 {
@@ -343,8 +348,8 @@
 
                 background-color: @white;
                 border: @lines-grey solid 1px;
-                margin-bottom: 5px;
-                margin-top: 5px;
+                margin-bottom: @business-card-gutter-lg;
+                margin-top: @business-card-gutter-lg;
 
                 &.reverse {
                     flex-direction: row-reverse;
@@ -399,16 +404,13 @@
                     }
                 }
 
-                @media (max-width: @desktop-hd-point) {
-                }
-
                 @media @mdscreen {
+                    margin-bottom: @business-card-gutter-md;
+                    margin-top: @business-card-gutter-md;
+
                     .business-card {
                         padding: 20px 10px 20px 10px;
                     }
-                }
-
-                @media @lsmscreen {
                 }
 
                 @media (max-width: 480px) {
@@ -423,6 +425,8 @@
                 }
 
                 @media @xsscreen {
+                    margin-bottom: @business-card-gutter-xs;
+                    margin-top: @business-card-gutter-xs;
                 }
             }
 
@@ -433,8 +437,8 @@
                 flex-direction: column;
                 background-color: @white;
                 border: @lines-grey solid 1px;
-                margin-bottom: 5px;
-                margin-top: 5px;
+                margin-bottom: @business-card-gutter-lg;
+                margin-top: @business-card-gutter-lg;
 
                 &.reverse {
                     flex-direction: column-reverse;
@@ -464,15 +468,9 @@
                     flex-grow: 2;
                 }
 
-                @media @lgscreen {
-
-                }
-
-                @media (max-width: @desktop-hd-point) {
-                    //height: 289.98px;
-                }
-
                 @media @mdscreen {
+                    margin-bottom: @business-card-gutter-md;
+                    margin-top: @business-card-gutter-md;
                     .business-card {
                         padding: 20px 10px 20px 10px;
                     }
@@ -485,11 +483,8 @@
                 }
 
                 @media @xsscreen {
-
-                }
-
-                @media @xxsscreen {
-
+                    margin-bottom: @business-card-gutter-xs;
+                    margin-top: @business-card-gutter-xs;
                 }
             }
 
