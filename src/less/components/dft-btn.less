@@ -19,7 +19,7 @@
  * template example
  * <button [ngClass]="{ 'disabled': boolean }" [disabled]="boolean" type="button" class="btn dft-btn">
  *          <span class="dft-btn-label">BUTTON</span>
- *          <div class="slider"></div>
+ *          <div class="dft-btn-slider"></div>
  * </button>
  */
 .btn {
@@ -37,7 +37,7 @@
         width: @dft-btn-width;
         .border-radius ( 0px );
         .transition ( 0.3s ease-in-out );
-        .slider {
+        > .dft-btn-slider {
             background: transparent;
             top: 0;
             // to get needed animation effect this slider fit button size
@@ -60,10 +60,10 @@
             -webkit-box-shadow: none;
             -moz-box-shadow: none;
             box-shadow: none;
-        }
-        &:hover > .slider {
-            transform: translateX( calc( @dft-btn-width + @dft-btn-border-size ) );
-            background-color: white;
+            > .dft-btn-slider {
+                transform: translateX( calc( @dft-btn-width + @dft-btn-border-size ) );
+                background-color: white;
+            }
         }
 
         &:active, &.active {
@@ -79,6 +79,10 @@
             background-color: @disabled-grey;
             color: @white;
             border-color: transparent;
+            > .dft-btn-slider {
+                transform: translateX( calc( @dft-btn-width + @dft-btn-border-size ) );
+                background-color: inherit;
+            }
         }
     }
 }
