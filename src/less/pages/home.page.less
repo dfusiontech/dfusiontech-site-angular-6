@@ -2,34 +2,21 @@
     position: relative;
     @dft-cases-transition-behavior: 500ms ease-out;
     overflow: hidden;
+    // background colors for case content on hover
+    @hover-turquoise-bg: #00B3E4;
+    @hover-green-bg: #20c997;
+    @hover-orange-bg: #fd7e14;
+    @hover-purple-bg: #9c27b0;
+    @hover-red-bg : #9c27b0;
+    @hover-blue-bg: cornflowerblue;
 
     .heading-wrapper {
         @media @lgscreen {
             padding: 170px 50px;
         }
-
-        @media @mdscreen {
-            // another padding if you need
-        }
-
-        @media @lsmscreen {
-            // another padding
-        }
-
-        @media @xsscreen {
-            // another padding
-        }
     }
 
     .cases-list {
-        // indent on mobile corresponding to design
-        //padding-top: 40px;
-        @media @lsmscreen {
-            //padding-top: 24px;
-            // fix content and header align on small desktop
-            //margin: 0 -15px;
-            //width: calc(100% + 30px);
-        }
         .case-item {
             margin-bottom: 40px;
             &.last-case-item {
@@ -45,7 +32,9 @@
             }
             .case-content {
                 background-color: @white;
+                // set content over image on hover
                 position: relative;
+                z-index: 1;
                 transition: @dft-cases-transition-behavior;
                 // indent on mobile corresponding to design
                 @media @lsmscreen {
@@ -93,23 +82,23 @@
             }
             &:hover {
                 .case-content {
-                    // set content over image on hover
-                    z-index: 1;
-                    background-color: #00B3E4;
+                    &.hover-turquoise-bg {
+                        background-color: @hover-turquoise-bg;
+                    }
                     &.hover-green-bg {
-                        background-color: #20c997;
+                        background-color: @hover-green-bg;
                     }
                     &.hover-orange-bg {
-                        background-color: #fd7e14;
+                        background-color: @hover-orange-bg;
                     }
                     &.hover-purple-bg {
-                        background-color: #9c27b0;
+                        background-color: @hover-purple-bg;
                     }
                     &.hover-red-bg {
-                        background-color: #bd2130;
+                        background-color: @hover-red-bg;
                     }
                     &.hover-blue-bg {
-                        background-color: cornflowerblue;
+                        background-color: @hover-blue-bg;
                     }
                     color: @white;
                     transition: @dft-cases-transition-behavior;
@@ -121,6 +110,7 @@
                     h2 {
                         color: @white;
                     }
+                    // set white color of line under case content
                     &:after {
                         border-bottom: 3px solid white;
                     }

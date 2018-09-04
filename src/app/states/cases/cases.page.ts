@@ -1,7 +1,7 @@
 // outsource
 import { Component, HostListener, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
-
+// services
 import { CasesService } from "../../services/Cases.service";
 
 @Component({
@@ -14,13 +14,12 @@ export class CasesPage implements OnInit {
     public caseMediumDesktopBehavior;
     public caseRestructuringPointMobile = 768;
     public caseRestructuringPointDesktop = 992;
+
     constructor ( private state: StateService, private casesService: CasesService) {};
 
     ngOnInit() {
         this.casesService.getCases().then(data => {
-            console.log(data);
             this.casesList = data;
-            console.log(this.casesList);
         });
         // changing cases content order on mobile
         if ( window.innerWidth < this.caseRestructuringPointMobile ) {
@@ -34,6 +33,7 @@ export class CasesPage implements OnInit {
         } else {
             this.caseMediumDesktopBehavior = false;
         }
+
     };
 
     @HostListener('window:resize') onResize() {
