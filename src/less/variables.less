@@ -3,18 +3,17 @@
 // --------------------------------------------------
 //==Grid
 
-@desktop-hd-point-x:1444px;
 @desktop-hd-point:  1200px;
 @desktop-point:     992px;
 @tablet-point:      768px;
-@mobile-point:      480px;
+@mobile-point:      576px;
 @mobile-point-x:    320px;
 
 /* Large desktops and laptops */
 @lgscreen: ~"(min-width: @{desktop-hd-point})";
 
 /* Portrait tablets and medium desktops */
-@mdscreen: ~"(max-width: @{desktop-point})";
+@mdscreen: ~"(max-width: 991px)";
 
 /* Portrait tablets and small desktops (gsm mean greater than small) */
 @gsmscreen: ~"(min-width: @{tablet-point})";
@@ -27,6 +26,17 @@
 
 /* Smallest old phones (extra extra small)*/
 @xxsscreen: ~"(max-width: @{mobile-point-x})";
+
+/* Additional class for bootstrap utilities */
+@media (min-width: @mobile-point) {
+    .d-xs-block {
+        display: block !important;
+    }
+
+    .d-xs-none {
+        display: none !important;
+    }
+}
 
 // height of the footer with fixed height
 @footer-height: 115px;
@@ -69,6 +79,8 @@
 @lightest-grey:     #F6F6F6;
 //** button disabled
 @disabled-grey:     #BDBDBD;
+//** invalid outline/boxshadow
+@invalid-red:       #FF0000;
 
 @headline-black:    @darkest-grey;
 //** on big quotes '' some headline ,,
@@ -77,7 +89,8 @@
 @date-grey:         @dark-grey;
 //** on blocks headline(main page -> CASES/THOUGHTS)
 //** & rectangle behind the "first screen"
-@headline-grey:     @lightest-grey;
+@headline-grey:     @light-grey;
+@rectangle-grey:    @lightest-grey;
 //** on longitudinal lines and borders
 @lines-grey:        @lighter-grey;
 //** on social icons
@@ -139,3 +152,10 @@
 @headings-font-weight:    @font-weight-light;
 @headings-line-height:    1.1;
 @headings-color:          @headline-black;
+
+//**
+@assets-folder: '/assets';
+@fonts-folder: '@{assets-folder}/fonts';
+
+//** Override Font Awesome font path
+@fa-font-path: @fonts-folder;

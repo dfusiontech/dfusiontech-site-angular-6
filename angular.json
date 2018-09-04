@@ -23,13 +23,27 @@
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "src/tsconfig.app.json",
                         "assets": [
-                            "src/assets"
+                            {
+                                "glob": "**/*",
+                                "input": "src/assets",
+                                "output": "/assets"
+                            },
+                            {
+                                "glob": "**/*",
+                                "input": "./node_modules/font-awesome/fonts/",
+                                "output": "/assets/fonts/font-awesome"
+                            }
                         ],
                         "styles": [
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
-                            "node_modules/font-awesome/css/font-awesome.css",
+//                            "node_modules/font-awesome/css/font-awesome.css",
                             "src/less/index.less"
                         ],
+//                        "stylePreprocessorOptions": {
+//                            "includePaths": [
+//                                "src/less"
+//                            ]
+//                        },
                         "scripts": []
                     },
                     "configurations": {

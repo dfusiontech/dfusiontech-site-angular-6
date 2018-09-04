@@ -1,8 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <section class="heading-block grey-rectangle">
+                    <div class="heading-title inner-img">
+                        <a uiSref="thoughtsItem" title="Lincoln Center">
+                            <img src="../../../assets/images/thoughts-page/heading-bg.png" alt="">
+                        </a>
+                    </div>
+                    <div class="heading-description">
+                        <h2 class="description-headline"><a uiSref="thoughtsItem" title="Lincoln Center">Lincoln Center</a></h2>
+                        <p class="description">Lincoln Center - The world’s leading performing arts center. Located in the heart of New York City on a 16-acr…</p>
+                        <span class="date horizontal-line m">may 4, 2018</span>
+                    </div>
+                </section>
+                <section class="thoughts-wrapper"
+                         *ngIf="thoughtsList"
+                        >
+                    <ul class="list-unstyled row">
+                        <li class="col-lg-4 col-sm-6" *ngFor="let thought of thoughtsList">
+                            <div class="thought">
+                                <div class="thought-title">
+                                    <a uiSref="thoughtsItem"
 
-<h1> I am the Thoughts page !!! =) </h1>
+                                       [attr.title]="thought.title"
+                                       style="background-image: url('../../../assets/images/thoughts-page/business-1.png');"
+                                       [ngStyle]="{ 'background-image': 'url(' + thought.img + ')'}"
+                                            >
+                                    </a>
+                                </div>
+                                <div class="thought-description">
+                                    <h3 class="description-headline">
+                                        <a uiSref="thoughtsItem" [attr.title]="thought.title">
+                                            {{ thought.title }}
+                                        </a>
+                                    </h3>
+                                    <p class="description">
+                                        {{ thought.description }}
+                                    </p>
+                                    <span class="date horizontal-line m">
+                                        {{ thought.date }}
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h2>There will be list of links to each thought soon</h2>
-
-<h3> <a (click)="goToThought(0)"> first thought ( function goToThought(0) ) </a> </h3>
-
-<h3> <a (click)="goToThought(1)"> second thought ( function goToThought(1) ) </a> </h3>

@@ -8,13 +8,14 @@
         .form-wrapper {
             padding: 75px 170px 30px;
             font-size: 16px;
+            transition: padding 250ms ease;
 
             @media @lsmscreen {
                 padding: 70px 80px;
             }
 
-            @media @xxsscreen {
-
+            @media @xsscreen {
+                padding: 50px 0 ;
             }
 
             input, textarea {
@@ -22,6 +23,15 @@
                 border: none;
                 outline: none !important;
                 box-shadow: none;
+
+                &:focus {
+                    box-shadow: 0 0 0 2px @malachite;
+                }
+
+                &.is-invalid {
+                    box-shadow: 0 0 0 2px @invalid-red;
+                }
+                //transition: width 250ms ease; rgba(13, 211, 95, 1)
             }
 
             textarea {
@@ -41,6 +51,10 @@
                     }
 
                     label[for='inputEmail'] {
+                        margin-left: 11px;
+                    }
+
+                    .invalid-email {
                         margin-left: 11px;
                     }
                 }

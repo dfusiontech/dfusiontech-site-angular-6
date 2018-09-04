@@ -186,3 +186,12 @@
         filter: progid:DXImageTransform.Microsoft.gradient(enabled='false'); // Only IE9
     }
 }
+
+.row-gutter(@gutter-width: 15px) {
+    margin-right: -@gutter-width;
+    margin-left: -@gutter-width;
+    > [class*="col-"] {
+        padding-right: @gutter-width;
+        padding-left: @gutter-width;
+    }
+}

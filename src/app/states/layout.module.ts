@@ -1,30 +1,34 @@
 // outsource
 import { NgModule } from '@angular/core';
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
-import { RootModule, UIRouterModule } from "@uirouter/angular";
-import { PreventParentScrollModule } from "ngx-prevent-parent-scroll";
+import { RootModule, UIRouterModule } from '@uirouter/angular';
+import { PreventParentScrollModule } from 'ngx-prevent-parent-scroll';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { FormsModule } from '@angular/forms';
 // app states
-import { homeState } from "./home/home.state";
-import { casesState } from "./cases/cases.state";
-import { casesItemState } from "./case-item/cases-item.state";
-import { thoughtsState } from "./thoughts/thoughts.state";
-import { aboutUsState } from "./about-us/about-us.state";
-import { contactsState } from "./contacts/contacts.state";
+import { homeState } from './home/home.state';
+import { casesState } from './cases/cases.state';
+import { casePageState } from './case/case-page.state';
+import { thoughtsState } from './thoughts/thoughts.state';
+import { aboutUsState } from './about-us/about-us.state';
+import { contactsState } from './contacts/contacts.state';
 import { thoughtsItemState } from "./thoughts-item/thoughts-item.state";
 // Components
-import { HeaderComponent } from "../components/header/header.component";
-import { LayoutComponent } from "./layout.component";
-import { FooterComponent } from "../components/footer/footer.component";
+import { HeaderComponent } from '../components/header/header.component';
+import { LayoutComponent } from './layout.component';
+import { FooterComponent } from '../components/footer/footer.component';
 // pages
-import { HomePage } from "./home/home.page";
-import { CasesPage } from "./cases/cases.page";
-import { CasesItemPage } from "./case-item/cases-item.page";
-import { ThoughtsPage} from "./thoughts/thoughts.page";
-import { ThoughtsItemPage } from "./thoughts-item/thoughts-item.page";
-import { AboutUsPage } from "./about-us/about-us.page";
-import { ContactsPage } from "./contacts/contacts.page";
+import { HomePage } from './home/home.page';
+import { CasesPage } from './cases/cases.page';
+import { CasePage } from './case/case.page';
+import { ThoughtsPage} from './thoughts/thoughts.page';
+import { ThoughtsItemPage } from './thoughts-item/thoughts-item.page';
+import { ThoughtsService } from '../services/Thoughts.service';
+import { AboutUsPage } from './about-us/about-us.page';
+import { ContactsPage } from './contacts/contacts.page';
+import { CasesService } from '../services/Cases.service';
+import { LetsChatComponent } from '../components/lets-chat/lets-chat.component';
 
 /**
  * define all pages within application
@@ -32,13 +36,13 @@ import { ContactsPage } from "./contacts/contacts.page";
  *
  */
 export const routing: RootModule = {
-    // useHash: false, // html5mode - without #
-    useHash: true, // with #
+    useHash: false, // html5mode - without #
+    // useHash: true, // with #
     otherwise: homeState.url,
     states: [
         homeState,
         casesState,
-        casesItemState,
+        casePageState,
         thoughtsState,
         thoughtsItemState,
         aboutUsState,
@@ -56,10 +60,11 @@ export const routing: RootModule = {
     declarations: [
         HeaderComponent,
         FooterComponent,
+        LetsChatComponent,
         LayoutComponent,
         HomePage,
         CasesPage,
-        CasesItemPage,
+        CasePage,
         ThoughtsPage,
         ThoughtsItemPage,
         AboutUsPage,
@@ -71,7 +76,12 @@ export const routing: RootModule = {
         CommonModule,
         PreventParentScrollModule,
         NgbModule.forRoot(),
-        UIRouterModule.forRoot(routing)
+        UIRouterModule.forRoot(routing),
+        FormsModule
+    ],
+    providers: [
+        CasesService,
+        ThoughtsService
     ],
     // define outgoing modules
     exports: [

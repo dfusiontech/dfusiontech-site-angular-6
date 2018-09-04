@@ -1,0 +1,516 @@
+#aboutus {
+
+    // Value of margins & gutter width on different media points [>=992px] | [<=991px] | [<=576px]
+    @business-card-gutter-lg: 7px;
+    @business-card-gutter-md: 13px;
+    @business-card-gutter-xs: 15px;
+
+    // Value of padding in each business card
+    @business-card-padding-lg: @business-card-gutter-lg*2 @business-card-gutter-lg*1 @business-card-gutter-lg*2 @business-card-gutter-lg*2; // 20px  10px  20px 20px
+    @business-card-padding-md: @business-card-gutter-md*2 @business-card-gutter-md*1 @business-card-gutter-md*2 @business-card-gutter-md*2; // 25px 12.5px 25px 25px
+    @business-card-padding-xs: @business-card-gutter-xs*1 @business-card-gutter-xs*1 @business-card-gutter-xs*1 @business-card-gutter-xs*1; // 15px  15px  15px 30px
+
+    .thesis {
+        color: @black;
+        font-size: 15px;
+        font-weight: 300;
+        margin-bottom: 30px;
+    }
+
+    .heading-block {
+        max-height: 1030px;
+        padding-bottom: 0;
+
+        .heading-title {
+            padding: 95px 60px;
+            transition: padding 100ms ease;
+
+            @media @lsmscreen {
+                padding: 75px 20px;
+            }
+
+            @media @xsscreen {
+                padding: 40px 25px 25px;
+            }
+        }
+
+        @media @lsmscreen {
+            margin: 0 -15px 60px;
+        }
+
+        @media @xsscreen {
+            padding-bottom: 55px;
+        }
+
+        .heading-about {
+            background-color: @white;
+            overflow: hidden;
+            max-height: 590px;
+
+            .theses-wrapper {
+                width: 52%;
+                padding: 40px 65px;
+
+                :last-child {
+                    margin-bottom: 0;
+                }
+
+                @media (max-width: @desktop-hd-point) {
+                    padding: 30px 60px;
+                }
+
+                @media @mdscreen {
+                    padding: 15px 60px;
+                    width: 55%;
+
+                    :first-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                @media @lsmscreen {
+                    padding: 10px 40px;
+                }
+            }
+        }
+    }
+
+    .picture-rectangle {
+        &:before {
+            content: '';
+            position: absolute;
+            right: 52%;
+            top: 0;
+            background-image: url('@{assets-folder}/images/pages/about-us/heading-bg.png');
+            background-size: auto 100%;
+            background-position: center;
+            left: -135px;
+            height: 100%;
+            transition: width 100ms ease;
+
+            @media @mdscreen {
+                right: 55%;
+            }
+
+            @media @lsmscreen {
+                right: 55%;
+            }
+
+            @media @mobile-point {
+                right: 55%;
+            }
+
+            @media @xsscreen {
+                right: 55%;
+                left: -20px;
+            }
+        }
+    }
+
+    .hidden-theses{
+        display: none;
+
+        @media (max-width: @desktop-hd-point) {
+            display: block;
+            margin-bottom: 60px;
+        }
+
+        @media @lsmscreen {
+            margin-bottom: 30px;
+        }
+
+        @media @xsscreen {
+            margin-bottom: 0;
+
+        }
+    }
+
+    .advantages {
+        margin-bottom: 70px;
+
+        @media @mdscreen {
+
+                .list-unstyled {
+                    // bring url's to html and set here styles to show bg on md as max
+                    li:first-child {
+                        .advantage-picture-wrapper {
+                            background-image: url('@{assets-folder}/images/pages/about-us/advantage1-md.png');
+                        }
+                    }
+
+                    li:not(:first-child):not(:last-child) {
+                        .advantage-picture-wrapper {
+                            background-image: url('@{assets-folder}/images/pages/about-us/advantage2-md.png');
+                        }
+                    }
+
+                    li:last-child {
+                        .advantage-picture-wrapper {
+                            background-image: url('@{assets-folder}/images/pages/about-us/advantage3-md.png')
+                        }
+                    }
+                }
+        }
+
+        .advantage {
+
+            .advantage-picture-wrapper {
+                height: 260px;
+                text-align: center;
+                overflow: hidden;
+
+                .advantage-picture {
+                    height: 100%;
+                    max-width: 100%;
+                }
+
+                @media @mdscreen {
+                    background-size: 100% auto;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 280px;
+                    margin-bottom: 60px;
+
+                    .advantage-picture {
+                        display: none;
+                    }
+                }
+
+                @media @lsmscreen {
+                    height: 220px;
+                    margin-bottom: 40px;
+                }
+
+                @media @xsscreen {
+                    height: 200px;
+                    margin-bottom: 30px;
+                }
+
+                @media @xxsscreen {
+                    height: 150px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .advantage-description {
+                padding: 30px 40px 44px 25px;
+                background-color: @white;
+                position: relative;
+
+                .advantage-headline {
+                    font-size: 24px;
+                    line-height: 1.3;
+                    color: @black;
+                    padding-bottom: 20px;
+                    strong {
+                        font-weight: 600;
+                    }
+                }
+
+                .description {
+                    position: relative;
+                    font-size: 15px;
+                    max-height: 300px;
+                    overflow: hidden;
+                }
+
+                @media (max-width: @desktop-hd-point) {
+
+                    min-height: 532px;
+
+                    .description {
+                        max-height: 330px;
+                        height: 330px;
+                        position: absolute;
+                        bottom: 20px;
+                        width: 225px;
+                    }
+                }
+
+                @media @mdscreen {
+                    min-height: auto;
+
+                    .description {
+                        max-height: none;
+                        height: auto;
+                        position: relative;
+                        bottom: 0;
+                        width: auto;
+                    }
+                }
+
+                @media @lsmscreen {
+                    padding: 10px 30px 30px;
+                    margin: 0 60px 60px;
+                }
+
+                @media @lsmscreen {
+                    padding: 10px 5px 30px;
+                    margin: 0 0 30px 0;
+                }
+            }
+        }
+    }
+    // changing margin-bottom due to unique layout
+    .grey-headline {
+        margin-bottom: -0.6em;
+    }
+
+    /**
+     * [*] NOW there 3 classes with 1 additional (4 in total):
+     * [+] - [vertical];
+     * [+] - [horizontal];
+     * [+] - [reverse];
+     * (+) - [reverse-md];
+     * [*] You can combine this classes or just use it as is FOR EXAMPLE:
+     *     [vertical reverse] || [horizontal reverse-md] || [vertical] || [horizontal reverse] || [vertical reverse-md] || [horizontal]
+     * [**] BUT NOTICE you can't combine [vertical] with [horizontal], because it will have UNPREDICTABLE RESULT;
+     * USAGE:
+     * <div class="horizontal">
+     *      <div class="leader-img">
+     *          <img src="#">
+     *      </div>
+     *      <div class="business-card">
+     *          <span class="name">Bob Dylan</span>
+     *          <span class="position horizontal-line s">Musician</span>
+     *      </div>
+     * </div>
+    **/
+
+    .team-leaders {
+        &.team-leaders-small-grid {
+            .row {
+                .row-gutter(@business-card-gutter-lg);
+
+                @media @mdscreen {
+                    .row-gutter(@business-card-gutter-md);
+                }
+
+                @media @xsscreen {
+                    .row-gutter(@business-card-gutter-xs);
+                }
+            }
+        }
+        .col-12 {
+
+            .business-card-description {
+                overflow: hidden;
+
+                .name {
+                    display: block;
+                    font-size: 22px;
+                    line-height: 1.2;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+
+                .position {
+                    line-height: 1.2;
+                    padding-bottom: 20px;
+                }
+
+                @media (max-width: 1200px) {
+                    .name {
+                        font-size: 18px;
+                    }
+                    .position {
+                        font-size: 14px;
+                    }
+                }
+
+                @media @mdscreen {
+                    .name {
+                        font-size: 30px;
+                    }
+
+                    .position {
+                        //line-height: 1.2;
+                        font-size: 18px;
+                    }
+                }
+
+                @media @xsscreen {
+                    .name {
+                        font-size: 25px;
+                    }
+
+                    .position {
+                        //line-height: 1.2;
+                        font-size: 16px;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .name {
+                        font-size: 18px;
+                    }
+
+                    .position {
+                        font-size: 15px;
+                    }
+                }
+
+            }
+
+            .horizontal {
+                display: flex;
+                align-items: stretch;
+                justify-content: space-between;
+                position: relative;
+                background-color: @white;
+                //border: @lines-grey solid 1px;
+                margin-bottom: @business-card-gutter-lg;
+                margin-top: @business-card-gutter-lg;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid @lines-grey;
+                    //border: 1px solid red;
+                }
+
+                &.reverse {
+                    flex-direction: row-reverse;
+
+                    .leader-img {
+                        text-align: right;
+                    }
+
+                    &-md {
+                        @media @mdscreen {
+                            flex-direction: row-reverse;
+                            .leader-img {
+                                text-align: right;
+                            }
+                        }
+
+                        @media (min-width: 992px) {
+                            flex-direction: row;
+                            .leader-img {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+
+                .leader-img {
+                    height: 100%;
+                    width: 50%;
+
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+
+                .business-card-description {
+                    max-height: 100%;
+                    width: auto;
+                    flex-grow: 2;
+                    padding: @business-card-padding-lg;
+                }
+
+                //@media (min-width: 992px) {
+                //    &.reverse {
+                //        .business-card-description {
+                //            //padding-left: 20px;
+                //        }
+                //    }
+                //}
+
+                @media @mdscreen {
+                    margin-bottom: @business-card-gutter-md;
+                    margin-top: @business-card-gutter-md;
+
+                    .business-card-description {
+                        padding: @business-card-padding-md;
+                    }
+                }
+
+                @media @xsscreen {
+                    margin-bottom: @business-card-gutter-xs;
+                    margin-top: @business-card-gutter-xs;
+                }
+
+                @media (max-width: 480px) {
+                    .business-card-description {
+                        padding: @business-card-padding-xs;
+                    }
+                    &.reverse, &.reverse-md {
+                        .business-card-description {
+                            padding-left: @business-card-gutter-xs;
+                        }
+                    }
+                }
+            }
+
+            .vertical {
+                display: flex;
+                align-items: stretch;
+                justify-content: space-between;
+                flex-direction: column;
+                position: relative;
+                background-color: @white;
+                //border: @lines-grey solid 1px;
+                margin-bottom: @business-card-gutter-lg;
+                margin-top: @business-card-gutter-lg;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid @lines-grey;
+                    //border: 1px solid red;
+                }
+
+                &.reverse {
+                    flex-direction: column-reverse;
+                }
+
+                .leader-img {
+                    //height: 50%;
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .business-card-description {
+                    width: 100%;
+                    padding: @business-card-padding-lg;
+                    flex-grow: 2;
+                }
+
+                @media @mdscreen {
+                    margin-bottom: @business-card-gutter-md;
+                    margin-top: @business-card-gutter-md;
+                    .business-card-description {
+                        padding: @business-card-padding-md;
+                        padding-top: @business-card-gutter-md*2;
+                    }
+                }
+
+                @media @lsmscreen {
+                    .business-card-description {
+                        padding: @business-card-padding-xs;
+                        padding-left: @business-card-gutter-xs;
+                        padding-top: @business-card-gutter-xs*2;
+                    }
+                }
+
+                @media @xsscreen {
+                    margin-bottom: @business-card-gutter-xs;
+                    margin-top: @business-card-gutter-xs;
+                }
+            }
+        }
+    }
+}

@@ -2,26 +2,28 @@
 import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 
+import { ThoughtsService } from "../../services/Thoughts.service";
+
 @Component({
+    selector: '[id="thoughts"]',
     templateUrl: './thoughts.html'
 })
 export class ThoughtsPage implements OnInit {
-    /**
-     * using vm to define public data of the page
-     * and delegate prepared properties
-     *
-     */
-    public vm = {
-
-    };
+    public thoughtsList;
 
     /**
      * constructor holder to define what exactly past in public vm object
      *
      *
      */
-    constructor (private state: StateService) {
+    constructor (private state: StateService, private thoughtsService: ThoughtsService) {
 
+    };
+
+    ngOnInit() {
+        this.thoughtsService.getThoughts().then(data => {
+            this.thoughtsList = data;
+        });
     };
 
     /**
@@ -36,6 +38,4 @@ export class ThoughtsPage implements OnInit {
             this.state.go('thoughtsItem');
         }
     };
-
-    ngOnInit() {};
 }

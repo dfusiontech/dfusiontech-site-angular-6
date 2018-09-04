@@ -3,17 +3,18 @@
     // test props to separate page root components
     background: @body-bg;
     min-height: @footer-height;
-
     border-top: solid 1px @icon-grey;
 
     .footer-wrapper {
         padding: 9px 0;
+        transition: padding 250ms ease;
 
         @media (max-width: 575.98px) {
-            padding: 20px 0px;
+            padding: 20px 0;
         }
 
         .footer-col {
+            transition: padding 250ms ease, font-size 250ms ease;
 
             @media (max-width: 575.98px) {
                 padding: 0 10px;
@@ -58,7 +59,7 @@
                 }
             }
 
-            @media (max-width: 575.98px) {
+            @media @lsmscreen {
                 margin-bottom: 25px;
             }
 
