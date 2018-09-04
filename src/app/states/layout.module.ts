@@ -29,6 +29,7 @@ import { AboutUsPage } from './about-us/about-us.page';
 import { ContactsPage } from './contacts/contacts.page';
 import { CasesService } from '../services/Cases.service';
 import { LetsChatComponent } from '../components/lets-chat/lets-chat.component';
+import {TeamLeadersService} from "../services/Team-leaders.service";
 
 /**
  * define all pages within application
@@ -81,7 +82,8 @@ export const routing: RootModule = {
     ],
     providers: [
         CasesService,
-        ThoughtsService
+        ThoughtsService,
+        TeamLeadersService
     ],
     // define outgoing modules
     exports: [

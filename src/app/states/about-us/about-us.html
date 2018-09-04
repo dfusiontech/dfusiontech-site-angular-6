@@ -112,7 +112,7 @@
                         </li>
                     </ul>
                 </section>
-                <section class="team-leaders team-leaders-small-grid horizontal-alignment">
+                <section class="team-leaders team-leaders-small-grid horizontal-alignment" *ngIf="teamLeadersList">
                     <h2 class="grey-headline">Our team</h2>
                     <div class="row">
                         <div class="col-12 offset-lg-1 col-lg-4">
@@ -120,15 +120,14 @@
                                 <div class="col-12 order-3 order-lg-1">
                                     <div class="horizontal reverse" #horizontal [ngStyle]="{'height.px' : vertical.offsetWidth }">
                                         <div class="leader-img">
-                                            <img
-                                                 src="../../../assets/images/pages/about-us/leaders/igor.png"
-                                                 alt="Igor Kalosha"
+                                            <img [src]="teamLeadersList[0].img"
+                                                 [alt]="teamLeadersList[0].name"
                                                     >
                                         </div>
                                         <div class="business-card-description">
-                                            <span class="name">Igor Kalosha</span>
+                                            <span class="name">{{ teamLeadersList[0].name }}</span>
                                             <span class="position horizontal-line s">
-                                                COO
+                                                {{ teamLeadersList[0].position }}
                                             </span>
                                         </div>
                                     </div>
@@ -136,14 +135,14 @@
                                 <div class="col-6 order-1 order-lg-2">
                                     <div class="vertical d-flex d-lg-none reverse" [ngStyle]="{'height.px' : horizontal.offsetWidth}">
                                         <div class="leader-img">
-                                            <img src="../../../assets/images/pages/about-us/leaders/eugene.png"
-                                                 alt="Eugene Kalosha"
+                                            <img [src]="teamLeadersList[1].img"
+                                                 [alt]="teamLeadersList[1].name"
                                                     >
                                         </div>
                                         <div class="business-card-description">
-                                            <span class="name">Eugene Kalosha</span>
+                                            <span class="name">{{ teamLeadersList[1].name }}</span>
                                             <span class="position horizontal-line s">
-                                                Founder and CEO
+                                                {{ teamLeadersList[1].position }}
                                             </span>
                                         </div>
                                     </div>
@@ -151,14 +150,14 @@
                                 <div class="col-6 order-2 order-lg-3">
                                     <div class="vertical" #vertical [ngStyle]="{'height.px' : horizontal.offsetWidth - 1}">
                                         <div class="leader-img">
-                                            <img src="../../../assets/images/pages/about-us/leaders/oleg.png"
-                                                 alt="Oleg Pankiv"
+                                            <img [src]="teamLeadersList[2].img"
+                                                 [alt]="teamLeadersList[2].name"
                                                     >
                                         </div>
                                         <div class="business-card-description">
-                                            <span class="name">Oleg Pankiv</span>
+                                            <span class="name">{{ teamLeadersList[2].name }}</span>
                                             <span class="position horizontal-line s">
-                                                Lead of Mobile Development
+                                                {{ teamLeadersList[2].position }}
                                             </span>
                                         </div>
                                     </div>
@@ -170,15 +169,14 @@
                                 <div class="col-4 d-none d-lg-flex">
                                     <div class="vertical reverse" [ngStyle]="{'height.px' : horizontal.offsetWidth - 1 }">
                                         <div class="leader-img">
-                                            <img
-                                                 src="../../../assets/images/pages/about-us/leaders/eugene.png"
-                                                 alt="Eugene Kalosha"
+                                            <img [src]="teamLeadersList[1].img"
+                                                 [alt]="teamLeadersList[1].name"
                                                     >
                                         </div>
                                         <div class="business-card-description">
-                                            <span class="name">Eugene Kalosha</span>
+                                            <span class="name">{{ teamLeadersList[1].name }}</span>
                                             <span class="position horizontal-line s">
-                                                Founder and CEO
+                                                {{ teamLeadersList[1].position }}
                                             </span>
                                         </div>
                                     </div>
@@ -188,15 +186,14 @@
                                         <div class="col-12">
                                             <div class="horizontal" [ngStyle]="{'height.px' : vertical.offsetWidth}">
                                                 <div class="leader-img">
-                                                    <img
-                                                         src="../../../assets/images/pages/about-us/leaders/marina.png"
-                                                         alt="Marina Kotenko"
+                                                    <img [src]="teamLeadersList[3].img"
+                                                         [alt]="teamLeadersList[3].name"
                                                             >
                                                 </div>
                                                 <div class="business-card-description">
-                                                    <span class="name">Marina Kotenko</span>
+                                                    <span class="name">{{ teamLeadersList[3].name }}</span>
                                                     <span class="position horizontal-line s">
-                                                        Head of Business Development
+                                                        {{ teamLeadersList[3].position }}
                                                     </span>
                                                 </div>
                                             </div>
@@ -204,15 +201,14 @@
                                         <div class="col-12">
                                             <div class="horizontal reverse-md" [ngStyle]="{'height.px' : vertical.offsetWidth}">
                                                 <div class="leader-img">
-                                                    <img
-                                                         src="../../../assets/images/pages/about-us/leaders/vadim.png"
-                                                         alt="Vadim Kalosha"
+                                                    <img [src]="teamLeadersList[4].img"
+                                                         [alt]="teamLeadersList[4].name"
                                                             >
                                                 </div>
                                                 <div class="business-card-description">
-                                                    <span class="name">Vadim Kalosha</span>
+                                                    <span class="name">{{ teamLeadersList[4].name }}</span>
                                                     <span class="position horizontal-line s">
-                                                        VP of Engineering
+                                                        {{ teamLeadersList[4].position }}
                                                     </span>
                                                 </div>
                                             </div>
@@ -222,15 +218,14 @@
                                 <div class="col-12 col-lg-8">
                                     <div class="horizontal" [ngStyle]="{'height.px' : vertical.offsetWidth}">
                                         <div class="leader-img">
-                                            <img class="leader-img"
-                                                 src="../../../assets/images/pages/about-us/leaders/sergey.png"
-                                                 alt="Sergey Perekhrest"
+                                            <img [src]="teamLeadersList[5].img"
+                                                 [alt]="teamLeadersList[5].name"
                                                     >
                                         </div>
                                         <div class="business-card-description">
-                                            <span class="name">Sergey Perekhrest</span>
+                                            <span class="name">{{ teamLeadersList[5].name }}</span>
                                             <span class="position horizontal-line s">
-                                                Lead of Front-End Development
+                                                {{ teamLeadersList[5].position }}
                                             </span>
                                         </div>
                                     </div>
