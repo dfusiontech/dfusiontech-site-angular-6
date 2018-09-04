@@ -1,5 +1,15 @@
 #aboutus {
 
+    // Value of margins & gutter width on different media points [>=992px] | [<=991px] | [<=576px]
+    @business-card-gutter-lg: 7px;
+    @business-card-gutter-md: 13px;
+    @business-card-gutter-xs: 15px;
+
+    // Value of padding in each business card
+    @business-card-padding-lg: @business-card-gutter-lg*2 @business-card-gutter-lg*1 @business-card-gutter-lg*2 @business-card-gutter-lg*2; // 20px  10px  20px 20px
+    @business-card-padding-md: @business-card-gutter-md*2 @business-card-gutter-md*1 @business-card-gutter-md*2 @business-card-gutter-md*2; // 25px 12.5px 25px 25px
+    @business-card-padding-xs: @business-card-gutter-xs*1 @business-card-gutter-xs*1 @business-card-gutter-xs*1 @business-card-gutter-xs*1; // 15px  15px  15px 30px
+
     .thesis {
         color: @black;
         font-size: 15px;
@@ -246,16 +256,44 @@
         margin-bottom: -0.6em;
     }
 
+    /**
+     * [*] NOW there 3 classes with 1 additional (4 in total):
+     * [+] - [vertical];
+     * [+] - [horizontal];
+     * [+] - [reverse];
+     * (+) - [reverse-md];
+     * [*] You can combine this classes or just use it as is FOR EXAMPLE:
+     *     [vertical reverse] || [horizontal reverse-md] || [vertical] || [horizontal reverse] || [vertical reverse-md] || [horizontal]
+     * [**] BUT NOTICE you can't combine [vertical] with [horizontal], because it will have UNPREDICTABLE RESULT;
+     * USAGE:
+     * <div class="horizontal">
+     *      <div class="leader-img">
+     *          <img src="#">
+     *      </div>
+     *      <div class="business-card">
+     *          <span class="name">Bob Dylan</span>
+     *          <span class="position horizontal-line s">Musician</span>
+     *      </div>
+     * </div>
+    **/
+
     .team-leaders {
         &.team-leaders-small-grid {
             .row {
-                .row-gutter(5px);
+                .row-gutter(@business-card-gutter-lg);
+
+                @media @mdscreen {
+                    .row-gutter(@business-card-gutter-md);
+                }
+
+                @media @xsscreen {
+                    .row-gutter(@business-card-gutter-xs);
+                }
             }
         }
         .col-12 {
 
-            .business-card {
-                max-height: 100%;
+            .business-card-description {
                 overflow: hidden;
 
                 .name {
@@ -303,8 +341,6 @@
                 }
 
                 @media (max-width: 480px) {
-
-
                     .name {
                         font-size: 18px;
                     }
@@ -317,146 +353,162 @@
             }
 
             .horizontal {
-                background-color: @white;
-                border: @lines-grey solid 1px;
-                //height: 160px;
-                margin-bottom: 15px;
-                margin-top: 15px;
+                display: flex;
+                align-items: stretch;
+                justify-content: space-between;
                 position: relative;
-
-                .row {
+                background-color: @white;
+                //border: @lines-grey solid 1px;
+                margin-bottom: @business-card-gutter-lg;
+                margin-top: @business-card-gutter-lg;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 100%;
                     height: 100%;
-                    .col-md-12 {
+                    border: 1px solid @lines-grey;
+                    //border: 1px solid red;
+                }
+
+                &.reverse {
+                    flex-direction: row-reverse;
+
+                    .leader-img {
+                        text-align: right;
+                    }
+
+                    &-md {
+                        @media @mdscreen {
+                            flex-direction: row-reverse;
+                            .leader-img {
+                                text-align: right;
+                            }
+                        }
+
+                        @media (min-width: 992px) {
+                            flex-direction: row;
+                            .leader-img {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+
+                .leader-img {
+                    height: 100%;
+                    width: 50%;
+
+                    img {
+                        width: auto;
                         height: 100%;
                     }
                 }
 
-                img {
-                    height: 100%;
+                .business-card-description {
+                    max-height: 100%;
                     width: auto;
+                    flex-grow: 2;
+                    padding: @business-card-padding-lg;
                 }
 
-                .business-card {
-                    height: 100%;
-                    padding: 20px 10px 20px 0;
-                    //margin-left: -15px;
-                    //width: calc(100% + 15px);
-                }
-
-                @media (min-width: 992px) {
-                    .business-card {
-                        margin-left: -10px;
-                    }
-
-                    &.reverse {
-                        .business-card {
-                            padding-left: 20px;
-                        }
-                    }
-                }
-
-                @media (max-width: @desktop-hd-point) {
-                    //height: 129.98px;
-                }
+                //@media (min-width: 992px) {
+                //    &.reverse {
+                //        .business-card-description {
+                //            //padding-left: 20px;
+                //        }
+                //    }
+                //}
 
                 @media @mdscreen {
-                    .business-card {
-                        padding: 20px 10px 20px 10px;
-                    }
-                }
+                    margin-bottom: @business-card-gutter-md;
+                    margin-top: @business-card-gutter-md;
 
-                @media @lsmscreen {
-                }
-
-                @media (max-width: 480px) {
-                    .business-card {
-                        padding: 10px 10px 20px 0;
-                    }
-                    &.reverse, &.reverse {
-                        .business-card {
-                            padding-left: 10px;
-                        }
+                    .business-card-description {
+                        padding: @business-card-padding-md;
                     }
                 }
 
                 @media @xsscreen {
+                    margin-bottom: @business-card-gutter-xs;
+                    margin-top: @business-card-gutter-xs;
+                }
+
+                @media (max-width: 480px) {
+                    .business-card-description {
+                        padding: @business-card-padding-xs;
+                    }
+                    &.reverse, &.reverse-md {
+                        .business-card-description {
+                            padding-left: @business-card-gutter-xs;
+                        }
+                    }
                 }
             }
 
             .vertical {
+                display: flex;
+                align-items: stretch;
+                justify-content: space-between;
+                flex-direction: column;
                 position: relative;
                 background-color: @white;
-                border: @lines-grey solid 1px;
-                //height: 350px;
-                margin-bottom: 15px;
-                margin-top: 15px;
+                //border: @lines-grey solid 1px;
+                margin-bottom: @business-card-gutter-lg;
+                margin-top: @business-card-gutter-lg;
 
-                .row {
-                    height: 50%;
-
-                    .col-md-12 {
-                        height: 100%;
-                    }
-                }
-
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-
-                .business-card {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
                     width: 100%;
                     height: 100%;
-                    padding: 20px 10px 20px 20px;
+                    border: 1px solid @lines-grey;
+                    //border: 1px solid red;
                 }
 
                 &.reverse {
+                    flex-direction: column-reverse;
+                }
+
+                .leader-img {
+                    //height: 50%;
+                    width: 100%;
+
                     img {
-                        //float: right;
-                        //margin-top: 50%;
-                        position: absolute;
-                        bottom: 0;
-                        width: calc(100% - 30px);
+                        width: 100%;
+                        height: auto;
                     }
                 }
 
-                &:not(.reverse) {
-                    .business-card {
-                        padding: 5px 10px 20px 20px;
-                    }
-                }
-
-                @media @lgscreen {
-
-                }
-
-                @media (max-width: @desktop-hd-point) {
-                    //height: 289.98px;
+                .business-card-description {
+                    width: 100%;
+                    padding: @business-card-padding-lg;
+                    flex-grow: 2;
                 }
 
                 @media @mdscreen {
-                    .business-card {
-                        padding: 20px 10px 20px 10px;
+                    margin-bottom: @business-card-gutter-md;
+                    margin-top: @business-card-gutter-md;
+                    .business-card-description {
+                        padding: @business-card-padding-md;
+                        padding-top: @business-card-gutter-md*2;
                     }
                 }
 
                 @media @lsmscreen {
-                    .business-card {
-                        padding: 20px 10px 20px 10px;
+                    .business-card-description {
+                        padding: @business-card-padding-xs;
+                        padding-left: @business-card-gutter-xs;
+                        padding-top: @business-card-gutter-xs*2;
                     }
                 }
 
                 @media @xsscreen {
-                    //height: 260px;
-
-                    //img, &.reverse img {
-                    //    width: 115px;
-                    //
-                    //}
-
-                    //&.Oleg .col-12:not(.business-card) {
-                    //    //text-align: right;
-                    //}
+                    margin-bottom: @business-card-gutter-xs;
+                    margin-top: @business-card-gutter-xs;
                 }
             }
         }
