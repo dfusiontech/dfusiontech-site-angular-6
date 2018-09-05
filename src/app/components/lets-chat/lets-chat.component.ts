@@ -15,7 +15,6 @@ export class LetsChatComponent implements OnInit {
         } else {
             this.caseMobileBehavior = false;
         }
-        console.log(this.caseMobileBehavior);
     };
     // find out width of current desktop and set needed header height value and transmit it to on scroll event
     @HostListener('window:resize') onResize() {
