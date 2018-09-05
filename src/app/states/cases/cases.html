@@ -20,6 +20,7 @@
                                         <div class="col-12" *ngFor="let caseItem of caseItems">
                                             <a
                                                 uiSref="case-page"
+                                                [uiParams]="{ permalinkId: caseItem.permalinkId }"
                                                 class="d-block case-item"
                                                     >
                                                 <div class="row align-items-center">
@@ -71,6 +72,7 @@
                                         <div class="col-12">
                                             <a
                                                 uiSref="case-page"
+                                                [uiParams]="{ permalinkId: caseItems.permalinkId }"
                                                 class="d-block case-item"
                                                     >
                                                 <div class="row align-items-center">
@@ -139,6 +141,7 @@
                                                     >
                                                 <a
                                                     uiSref="case-page"
+                                                    [uiParams]="{ permalinkId: caseItemHorizontal.permalinkId }"
                                                     class="d-block case-item"
                                                     *ngFor="let caseItemHorizontal of caseItem.caseModels; let odd = odd; let even = even"
                                                         >
@@ -183,6 +186,7 @@
                                                     >
                                                 <a
                                                     uiSref="case-page"
+                                                    [uiParams]="{ permalinkId: caseItemVertical.permalinkId }"
                                                     class="d-block case-item"
                                                     *ngFor="let caseItemVertical of caseItem.caseModels"
                                                         >

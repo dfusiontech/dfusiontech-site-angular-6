@@ -16,20 +16,23 @@ export class CasesService {
             setTimeout(() => {
                 if ( CasesConstant ) {
                     // getting cases list without order
-                    for ( let i = 0; i < CasesConstant.length; i++ ) {
-                        casesList.push( new CaseModel( CasesConstant[i] ));
+                    const caseContentData = CasesConstant.map(e => ({ ... e })); // deep copy
+                    for ( let i = 0; i < caseContentData.length; i++ ) {
+                        caseContentData[i].permalinkId = caseContentData[i].permalinkId + '-' + ((n) => n + 1)(i);
+                        casesList.push( new CaseModel( caseContentData[i] ));
                     }
                     // set random background color which will be used on hover background case content
                     for ( let i = 0; i < casesList.length; i++ ) {
                         // available variables of background color
-                        let listBackgroundColors = [ 'turquoise', 'green', 'orange', 'purple', 'red', 'blue' ];
+                        const listBackgroundColors = [ 'turquoise', 'green', 'orange', 'purple', 'red', 'blue' ];
+                        let randomBackgroundColor;
                         if ( i === 0 ) {
-                            let randomBackgroundColor = listBackgroundColors[ Math.floor(Math.random() * listBackgroundColors.length ) ];
+                            randomBackgroundColor = listBackgroundColors[ Math.floor(Math.random() * listBackgroundColors.length ) ];
                             casesList[i].contentBackground = randomBackgroundColor;
                         } else {
                             // prevent repeating background colors of nearby items
                             do {
-                                let randomBackgroundColor = listBackgroundColors[ Math.floor(Math.random() * listBackgroundColors.length ) ];
+                                randomBackgroundColor = listBackgroundColors[ Math.floor(Math.random() * listBackgroundColors.length ) ];
                                 casesList[i].contentBackground = randomBackgroundColor;
                             } while ( casesList[i].contentBackground === casesList[i-1].contentBackground )
                         }
