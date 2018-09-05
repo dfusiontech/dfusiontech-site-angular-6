@@ -138,4 +138,10 @@ export const CasesConstant = [
         'img': 'http://placehold.it/672x354',
         'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     }
+    ,
+    {
+        'title': 'QWERTY LOREM IPSUM',
+        'img': 'http://placehold.it/672x354',
+        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+    }
 ];

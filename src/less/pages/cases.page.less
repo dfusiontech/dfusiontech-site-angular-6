@@ -20,21 +20,39 @@
         }
         .case-item {
             margin-bottom: 40px;
+            overflow: hidden;
+            width: 100%;
+
             &.last-case-item {
                 margin-bottom: 0;
             }
-            .case-img {
-                // set fixed height corresponding to design
+            .case-img-block {
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
                 height: 376px;
+                width: 100%;
 
                 @media @lsmscreen {
                     height: 247px;
                 }
+            }
+            .case-img {
+                // set fixed height corresponding to design
+                //height: 376px;
+                flex: none;
+                max-width: none;
+                width: auto;
+
+                @media @lsmscreen {
+                    height: 247px;
+                    //height: auto;
+                }
                 &.img-big-desktop {
-                    max-width: 100%;
+                    //max-width: 100%;
                 }
                 &.img-small-desktop {
-                    min-width: 100%;
+                    //min-width: 100%;
                 }
             }
             .case-content {

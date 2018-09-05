@@ -20,7 +20,7 @@
                                         <div class="col-12" *ngFor="let caseItem of caseItems">
                                             <a
                                                 uiSref="case-page"
-                                                class="d-inline-block case-item"
+                                                class="d-block case-item"
                                                     >
                                                 <div class="row align-items-center">
                                                     <div
@@ -30,15 +30,17 @@
                                                             'order-first': caseMobileBehavior && odd
                                                                 }"
                                                             >
-                                                        <img
-                                                            class="case-img"
-                                                            [src]="caseItem.img"
-                                                            [alt]="caseItem.title"
-                                                            [ngClass]="{
+                                                        <div class="case-img-block">
+                                                            <img
+                                                                class="case-img"
+                                                                [src]="caseItem.img"
+                                                                [alt]="caseItem.title"
+                                                                [ngClass]="{
                                                                 'img-big-desktop': !caseMobileBehavior ,
                                                                 'img-small-desktop': caseMobileBehavior
                                                                     }"
-                                                                >
+                                                            />
+                                                        </div>
                                                     </div>
                                                     <div class="col-md-5 col-lg-4">
                                                         <section
@@ -69,7 +71,7 @@
                                         <div class="col-12">
                                             <a
                                                 uiSref="case-page"
-                                                class="d-inline-block case-item"
+                                                class="d-block case-item"
                                                     >
                                                 <div class="row align-items-center">
                                                     <div
@@ -79,15 +81,17 @@
                                                         'order-first': ( caseMobileBehavior && odd && cases.revers ) || ( caseMediumDesktopBehavior && cases.revers && i === 0 )
                                                                 }"
                                                             >
-                                                        <img
-                                                            class="case-img"
-                                                            [src]="caseItems.img"
-                                                            [alt]="caseItems.title"
-                                                            [ngClass]="{
-                                                                'img-big-desktop': !caseMobileBehavior ,
-                                                                 'img-small-desktop': caseMobileBehavior
-                                                                    }"
-                                                                >
+                                                        <div class="case-img-block">
+                                                            <img
+                                                                class="case-img"
+                                                                [src]="caseItems.img"
+                                                                [alt]="caseItems.title"
+                                                                [ngClass]="{
+                                                                    'img-big-desktop': !caseMobileBehavior ,
+                                                                     'img-small-desktop': caseMobileBehavior
+                                                                        }"
+                                                                    />
+                                                        </div>
                                                     </div>
                                                     <div
                                                         class="col-md-5 col-lg-4"
@@ -135,7 +139,7 @@
                                                     >
                                                 <a
                                                     uiSref="case-page"
-                                                    class="d-inline-block case-item"
+                                                    class="d-block case-item"
                                                     *ngFor="let caseItemHorizontal of caseItem.caseModels; let odd = odd; let even = even"
                                                         >
                                                     <div class="row align-items-center">
@@ -160,11 +164,13 @@
                                                             class="col-md-7"
                                                             [ngClass]="{ 'order-first': caseMobileBehavior || odd }"
                                                                 >
-                                                            <img
-                                                                [src]="caseItemHorizontal.img"
-                                                                [alt]="caseItemHorizontal.title"
-                                                                class="case-img w-100"
-                                                                    >
+                                                            <div class="case-img-block">
+                                                                <img
+                                                                    [src]="caseItemHorizontal.img"
+                                                                    [alt]="caseItemHorizontal.title"
+                                                                    class="case-img"
+                                                                />
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </a>
@@ -177,7 +183,7 @@
                                                     >
                                                 <a
                                                     uiSref="case-page"
-                                                    class="d-inline-block case-item"
+                                                    class="d-block case-item"
                                                     *ngFor="let caseItemVertical of caseItem.caseModels"
                                                         >
                                                     <div
@@ -209,11 +215,13 @@
                                                             class="col-md-7 col-lg-12"
                                                             [ngClass]="{ 'order-first': caseMobileBehavior || caseItems.revers && caseMediumDesktopBehavior }"
                                                                 >
+                                                            <div class="case-img-block">
                                                             <img
                                                                 [src]="caseItemVertical.img"
                                                                 [alt]="caseItemVertical.title"
-                                                                class="case-img w-100"
-                                                                    >
+                                                                class="case-img"
+                                                                    />
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </a>
