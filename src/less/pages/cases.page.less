@@ -26,9 +26,15 @@
             .case-img {
                 // set fixed height corresponding to design
                 height: 376px;
-                max-width: 100%;
+
                 @media @lsmscreen {
                     height: 247px;
+                }
+                &.img-big-desktop {
+                    max-width: 100%;
+                }
+                &.img-small-desktop {
+                    min-width: 100%;
                 }
             }
             .case-content {
@@ -49,12 +55,18 @@
                     @media @lsmscreen {
                         padding: 30px 3px 38px;
                     }
+                    &.case-content-medium-reversed {
+                        padding: 20px 27px;
+                    }
                 }
                 &.case-content-large {
                     padding: 30px 27px 38px;
                     // set indent on mobile corresponding to design
                     @media @lsmscreen {
                         padding: 30px 3px 38px;
+                    }
+                    &.case-content-large-reversed {
+                        padding: 20px 27px;
                     }
                 }
                 // compressing content corresponding to design

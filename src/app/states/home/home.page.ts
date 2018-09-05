@@ -20,6 +20,8 @@ export class HomePage implements OnInit {
     ngOnInit() {
         this.casesService.getCases().then(data => {
             this.casesList = data;
+            // corresponding to design cases list cosist only of two elements
+            this.casesList = this.casesList.slice(0, 2);
         });
         // changing cases content order on mobile
         if ( window.innerWidth < this.caseRestructuringPointMobile ) {
