@@ -1,6 +1,8 @@
+import { Transition } from '@uirouter/angular';
+
 import { ThoughtsItemPage } from './thoughts-item.page';
 import { HeaderComponent } from '../../components/header/header.component';
-import { Transition } from '@uirouter/angular';
+import { ThoughtsService } from '../../services/Thoughts.service';
 
 export const thoughtsItemState = {
     name: 'thoughts-item',
@@ -12,9 +14,9 @@ export const thoughtsItemState = {
     resolve: [
         {
             token: 'thoughtId',
-            deps: [Transition],
-            resolveFn: (trans) => {
-                // ThoughtsService.getThoughtByLink(trans.params().thoughtId);
+            deps: [Transition, ThoughtsService],
+            resolveFn: (trans, thoughtsService) => {
+                // thoughtsService.getThoughtByLink(trans.params().thoughtId);
                 return trans.params().thoughtId;
             }
         }
