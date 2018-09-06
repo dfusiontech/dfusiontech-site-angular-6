@@ -13,19 +13,19 @@ import { casePageState } from './case/case-page.state';
 import { thoughtsState } from './thoughts/thoughts.state';
 import { aboutUsState } from './about-us/about-us.state';
 import { contactsState } from './contacts/contacts.state';
-import { thoughtsItemState } from "./thoughts-item/thoughts-item.state";
+import { thoughtsItemState } from './thoughts-item/thoughts-item.state';
 // Components
 import { HeaderComponent } from '../components/header/header.component';
 import { LayoutComponent } from './layout.component';
 import { FooterComponent } from '../components/footer/footer.component';
 // pages
-import { HomePage } from './home/home.page';
+import { HomePageComponent } from './home/home.page';
 import { CasesPage } from './cases/cases.page';
 import { CasePage } from './case/case.page';
 import { ThoughtsPage} from './thoughts/thoughts.page';
-import { ThoughtsItemPage } from './thoughts-item/thoughts-item.page';
+import { ThoughtsItemPageComponent } from './thoughts-item/thoughts-item.page';
 import { ThoughtsService } from '../services/Thoughts.service';
-import { AboutUsPage } from './about-us/about-us.page';
+import { AboutUsPageComponent } from './about-us/about-us.page';
 import { ContactsPage } from './contacts/contacts.page';
 import { CasesService } from '../services/Cases.service';
 import { LetsChatComponent } from '../components/lets-chat/lets-chat.component';
@@ -62,12 +62,12 @@ export const routing: RootModule = {
         FooterComponent,
         LetsChatComponent,
         LayoutComponent,
-        HomePage,
+        HomePageComponent,
         CasesPage,
         CasePage,
         ThoughtsPage,
-        ThoughtsItemPage,
-        AboutUsPage,
+        ThoughtsItemPageComponent,
+        AboutUsPageComponent,
         ContactsPage
     ],
     // define dependencies for all page components

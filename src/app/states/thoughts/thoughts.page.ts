@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 
-import { ThoughtsService } from "../../services/Thoughts.service";
+import { ThoughtsService } from '../../services/Thoughts.service';
 
 @Component({
     selector: '[id="thoughts"]',
@@ -18,13 +18,13 @@ export class ThoughtsPage implements OnInit {
      */
     constructor (private state: StateService, private thoughtsService: ThoughtsService) {
 
-    };
+    }
 
     ngOnInit() {
         this.thoughtsService.getThoughts().then(data => {
             this.thoughtsList = data;
         });
-    };
+    }
 
     // /**
     //  * example of programmatically redirect

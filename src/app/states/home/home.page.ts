@@ -2,20 +2,20 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 // services
-import { CasesService } from "../../services/Cases.service";
+import { CasesService } from '../../services/Cases.service';
 
 @Component({
     selector: '[id="home"]',
     templateUrl: './home.html'
 })
-export class HomePage implements OnInit {
+export class HomePageComponent implements OnInit {
     public casesList;
     public caseMobileBehavior;
     public caseMediumDesktopBehavior;
     public caseRestructuringPointMobile = 768;
     public caseRestructuringPointDesktop = 992;
 
-    constructor ( private state: StateService, private casesService: CasesService) {};
+    constructor ( private state: StateService, private casesService: CasesService) {}
 
     ngOnInit() {
         this.casesService.getCases().then(data => {
@@ -36,7 +36,7 @@ export class HomePage implements OnInit {
             this.caseMediumDesktopBehavior = false;
         }
 
-    };
+    }
 
     @HostListener('window:resize') onResize() {
         if ( window.innerWidth < this.caseRestructuringPointMobile ) {
