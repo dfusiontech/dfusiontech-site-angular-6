@@ -1,7 +1,20 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="container">
+            <div id="errorMessage" *ngIf="errorOccurred" [errorResponse]="errorResponse"></div>
+            <div
+                *ngIf="!thoughtsListLoaded && !errorOccurred"
+                class="def-preloader"
+                    >
+                <div id="SPW">
+                    <div id="SP_1" class="sp"></div> <div id="SP_2" class="sp"></div> <div id="SP_3" class="sp"></div> <div id="SP_4" class="sp"></div>
+                    <div id="SP_5" class="sp"></div> <div id="SP_6" class="sp"></div> <div id="SP_7" class="sp"></div> <div id="SP_8" class="sp"></div>
+                </div>
+            </div>
+            <div
+                class="container"
+                *ngIf="thoughtsListLoaded"
+                    >
                 <section class="heading-block grey-rectangle">
                     <div class="heading-title inner-img">
                         <a uiSref="thoughtsItem" title="Lincoln Center">
@@ -14,9 +27,7 @@
                         <span class="date horizontal-line m">may 4, 2018</span>
                     </div>
                 </section>
-                <section class="thoughts-wrapper"
-                         *ngIf="thoughtsList"
-                        >
+                <section class="thoughts-wrapper">
                     <ul class="list-unstyled row">
                         <li class="col-lg-4 col-sm-6" *ngFor="let thought of thoughtsList">
                             <div class="thought">

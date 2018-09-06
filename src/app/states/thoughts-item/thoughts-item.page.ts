@@ -9,6 +9,14 @@ import { ThoughtsService } from "../../services/Thoughts.service";
 })
 export class ThoughtsItemPage implements OnInit {
     @Input() thoughtId;
+
+    // initially data is loading
+    public thoughtItemLoaded = false;
+
+    public errorResponse;
+    // initially we don't know if error has been occurred with getting data
+    public errorOccurred = false;
+
     public thought;
 
     /**
@@ -22,9 +30,16 @@ export class ThoughtsItemPage implements OnInit {
 
     ngOnInit() {
         // this.thought = this.thoughtsService.getThoughtByLink(this.thoughtId);
-        this.thoughtsService.getThoughtByLink(this.thoughtId).then(data => {
-            this.thought = data;
-        });
+        this.thoughtsService
+            .getThoughtByLink(this.thoughtId)
+            .then(data => {
+                this.thought = data;
+                this.thoughtItemLoaded = true;
+            })
+            .catch(error => {
+                this.errorResponse = error;
+                this.errorOccurred = true;
+            });
     };
 
 

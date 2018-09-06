@@ -6,6 +6,8 @@ import { CaseModel } from "../models/case.model";
 export class CasesService {
     constructor() {}
     public getCases() {
+        // in case of problems with getting data transmit message with this content
+        const errorResponse = 'Sorry, content is not available at that moment.';
         // variable to get prepared collection and cases items with different background color, not ordered
         let casesList = [];
         // variable to order each 5 cases by groups ( two in "single" and three in "group" )
@@ -154,7 +156,7 @@ export class CasesService {
                     }
                     resolve( casesListOrdered );
                 } else {
-                    reject('error');
+                    reject( errorResponse );
                 }
             }, 1000);
         });
