@@ -7,6 +7,7 @@ export class CaseModel {
     description: string;
     img: string;
     contentBackground: string;
+    permalinkId: string;
     constructor ( data ) {
         this.title = data.title || '';
         this.description = data.description || '';
@@ -14,5 +15,6 @@ export class CaseModel {
         // this property will be filled in cases service, need this property to set unique value of bg color of case
         // content on hover
         this.contentBackground = '';
+        this.permalinkId = data.permalinkId;
     }
 }
