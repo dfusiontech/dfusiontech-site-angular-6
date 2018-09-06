@@ -12,8 +12,10 @@ export class HomePage implements OnInit {
     public casesList;
     public caseMobileBehavior;
     public caseMediumDesktopBehavior;
+    public caseLargeDesktopBehavior;
     public caseRestructuringPointMobile = 768;
     public caseRestructuringPointDesktop = 992;
+    public caseRestructuringPointLgDesktop =  1200;
 
     constructor ( private state: StateService, private casesService: CasesService) {};
 
@@ -35,6 +37,12 @@ export class HomePage implements OnInit {
         } else {
             this.caseMediumDesktopBehavior = false;
         }
+        // changing cases content order on large desktop
+        if ( window.innerWidth < this.caseRestructuringPointLgDesktop ) {
+            this.caseLargeDesktopBehavior = true;
+        } else {
+            this.caseLargeDesktopBehavior = false;
+        }
 
     };
 
@@ -49,6 +57,12 @@ export class HomePage implements OnInit {
             this.caseMediumDesktopBehavior = true;
         } else {
             this.caseMediumDesktopBehavior = false;
+        }
+        // changing cases content order on large desktop
+        if ( window.innerWidth < this.caseRestructuringPointLgDesktop ) {
+            this.caseLargeDesktopBehavior = true;
+        } else {
+            this.caseLargeDesktopBehavior = false;
         }
     }
 }
