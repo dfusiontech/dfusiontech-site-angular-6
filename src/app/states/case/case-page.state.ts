@@ -8,7 +8,7 @@ import { HeaderComponent } from "../../components/header/header.component";
  */
 export const casePageState = {
     name: 'case-page',
-    url: '/case-page', // there should be single case name or number
+    url: '/case/:permalinkId', // there should be single case name or number
     views: {
         header: { component: HeaderComponent },
         $default: { component: CasePage },

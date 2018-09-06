@@ -41,7 +41,6 @@ export class CasesPage implements OnInit {
         } else {
             this.caseLargeDesktopBehavior = false;
         }
-
     };
 
     @HostListener('window:resize') onResize() {
