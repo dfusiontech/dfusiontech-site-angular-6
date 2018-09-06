@@ -46,13 +46,6 @@
 
                 @media @lsmscreen {
                     height: 247px;
-                    //height: auto;
-                }
-                &.img-big-desktop {
-                    //max-width: 100%;
-                }
-                &.img-small-desktop {
-                    //min-width: 100%;
                 }
             }
             .case-content {
@@ -77,14 +70,11 @@
                         padding: 20px 27px;
                     }
                 }
-                &.case-content-large {
-                    padding: 30px 27px 38px;
+                &.case-content-wider {
+                    padding: 20px 27px;
                     // set indent on mobile corresponding to design
                     @media @lsmscreen {
                         padding: 30px 3px 38px;
-                    }
-                    &.case-content-large-reversed {
-                        padding: 20px 27px;
                     }
                 }
                 // compressing content corresponding to design
@@ -152,16 +142,32 @@
                         }
                     }
                     &.move-bottom {
+                         @media ( min-width: 1199px ) {
+                             transform: translateY(45%)!important;
+                         }
+                         // fix transform behavior on interval between 991px and 1199px
+                         @media ( max-width: 1199px ) and ( min-width: 991px ) {
+                             transform: translateY(45%)!important;
+                         }
+                         // fix transform behavior on 992px
+                         @media ( max-width: 991px ) {
+                             transform: translateX(25%)!important;
+                         }
+                         @media @lsmscreen {
+                             transform: translateY(-20%)!important;
+                         }
+                     }
+                    &.move-top {
                         @media ( min-width: 1199px ) {
-                            transform: translateY(45%)!important;
+                            transform: translateY(-45%)!important;
                         }
                         // fix transform behavior on interval between 991px and 1199px
                         @media ( max-width: 1199px ) and ( min-width: 991px ) {
-                            transform: translateY(45%)!important;
+                            transform: translateY(-45%)!important;
                         }
                         // fix transform behavior on 992px
                         @media ( max-width: 991px ) {
-                            transform: translateX(25%)!important;
+                            transform: translateX(-25%)!important;
                         }
                         @media @lsmscreen {
                             transform: translateY(-20%)!important;

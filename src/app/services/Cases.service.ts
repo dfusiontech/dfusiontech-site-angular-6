@@ -127,6 +127,9 @@ export class CasesService {
                                         order: 'odd',
                                         colSize: '12',
                                         caseModels: [],
+                                        // if element consist only of one case ( situation when it is last element ) we
+                                        // need to change repeating behavior of this element on view
+                                        lastCase: false,
                                     },
                                 ]
                             };
@@ -142,6 +145,7 @@ export class CasesService {
                                 casesListOrdered[i].cols[0].caseModels.push(casesListGroupsOrdered[i][1]);
                             } else {
                                 casesListOrdered[i].cols[0].caseModels.push(casesListGroupsOrdered[i][0]);
+                                casesListOrdered[i].cols[0].lastCase = true;
                             }
                         }
                     }
