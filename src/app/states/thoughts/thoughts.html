@@ -21,7 +21,8 @@
                         <li class="col-lg-4 col-sm-6" *ngFor="let thought of thoughtsList">
                             <div class="thought">
                                 <div class="thought-title">
-                                    <a uiSref="thoughtsItem"
+                                    <a uiSref="thoughts-item"
+                                       [uiParams]="{ thoughtId: thought.thoughtId }"
 
                                        [attr.title]="thought.title"
                                        style="background-image: url('../../../assets/images/thoughts-page/business-1.png');"
@@ -31,7 +32,10 @@
                                 </div>
                                 <div class="thought-description">
                                     <h3 class="description-headline">
-                                        <a uiSref="thoughtsItem" [attr.title]="thought.title">
+                                        <a uiSref="thoughts-item"
+                                           [uiParams]="{ thoughtId: thought.thoughtId }"
+                                           [attr.title]="thought.title"
+                                                >
                                             {{ thought.title }}
                                         </a>
                                     </h3>
