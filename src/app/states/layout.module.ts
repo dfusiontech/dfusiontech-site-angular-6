@@ -6,6 +6,9 @@ import { RootModule, UIRouterModule } from '@uirouter/angular';
 import { PreventParentScrollModule } from 'ngx-prevent-parent-scroll';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { FormsModule } from '@angular/forms';
+// services
+import { CasesService } from '../services/Cases.service';
+import { ThoughtsService } from '../services/Thoughts.service';
 // app states
 import { homeState } from './home/home.state';
 import { casesState } from './cases/cases.state';
@@ -18,17 +21,17 @@ import { thoughtsItemState } from "./thoughts-item/thoughts-item.state";
 import { HeaderComponent } from '../components/header/header.component';
 import { LayoutComponent } from './layout.component';
 import { FooterComponent } from '../components/footer/footer.component';
+import { LetsChatComponent } from '../components/lets-chat/lets-chat.component';
+import { ErrorMessageComponent } from "../components/error-message/error-message.component";
 // pages
 import { HomePage } from './home/home.page';
 import { CasesPage } from './cases/cases.page';
 import { CasePage } from './case/case.page';
 import { ThoughtsPage} from './thoughts/thoughts.page';
 import { ThoughtsItemPage } from './thoughts-item/thoughts-item.page';
-import { ThoughtsService } from '../services/Thoughts.service';
 import { AboutUsPage } from './about-us/about-us.page';
 import { ContactsPage } from './contacts/contacts.page';
-import { CasesService } from '../services/Cases.service';
-import { LetsChatComponent } from '../components/lets-chat/lets-chat.component';
+
 
 /**
  * define all pages within application
@@ -61,6 +64,7 @@ export const routing: RootModule = {
         HeaderComponent,
         FooterComponent,
         LetsChatComponent,
+        ErrorMessageComponent,
         LayoutComponent,
         HomePage,
         CasesPage,

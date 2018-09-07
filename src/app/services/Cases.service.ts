@@ -6,6 +6,8 @@ import { CaseModel } from "../models/case.model";
 export class CasesService {
     constructor() {}
     public getCases() {
+        // in case of problems with getting data transmit message with this content
+        const errorResponse = 'Sorry, content is not available at that moment.';
         // variable to get prepared collection and cases items with different background color, not ordered
         let casesList = [];
         // variable to order each 5 cases by groups ( two in "single" and three in "group" )
@@ -130,6 +132,9 @@ export class CasesService {
                                         order: 'odd',
                                         colSize: '12',
                                         caseModels: [],
+                                        // if element consist only of one case ( situation when it is last element ) we
+                                        // need to change repeating behavior of this element on view
+                                        lastCase: false,
                                     },
                                 ]
                             };
@@ -145,12 +150,13 @@ export class CasesService {
                                 casesListOrdered[i].cols[0].caseModels.push(casesListGroupsOrdered[i][1]);
                             } else {
                                 casesListOrdered[i].cols[0].caseModels.push(casesListGroupsOrdered[i][0]);
+                                casesListOrdered[i].cols[0].lastCase = true;
                             }
                         }
                     }
                     resolve( casesListOrdered );
                 } else {
-                    reject('error');
+                    reject( errorResponse );
                 }
             }, 1000);
         });
