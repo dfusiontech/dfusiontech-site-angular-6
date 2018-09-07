@@ -8,7 +8,7 @@ import { CasesService } from "../../services/Cases.service";
     templateUrl: './case-page.html'
 })
 export class CasePage implements OnInit {
-    @Input() permalinkId;
+    @Input() caseId;
     public case;
     public caseXlgDesktopBehavior;
     public caseMobileDesktopBehavior;
@@ -29,7 +29,7 @@ export class CasePage implements OnInit {
             this.caseMobileDesktopBehavior = false;
         }
 
-        this.casesService.getCaseByLink(this.permalinkId).then(data => {
+        this.casesService.getCaseByLink(this.caseId).then(data => {
             this.case = data;
         });
     };

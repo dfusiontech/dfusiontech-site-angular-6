@@ -18,8 +18,9 @@ export class CasesService {
                     // getting cases list without order
                     const caseContentData = CasesConstant.map(e => ({ ... e })); // deep copy
                     for ( let i = 0; i < caseContentData.length; i++ ) {
-                        caseContentData[i].permalinkId = caseContentData[i].permalinkId + '-' + ((n) => n + 1)(i);
+                        // caseContentData[i].caseId = caseContentData[i].caseId + '-' + ((n) => n + 1)(i);
                         casesList.push( new CaseModel( caseContentData[i] ));
+                        casesList[i].caseId = caseContentData[i].caseId + (i + 1).toString();
                     }
                     // set random background color which will be used on hover background case content
                     for ( let i = 0; i < casesList.length; i++ ) {
@@ -163,9 +164,9 @@ export class CasesService {
                 if (CasesConstant) {
                     for (let i = 0; i < CasesConstant.length; i++) {
                         casesList.push(new CaseModel(CasesConstant[i]));
-                        casesList[i].permalinkId = 'case-' + (i + 1);
+                        casesList[i].caseId = 'case-' + (i + 1);
                     }
-                    resolve(casesList.find(fcase => fcase.thoughtId === link));
+                    resolve(casesList.find(fcase => fcase.caseId === link));
                 } else {
                     reject('error');
                 }
