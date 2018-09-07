@@ -6,6 +6,7 @@ import { ThoughtsItemPageComponent } from './thoughts-item.page';
 import { ThoughtsService } from '../../services/Thoughts.service';
 
 export function thoughtIdResolve ($transition$) {
+    // thoughtsService.getThoughtByLink(trans.params().thoughtId);
     const params: any = $transition$.params();
     return params.thoughtId;
 }
@@ -22,12 +23,6 @@ export const thoughtsItemState = {
             token: 'thoughtId',
             deps: [Transition],
             resolveFn: thoughtIdResolve
-            /*
-            resolveFn2: (trans, thoughtsService) => {
-                // thoughtsService.getThoughtByLink(trans.params().thoughtId);
-                return trans.params().thoughtId;
-            }
-            */
         }
     ]
 };
