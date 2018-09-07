@@ -18,7 +18,7 @@ export class ThoughtsService {
                     }
                     resolve( thoughtsList );
                 } else {
-                    reject( this.errorResponse );
+                    reject( 'ThoughtsSvc: ' + this.errorResponse );
                 }
             }, 1000);
         });
@@ -35,7 +35,7 @@ export class ThoughtsService {
                     }
                     resolve(thoughtsList.find(thought => thought.thoughtId === link));
                 } else {
-                    reject( this.errorResponse );
+                    reject( 'ThoughtsSvc: ' + this.errorResponse );
                 }
             }, 1000);
         });

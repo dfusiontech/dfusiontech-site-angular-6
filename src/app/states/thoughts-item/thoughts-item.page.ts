@@ -41,6 +41,4 @@ export class ThoughtsItemPageComponent implements OnInit {
                 this.errorOccurred = true;
             });
     };
-
-
 }

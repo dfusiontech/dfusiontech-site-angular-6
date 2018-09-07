@@ -1,3 +1,4 @@
+// outsource
 import { Transition } from '@uirouter/angular';
 
 import { HeaderComponent } from '../../components/header/header.component';
