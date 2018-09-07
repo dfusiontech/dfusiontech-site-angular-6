@@ -8,7 +8,7 @@ import { ThoughtsService } from '../../services/Thoughts.service';
     selector: '[id="thoughts"]',
     templateUrl: './thoughts.html'
 })
-export class ThoughtsPage implements OnInit {
+export class ThoughtsPageComponent implements OnInit {
     // initially data is loading
     public thoughtsListLoaded = false;
 
@@ -23,9 +23,7 @@ export class ThoughtsPage implements OnInit {
      *
      *
      */
-    constructor (private state: StateService, private thoughtsService: ThoughtsService) {
-
-    };
+    constructor (private state: StateService, private thoughtsService: ThoughtsService) {}
 
     ngOnInit() {
         this.thoughtsService
@@ -38,7 +36,7 @@ export class ThoughtsPage implements OnInit {
                 this.errorResponse = error;
                 this.errorOccurred = true;
             });
-    };
+    }
 
     // /**
     //  * example of programmatically redirect

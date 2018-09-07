@@ -1,4 +1,4 @@
-import { ThoughtsPage } from './thoughts.page';
+import { ThoughtsPageComponent } from './thoughts.page';
 import { HeaderComponent } from '../../components/header/header.component';
 
 
@@ -7,7 +7,7 @@ export const thoughtsState = {
     url: '/thoughts',
     views: {
         header: { component: HeaderComponent },
-        $default: { component: ThoughtsPage },
+        $default: { component: ThoughtsPageComponent },
     },
 };
 

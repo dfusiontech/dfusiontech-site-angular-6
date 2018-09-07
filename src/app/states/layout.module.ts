@@ -23,14 +23,15 @@ import { LayoutComponent } from './layout.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { LetsChatComponent } from '../components/lets-chat/lets-chat.component';
 import { ErrorMessageComponent } from '../components/error-message/error-message.component';
+import { PreloaderComponent } from '../components/preloader/preloader.component';
 // pages
 import { HomePageComponent } from './home/home.page';
-import { CasesPage } from './cases/cases.page';
+import { CasesPageComponent } from './cases/cases.page';
 import { CasePage } from './case/case.page';
-import { ThoughtsPage} from './thoughts/thoughts.page';
+import { ThoughtsPageComponent } from './thoughts/thoughts.page';
 import { ThoughtsItemPageComponent } from './thoughts-item/thoughts-item.page';
 import { AboutUsPageComponent } from './about-us/about-us.page';
-import { ContactsPage } from './contacts/contacts.page';
+import { ContactsPageComponent } from './contacts/contacts.page';
 
 
 /**
@@ -65,14 +66,15 @@ export const routing: RootModule = {
         FooterComponent,
         LetsChatComponent,
         ErrorMessageComponent,
+        PreloaderComponent,
         LayoutComponent,
         HomePageComponent,
-        CasesPage,
+        CasesPageComponent,
         CasePage,
-        ThoughtsPage,
+        ThoughtsPageComponent,
         ThoughtsItemPageComponent,
         AboutUsPageComponent,
-        ContactsPage
+        ContactsPageComponent
     ],
     // define dependencies for all page components
     imports: [

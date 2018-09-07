@@ -18,15 +18,12 @@ export class ThoughtsItemPageComponent implements OnInit {
     public errorResponse;
     // initially we don't know if error has been occurred with getting data
     public errorOccurred = false;
-
     /**
      * constructor holder to define what exactly past in public vm object
      *
      *
      */
-    constructor ( private state: StateService, private thoughtsService: ThoughtsService ) {
-
-    }
+    constructor ( private state: StateService, private thoughtsService: ThoughtsService ) {}
 
     ngOnInit() {
         this.thoughtsService

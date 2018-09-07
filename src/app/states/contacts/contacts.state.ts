@@ -1,4 +1,4 @@
-import { ContactsPage } from './contacts.page';
+import { ContactsPageComponent } from './contacts.page';
 import { HeaderComponent } from '../../components/header/header.component';
 
 /**
@@ -11,6 +11,6 @@ export const contactsState = {
     url: '/contacts',
     views: {
         header: { component: HeaderComponent },
-        $default: { component: ContactsPage },
+        $default: { component: ContactsPageComponent },
     }
 };
