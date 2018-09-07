@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div id="errorMessage" *ngIf="errorOccurred" [errorResponse]="errorResponse"></div>
+            <error-message *ngIf="errorOccurred" [errorResponse]="errorResponse"></error-message>
             <div
                 *ngIf="!casesListLoaded && !errorOccurred"
                 class="def-preloader"
@@ -198,10 +198,11 @@
                                                 </div>
 
                                                 <div
-                                                    class="col-lg-4"
+                                                    class="col-lg-4 d-flex"
                                                     *ngSwitchCase="'4'"
                                                     [ngClass]="{
-                                                        'd-flex align-items-end': !caseMediumDesktopBehavior,
+                                                        'align-items-end': !caseItems.revers,
+                                                        'align-items-start': caseItems.revers,
                                                         'order-first': caseItems.revers
                                                             }"
                                                         >
@@ -216,26 +217,24 @@
                                                             [ngClass]="{ 'align-items-center': caseMediumDesktopBehavior }"
                                                                 >
                                                             <div
-                                                                class="col-md-5 col-lg-12"
+                                                                class="col-md-5 col-lg-12 d-flex"
                                                                 [ngClass]="{
-                                                                'd-flex': !caseMediumDesktopBehavior,
-                                                                'justify-content-end': !caseItems.revers,
-                                                                'justify-content-start': caseItems.revers
-
-                                                                    }"
+                                                                    'justify-content-end': !caseItems.revers,
+                                                                    'justify-content-start': caseItems.revers
+                                                                        }"
                                                                     >
                                                                 <section
                                                                     class="case-content compresed-case-content case-content-wider"
                                                                     [ngClass]="{
-                                                                    'move-bottom': !(caseItems.revers && caseMediumDesktopBehavior ),
-                                                                    'move-top': caseItems.revers,
-                                                                    'hover-turquoise-bg':  caseItemVertical.contentBackground === 'turquoise',
-                                                                    'hover-red-bg': caseItemVertical.contentBackground === 'red',
-                                                                    'hover-blue-bg': caseItemVertical.contentBackground === 'blue',
-                                                                    'hover-purple-bg ': caseItemVertical.contentBackground === 'purple',
-                                                                    'hover-green-bg': caseItemVertical.contentBackground === 'green',
-                                                                    'hover-orange-bg': caseItemVertical.contentBackground === 'orange'
-                                                                        }"
+                                                                        'move-bottom': !(caseItems.revers && caseMediumDesktopBehavior ),
+                                                                        'move-top': caseItems.revers,
+                                                                        'hover-turquoise-bg':  caseItemVertical.contentBackground === 'turquoise',
+                                                                        'hover-red-bg': caseItemVertical.contentBackground === 'red',
+                                                                        'hover-blue-bg': caseItemVertical.contentBackground === 'blue',
+                                                                        'hover-purple-bg ': caseItemVertical.contentBackground === 'purple',
+                                                                        'hover-green-bg': caseItemVertical.contentBackground === 'green',
+                                                                        'hover-orange-bg': caseItemVertical.contentBackground === 'orange'
+                                                                            }"
                                                                         >
                                                                     <h2 class="text-uppercase h3">{{ caseItemVertical.title }}</h2>
                                                                     <p class="m-0 pb-4 pt-2">{{ caseItemVertical.description }}</p>

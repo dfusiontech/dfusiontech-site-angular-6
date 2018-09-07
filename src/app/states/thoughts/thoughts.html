@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div id="errorMessage" *ngIf="errorOccurred" [errorResponse]="errorResponse"></div>
+            <error-message *ngIf="errorOccurred" [errorResponse]="errorResponse"></error-message>
             <div
                 *ngIf="!thoughtsListLoaded && !errorOccurred"
                 class="def-preloader"

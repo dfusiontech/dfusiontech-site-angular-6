@@ -1,8 +1,6 @@
-#errorMessage {
-    .error-message{
-        min-height: ~'calc(100vh - '@header-height + @footer-height~')';
-        @media @lsmscreen {
-            min-height: ~'calc(100vh - '@header-height-mobile + @footer-height~')';
-        }
+.dft-error-message {
+    min-height: ~'calc(100vh - '@header-height + @footer-height~')';
+    @media @lsmscreen {
+        min-height: ~'calc(100vh - '@header-height-mobile + @footer-height~')';
     }
 }
