@@ -1,5 +1,5 @@
-import { HomePage } from "./home.page";
-import { HeaderComponent } from "../../components/header/header.component";
+import { HeaderComponent } from '../../components/header/header.component';
+import { HomePageComponent } from './home.page';
 /**
  * Metadata of home state
  *
@@ -10,6 +10,6 @@ export const homeState = {
     url: '/home',
     views: {
         header: { component: HeaderComponent },
-        $default: { component: HomePage },
+        $default: { component: HomePageComponent },
     },
 };

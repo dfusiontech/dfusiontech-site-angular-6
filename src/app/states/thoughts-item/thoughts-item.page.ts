@@ -1,13 +1,13 @@
 // outsource
-import { Component, OnInit, Input } from "@angular/core";
-import { StateService } from "@uirouter/angular";
-import { ThoughtsService } from "../../services/Thoughts.service";
+import { Component, OnInit, Input } from '@angular/core';
+import { StateService } from '@uirouter/angular';
+import { ThoughtsService } from '../../services/Thoughts.service';
 
 @Component({
     selector: '[id="thoughtsItem"]',
     templateUrl: './thoughts-item.html'
 })
-export class ThoughtsItemPage implements OnInit {
+export class ThoughtsItemPageComponent implements OnInit {
     @Input() thoughtId;
 
     // initially data is loading

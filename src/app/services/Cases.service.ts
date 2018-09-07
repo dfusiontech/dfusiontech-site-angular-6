@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { CasesConstant } from "../constants/cases.constant";
-import { CaseModel } from "../models/case.model";
+import { Injectable } from '@angular/core';
+import { CasesConstant } from '../constants/cases.constant';
+import { CaseModel } from '../models/case.model';
 
 @Injectable()
 export class CasesService {

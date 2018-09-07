@@ -9,7 +9,8 @@ import { hmrBootstrap } from './hmr';
 if (environment.production) {
     enableProdMode();
 } else {
-    console.info('%c APP Environment:\n', 'background: green; color: #fff; font-size: 14px; font-weigth: bolder;', environment);
+    console.info('%c APP Environment:\n',
+        'background: green; color: #fff; font-size: 14px; font-weigth: bolder;', environment);
 }
 
 const bootstrap = () =>platformBrowserDynamic().bootstrapModule(AppModule);
@@ -21,5 +22,6 @@ if (environment.hmr) {
         console.log('Are you using the --hmr flag for ng serve?');
     }
 } else {
-    bootstrap().catch(error => console.error('%c APP bootstraping ERROR:\n', 'background: red; color: #fff; font-size: 18px; font-weigth: bolder;', error));
+    bootstrap().catch(error => console.error('%c APP bootstraping ERROR:\n',
+        'background: red; color: #fff; font-size: 18px; font-weigth: bolder;', error));
 }
