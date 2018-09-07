@@ -24,9 +24,7 @@ export class ThoughtsItemPageComponent implements OnInit {
      *
      *
      */
-    constructor ( private state: StateService, private thoughtsService: ThoughtsService ) {
-
-    };
+    constructor ( private state: StateService, private thoughtsService: ThoughtsService ) {}
 
     ngOnInit() {
         // this.thought = this.thoughtsService.getThoughtByLink(this.thoughtId);
@@ -40,7 +38,5 @@ export class ThoughtsItemPageComponent implements OnInit {
                 this.errorResponse = error;
                 this.errorOccurred = true;
             });
-    };
-
-
+    }
 }

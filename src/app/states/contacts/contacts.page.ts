@@ -6,7 +6,7 @@ import { StateService } from '@uirouter/angular';
     selector: '[id="contacts"]',
     templateUrl: './contacts.html'
 })
-export class ContactsPage implements OnInit {
+export class ContactsPageComponent implements OnInit {
     contactMessage: any = {
         name: '',
         email: '',

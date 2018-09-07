@@ -1,4 +1,4 @@
-import { CasesPage } from './cases.page';
+import { CasesPageComponent } from './cases.page';
 import { HeaderComponent } from '../../components/header/header.component';
 
 /**
@@ -11,6 +11,6 @@ export const casesState = {
     url: '/cases',
     views: {
         header: { component: HeaderComponent },
-        $default: { component: CasesPage },
+        $default: { component: CasesPageComponent },
     }
 };

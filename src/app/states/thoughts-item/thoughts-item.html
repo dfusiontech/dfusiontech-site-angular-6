@@ -2,15 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <error-message *ngIf="errorOccurred" [errorResponse]="errorResponse"></error-message>
-            <div
-                *ngIf="!thoughtItemLoaded && !errorOccurred"
-                class="def-preloader"
-                    >
-                <div id="SPW">
-                    <div id="SP_1" class="sp"></div> <div id="SP_2" class="sp"></div> <div id="SP_3" class="sp"></div> <div id="SP_4" class="sp"></div>
-                    <div id="SP_5" class="sp"></div> <div id="SP_6" class="sp"></div> <div id="SP_7" class="sp"></div> <div id="SP_8" class="sp"></div>
-                </div>
-            </div>
+            <dft-preloader *ngIf="!thoughtItemLoaded && !errorOccurred"></dft-preloader>
             <div
                 *ngIf="thoughtItemLoaded"
                 class="container"

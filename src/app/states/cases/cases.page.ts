@@ -8,7 +8,7 @@ import { CasesService } from '../../services/Cases.service';
     selector: '[id="cases"]',
     templateUrl: './cases.html'
 })
-export class CasesPage implements OnInit {
+export class CasesPageComponent implements OnInit {
     // initially data is loading
     public casesListLoaded = false;
 
@@ -25,7 +25,7 @@ export class CasesPage implements OnInit {
     public caseRestructuringPointDesktop = 992;
     public caseRestructuringPointLgDesktop =  1200;
 
-    constructor ( private state: StateService, private casesService: CasesService) {};
+    constructor ( private state: StateService, private casesService: CasesService) {}
 
     ngOnInit() {
         this.casesService
@@ -56,7 +56,7 @@ export class CasesPage implements OnInit {
         } else {
             this.caseLargeDesktopBehavior = false;
         }
-    };
+    }
 
     @HostListener('window:resize') onResize() {
         if ( window.innerWidth < this.caseRestructuringPointMobile ) {

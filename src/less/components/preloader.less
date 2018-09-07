@@ -14,7 +14,7 @@
     }
 }
 
-#SPW {
+.SPW {
     position: relative;
     width: 234px;
     height: 28px;
@@ -37,12 +37,21 @@
             100%{ .scale(.3); background-color: rgb(255,255,255); }
         });
     }
-    #SP_1 { left: 0; .animation-delay( .6s ); }
-    #SP_2 { left: 29px; .animation-delay( .75s ); }
-    #SP_3 { left: 58px; .animation-delay( .9s ); }
-    #SP_4 { left: 88px; .animation-delay( 1.05s ); }
-    #SP_5 { left: 117px; .animation-delay( 1.2s ); }
-    #SP_6 { left: 146px; .animation-delay( 1.35s ); }
-    #SP_7 { left: 175px; .animation-delay( 1.5s ); }
-    #SP_8 { left: 205px; .animation-delay( 1.65s ); }
+    @spinner-step : 29px;
+    @spinner-animation-delay: .6s;
+    @spinner-animation-delay-step: .15s;
+    .SP_0 { left: @spinner-step * 0; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 0 ); }
+    .SP_1 { left: @spinner-step * 1; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 1 ); }
+    .SP_2 { left: @spinner-step * 2; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 2 ); }
+    .SP_3 { left: @spinner-step * 3; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 3 ); }
+    .SP_4 { left: @spinner-step * 4; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 4 ); }
+    .SP_5{ left: @spinner-step * 5; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 5 ); }
+    .SP_6 { left: @spinner-step * 6; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 6 ); }
+    .SP_7{ left: @spinner-step * 7; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 7 ); }
+    .SP_8 { left: @spinner-step * 8; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 8 ); }
+    .SP_9 { left: @spinner-step * 9; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 9 ); }
+    .SP_10 { left: @spinner-step * 10; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 10 ); }
+    .SP_11 { left: @spinner-step * 11; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 11 ); }
+    .SP_12 { left: @spinner-step * 12; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 12 ); }
+    .SP_13 { left: @spinner-step * 13; .animation-delay( @spinner-animation-delay + @spinner-animation-delay-step * 13 ); }
 }

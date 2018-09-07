@@ -2,15 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <error-message *ngIf="errorOccurred" [errorResponse]="errorResponse"></error-message>
-            <div
-                *ngIf="!thoughtsListLoaded && !errorOccurred"
-                class="def-preloader"
-                    >
-                <div id="SPW">
-                    <div id="SP_1" class="sp"></div> <div id="SP_2" class="sp"></div> <div id="SP_3" class="sp"></div> <div id="SP_4" class="sp"></div>
-                    <div id="SP_5" class="sp"></div> <div id="SP_6" class="sp"></div> <div id="SP_7" class="sp"></div> <div id="SP_8" class="sp"></div>
-                </div>
-            </div>
+            <dft-preloader *ngIf="!thoughtsListLoaded && !errorOccurred"></dft-preloader>
             <div
                 class="container"
                 *ngIf="thoughtsListLoaded"
@@ -34,7 +26,6 @@
                                 <div class="thought-title">
                                     <a uiSref="thoughts-item"
                                        [uiParams]="{ thoughtId: thought.thoughtId }"
-
                                        [attr.title]="thought.title"
                                        style="background-image: url('../../../assets/images/thoughts-page/business-1.png');"
                                        [ngStyle]="{ 'background-image': 'url(' + thought.img + ')'}"
