@@ -4,7 +4,6 @@ import { Transition } from '@uirouter/angular';
 import { HeaderComponent } from '../../components/header/header.component';
 import { ThoughtsItemPageComponent } from './thoughts-item.page';
 
-import { ThoughtsService } from '../../services/Thoughts.service';
 
 export function thoughtIdResolve ($transition$) {
     // thoughtsService.getThoughtByLink(trans.params().thoughtId);

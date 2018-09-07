@@ -9,7 +9,15 @@ import { CasesService } from '../../services/Cases.service';
 })
 export class CasePage implements OnInit {
     @Input() caseId;
+
     public case;
+    // initially data is loading
+    public caseItemLoaded = false;
+    // will contain potential error
+    public errorResponse;
+    // initially we don't know if error has been occurred with getting data
+    public errorOccurred = false;
+
     public caseXlgDesktopBehavior;
     public caseMobileDesktopBehavior;
     public caseRestructuringPointMobile = 768;
@@ -29,10 +37,21 @@ export class CasePage implements OnInit {
             this.caseMobileDesktopBehavior = false;
         }
 
-        this.casesService.getCaseByLink(this.caseId).then(data => {
-            this.case = data;
-        });
-    };
+        this.casesService
+            .getCaseByLink(this.caseId)
+            .then(data => {
+                this.case = data;
+                this.caseItemLoaded = true;
+            })
+            .catch(error => {
+                this.errorResponse = error;
+                this.errorOccurred = true;
+            });
+        // error processing
+        if (this.errorOccurred) {
+            console.log(this.errorResponse);
+        }
+    }
 
     @HostListener('window:resize') onResize() {
         // for large desktop
