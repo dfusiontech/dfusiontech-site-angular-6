@@ -25,12 +25,12 @@ import { LetsChatComponent } from '../components/lets-chat/lets-chat.component';
 import { ErrorMessageComponent } from '../components/error-message/error-message.component';
 import { PreloaderComponent } from '../components/preloader/preloader.component';
 // pages
-import { HomePage } from './home/home.page';
+import { HomePageComponent } from './home/home.page';
 import { CasesPage } from './cases/cases.page';
 import { CasePage } from './case/case.page';
 import { ThoughtsPage} from './thoughts/thoughts.page';
-import { ThoughtsItemPage } from './thoughts-item/thoughts-item.page';
-import { AboutUsPage } from './about-us/about-us.page';
+import { ThoughtsItemPageComponent } from './thoughts-item/thoughts-item.page';
+import { AboutUsPageComponent } from './about-us/about-us.page';
 import { ContactsPage } from './contacts/contacts.page';
 
 
@@ -68,12 +68,12 @@ export const routing: RootModule = {
         ErrorMessageComponent,
         PreloaderComponent,
         LayoutComponent,
-        HomePage,
+        HomePageComponent,
         CasesPage,
         CasePage,
         ThoughtsPage,
-        ThoughtsItemPage,
-        AboutUsPage,
+        ThoughtsItemPageComponent,
+        AboutUsPageComponent,
         ContactsPage
     ],
     // define dependencies for all page components

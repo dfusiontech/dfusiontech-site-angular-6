@@ -1,5 +1,5 @@
-import { CasesPage } from "./cases.page";
-import { HeaderComponent } from "../../components/header/header.component";
+import { CasesPage } from './cases.page';
+import { HeaderComponent } from '../../components/header/header.component';
 
 /**
  * Metadata of cases state

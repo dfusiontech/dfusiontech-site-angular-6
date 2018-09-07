@@ -1,7 +1,8 @@
 import { Transition } from '@uirouter/angular';
 
-import { ThoughtsItemPage } from './thoughts-item.page';
 import { HeaderComponent } from '../../components/header/header.component';
+import { ThoughtsItemPageComponent } from './thoughts-item.page';
+
 import { ThoughtsService } from '../../services/Thoughts.service';
 
 export function thoughtIdResolve ($transition$) {
@@ -15,12 +16,12 @@ export const thoughtsItemState = {
     url: '/thought/:thoughtId', // there should be single case name or number
     views: {
         header: { component: HeaderComponent },
-        $default: { component: ThoughtsItemPage },
+        $default: { component: ThoughtsItemPageComponent },
     },
     resolve: [
         {
             token: 'thoughtId',
-            deps: [Transition, ThoughtsService],
+            deps: [Transition],
             resolveFn: thoughtIdResolve
         }
     ]

@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 
-import { ThoughtsService } from "../../services/Thoughts.service";
+import { ThoughtsService } from '../../services/Thoughts.service';
 
 @Component({
     selector: '[id="thoughts"]',

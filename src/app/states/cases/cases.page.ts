@@ -2,7 +2,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 // services
-import { CasesService } from "../../services/Cases.service";
+import { CasesService } from '../../services/Cases.service';
 
 @Component({
     selector: '[id="cases"]',
