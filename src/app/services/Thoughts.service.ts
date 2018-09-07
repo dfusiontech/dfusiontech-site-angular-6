@@ -23,7 +23,7 @@ export class ThoughtsService {
         return promise;
     }
     public getThoughtByLink(link) {
-        const thoughtsList = [];
+        let thoughtsList = [];
         let promise = new Promise((resolve, reject) => {
             setTimeout(() => {
                 if (ThoughtsConstant) {

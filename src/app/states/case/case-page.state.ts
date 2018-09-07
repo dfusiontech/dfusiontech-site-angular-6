@@ -1,5 +1,12 @@
+// outsource
+import { Transition } from "@uirouter/angular";
+
+//
 import { CasePage } from "./case.page";
 import { HeaderComponent } from "../../components/header/header.component";
+import { CasesService } from "../../services/Cases.service";
+
+
 
 /**
  * Metadata of cases state
@@ -12,6 +19,15 @@ export const casePageState = {
     views: {
         header: { component: HeaderComponent },
         $default: { component: CasePage },
-    }
+    },
+    resolve: [
+        {
+            token: 'permalinkId',
+            deps: [Transition, CasesService],
+            resolveFn: (trans, casesService) => {
+                return trans.params().permalinkId;
+            }
+        }
+    ]
 };
 

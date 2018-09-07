@@ -26,6 +26,4 @@ export class ThoughtsItemPage implements OnInit {
             this.thought = data;
         });
     };
-
-
 }

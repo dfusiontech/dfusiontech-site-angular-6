@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="case">
     <div class="row">
         <div class="col-12">
             <!-- Adding grey background area on large desktops -->
@@ -20,7 +20,7 @@
                         <div [ngClass]="{ 'col-12': caseMobileDesktopBehavior }" >
                             <div class="heading-case-description">
                                 <h2 class="h1 mb-2">
-                                    Unreel.me
+                                    {{case.title}}
                                 </h2>
                                 <p>
                                     This project is a complex of Back-End and Front- End applications that manage different

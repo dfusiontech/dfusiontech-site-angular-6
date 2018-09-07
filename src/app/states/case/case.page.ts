@@ -1,5 +1,5 @@
 // outsource
-import { Component, HostListener, OnInit } from "@angular/core";
+import { Component, HostListener, Input, OnInit } from "@angular/core";
 import { StateService } from "@uirouter/angular";
 import { CasesService } from "../../services/Cases.service";
 
@@ -8,6 +8,8 @@ import { CasesService } from "../../services/Cases.service";
     templateUrl: './case-page.html'
 })
 export class CasePage implements OnInit {
+    @Input() permalinkId;
+    public case;
     public caseXlgDesktopBehavior;
     public caseMobileDesktopBehavior;
     public caseRestructuringPointMobile = 768;
@@ -26,6 +28,10 @@ export class CasePage implements OnInit {
         } else {
             this.caseMobileDesktopBehavior = false;
         }
+
+        this.casesService.getCaseByLink(this.permalinkId).then(data => {
+            this.case = data;
+        });
     };
 
     @HostListener('window:resize') onResize() {

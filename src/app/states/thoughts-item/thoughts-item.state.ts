@@ -1,5 +1,7 @@
+// outsource
 import { Transition } from '@uirouter/angular';
 
+//
 import { ThoughtsItemPage } from './thoughts-item.page';
 import { HeaderComponent } from '../../components/header/header.component';
 import { ThoughtsService } from '../../services/Thoughts.service';

@@ -156,4 +156,21 @@ export class CasesService {
         });
         return promise;
     }
+    public getCaseByLink(link) {
+        let casesList = [];
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (CasesConstant) {
+                    for (let i = 0; i < CasesConstant.length; i++) {
+                        casesList.push(new CaseModel(CasesConstant[i]));
+                        casesList[i].permalinkId = 'case-' + (i + 1);
+                    }
+                    resolve(casesList.find(fcase => fcase.thoughtId === link));
+                } else {
+                    reject('error');
+                }
+            }, 1000);
+        });
+        return promise;
+    }
 }
