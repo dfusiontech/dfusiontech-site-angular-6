@@ -1,7 +1,7 @@
 // outsource
-import { Component, HostListener, OnInit } from "@angular/core";
-import { StateService } from "@uirouter/angular";
-import { CasesService } from "../../services/Cases.service";
+import { Component, HostListener, OnInit } from '@angular/core';
+import { StateService } from '@uirouter/angular';
+import { CasesService } from '../../services/Cases.service';
 
 @Component({
     selector: '[id="case-page"]',
@@ -12,7 +12,7 @@ export class CasePage implements OnInit {
     public caseMobileDesktopBehavior;
     public caseRestructuringPointMobile = 768;
     public caseRestructuringPointLarge = 1199;
-    constructor ( private state: StateService, private casesService: CasesService) {};
+    constructor ( private state: StateService, private casesService: CasesService) {}
 
     ngOnInit() {
         // changing case page content order on large desktop
@@ -26,7 +26,7 @@ export class CasePage implements OnInit {
         } else {
             this.caseMobileDesktopBehavior = false;
         }
-    };
+    }
 
     @HostListener('window:resize') onResize() {
         // for large desktop

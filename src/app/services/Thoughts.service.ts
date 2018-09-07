@@ -1,18 +1,18 @@
-import { Injectable } from "@angular/core";
-import { ThoughtsConstant } from "../constants/thoughts.constant";
-import { ThoughtModel } from "../models/thought.model";
+import { Injectable } from '@angular/core';
+import { ThoughtsConstant } from '../constants/thoughts.constant';
+import { ThoughtModel } from '../models/thought.model';
 
 @Injectable()
 export class ThoughtsService {
     constructor() {}
     public getThoughts() {
         const thoughtsList = [];
-        let promise = new Promise((resolve, reject) => {
+        const promise = new Promise((resolve, reject) => {
             setTimeout(() => {
                 if ( ThoughtsConstant ) {
                     for ( let i = 0; i < ThoughtsConstant.length; i++ ) {
                         thoughtsList.push(new ThoughtModel( ThoughtsConstant[i] ));
-                        thoughtsList[i].thoughtId = 'thought-' + (i+1);
+                        thoughtsList[i].thoughtId = 'thought-' + (i + 1);
                     }
                     resolve( thoughtsList );
                 } else {
@@ -24,7 +24,7 @@ export class ThoughtsService {
     }
     public getThoughtByLink(link) {
         const thoughtsList = [];
-        let promise = new Promise((resolve, reject) => {
+        const promise = new Promise((resolve, reject) => {
             setTimeout(() => {
                 if (ThoughtsConstant) {
                     for (let i = 0; i < ThoughtsConstant.length; i++) {
