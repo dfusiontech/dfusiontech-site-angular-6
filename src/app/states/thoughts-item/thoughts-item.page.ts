@@ -10,14 +10,14 @@ import { ThoughtsService } from '../../services/Thoughts.service';
 export class ThoughtsItemPageComponent implements OnInit {
     @Input() thoughtId;
 
+
+    public thought;
     // initially data is loading
     public thoughtItemLoaded = false;
-
+    // will contain potential error
     public errorResponse;
     // initially we don't know if error has been occurred with getting data
     public errorOccurred = false;
-
-    public thought;
 
     /**
      * constructor holder to define what exactly past in public vm object
@@ -26,10 +26,9 @@ export class ThoughtsItemPageComponent implements OnInit {
      */
     constructor ( private state: StateService, private thoughtsService: ThoughtsService ) {
 
-    };
+    }
 
     ngOnInit() {
-        // this.thought = this.thoughtsService.getThoughtByLink(this.thoughtId);
         this.thoughtsService
             .getThoughtByLink(this.thoughtId)
             .then(data => {
@@ -40,5 +39,5 @@ export class ThoughtsItemPageComponent implements OnInit {
                 this.errorResponse = error;
                 this.errorOccurred = true;
             });
-    };
+    }
 }
