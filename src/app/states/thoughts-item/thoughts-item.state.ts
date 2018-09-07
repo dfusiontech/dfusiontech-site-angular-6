@@ -4,6 +4,12 @@ import { ThoughtsItemPage } from './thoughts-item.page';
 import { HeaderComponent } from '../../components/header/header.component';
 import { ThoughtsService } from '../../services/Thoughts.service';
 
+export function thoughtIdResolve ($transition$) {
+    // thoughtsService.getThoughtByLink(trans.params().thoughtId);
+    const params: any = $transition$.params();
+    return params.thoughtId;
+}
+
 export const thoughtsItemState = {
     name: 'thoughts-item',
     url: '/thought/:thoughtId', // there should be single case name or number
@@ -15,10 +21,7 @@ export const thoughtsItemState = {
         {
             token: 'thoughtId',
             deps: [Transition, ThoughtsService],
-            resolveFn: (trans, thoughtsService) => {
-                // thoughtsService.getThoughtByLink(trans.params().thoughtId);
-                return trans.params().thoughtId;
-            }
+            resolveFn: thoughtIdResolve
         }
     ]
 };
