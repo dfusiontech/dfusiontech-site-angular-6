@@ -47,10 +47,6 @@ export class CasePage implements OnInit {
                 this.errorResponse = error;
                 this.errorOccurred = true;
             });
-        // error processing
-        if (this.errorOccurred) {
-            console.log(this.errorResponse);
-        }
     }
 
     @HostListener('window:resize') onResize() {
