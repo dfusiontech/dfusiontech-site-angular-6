@@ -1,5 +1,5 @@
-import { ContactsPage } from "./contacts.page";
-import { HeaderComponent } from "../../components/header/header.component";
+import { ContactsPage } from './contacts.page';
+import { HeaderComponent } from '../../components/header/header.component';
 
 /**
  * Metadata of home state

@@ -1,6 +1,16 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
+            <error-message *ngIf="errorOccurred" [errorResponse]="errorResponse"></error-message>
+            <div
+                *ngIf="!casesListLoaded && !errorOccurred"
+                class="def-preloader"
+                    >
+                <div id="SPW">
+                    <div id="SP_1" class="sp"></div> <div id="SP_2" class="sp"></div> <div id="SP_3" class="sp"></div> <div id="SP_4" class="sp"></div>
+                    <div id="SP_5" class="sp"></div> <div id="SP_6" class="sp"></div> <div id="SP_7" class="sp"></div> <div id="SP_8" class="sp"></div>
+                </div>
+            </div>
             <!-- Adding grey background area on big desktops -->
             <div
                 *ngIf="casesList"
@@ -14,10 +24,19 @@
                             [ngSwitch]="cases.type"
                             *ngFor="let items of cases.cols"
                                 >
-                            <ng-container [ngSwitch]="items.order" *ngSwitchCase="'single'">
+                            <ng-container
+                                [ngSwitch]="items.order"
+                                *ngSwitchCase="'single'"
+                                    >
                                 <ng-container *ngFor="let caseItems of items.caseModels; let odd = odd; let even = even; let i = index">
-                                    <div class="row" *ngSwitchCase="'first'">
-                                        <div class="col-12" *ngFor="let caseItem of caseItems">
+                                    <div
+                                        class="row"
+                                        *ngSwitchCase="'first'"
+                                            >
+                                        <div
+                                            class="col-12"
+                                            *ngFor="let caseItem of caseItems"
+                                                >
                                             <a
                                                 uiSref="case-page"
                                                 [uiParams]="{ caseId: caseItem.caseId }"
@@ -36,11 +55,7 @@
                                                                 class="case-img"
                                                                 [src]="caseItem.img"
                                                                 [alt]="caseItem.title"
-                                                                [ngClass]="{
-                                                                'img-big-desktop': !caseMobileBehavior ,
-                                                                'img-small-desktop': caseMobileBehavior
-                                                                    }"
-                                                            />
+                                                                    />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-5 col-lg-4">
@@ -79,7 +94,7 @@
                                                     <div
                                                         class="col-md-7 col-lg-8"
                                                         [ngClass]="{
-                                                        'order-last': !caseMobileBehavior && odd && !cases.revers ||  ( caseMediumDesktopBehavior && cases.revers && i === 0 && !caseMobileBehavior ),
+                                                        'order-last': ( !caseMobileBehavior && odd && !cases.revers ) || ( caseMediumDesktopBehavior && cases.revers && i === 0 && !caseMobileBehavior ),
                                                         'order-first': ( caseMobileBehavior && odd && cases.revers ) || ( caseMediumDesktopBehavior && cases.revers && i === 0 )
                                                                 }"
                                                             >
@@ -88,23 +103,20 @@
                                                                 class="case-img"
                                                                 [src]="caseItems.img"
                                                                 [alt]="caseItems.title"
-                                                                [ngClass]="{
-                                                                    'img-big-desktop': !caseMobileBehavior ,
-                                                                     'img-small-desktop': caseMobileBehavior
-                                                                        }"
                                                                     />
                                                         </div>
                                                     </div>
                                                     <div
                                                         class="col-md-5 col-lg-4"
                                                         [ngClass]="{
-                                                            'order-first': !caseLargeDesktopBehavior && !caseMediumDesktopBehavior && cases.revers &&  i===1
+                                                            'order-first': !caseMediumDesktopBehavior &&  i===1,
+                                                            'order-last': items.lastCase
                                                                 }"
                                                             >
                                                         <section
                                                             class="case-content case-content-medium"
                                                             [ngClass]="{
-                                                                'move-right':( !caseLargeDesktopBehavior && !caseMediumDesktopBehavior && cases.revers &&  i===1 ) || ( !caseMobileBehavior && odd && !cases.revers ) || ( caseMediumDesktopBehavior && cases.revers && i === 0 ),
+                                                                'move-right':  !items.lastCase && ( ( !caseMobileBehavior && odd && !cases.revers ) || ( caseMediumDesktopBehavior && cases.revers && i === 0 ) || ( cases.revers && !caseMediumDesktopBehavior && i === 1 ) ),
                                                                 'hover-turquoise-bg':  caseItems.contentBackground === 'turquoise',
                                                                 'hover-red-bg': caseItems.contentBackground === 'red',
                                                                 'hover-blue-bg': caseItems.contentBackground === 'blue',
@@ -172,7 +184,7 @@
                                                                     [src]="caseItemHorizontal.img"
                                                                     [alt]="caseItemHorizontal.title"
                                                                     class="case-img"
-                                                                />
+                                                                        />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -180,9 +192,13 @@
                                             </div>
 
                                             <div
-                                                class="col-lg-4"
+                                                class="col-lg-4 d-flex"
                                                 *ngSwitchCase="'4'"
-                                                [ngClass]="{ 'd-flex align-items-end': !caseMediumDesktopBehavior, 'order-first': caseItems.revers }"
+                                                [ngClass]="{
+                                                    'align-items-end': !caseItems.revers,
+                                                    'align-items-start': caseItems.revers,
+                                                    'order-first': caseItems.revers
+                                                        }"
                                                     >
                                                 <a
                                                     uiSref="case-page"
@@ -195,14 +211,17 @@
                                                         [ngClass]="{ 'align-items-center': caseMediumDesktopBehavior }"
                                                             >
                                                         <div
-                                                            class="col-md-5 col-lg-12"
-                                                            [ngClass]="{ 'd-flex justify-content-end': !caseMediumDesktopBehavior }"
+                                                            class="col-md-5 col-lg-12 d-flex"
+                                                            [ngClass]="{
+                                                                'justify-content-end': !caseItems.revers,
+                                                                'justify-content-start': caseItems.revers
+                                                                    }"
                                                                 >
                                                             <section
-                                                                class="case-content compresed-case-content case-content-large"
+                                                                class="case-content compresed-case-content case-content-wider"
                                                                 [ngClass]="{
                                                                     'move-bottom': !(caseItems.revers && caseMediumDesktopBehavior ),
-                                                                    'case-content-large-reversed': caseItems.revers,
+                                                                    'move-top': caseItems.revers,
                                                                     'hover-turquoise-bg':  caseItemVertical.contentBackground === 'turquoise',
                                                                     'hover-red-bg': caseItemVertical.contentBackground === 'red',
                                                                     'hover-blue-bg': caseItemVertical.contentBackground === 'blue',
@@ -217,7 +236,7 @@
                                                         </div>
                                                         <div
                                                             class="col-md-7 col-lg-12"
-                                                            [ngClass]="{ 'order-first': caseMobileBehavior || caseItems.revers && caseMediumDesktopBehavior }"
+                                                            [ngClass]="{ 'order-first': caseItems.revers || caseMobileBehavior || caseItems.revers && caseMediumDesktopBehavior }"
                                                                 >
                                                             <div class="case-img-block">
                                                             <img
@@ -237,7 +256,7 @@
                         </ng-container>
                     </ng-container>
                 </div>
-                <div id="letsChat"></div>
+                <lets-chat></lets-chat>
             </div>
         </div>
     </div>

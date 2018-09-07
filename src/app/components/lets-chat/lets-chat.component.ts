@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
-    selector: '[id="letsChat"]',
+    selector: 'lets-chat',
     templateUrl: './lets-chat.html'
 })
 export class LetsChatComponent implements OnInit {

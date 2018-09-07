@@ -2,14 +2,22 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 // services
-import { CasesService } from "../../services/Cases.service";
+import { CasesService } from '../../services/Cases.service';
 
 @Component({
     selector: '[id="cases"]',
     templateUrl: './cases.html'
 })
 export class CasesPage implements OnInit {
+    // initially data is loading
+    public casesListLoaded = false;
+
+    public errorResponse;
+    // initially we don't know if error has been occurred with getting data
+    public errorOccurred = false;
+
     public casesList;
+
     public caseMobileBehavior;
     public caseMediumDesktopBehavior;
     public caseLargeDesktopBehavior;
@@ -20,9 +28,16 @@ export class CasesPage implements OnInit {
     constructor ( private state: StateService, private casesService: CasesService) {};
 
     ngOnInit() {
-        this.casesService.getCases().then(data => {
-            this.casesList = data;
-        });
+        this.casesService
+            .getCases()
+            .then(data => {
+                this.casesList = data;
+                this.casesListLoaded = true;
+            })
+            .catch(error => {
+                this.errorResponse = error;
+                this.errorOccurred = true;
+            });
         // changing cases content order on mobile
         if ( window.innerWidth < this.caseRestructuringPointMobile ) {
             this.caseMobileBehavior = true;

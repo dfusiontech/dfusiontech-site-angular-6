@@ -2,13 +2,20 @@
 import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 
-import { ThoughtsService } from "../../services/Thoughts.service";
+import { ThoughtsService } from '../../services/Thoughts.service';
 
 @Component({
     selector: '[id="thoughts"]',
     templateUrl: './thoughts.html'
 })
 export class ThoughtsPage implements OnInit {
+    // initially data is loading
+    public thoughtsListLoaded = false;
+
+    public errorResponse;
+    // initially we don't know if error has been occurred with getting data
+    public errorOccurred = false;
+
     public thoughtsList;
 
     /**
@@ -21,9 +28,16 @@ export class ThoughtsPage implements OnInit {
     };
 
     ngOnInit() {
-        this.thoughtsService.getThoughts().then(data => {
-            this.thoughtsList = data;
-        });
+        this.thoughtsService
+            .getThoughts()
+            .then(data => {
+                this.thoughtsList = data;
+                this.thoughtsListLoaded = true;
+            })
+            .catch(error => {
+                this.errorResponse = error;
+                this.errorOccurred = true;
+            });
     };
 
     // /**
