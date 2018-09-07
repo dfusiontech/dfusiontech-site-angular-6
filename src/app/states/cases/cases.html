@@ -5,7 +5,7 @@
             <dft-preloader *ngIf="!casesListLoaded && !errorOccurred"></dft-preloader>
             <!-- Adding grey background area on big desktops -->
             <div
-                *ngIf="casesListLoaded"
+                *ngIf="casesList"
                 class="container"
                 [ngClass]="{ 'grey-rectangle': !caseMobileBehavior }"
                     >
@@ -31,8 +31,8 @@
                                                 >
                                             <a
                                                 uiSref="case-page"
+                                                [uiParams]="{ caseId: caseItem.caseId }"
                                                 class="d-block case-item"
-                                                [uiParams]="{ permalinkId: caseItem.permalinkId }"
                                                     >
                                                 <div class="row align-items-center">
                                                     <div
@@ -79,7 +79,7 @@
                                         <div class="col-12">
                                             <a
                                                 uiSref="case-page"
-                                                [uiParams]="{ permalinkId: caseItems.permalinkId }"
+                                                [uiParams]="{ caseId: caseItems.caseId }"
                                                 class="d-block case-item"
                                                     >
                                                 <div class="row align-items-center">
@@ -145,7 +145,7 @@
                                                     >
                                                 <a
                                                     uiSref="case-page"
-                                                    [uiParams]="{ permalinkId: caseItemHorizontal.permalinkId }"
+                                                    [uiParams]="{ caseId: caseItemHorizontal.caseId }"
                                                     class="d-block case-item"
                                                     *ngFor="let caseItemHorizontal of caseItem.caseModels; let odd = odd; let even = even"
                                                         >
@@ -194,7 +194,7 @@
                                                     >
                                                 <a
                                                     uiSref="case-page"
-                                                    [uiParams]="{ permalinkId: caseItemVertical.permalinkId }"
+                                                    [uiParams]="{ caseId: caseItemVertical.caseId }"
                                                     class="d-block case-item"
                                                     *ngFor="let caseItemVertical of caseItem.caseModels"
                                                         >
