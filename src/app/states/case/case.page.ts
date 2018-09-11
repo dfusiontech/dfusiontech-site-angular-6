@@ -4,10 +4,10 @@ import { StateService } from '@uirouter/angular';
 import { CasesService } from '../../services/Cases.service';
 
 @Component({
-    selector: '[id="case-page"]',
+    selector: '[data-case-page]',
     templateUrl: './case-page.html'
 })
-export class CasePage implements OnInit {
+export class CasePageComponent implements OnInit {
     @Input() caseId;
 
     public case;

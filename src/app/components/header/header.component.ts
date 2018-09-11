@@ -1,7 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
-    // selector: '[id="header"]',
     templateUrl: './header.html'
 })
 export class HeaderComponent implements OnInit {

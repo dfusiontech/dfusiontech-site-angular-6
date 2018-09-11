@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'error-message',
+    selector: '[data-error-message]',
     templateUrl: './error-message.html'
 })
 export class ErrorMessageComponent implements OnInit {
     @Input() errorResponse;
 
-    constructor() {};
+    constructor() {}
     ngOnInit() {
-    };
+    }
 }

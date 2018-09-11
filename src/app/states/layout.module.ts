@@ -27,7 +27,7 @@ import { PreloaderComponent } from '../components/preloader/preloader.component'
 // pages
 import { HomePageComponent } from './home/home.page';
 import { CasesPageComponent } from './cases/cases.page';
-import { CasePage } from './case/case.page';
+import { CasePageComponent } from './case/case.page';
 import { ThoughtsPageComponent } from './thoughts/thoughts.page';
 import { ThoughtsItemPageComponent } from './thoughts-item/thoughts-item.page';
 import { AboutUsPageComponent } from './about-us/about-us.page';
@@ -70,7 +70,7 @@ export const routing: RootModule = {
         LayoutComponent,
         HomePageComponent,
         CasesPageComponent,
-        CasePage,
+        CasePageComponent,
         ThoughtsPageComponent,
         ThoughtsItemPageComponent,
         AboutUsPageComponent,

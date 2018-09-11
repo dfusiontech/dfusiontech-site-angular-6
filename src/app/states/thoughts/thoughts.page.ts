@@ -5,7 +5,7 @@ import { StateService } from '@uirouter/angular';
 import { ThoughtsService } from '../../services/Thoughts.service';
 
 @Component({
-    selector: '[id="thoughts"]',
+    selector: '[data-thoughts]',
     templateUrl: './thoughts.html'
 })
 export class ThoughtsPageComponent implements OnInit {

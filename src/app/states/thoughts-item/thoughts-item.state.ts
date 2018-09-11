@@ -3,6 +3,7 @@ import { Transition } from '@uirouter/angular';
 
 import { HeaderComponent } from '../../components/header/header.component';
 import { ThoughtsItemPageComponent } from './thoughts-item.page';
+import {FooterComponent} from '../../components/footer/footer.component';
 
 
 export function thoughtIdResolve ($transition$) {
@@ -17,6 +18,7 @@ export const thoughtsItemState = {
     views: {
         header: { component: HeaderComponent },
         $default: { component: ThoughtsItemPageComponent },
+        footer: { component: FooterComponent },
     },
     resolve: [
         {
