@@ -3,23 +3,8 @@
         <div
             *ngFor="let a of spinnerList; let i = index"
             class="sp"
-            [ngClass]="{
-                'sp_0': i === 0,
-                'sp_1': i === 1,
-                'sp_2': i === 2,
-                'sp_3': i === 3,
-                'sp_4': i === 4,
-                'sp_5': i === 5,
-                'sp_6': i === 6,
-                'sp_7': i === 7,
-                'sp_8': i === 8,
-                'sp_9': i === 9,
-                'sp_10': i === 10,
-                'sp_11': i === 11,
-                'sp_12': i === 12,
-                'sp_13': i === 13
-                    }"
-                >
+            [ngClass]="'sp_'+i"
+            >
         </div>
     </div>
 </div>
