@@ -5,7 +5,7 @@ import { StateService } from '@uirouter/angular';
 import { CasesService } from '../../services/Cases.service';
 
 @Component({
-    selector: '[id="cases"], app-cases',
+    selector: '[data-cases]',
     templateUrl: './cases.html'
 })
 export class CasesPageComponent implements OnInit {

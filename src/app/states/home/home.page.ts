@@ -6,7 +6,7 @@ import { CasesService } from '../../services/Cases.service';
 import { ThoughtsService } from '../../services/Thoughts.service';
 
 @Component({
-    selector: '[id="home"], app-home',
+    selector: '[data-home]',
     templateUrl: './home.html'
 })
 export class HomePageComponent implements OnInit {

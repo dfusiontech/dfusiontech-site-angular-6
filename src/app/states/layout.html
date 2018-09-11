@@ -18,9 +18,8 @@
 <ui-view id="header" name="header"></ui-view>
 <!-- place to render page content based on url -->
 <ui-view id="main">
-    <app-preloader></app-preloader>
+    <div data-preloader></div>
 </ui-view>
 <!-- Common footer can be component => selector: '[id="footer"]', -->
-<footer id="footer">
-</footer>
+<ui-view name="footer"></ui-view>
 

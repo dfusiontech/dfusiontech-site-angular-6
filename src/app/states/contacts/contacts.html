@@ -1,90 +1,143 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="container">
-                <section class="heading-block grey-rectangle">
-                    <div class="heading-title">
-                        <h2>
-                            Hey! Looking for software development or support partner? (Follow us on <a class="heading-link" href="https://clutch.co/profile/dfusiontech" target="_blank">Clutch</a>, like us on <a class="heading-link" href="https://www.facebook.com/dfusiontechinc" target="_blank">Facebook</a>) Get in touch via <a class="heading-link" href="https://www.linkedin.com/company/dfusion-tech" target="_blank">LinkedIn</a>, visit our <a class="heading-link" href="https://goo.gl/maps/LU4zi2fKxPL2" target="_blank">Office</a>
-                        </h2>
-                    </div>
-                    <a pageScroll pageScrolllTarget="#contactUs" [pageScrollOffset]="77" href="#contactUs" class="anchor-to-form"><i class="dft dft-arrow-down"></i></a>
-                </section>
+<div id="contacts">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container">
+                    <section class="heading-block grey-rectangle">
+                        <div class="heading-title">
+                            <h2>
+                                Hey! Looking for software development or support partner? (Follow us on
+                                <a
+                                    target="_blank"
+                                    class="heading-link"
+                                    href="https://clutch.co/profile/dfusiontech"
+                                        >
+                                    Clutch
+                                </a>
+                                , like us on
+                                <a
+                                    target="_blank"
+                                    class="heading-link"
+                                    href="https://www.facebook.com/dfusiontechinc"
+                                        >
+                                    Facebook
+                                </a>
+                                ) Get in touch via
+                                <a
+                                    target="_blank"
+                                    class="heading-link"
+                                    href="https://www.linkedin.com/company/dfusion-tech"
+                                        >
+                                    LinkedIn
+                                </a>
+                                , visit our
+                                <a
+                                    target="_blank"
+                                    class="heading-link"
+                                    href="https://goo.gl/maps/LU4zi2fKxPL2"
+                                        >
+                                    Office
+                                </a>
+                            </h2>
+                        </div>
+                        <a
+                            pageScroll
+                            href="#contactUs"
+                            class="anchor-to-form"
+                            data-pageScrollOffset="77"
+                            data-pageScrolllTarget="#contactUs"
+                                >
+                            <i class="dft dft-arrow-down"></i>
+                        </a>
+                    </section>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row contact-block">
-        <div class="col-md-12">
-            <div class="container">
-                <section class="form-wrapper" id="contactUs">
-                    <form class="needs-validation"
-                          name="form"
-                          #contactForm="ngForm"
-                          (ngSubmit)="contactForm.form.valid && onSubmit()"
-                          novalidate>
-                        <div class="form-row">
-                            <div class="form-group col-md-12 col-lg-6">
-                                <label for="inputName">What’s your name?</label>
-                                <!--[ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"-->
-                                <input type="text"
-                                       placeholder="Tony Stark"
-                                       class="form-control"
-                                       id="inputName"
-                                       name="name"
-                                       [(ngModel)]="contactMessage.name"
-                                       #name = "ngModel"
-                                       [ngClass]="{'is-invalid': contactForm.submitted && name.invalid }"
-                                       required
-                                        />
-                                <div *ngIf="contactForm.submitted && name.invalid" class="invalid-feedback">
-                                    <span >
-                                        Please enter your Name.
-                                    </span>
+        <div class="row contact-block">
+            <div class="col-md-12">
+                <div class="container">
+                    <section
+                        id="contactUs"
+                        class="form-wrapper"
+                            >
+                        <form
+                            novalidate
+                            name="form"
+                            #contactForm="ngForm"
+                            class="needs-validation"
+                            (ngSubmit)="contactForm.form.valid && onSubmit()"
+                                >
+                            <div class="form-row">
+                                <div class="form-group col-md-12 col-lg-6">
+                                    <label for="inputName">What’s your name?</label>
+                                    <!--[ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"-->
+                                    <input
+                                        required
+                                        type="text"
+                                        name="name"
+                                        id="inputName"
+                                        #name="ngModel"
+                                        class="form-control"
+                                        placeholder="Tony Stark"
+                                        [(ngModel)]="contactMessage.name"
+                                        [ngClass]="{'is-invalid': contactForm.submitted && name.invalid }"
+                                            />
+                                    <div
+                                        class="invalid-feedback"
+                                        *ngIf="contactForm.submitted && name.invalid"
+                                            >
+                                        <span>Please enter your Name.</span>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12 col-lg-6">
+                                    <label for="inputEmail">Your email</label>
+                                    <!--[ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"-->
+                                    <input
+                                        email
+                                        required
+                                        type="email"
+                                        name="email"
+                                        id="inputEmail"
+                                        #email="ngModel"
+                                        class="form-control"
+                                        placeholder="example@gmail.com"
+                                        [(ngModel)]="contactMessage.email"
+                                        [ngClass]="{'is-invalid' : contactForm.submitted && email.invalid}"
+                                            />
+                                    <div class="invalid-feedback invalid-email">
+                                        Please enter valid Email.
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group col-md-12 col-lg-6">
-                                <label for="inputEmail">Your email</label>
-                                <!--[ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"-->
-                                <input type="email"
-                                       placeholder="example@gmail.com"
-                                       class="form-control"
-                                       id="inputEmail"
-                                       name="email"
-                                       [(ngModel)]="contactMessage.email"
-                                       #email="ngModel"
-                                       [ngClass]="{'is-invalid' : contactForm.submitted && email.invalid}"
-                                       required
-                                       email
-                                        />
-                                <div class="invalid-feedback invalid-email">
-                                    Please enter valid Email.
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputMessage">Message</label>
+                                    <textarea
+                                        type="text"
+                                        class="form-control"
+                                        id="inputMessage"
+                                        placeholder=""
+                                        name="message"
+                                        [(ngModel)]="contactMessage.message"
+                                        #message="ngModel"
+                                            >
+                                    </textarea>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label for="inputMessage">Message</label>
-                                <textarea type="text"
-                                          class="form-control"
-                                          id="inputMessage"
-                                          placeholder=""
-                                          name="message"
-                                          [(ngModel)]="contactMessage.message"
-                                          #message="ngModel"
-                                            ></textarea>
-                            </div>
-                        </div>
-
-                        <!--<button type="submit" class="btn dft-btn"> BUTTON </button>-->
-                        <button [ngClass]="{ 'disabled': contactForm.submitted && (name.invalid || email.invalid) }" [disabled]="contactForm.submitted && (name.invalid || email.invalid)" type="submit" class="btn dft-btn">
-                            <span class="dft-btn-label">SUBMIT</span>
-                            <div class="dft-btn-slider"></div>
-                        </button>
-                    </form>
-                </section>
+                            <!--<button type="submit" class="btn dft-btn"> BUTTON </button>-->
+                            <button
+                                type="submit"
+                                class="btn dft-btn"
+                                [disabled]="contactForm.submitted && (name.invalid || email.invalid)"
+                                [ngClass]="{ 'disabled': contactForm.submitted && (name.invalid || email.invalid) }"
+                                    >
+                                <span class="dft-btn-label">SUBMIT</span>
+                                <div class="dft-btn-slider"></div>
+                            </button>
+                        </form>
+                    </section>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-

@@ -1,122 +1,147 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <app-error-message *ngIf="errorOccurred" [errorResponse]="errorResponse"></app-error-message>
-            <app-preloader *ngIf="!thoughtItemLoaded && !errorOccurred"></app-preloader>
-            <div
-                *ngIf="thoughtItemLoaded"
-                class="container"
-                    >
-                <section class="heading-block grey-rectangle">
-                    <div class="heading-title inner-img">
-                        <img src="../../../assets/images/thoughts-page/heading-bg.png" alt="">
-                    </div>
-                </section>
-                <section class="content-wrapper">
-                    <span class="date">{{thought.date}}</span>
-                    <!--<h1>{{thought.title}}</h1>-->
-                    <h1 class="headline-1">Why do outsourcing <br>
-                        white-labeled relationships fail?
-                    </h1>
-                    <p class="paragraph">
-                        I should start with the fact that I always hated «outsourcing» word - I can’t understand how
-                        being an outsourcing software development company might be a business goal. There are a lot
-                        of companies (particularly in Ukraine) who proudly position themselves as
-                        «outsourcing companies» and consider that part of their branding strategy (moreover there are
-                        even communities and successfully running conferences utilising this word). All right that may
-                        be a good start for a company just established, that is also a good way to keep your developers
-                        busy but that can’t be a permanent and ultimate goal (in my humble opinion at least).
-                    </p>
-                    <h2 class="headline-2">The problem</h2>
-                    <p class="paragraph">
-                        To be completely clear I am talking here about the most common and most used cases of
-                        «outsourcing» in software world - proving development or other digital services under
-                        white-label agreement, essentially doing someone’s work instead of them. Let’s consider a few
-                        main cases why there may be a need for outsourcing some of your work under white-label
-                        agreement:
-                    </p>
-                    <ol class="dft-list">
-                        <li class="dft-li">
-                            <span class="dft-li-text">
-                                You ARE ABLE to do the job in-house but you don’t have enough resources right now and you
-                                already have a commitment for the project. So you need to solve your problem by giving the
-                                work to a sub-contractor (without disclosing that to your client).
-                            </span>
-                        </li>
-                        <li class="dft-li">
-                            <span class="dft-li-text">
-                                You ARE ABLE to do the job in-house but you don’t have enough resources right now and you
-                                already have a commitment for the project. So you need to solve your problem by giving the
-                                work to a sub-contractor (without disclosing that to your client).
-                            </span>
-                        </li>
-                    </ol>
-                    <p class="paragraph">
-                        To be completely clear I am talking here about the most common and most used cases of
-                        «outsourcing» in software world - proving development or other digital services under
-                        white-label agreement, essentially doing someone’s work instead of them. Let’s consider a few
-                        main cases why there may be a need for outsourcing some of your work under white-label
-                        agreement:
-                    </p>
-                    <div class="thought-image-wrapper" title="Cover “News Magazine”" style="background-image: url('../../../assets/images/thoughts-item-page/Bitmap.png');">
-                        <img class="thought-image" src="../../../assets/images/thoughts-item-page/Bitmap.png" alt="Cover “News Magazine”, June 27, 2018">
-                    </div>
-                    <div class="image-description">
-                        <span class="description">Cover “News Magazine”, June 27, 2018</span>
-                    </div>
-
-                    <p class="paragraph">
-                        I totally respect the reasons and I can also accept the solution in the first case - it might
-                        happen that you are hiring a company similar to yours and it wouldn’t be wise enough to
-                        introduce your competitor to your client. Moreover that looks more like resolving a temporary
-                        issue than a way you build your business. However, the 2nd case is what often happens on a
-                        permanent basis and becomes a long-term relationship. I am totally confident that it’s a bad
-                        practice for both parties for the following reason:
-                    </p>
-                    <div class="quote-wrapper">
-                        <div class="quote-signs">
-                            <span class="quote">The communication in outsourcing is always broken no matter how good it is</span>
+<div id="thoughtsItem">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div
+                    data-error-message
+                    *ngIf="errorOccurred"
+                    [errorResponse]="errorResponse"
+                        >
+                </div>
+                <div
+                    data-preloader
+                    *ngIf="!thoughtItemLoaded && !errorOccurred"
+                        >
+                </div>
+                <div
+                    class="container"
+                    *ngIf="thoughtItemLoaded"
+                        >
+                    <section class="heading-block grey-rectangle">
+                        <div class="heading-title inner-img">
+                            <img
+                                alt="Heading title"
+                                src="../../../assets/images/thoughts-page/heading-bg.png"
+                                    />
                         </div>
-                    </div>
-                    <p class="paragraph">
-                        That happens just because there is someone in the middle of communication process passing the
-                        information back and forth and moreover that person is usually not skilled enough in the
-                        particular area. This leads to the situation when all parties spend too much time and therefore
-                        everyone lose money.
-                    </p>
-                    <ul class="dft-list">
-                        <li class="dft-li">
+                    </section>
+                    <section class="content-wrapper">
+                        <span class="date">{{thought.date}}</span>
+                        <!--<h1>{{thought.title}}</h1>-->
+                        <h1 class="headline-1">
+                            Why do outsourcing <br>
+                            white-labeled relationships fail?
+                        </h1>
+                        <p class="paragraph">
+                            I should start with the fact that I always hated «outsourcing» word - I can’t understand how
+                            being an outsourcing software development company might be a business goal. There are a lot
+                            of companies (particularly in Ukraine) who proudly position themselves as
+                            «outsourcing companies» and consider that part of their branding strategy (moreover there are
+                            even communities and successfully running conferences utilising this word). All right that may
+                            be a good start for a company just established, that is also a good way to keep your developers
+                            busy but that can’t be a permanent and ultimate goal (in my humble opinion at least).
+                        </p>
+                        <h2 class="headline-2">The problem</h2>
+                        <p class="paragraph">
+                            To be completely clear I am talking here about the most common and most used cases of
+                            «outsourcing» in software world - proving development or other digital services under
+                            white-label agreement, essentially doing someone’s work instead of them. Let’s consider a few
+                            main cases why there may be a need for outsourcing some of your work under white-label
+                            agreement:
+                        </p>
+                        <ol class="dft-list">
+                            <li class="dft-li">
                             <span class="dft-li-text">
                                 You ARE ABLE to do the job in-house but you don’t have enough resources right now and you
                                 already have a commitment for the project. So you need to solve your problem by giving the
                                 work to a sub-contractor (without disclosing that to your client).
                             </span>
-                        </li>
-                        <li class="dft-li">
+                            </li>
+                            <li class="dft-li">
                             <span class="dft-li-text">
                                 You ARE ABLE to do the job in-house but you don’t have enough resources right now and you
                                 already have a commitment for the project. So you need to solve your problem by giving the
                                 work to a sub-contractor (without disclosing that to your client).
                             </span>
-                        </li>
-                    </ul>
-                    <h2 class="headline-2">Solution</h2>
-                    <p class="paragraph">
-                        That happens just because there is someone in the middle of communication process passing the
-                        information back and forth and moreover that person is usually not skilled enough in the
-                        particular area. This leads to the situation when all parties spend too much time and
-                        therefore everyone lose money.
-                    </p>
-                    <p class="paragraph">
-                        I totally respect the reasons and I can also accept the solution in the first case - it might
-                        happen that you are hiring a company similar to yours and it wouldn’t be wise enough to
-                        introduce your competitor to your client. Moreover that looks more like resolving a temporary
-                        issue than a way you build your business.
-                        However, the 2nd case is what often happens on a permanent basis and becomes a long-term
-                        relationship. I am totally confident that it’s a bad practice for both parties for the
-                        following reason:
-                    </p>
-                </section>
+                            </li>
+                        </ol>
+                        <p class="paragraph">
+                            To be completely clear I am talking here about the most common and most used cases of
+                            «outsourcing» in software world - proving development or other digital services under
+                            white-label agreement, essentially doing someone’s work instead of them. Let’s consider a few
+                            main cases why there may be a need for outsourcing some of your work under white-label
+                            agreement:
+                        </p>
+                        <div
+                            class="thought-image-wrapper"
+                            title="Cover “News Magazine”"
+                            style="background-image: url('../../../assets/images/thoughts-item-page/Bitmap.png');"
+                                >
+                            <img
+                                class="thought-image"
+                                alt="Cover “News Magazine”, June 27, 2018"
+                                src="../../../assets/images/thoughts-item-page/Bitmap.png"
+                                    />
+                        </div>
+                        <div class="image-description">
+                            <span class="description">Cover “News Magazine”, June 27, 2018</span>
+                        </div>
+
+                        <p class="paragraph">
+                            I totally respect the reasons and I can also accept the solution in the first case - it might
+                            happen that you are hiring a company similar to yours and it wouldn’t be wise enough to
+                            introduce your competitor to your client. Moreover that looks more like resolving a temporary
+                            issue than a way you build your business. However, the 2nd case is what often happens on a
+                            permanent basis and becomes a long-term relationship. I am totally confident that it’s a bad
+                            practice for both parties for the following reason:
+                        </p>
+                        <div class="quote-wrapper">
+                            <div class="quote-signs">
+                                <span class="quote">
+                                    The communication in outsourcing is always broken no matter how good it is
+                                </span>
+                            </div>
+                        </div>
+                        <p class="paragraph">
+                            That happens just because there is someone in the middle of communication process passing the
+                            information back and forth and moreover that person is usually not skilled enough in the
+                            particular area. This leads to the situation when all parties spend too much time and therefore
+                            everyone lose money.
+                        </p>
+                        <ul class="dft-list">
+                            <li class="dft-li">
+                            <span class="dft-li-text">
+                                You ARE ABLE to do the job in-house but you don’t have enough resources right now and you
+                                already have a commitment for the project. So you need to solve your problem by giving the
+                                work to a sub-contractor (without disclosing that to your client).
+                            </span>
+                            </li>
+                            <li class="dft-li">
+                            <span class="dft-li-text">
+                                You ARE ABLE to do the job in-house but you don’t have enough resources right now and you
+                                already have a commitment for the project. So you need to solve your problem by giving the
+                                work to a sub-contractor (without disclosing that to your client).
+                            </span>
+                            </li>
+                        </ul>
+                        <h2 class="headline-2">Solution</h2>
+                        <p class="paragraph">
+                            That happens just because there is someone in the middle of communication process passing the
+                            information back and forth and moreover that person is usually not skilled enough in the
+                            particular area. This leads to the situation when all parties spend too much time and
+                            therefore everyone lose money.
+                        </p>
+                        <p class="paragraph">
+                            I totally respect the reasons and I can also accept the solution in the first case - it might
+                            happen that you are hiring a company similar to yours and it wouldn’t be wise enough to
+                            introduce your competitor to your client. Moreover that looks more like resolving a temporary
+                            issue than a way you build your business.
+                            However, the 2nd case is what often happens on a permanent basis and becomes a long-term
+                            relationship. I am totally confident that it’s a bad practice for both parties for the
+                            following reason:
+                        </p>
+                    </section>
+                </div>
             </div>
         </div>
     </div>
