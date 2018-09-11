@@ -1,8 +1,7 @@
 // outsource
-import { Transition } from "@uirouter/angular";
-
+import { Transition } from '@uirouter/angular';
 //
-import { CasePage } from './case.page';
+import { CasePageComponent } from './case.page';
 import { HeaderComponent } from '../../components/header/header.component';
 import { CasesService } from '../../services/Cases.service';
 
@@ -21,7 +20,7 @@ export const casePageState = {
     url: '/case/:caseId', // there should be single case name or number
     views: {
         header: { component: HeaderComponent },
-        $default: { component: CasePage },
+        $default: { component: CasePageComponent },
     },
     resolve: [
         {
@@ -31,4 +30,3 @@ export const casePageState = {
         }
     ]
 };
-

@@ -9,11 +9,11 @@ import { hmrBootstrap } from './hmr';
 if (environment.production) {
     enableProdMode();
 } else {
-    console.info('%c APP Environment:\n',
+    console.log('%c APP Environment:\n',
         'background: green; color: #fff; font-size: 14px; font-weigth: bolder;', environment);
 }
 
-const bootstrap = () =>platformBrowserDynamic().bootstrapModule(AppModule);
+const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
 if (environment.hmr) {
     if (module[ 'hot' ]) {
         hmrBootstrap(module, bootstrap);

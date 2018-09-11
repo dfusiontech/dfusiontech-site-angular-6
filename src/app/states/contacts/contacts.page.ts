@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 
 @Component({
-    selector: '[id="contacts"]',
+    selector: '[id="contacts"], app-contacts',
     templateUrl: './contacts.html'
 })
 export class ContactsPageComponent implements OnInit {

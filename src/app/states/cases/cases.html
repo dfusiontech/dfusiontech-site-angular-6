@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <error-message *ngIf="errorOccurred" [errorResponse]="errorResponse"></error-message>
-            <dft-preloader *ngIf="!casesListLoaded && !errorOccurred"></dft-preloader>
+            <app-error-message *ngIf="errorOccurred" [errorResponse]="errorResponse"></app-error-message>
+            <app-preloader *ngIf="!casesListLoaded && !errorOccurred"></app-preloader>
             <!-- Adding grey background area on big desktops -->
             <div
                 *ngIf="casesList"
@@ -248,7 +248,7 @@
                         </ng-container>
                     </ng-container>
                 </div>
-                <lets-chat></lets-chat>
+                <app-lets-chat></app-lets-chat>
             </div>
         </div>
     </div>

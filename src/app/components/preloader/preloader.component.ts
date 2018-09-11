@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'dft-preloader',
+    selector: 'app-preloader',
     templateUrl: './preloader.html'
 })
 export class PreloaderComponent implements OnInit {
