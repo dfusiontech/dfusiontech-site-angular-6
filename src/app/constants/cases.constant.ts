@@ -45,130 +45,172 @@ export const CasesConstant = [
         img: 'assets/images/pages/cases/worldtv.jpg'
     },
     {
-        'title': 'HATOLOGY',
+        title: 'HATOLOGY',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor ' +
+        'adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation' +
+        ' ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
         'title': 'INVENTURE',
         'caseId': 'case-',
         'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor ' +
+        'adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ' +
+        'ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'GLUKGLUK',
+        title: 'GLUKGLUK',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor ' +
+        'adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ' +
+        'ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'PODUNK',
+        title: 'PODUNK',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
+        ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam' +
+        ' ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'XLEEN',
+        title: 'XLEEN',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
+        ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'EMPIRICA',
+        title: 'EMPIRICA',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
+        ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ' +
+        'ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'DATAGEN',
+        title: 'DATAGEN',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
+        'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'ZAGGLE',
+        title: 'ZAGGLE',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
+        ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'XURBAN',
+        title: 'XURBAN',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
+        'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. ' +
+        'Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'JIMBIES',
+        title: 'JIMBIES',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
+        ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'NSPIRE',
+        title: 'NSPIRE',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
+        'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'MAGNAFONE',
+        title: 'MAGNAFONE',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
+        'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'ANIMALIA',
+        title: 'ANIMALIA',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
+        ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'SONGLINES',
+        title: 'SONGLINES',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
+        ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'HIVEDOM',
+        title: 'HIVEDOM',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
+        ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'ORBOID',
+        title: 'ORBOID',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
+        'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'CONJURICA',
+        title: 'CONJURICA',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
+        ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'WARETEL',
+        title: 'WARETEL',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
+        'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. ' +
+        'Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'FOSSIEL',
+        title: 'FOSSIEL',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
+        ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     },
     {
-        'title': 'KIGGLE',
+        title: 'KIGGLE',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
+        'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     }
     ,
     {
-        'title': 'QWERTY LOREM IPSUM',
+        title: 'QWERTY LOREM IPSUM',
         'caseId': 'case-',
-        'img': 'http://placehold.it/870x376',
-        'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
+        img: 'http://placehold.it/870x376',
+        description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
+        ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
+        ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
     }
 ];

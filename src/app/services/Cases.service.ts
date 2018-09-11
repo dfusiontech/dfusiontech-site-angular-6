@@ -9,12 +9,12 @@ export class CasesService {
         // in case of problems with getting data transmit message with this content
         const errorResponse = 'Sorry, content is not available at that moment.';
         // variable to get prepared collection and cases items with different background color, not ordered
-        let casesList = [];
+        const casesList = [];
         // variable to order each 5 cases by groups ( two in "single" and three in "group" )
-        let casesListGroupsOrdered = [];
+        const casesListGroupsOrdered = [];
         // final version of cases list with prepared metadata for repeating of cases collection corresponding to design
-        let casesListOrdered = [];
-        let promise = new Promise((resolve, reject) => {
+        const casesListOrdered = [];
+        const promise = new Promise((resolve, reject) => {
             setTimeout(() => {
                 if ( CasesConstant ) {
                     // getting cases list without order
@@ -37,7 +37,7 @@ export class CasesService {
                             do {
                                 randomBackgroundColor = listBackgroundColors[ Math.floor(Math.random() * listBackgroundColors.length ) ];
                                 casesList[i].contentBackground = randomBackgroundColor;
-                            } while ( casesList[i].contentBackground === casesList[i-1].contentBackground )
+                            } while ( casesList[i].contentBackground === casesList[i - 1].contentBackground );
                         }
                     }
                     // variable for creating and filtering new elements of cases list
@@ -50,7 +50,7 @@ export class CasesService {
                             // first element of cases list single corresponding to design so we creating next element
                             a++;
                             casesListGroupsOrdered[a] = [];
-                        } else if ( a%2 && ((casesList.length - i) > 0) ) {
+                        } else if ( a % 2 && ((casesList.length - i) > 0) ) {
                             // even elements consist of three cases corresponding to design
                             // if amount of cases not enough to form element than it would be single element
                             if ( casesListGroupsOrdered[a].length < 3 ) {
@@ -89,7 +89,7 @@ export class CasesService {
                                 ]
                             };
                             casesListOrdered[i].cols[0].caseModels.push( casesListGroupsOrdered[i] );
-                        } else if ( i%2 && i !== 0 && casesListGroupsOrdered[i].length === 3 ) {
+                        } else if ( i % 2 && i !== 0 && casesListGroupsOrdered[i].length === 3 ) {
                             // filling even elements
                             casesListOrdered[i] = {
                                 type: 'group',
@@ -111,7 +111,7 @@ export class CasesService {
                                 ]
                             };
                             // property "revers" changes order of items for every next element
-                            if ( j%2 ) {
+                            if ( j % 2 ) {
                                 casesListOrdered[i].cols[0].revers = true;
                                 j++;
                             } else {
@@ -139,7 +139,7 @@ export class CasesService {
                                     },
                                 ]
                             };
-                            if ( k%2 ) {
+                            if ( k % 2 ) {
                                 casesListOrdered[i].revers = true;
                                 k++;
                             } else {
@@ -163,13 +163,13 @@ export class CasesService {
         });
         return promise;
     }
-    public getCaseByLink(link) {
-        let casesList = [];
-        let promise = new Promise((resolve, reject) => {
+    public getCaseByLink( link ) {
+        const casesList = [];
+        const promise = new Promise((resolve, reject) => {
             setTimeout(() => {
-                if (CasesConstant) {
+                if ( CasesConstant ) {
                     for (let i = 0; i < CasesConstant.length; i++) {
-                        casesList.push(new CaseModel(CasesConstant[i]));
+                        casesList.push( new CaseModel( CasesConstant[i] ) );
                         casesList[i].caseId = 'case-' + (i + 1);
                     }
                     resolve(casesList.find(fcase => fcase.caseId === link));

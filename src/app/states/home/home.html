@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <error-message *ngIf="errorOccurred" [errorResponse]="errorResponse"></error-message>
-            <dft-preloader *ngIf="!casesListLoaded && !errorOccurred"></dft-preloader>
+            <app-error-message *ngIf="errorOccurred" [errorResponse]="errorResponse"></app-error-message>
+            <app-preloader *ngIf="!casesListLoaded && !errorOccurred"></app-preloader>
             <div
                 class="container"
                 *ngIf="casesListLoaded"
@@ -13,7 +13,15 @@
                             it doesn’t matter where you start — try us and we’ll bring you up
                         </h1>
                     </div>
-                    <a pageScroll pageScrolllTarget="#letsChat" [pageScrollOffset]="77" href="#letsChat" class="anchor-to-form"><i class="dft dft-arrow-down"></i></a>
+                    <a
+                        pageScroll
+                        href="#letsChat"
+                        class="anchor-to-form"
+                        [pageScrollOffset]="77"
+                        pageScrolllTarget="#letsChat"
+                            >
+                        <i class="dft dft-arrow-down"></i>
+                    </a>
                 </section>
                 <section>
                     <!-- Wrapper to fix content behavior on small desktop-->
@@ -39,8 +47,8 @@
                                                     >
                                                 <a
                                                     uiSref="case-page"
+                                                    [uiParams]="{ caseId: caseItem.caseId }"
                                                     class="d-block case-item"
-                                                    [uiParams]="{ permalinkId: caseItem.permalinkId }"
                                                         >
                                                     <div class="row align-items-center">
                                                         <div
@@ -87,7 +95,7 @@
                                             <div class="col-12">
                                                 <a
                                                     uiSref="case-page"
-                                                    [uiParams]="{ permalinkId: caseItems.permalinkId }"
+                                                    [uiParams]="{ caseId: caseItems.caseId }"
                                                     class="d-block case-item"
                                                         >
                                                     <div class="row align-items-center">
@@ -103,7 +111,7 @@
                                                                     class="case-img"
                                                                     [src]="caseItems.img"
                                                                     [alt]="caseItems.title"
-                                                                        />
+                                                                />
                                                             </div>
                                                         </div>
                                                         <div
@@ -140,10 +148,12 @@
                                         class="row"
                                         *ngSwitchCase="'group'"
                                             >
-                                        <ng-container *ngFor="let caseItems of cases.cols">
+                                        <ng-container
+                                            *ngFor="let caseItems of cases.cols"
+                                                >
                                             <ng-container
-                                                [ngSwitch]="caseItem.colSize"
                                                 *ngFor="let caseItem of caseItems.items"
+                                                [ngSwitch]="caseItem.colSize"
                                                     >
                                                 <div
                                                     class="col-lg-8"
@@ -151,8 +161,8 @@
                                                         >
                                                     <a
                                                         uiSref="case-page"
+                                                        [uiParams]="{ caseId: caseItemHorizontal.caseId }"
                                                         class="d-block case-item"
-                                                        [uiParams]="{ permalinkId: caseItemHorizontal.permalinkId }"
                                                         *ngFor="let caseItemHorizontal of caseItem.caseModels; let odd = odd; let even = even"
                                                             >
                                                         <div class="row align-items-center">
@@ -200,9 +210,9 @@
                                                         >
                                                     <a
                                                         uiSref="case-page"
+                                                        [uiParams]="{ caseId: caseItemVertical.caseId }"
                                                         class="d-block case-item"
                                                         *ngFor="let caseItemVertical of caseItem.caseModels"
-                                                        [uiParams]="{ permalinkId: caseItemVertical.permalinkId }"
                                                             >
                                                         <div
                                                             class="row"
@@ -241,7 +251,7 @@
                                                                         [src]="caseItemVertical.img"
                                                                         [alt]="caseItemVertical.title"
                                                                         class="case-img"
-                                                                            />
+                                                                    />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -256,47 +266,39 @@
                     </div>
                 </section>
                 <!-- set id="letsChat" for page scroll target -->
-                <lets-chat id="letsChat"></lets-chat>
+                <app-lets-chat id="letsChat"></app-lets-chat>
                 <section class="thoughts-wrapper">
-                    <h2 class="grey-headline">Our thoughts</h2>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6">
+                    <ul class="list-unstyled row">
+                        <li class="col-lg-4 col-sm-6" *ngFor="let thought of thoughtsList">
                             <div class="thought">
                                 <div class="thought-title">
-                                    <a uiSref="thoughtsItem" title="Business model v.1" style="background-image: url('../../../assets/images/thoughts-page/business-1.png');"></a>
+                                    <a uiSref="thoughts-item"
+                                       [uiParams]="{ thoughtId: thought.thoughtId }"
+                                       [attr.title]="thought.title"
+                                       style="background-image: url('../../../assets/images/thoughts-page/business-1.png');"
+                                       [ngStyle]="{ 'background-image': 'url(' + thought.img + ')'}"
+                                            >
+                                    </a>
                                 </div>
                                 <div class="thought-description">
-                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="Business model v.1">Business model v.1</a></h3>
-                                    <p class="description">This project is a complex of Back-End and Front- End applications that manages different technologies and ..</p>
-                                    <span class="date horizontal-line m">may 4, 2018</span>
+                                    <h3 class="description-headline">
+                                        <a uiSref="thoughts-item"
+                                           [uiParams]="{ thoughtId: thought.thoughtId }"
+                                           [attr.title]="thought.title"
+                                                >
+                                            {{ thought.title }}
+                                        </a>
+                                    </h3>
+                                    <p class="description">
+                                        {{ thought.description }}
+                                    </p>
+                                    <span class="date horizontal-line m">
+                                        {{ thought.date }}
+                                    </span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="thought">
-                                <div class="thought-title">
-                                    <a uiSref="thoughtsItem" title="The story of one project..." style="background-image: url('../../../assets/images/thoughts-page/story-1.png');"></a>
-                                </div>
-                                <div class="thought-description">
-                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="The story of one project...">The story of one project...</a></h3>
-                                    <p class="description">During our 8-years of experience working on Java development, we’ve never shared our successful projects..</p>
-                                    <span class="date horizontal-line m">may 4, 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="thought">
-                                <div class="thought-title">
-                                    <a uiSref="thoughtsItem" title="Lincoln Center" style="background-image: url('../../../assets/images/thoughts-page/lincoln-center-1.png');"></a>
-                                </div>
-                                <div class="thought-description">
-                                    <h3 class="description-headline"><a uiSref="thoughtsItem" title="Lincoln Center">Lincoln Center</a></h3>
-                                    <p class="description">Lincoln Center - The world’s leading performing arts center. Located in the heart of New York City on a 16-acr…</p>
-                                    <span class="date horizontal-line m">may 4, 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </section>
             </div>
         </div>
