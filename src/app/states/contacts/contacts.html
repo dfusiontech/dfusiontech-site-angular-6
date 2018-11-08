@@ -45,7 +45,8 @@
                             class="anchor-to-form"
                             data-pageScrollOffset="77"
                             data-pageScrolllTarget="#contactUs"
-                                >
+                            pageScrollSpeed="2500"
+                        >
                             <i class="dft dft-arrow-down"></i>
                         </a>
                     </section>
@@ -77,7 +78,7 @@
                                         id="inputName"
                                         #name="ngModel"
                                         class="form-control"
-                                        placeholder="Tony Stark"
+                                        placeholder="Mr Stark"
                                         [(ngModel)]="contactMessage.name"
                                         [ngClass]="{'is-invalid': contactForm.submitted && name.invalid }"
                                             />
@@ -99,7 +100,7 @@
                                         id="inputEmail"
                                         #email="ngModel"
                                         class="form-control"
-                                        placeholder="example@gmail.com"
+                                        placeholder="iron.man@example.com"
                                         [(ngModel)]="contactMessage.email"
                                         [ngClass]="{'is-invalid' : contactForm.submitted && email.invalid}"
                                             />
@@ -115,7 +116,7 @@
                                         type="text"
                                         class="form-control"
                                         id="inputMessage"
-                                        placeholder=""
+                                        placeholder="Leave a message here"
                                         name="message"
                                         [(ngModel)]="contactMessage.message"
                                         #message="ngModel"

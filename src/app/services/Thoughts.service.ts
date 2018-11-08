@@ -37,7 +37,7 @@ export class ThoughtsService {
                 } else {
                     reject( 'ThoughtsSvc: ' + this.errorResponse );
                 }
-            }, 1000);
+            }, 500);
         });
         return promise;
     }

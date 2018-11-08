@@ -12,14 +12,13 @@
                     *ngIf="!thoughtsListLoaded && !errorOccurred"
                         >
                 </div>
-                <div
-                    class="container"
-                    *ngIf="thoughtsListLoaded"
+                <div class="container"
+                     *ngIf="thoughtsListLoaded && thoughtsList.length>0"
                         >
                     <section class="heading-block grey-rectangle">
                         <div class="heading-title inner-img">
                             <a
-                                uiSref="thoughtsItem"
+                                uiSref="thoughts-item"
                                 title="Lincoln Center"
                                     >
                                 <img
@@ -44,7 +43,9 @@
                             <span class="date horizontal-line m">may 4, 2018</span>
                         </div>
                     </section>
-                    <section class="thoughts-wrapper">
+                    <section class="thoughts-wrapper"
+                             *ngIf="thoughtsList.length>1"
+                            >
                         <ul class="list-unstyled row">
                             <li
                                 class="col-lg-4 col-sm-6"

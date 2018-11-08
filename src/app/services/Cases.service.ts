@@ -176,7 +176,7 @@ export class CasesService {
                 } else {
                     reject('error');
                 }
-            }, 1000);
+            }, 500);
         });
         return promise;
     }
