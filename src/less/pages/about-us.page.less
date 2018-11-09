@@ -12,9 +12,9 @@
 
     .thesis {
         color: @black;
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 300;
-        margin-bottom: 30px;
+        margin-bottom: 20px; // 22px - chock-a-block
     }
 
     .heading-block {
@@ -49,7 +49,7 @@
 
             .theses-wrapper {
                 width: 52%;
-                padding: 40px 65px;
+                padding: 10px 65px 40px;
 
                 :last-child {
                     margin-bottom: 0;
@@ -72,6 +72,8 @@
                     padding: 10px 40px;
                 }
             }
+
+
         }
     }
 
@@ -109,6 +111,11 @@
 
     .hidden-theses{
         display: none;
+
+        .thesis {
+            font-size: 15px;
+
+        }
 
         @media (max-width: @desktop-hd-point) {
             display: block;

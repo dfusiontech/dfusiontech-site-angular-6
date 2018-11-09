@@ -16,6 +16,24 @@
         }
     }
 
+    .heading-block {
+        .heading-title {
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0;
+            padding-bottom: 0;
+            @media @lsmscreen {
+                min-height: 300px;
+            }
+            @media @xxsscreen {
+                min-height: 250px;
+            }
+        }
+    }
+
     .cases-list {
         // indent on mobile corresponding to design
         @media @lsmscreen {
