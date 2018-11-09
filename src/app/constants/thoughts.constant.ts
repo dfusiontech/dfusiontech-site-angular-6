@@ -6,6 +6,12 @@ export const ThoughtsConstant = [
         title: 'Lincoln Center',
         description: 'Lincoln Center - The world’s leading performing arts center. Located in the heart of New York City on a 16-acr…',
         date: 'may 1, 2018',
+        img: '../../../assets/images/thoughts-page/heading-bg.png'
+    },
+    {
+        title: 'Lincoln Center',
+        description: 'Lincoln Center - The world’s leading performing arts center. Located in the heart of New York City on a 16-acr…',
+        date: 'may 1, 2018',
         img: '../../../assets/images/thoughts-page/business-1.png'
     },
     {

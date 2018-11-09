@@ -11,12 +11,14 @@ import { ThoughtsService } from '../../services/Thoughts.service';
 export class ThoughtsPageComponent implements OnInit {
     // initially data is loading
     public thoughtsListLoaded = false;
-
+    public thoughtsListEmpty = true;
     public errorResponse;
+
     // initially we don't know if error has been occurred with getting data
     public errorOccurred = false;
 
     public thoughtsList;
+    public headingThought;
 
     /**
      * constructor holder to define what exactly past in public vm object
@@ -28,26 +30,22 @@ export class ThoughtsPageComponent implements OnInit {
     ngOnInit() {
         this.thoughtsService
             .getThoughts()
-            .then(data => {
-                this.thoughtsList = data;
-                this.thoughtsListLoaded = true;
+            .then((data: Array<Object>) => {
+                if (data.length) {
+                    this.headingThought = data.splice(0, 1)[0];
+                    this.thoughtsList = data;
+                    this.thoughtsListLoaded = true;
+                    this.thoughtsListEmpty = false;
+                } else {
+                    this.thoughtsListLoaded = true;
+                    this.thoughtsListEmpty = true;
+                }
             })
             .catch(error => {
                 this.errorResponse = error;
                 this.errorOccurred = true;
+                this.thoughtsListEmpty = true;
+                this.thoughtsListLoaded = false;
             });
     }
-
-    // /**
-    //  * example of programmatically redirect
-    //  *
-    //  *
-    //  */
-    // public goToThought (thoughtId) { // Here should be logic of opening different thoughts (maybe here should be called service)
-    //     if(thoughtId == 0) {
-    //         this.state.go('thoughtsItem');
-    //     } else if(thoughtId == 1) {
-    //         this.state.go('thoughtsItem');
-    //     }
-    // };
 }

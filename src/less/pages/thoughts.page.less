@@ -1,7 +1,15 @@
+
+@thoughtHoverDescriptionColor: @malachite;
+
 #thoughts {
 
     .heading-block {
         margin-bottom: 50px;
+
+        &:hover .description {
+            transition: all ease 250ms;
+            color: @thoughtHoverDescriptionColor;
+        }
 
         .heading-title a {
             display: block;
@@ -70,6 +78,10 @@
 
         .thought {
             margin-bottom: 45px;
+
+            &:hover {
+                color: @thoughtHoverDescriptionColor;
+            }
 
             .thought-title {
                 height: 224px;
