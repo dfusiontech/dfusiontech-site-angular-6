@@ -4,7 +4,7 @@ import { StateService } from '@uirouter/angular';
 import { ThoughtsService } from '../../services/Thoughts.service';
 
 @Component({
-    selector: '[data-thoughts-item]',
+    selector: '[id="thoughts-item"]',
     templateUrl: './thoughts-item.html'
 })
 export class ThoughtsItemPageComponent implements OnInit {
