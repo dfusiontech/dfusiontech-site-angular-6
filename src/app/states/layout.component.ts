@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: '[data-dft-layout]',
+    selector: 'dft-layout',
     templateUrl: './layout.html'
 })
 export class LayoutComponent implements OnInit {

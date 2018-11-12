@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 
 @Component({
-    selector: '[data-about-us]',
+    selector: '[id="about-us"]',
     templateUrl: './about-us.html'
 })
 export class AboutUsPageComponent implements OnInit {
