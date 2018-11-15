@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start-hmr": "ng serve -c dev-hmr --o",
+    "start-hmr": "ng serve -c dev-hmr --o --aot",
     "start-local": "ng serve -c local --o",
-    "build": "ng build --prod",
+    "build": "ng build --prod --aot",
     "stage": "ng build -c stage",
     "test": "ng test",
     "lint": "ng lint",
