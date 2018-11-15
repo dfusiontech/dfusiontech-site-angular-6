@@ -15,11 +15,10 @@
     <div class="line-bg line14 show700"></div>
     <div class="line-bg line15"></div>
 </div>
-<ui-view id="header" name="header"></ui-view>
+<app-header id="header"></app-header>
 <!-- place to render page content based on url -->
 <ui-view id="main">
     <div data-preloader></div>
 </ui-view>
 <!-- Common footer can be component => selector: '[id="footer"]', -->
-<ui-view name="footer"></ui-view>
-
+<app-footer></app-footer>
