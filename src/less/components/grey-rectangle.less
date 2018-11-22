@@ -3,6 +3,9 @@
  *
  * size depends on parent of element which have this class
  */
+
+@dft-grey-rectangle-before-transition: width 100ms ease;
+
 .grey-rectangle {
     position: relative;
     &:before {
@@ -14,7 +17,7 @@
         background-color: @rectangle-grey;
         left: -135px;
         height: 100%;
-        transition: width 100ms ease;
+        .transition(@dft-grey-rectangle-before-transition);
 
         @media @mdscreen {
             right: 55%;

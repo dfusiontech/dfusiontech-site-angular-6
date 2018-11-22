@@ -7,14 +7,15 @@
 
     .footer-wrapper {
         padding: 9px 0;
-        transition: padding 250ms ease;
+        .transition(padding 250ms ease);
 
         @media (max-width: 575.98px) {
             padding: 20px 0;
         }
 
         .footer-col {
-            transition: padding 250ms ease, font-size 250ms ease;
+            @footerColTransition: padding 250ms ease, font-size 250ms ease;
+            .transition(@footerColTransition);
 
             @media (max-width: 575.98px) {
                 padding: 0 10px;
