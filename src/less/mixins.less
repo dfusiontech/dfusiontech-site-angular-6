@@ -67,12 +67,12 @@
     animation:         @name @duration @delay @ease;
 }
 // .animation-delay( .6s );
-.animation-delay ( @delay ) {
-    animation-delay: @delay;
-    -o-animation-delay: @delay;
-    -ms-animation-delay: @delay;
-    -moz-animation-delay: @delay;
-    -webkit-animation-delay: @delay;
+.animation-delay ( ... ) {
+    animation-delay: @arguments;
+    -o-animation-delay: @arguments;
+    -ms-animation-delay: @arguments;
+    -moz-animation-delay: @arguments;
+    -webkit-animation-delay: @arguments;
 }
 // .keyframes( blink, { 0% { background: red; } 100%{ background: green; } });
 .keyframes( @name; @arguments ) {
@@ -83,7 +83,7 @@
     @-webkit-keyframes @name { @arguments(); }
 }
 
-// .transition ( padding-top 0.5s ease );
+// .transition ( padding-top 0.5s ease ); @transition: all 0.5s ease
 .transition ( @transition: all 0.5s ease ) {
     -webkit-transition: @transition;
     -moz-transition:    @transition;
@@ -93,19 +93,19 @@
 }
 
 // .transform( rotate(45deg) );
-.transform ( @transform ){
-    -webkit-transform:  @transform;
-    -moz-transform:     @transform;
-    -ms-transform:      @transform;
-    -o-transform:       @transform;
-    transform:          @transform;
+.transform ( ... ) {
+    -webkit-transform:  @arguments;
+    -moz-transform:     @arguments;
+    -ms-transform:      @arguments;
+    -o-transform:       @arguments;
+    transform:          @arguments;
 }
 
-.transition-transform(@transition) {
-    -webkit-transition: -webkit-transform @transition;
-    -moz-transition: -moz-transform @transition;
-    -o-transition: -o-transform @transition;
-    transition: transform @transition;
+.transition-transform( ... ) {
+    -webkit-transition: -webkit-transform @arguments;
+    -moz-transition: -moz-transform @arguments;
+    -o-transition: -o-transform @arguments;
+    transition: transform @arguments;
 }
 
 // .transform-origin( top, center ); || .transform-origin();

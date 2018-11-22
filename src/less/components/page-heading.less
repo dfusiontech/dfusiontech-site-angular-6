@@ -1,11 +1,13 @@
 
+@dft-page-heading-transition: all ease 250ms;
+
 .heading-block {
     position: relative;
     width: 100%;
     height: auto;
     padding: 45px 0 50px;
     margin-bottom: 70px;
-    transition: all ease 250ms;
+   .transition(@dft-page-heading-transition);
 
     @media @lsmscreen { // .horizontal-alignment
         margin: 0 -15px 10px;
@@ -22,7 +24,7 @@
         background: @white;
         text-align: center;
         padding: 71px 48px 59px;
-        transition: all ease 250ms;
+       .transition(@dft-page-heading-transition);
 
 
         // additional class for heading which contain img as bg

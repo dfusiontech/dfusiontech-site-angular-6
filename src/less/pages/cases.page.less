@@ -53,7 +53,7 @@
                 // set content over image on hover
                 position: relative;
                 z-index: 1;
-                transition: @dft-cases-transition-behavior;
+                .transition(@dft-cases-transition-behavior);
                 // indent on mobile corresponding to design
                 @media @lsmscreen {
                     > p {
@@ -122,7 +122,7 @@
                         background-color: @hover-blue-bg;
                     }
                     color: @white;
-                    transition: @dft-cases-transition-behavior;
+                    .transition(@dft-cases-transition-behavior);
                     transform: translateX(-29%);
                     @media @lsmscreen {
                         transform: translateY(-20%);
