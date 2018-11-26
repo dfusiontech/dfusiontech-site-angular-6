@@ -14,11 +14,11 @@
     .wrap-lines {
         visibility: visible;
         opacity: 1;
-        transition: @dft-navbar-transition-behavior;
+        .transition(@dft-navbar-transition-behavior);
         &.hide-lines {
             visibility: hidden;
             opacity: 0;
-            transition: @dft-navbar-transition-behavior;
+            .transition(@dft-navbar-transition-behavior);
         }
     }
     // set navbar properties ( navbar fixed )
@@ -26,7 +26,7 @@
         background-color: @white;
         height: @header-height;
         // animate change of bg after toggling menu
-        transition: @dft-navbar-transition-behavior;
+        .transition(@dft-navbar-transition-behavior);
         padding: 0;
         align-items: flex-start;
         // fix for navbar container flex child vertical position
@@ -45,13 +45,13 @@
         z-index: 3;
         padding: 0;
         @media @lsmscreen {
-            transition: @dft-navbar-transition-behavior;
+            .transition(@dft-navbar-transition-behavior);
             visibility: visible;
             opacity: 1;
             &.hide-logo {
                 visibility: hidden;
                 opacity: 0;
-                transition: @dft-navbar-transition-behavior;
+                .transition(@dft-navbar-transition-behavior);
             }
         }
         .dft-logo-wrap {
@@ -76,11 +76,11 @@
     // background behavior on toggle
     .dft-navbar-on-toggle {
         background-color: @navbar-bg-on-toggle;
-        transition: @dft-navbar-transition-behavior;
+        .transition(@dft-navbar-transition-behavior);
     }
     .dft-navbar-on-scroll {
         background-color: @navbar-bg-on-scroll;
-        transition: @dft-navbar-transition-behavior;
+        .transition(@dft-navbar-transition-behavior);
         box-shadow: 0px 3px 9px rgba(0,0,0,.1);
     }
     .dft-list-horizontal {
@@ -95,20 +95,28 @@
                 // set menu height equal to header height corresponding to design
                 height: @header-height;
                 // implementing animation corresponding to design
+                @dft-nav-tab-after-transition: width .3s ease 0s, left .3s ease 0s;
                 &:after{
-                    top:0;
-                    content:"";
-                    display:block;
-                    height:4px;
-                    left:50%;
-                    position:absolute;
-                    background:@nav-item-border-hover;
-                    transition:width .3s ease 0s,left .3s ease 0s;
-                    width:0;
+                    top: 0;
+                    content: "";
+                    display: block;
+                    height: 4px;
+                    left: 50%;
+                    position: absolute;
+                    background: @nav-item-border-hover;
+                    .transition(@dft-nav-tab-after-transition);
+                    width: 0;
                 }
-                &:hover:after, &.active:after, &.active:after, &:active:after {
-                    width:100%;
-                    left:0;
+
+                &:hover:after {
+                    width: 100%;
+                    left: 0;
+                }
+
+                &.active:after, &:active:after {
+                    .transition(none);
+                    width: 100%;
+                    left: 0;
                 }
             }
         }
@@ -170,7 +178,7 @@
         height: 3px;
         vertical-align: bottom;
         background: black;
-        transition: background .3s .5s;
+        .transition(background .3s .5s);
         &::before,
         &::after {
             content: "";
@@ -180,7 +188,8 @@
             height: 3px;
             background: black;
             transform-origin: 50% 50%;
-            transition: top .3s .3s,transform .3s;
+            @dft-toggle-line-after-transition: top .3s .3s, transform .3s;
+            .transition(@dft-toggle-line-after-transition);
         }
         &::before {
             top: 9px;
@@ -193,7 +202,7 @@
     .toggle-show .toggle-line {
         width: 28px;
         background: 0 0;
-        transition: background 0s linear;
+        .transition(background 0s linear);
     }
 
     .toggle-show .toggle-line::before,
@@ -201,14 +210,15 @@
         width: 28px;
         top: 0;
         left: 0;
-        transition: top .3s,transform .3s .5s;
+        @dft-toggle-show-toggle-line-transition: top .3s, transform .3s .5s;
+        .transition(@dft-toggle-show-toggle-line-transition);
     }
 
     .toggle-show .toggle-line::before {
-        transform: rotate3d(0,0,1,45deg);
+        .transform(rotate3d(0,0,1,45deg))
     }
 
     .toggle-show .toggle-line::after {
-        transform: rotate3d(0,0,1,-45deg);
+        .transform(rotate3d(0,0,1,-45deg));
     }
 }

@@ -1,3 +1,5 @@
+@dft-thoughts-page-transition: all ease 250ms;
+
 #home {
     position: relative;
     @dft-cases-transition-behavior: 500ms ease-out;
@@ -7,7 +9,7 @@
     @hover-green-bg: #20c997;
     @hover-orange-bg: #fd7e14;
     @hover-purple-bg: #9c27b0;
-    @hover-red-bg : #9c27b0;
+    @hover-red-bg: #9c27b0;
     @hover-blue-bg: cornflowerblue;
 
     .heading-wrapper {
@@ -82,11 +84,11 @@
                 // set content over image on hover
                 position: relative;
                 z-index: 1;
-                transition: @dft-cases-transition-behavior;
+                .transition(@dft-cases-transition-behavior);
                 // indent on mobile corresponding to design
                 @media @lsmscreen {
                     > p {
-                        padding-bottom: 70px!important;
+                        padding-bottom: 70px !important;
                     }
                 }
                 &.case-content-medium {
@@ -151,7 +153,7 @@
                         background-color: @hover-blue-bg;
                     }
                     color: @white;
-                    transition: @dft-cases-transition-behavior;
+                    .transition(@dft-cases-transition-behavior);
                     transform: translateX(-29%);
                     @media @lsmscreen {
                         transform: translateY(-20%);
@@ -172,34 +174,34 @@
                     }
                     &.move-bottom {
                         @media ( min-width: 1199px ) {
-                            transform: translateY(45%)!important;
+                            transform: translateY(45%) !important;
                         }
                         // fix transform behavior on interval between 991px and 1199px
                         @media ( max-width: 1199px ) and ( min-width: 991px ) {
-                            transform: translateY(45%)!important;
+                            transform: translateY(45%) !important;
                         }
                         // fix transform behavior on 992px
                         @media ( max-width: 991px ) {
-                            transform: translateX(25%)!important;
+                            transform: translateX(25%) !important;
                         }
                         @media @lsmscreen {
-                            transform: translateY(-20%)!important;
+                            transform: translateY(-20%) !important;
                         }
                     }
                     &.move-top {
                         @media ( min-width: 1199px ) {
-                            transform: translateY(-45%)!important;
+                            transform: translateY(-45%) !important;
                         }
                         // fix transform behavior on interval between 991px and 1199px
                         @media ( max-width: 1199px ) and ( min-width: 991px ) {
-                            transform: translateY(-45%)!important;
+                            transform: translateY(-45%) !important;
                         }
                         // fix transform behavior on 992px
                         @media ( max-width: 991px ) {
-                            transform: translateX(-25%)!important;
+                            transform: translateX(-25%) !important;
                         }
                         @media @lsmscreen {
-                            transform: translateY(-20%)!important;
+                            transform: translateY(-20%) !important;
                         }
                     }
                 }
@@ -209,7 +211,7 @@
 
     .thoughts-wrapper {
         position: relative;
-        transition: all ease 250ms;
+        .transition(all ease 250ms);
         margin-bottom: 100px;
 
         @media @lsmscreen {
@@ -245,8 +247,6 @@
                     }
                 }
 
-
-
                 @media @lsmscreen {
                     max-height: 212px;
                 }
@@ -262,7 +262,7 @@
                 position: relative;
                 padding: 30px 30px 15px 30px;
                 background-color: @white;
-                transition: all ease 250ms;
+                .transition(@dft-thoughts-page-transition);
 
                 .description-headline {
                     font-size: 24px;
@@ -285,6 +285,7 @@
                         position: relative;
                         overflow: hidden;
                     }
+
                     .description-headline {
                         margin-bottom: 10px;
                     }

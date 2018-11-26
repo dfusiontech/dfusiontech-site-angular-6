@@ -3,6 +3,8 @@
 @content-padding-sm: 40px;
 @content-padding-xs: 20px;
 
+@dft-thoughts-item-page-content-wrapper-transition: margin ease 250ms, padding ease 250ms;
+
 #thoughts-item {
     .content-wrapper {
         position: relative;
@@ -11,7 +13,7 @@
         //top: -300px;
         //transform: translateY(-300px);
         margin-top: -300px; // to move block on the previous
-        transition: margin ease 250ms, padding ease 250ms; //transform ease 250ms,
+        .transition(@dft-thoughts-item-page-content-wrapper-transition); //transform ease 250ms,
         background-color: white;
         overflow: hidden;
 
