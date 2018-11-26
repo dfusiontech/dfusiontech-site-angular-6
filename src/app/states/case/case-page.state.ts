@@ -4,7 +4,7 @@ import { Transition } from '@uirouter/angular';
 import { CasePageComponent } from './case.page';
 import { HeaderComponent } from '../../components/header/header.component';
 import { CasesService } from '../../services/Cases.service';
-import {FooterComponent} from '../../components/footer/footer.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 export function caseIdResolve ($transition$) {
     const params: any = $transition$.params();

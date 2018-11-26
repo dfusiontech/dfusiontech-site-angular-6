@@ -5,45 +5,46 @@
                 data-error-message
                 *ngIf="errorOccurred"
                 [errorResponse]="errorResponse"
-            >
+                    >
             </div>
             <div
                 data-preloader
                 *ngIf="!casesListLoaded && !errorOccurred"
-            >
+                    >
             </div>
             <!-- Adding grey background area on big desktops -->
             <div
                 *ngIf="casesList"
                 class="container"
                 [ngClass]="{ 'grey-rectangle': !caseMobileBehavior }"
-            >
+                    >
                 <!-- Wrapper to fix content behavior on small desktop-->
                 <div class="cases-list">
                     <ng-container *ngFor="let cases of casesList">
                         <ng-container
                             [ngSwitch]="cases.type"
                             *ngFor="let items of cases.cols"
-                        >
+                                >
                             <ng-container
                                 [ngSwitch]="items.order"
                                 *ngSwitchCase="'single'"
-                            >
+                                    >
                                 <ng-container
-                                    *ngFor="let caseItems of items.caseModels; let odd = odd; let even = even; let i = index">
+                                    *ngFor="let caseItems of items.caseModels; let odd = odd; let even = even; let i = index"
+                                        >
                                     <div
                                         class="row"
                                         *ngSwitchCase="'first'"
-                                    >
+                                            >
                                         <div
                                             class="col-12"
                                             *ngFor="let caseItem of caseItems"
-                                        >
+                                                >
                                             <a
                                                 uiSref="case-page"
                                                 [uiParams]="{ caseId: caseItem.caseId }"
                                                 class="d-block case-item"
-                                            >
+                                                    >
                                                 <div class="row align-items-center">
                                                     <div
                                                         class="col-md-7 col-lg-8"
@@ -51,13 +52,13 @@
                                                                 'order-last': !caseMobileBehavior && odd,
                                                                 'order-first': caseMobileBehavior && odd
                                                                     }"
-                                                    >
+                                                            >
                                                         <div class="case-img-block">
                                                             <img
                                                                 class="case-img"
-                                                                [src]="caseItem.img"
                                                                 [alt]="caseItem.title"
-                                                            />
+                                                                [src]="caseItem.overviewImg"
+                                                                    />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-5 col-lg-4">
@@ -73,7 +74,7 @@
                                                                     'hover-green-bg': caseItem.contentBackground === 'green',
                                                                     'hover-orange-bg': caseItem.contentBackground === 'orange'
                                                                         }"
-                                                        >
+                                                                >
                                                             <h2 class="text-uppercase h3">{{ caseItem.title }}</h2>
                                                             <p class="m-0 pb-4 pt-2">{{ caseItem.description }}</p>
                                                         </section>
@@ -85,13 +86,13 @@
                                     <div
                                         class="row"
                                         *ngSwitchCase="'odd'"
-                                    >
+                                            >
                                         <div class="col-12">
                                             <a
                                                 uiSref="case-page"
                                                 [uiParams]="{ caseId: caseItems.caseId }"
                                                 class="d-block case-item"
-                                            >
+                                                    >
                                                 <div class="row align-items-center">
                                                     <div
                                                         class="col-md-7 col-lg-8"
@@ -99,22 +100,22 @@
                                                                 'order-last': ( !caseMobileBehavior && odd && !cases.revers ) || ( caseMediumDesktopBehavior && cases.revers && i === 0 && !caseMobileBehavior ),
                                                                 'order-first': ( caseMobileBehavior && odd && cases.revers ) || ( caseMediumDesktopBehavior && cases.revers && i === 0 )
                                                                     }"
-                                                    >
+                                                            >
                                                         <div class="case-img-block">
                                                             <img
                                                                 class="case-img"
-                                                                [src]="caseItems.img"
                                                                 [alt]="caseItems.title"
-                                                            />
+                                                                [src]="caseItems.overviewImg"
+                                                                    />
                                                         </div>
                                                     </div>
                                                     <div
                                                         class="col-md-5 col-lg-4"
                                                         [ngClass]="{
-                                                                'order-first': !caseMediumDesktopBehavior &&  i===1,
+                                                                'order-first': !caseMediumDesktopBehavior &&  i === 1,
                                                                 'order-last': items.lastCase
                                                                     }"
-                                                    >
+                                                            >
                                                         <section
                                                             class="case-content case-content-medium"
                                                             [ngClass]="{
@@ -126,7 +127,7 @@
                                                                     'hover-green-bg': caseItems.contentBackground === 'green',
                                                                     'hover-orange-bg': caseItems.contentBackground === 'orange'
                                                                         }"
-                                                        >
+                                                                >
                                                             <h2 class="text-uppercase h3">{{ caseItems.title }}</h2>
                                                             <p class="m-0 pb-4 pt-2">{{ caseItems.description }}</p>
                                                         </section>
@@ -141,24 +142,22 @@
                                 <div
                                     class="row"
                                     *ngSwitchCase="'group'"
-                                >
-                                    <ng-container
-                                        *ngFor="let caseItems of cases.cols"
-                                    >
+                                        >
+                                    <ng-container *ngFor="let caseItems of cases.cols">
                                         <ng-container
                                             *ngFor="let caseItem of caseItems.items"
                                             [ngSwitch]="caseItem.colSize"
-                                        >
+                                                >
                                             <div
                                                 class="col-lg-8"
                                                 *ngSwitchCase="'8'"
-                                            >
+                                                    >
                                                 <a
                                                     uiSref="case-page"
                                                     [uiParams]="{ caseId: caseItemHorizontal.caseId }"
                                                     class="d-block case-item"
                                                     *ngFor="let caseItemHorizontal of caseItem.caseModels; let odd = odd; let even = even"
-                                                >
+                                                        >
                                                     <div class="row align-items-center">
                                                         <div class="col-md-5">
                                                             <section
@@ -172,23 +171,25 @@
                                                                         'hover-orange-bg': caseItemHorizontal.contentBackground === 'orange'
                                                                             }"
                                                                 class="case-content move-right case-content-small hover-green-bg"
-                                                            >
-                                                                <h2 class="text-uppercase h3">{{
-                                                                    caseItemHorizontal.title }}</h2>
-                                                                <p class="m-0 pb-4 pt-2">{{
-                                                                    caseItemHorizontal.description }}</p>
+                                                                    >
+                                                                <h2 class="text-uppercase h3">
+                                                                    {{ caseItemHorizontal.title }}
+                                                                </h2>
+                                                                <p class="m-0 pb-4 pt-2">
+                                                                    {{ caseItemHorizontal.description }}
+                                                                </p>
                                                             </section>
                                                         </div>
                                                         <div
                                                             class="col-md-7"
                                                             [ngClass]="{ 'order-first': caseMobileBehavior || odd }"
-                                                        >
+                                                                >
                                                             <div class="case-img-block">
                                                                 <img
-                                                                    [src]="caseItemHorizontal.img"
+                                                                    [src]="caseItemHorizontal.overviewImg"
                                                                     [alt]="caseItemHorizontal.title"
                                                                     class="case-img"
-                                                                />
+                                                                        />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -202,24 +203,24 @@
                                                         'align-items-start': caseItems.revers,
                                                         'order-first': caseItems.revers
                                                             }"
-                                            >
+                                                    >
                                                 <a
                                                     uiSref="case-page"
                                                     [uiParams]="{ caseId: caseItemVertical.caseId }"
                                                     class="d-block case-item"
                                                     *ngFor="let caseItemVertical of caseItem.caseModels"
-                                                >
+                                                        >
                                                     <div
                                                         class="row"
                                                         [ngClass]="{ 'align-items-center': caseMediumDesktopBehavior }"
-                                                    >
+                                                            >
                                                         <div
                                                             class="col-md-5 col-lg-12 d-flex"
                                                             [ngClass]="{
                                                                     'justify-content-end': !caseItems.revers,
                                                                     'justify-content-start': caseItems.revers
                                                                         }"
-                                                        >
+                                                                >
                                                             <section
                                                                 class="case-content compresed-case-content case-content-wider"
                                                                 [ngClass]="{
@@ -232,23 +233,21 @@
                                                                         'hover-green-bg': caseItemVertical.contentBackground === 'green',
                                                                         'hover-orange-bg': caseItemVertical.contentBackground === 'orange'
                                                                             }"
-                                                            >
-                                                                <h2 class="text-uppercase h3">{{ caseItemVertical.title
-                                                                    }}</h2>
-                                                                <p class="m-0 pb-4 pt-2">{{ caseItemVertical.description
-                                                                    }}</p>
+                                                                    >
+                                                                <h2 class="text-uppercase h3">{{ caseItemVertical.title }}</h2>
+                                                                <p class="m-0 pb-4 pt-2">{{ caseItemVertical.description }}</p>
                                                             </section>
                                                         </div>
                                                         <div
                                                             class="col-md-7 col-lg-12"
                                                             [ngClass]="{ 'order-first': caseItems.revers || caseMobileBehavior || caseItems.revers && caseMediumDesktopBehavior }"
-                                                        >
+                                                                >
                                                             <div class="case-img-block">
                                                                 <img
-                                                                    [src]="caseItemVertical.img"
+                                                                    [src]="caseItemVertical.overviewImg"
                                                                     [alt]="caseItemVertical.title"
                                                                     class="case-img"
-                                                                />
+                                                                        />
                                                             </div>
                                                         </div>
                                                     </div>
