@@ -1,7 +1,9 @@
 // outsource
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
+// local dependencies
 import { CasesService } from '../../services/Cases.service';
+import {SEOService} from '../../services/Seo.service';
 
 @Component({
     selector: '[id="case-page"]',
@@ -22,9 +24,24 @@ export class CasePageComponent implements OnInit {
     public caseMobileDesktopBehavior;
     public caseRestructuringPointMobile = 768;
     public caseRestructuringPointLarge = 1199;
-    constructor ( private state: StateService, private casesService: CasesService) {}
+    constructor (
+        private state: StateService,
+        private casesService: CasesService,
+        private seoService: SEOService) {}
+
+    private metaTags = [
+        {
+            title: 'Case page. dFusiontech inc.'
+        },
+        {
+            name: 'description',
+            content: 'CASE PAGE OF THE SITE, DFT IS OUR PRIDE'
+        }
+    ];
 
     ngOnInit() {
+        this.seoService.updateMetaTags(this.metaTags);
+
         // changing case page content order on large desktop
         if ( window.innerWidth > this.caseRestructuringPointLarge ) {
             this.caseXlgDesktopBehavior = true;
@@ -42,6 +59,10 @@ export class CasePageComponent implements OnInit {
             .then(data => {
                 this.case = data;
                 this.caseItemLoaded = true;
+                // update meta tags with new information about current project
+                this.metaTags.push({title: this.case.title + '. dFusiontech inc.'});
+                this.metaTags.push({name: 'description', content: this.case.description});
+                this.seoService.updateMetaTags(this.metaTags);
             })
             .catch(error => {
                 this.errorResponse = error;

@@ -1,9 +1,10 @@
 // outsource
 import { Component, HostListener, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
-// services
+// local dependencies
 import { CasesService } from '../../services/Cases.service';
 import { ThoughtsService } from '../../services/Thoughts.service';
+import { SEOService } from '../../services/Seo.service';
 
 @Component({
     selector: '[id="home"]',
@@ -25,12 +26,26 @@ export class HomePageComponent implements OnInit {
     public caseRestructuringPointDesktop = 992;
     public caseRestructuringPointLgDesktop =  1200;
 
+    private metaTags = [
+        {
+            title: 'Home page. dFusiontech inc.'
+        },
+        {
+            name: 'description',
+            content: 'HOME PAGE OF THE SITE, DFT IS OUR PRIDE'
+        }
+    ];
+
     constructor (
         private state: StateService,
         private casesService: CasesService,
-        private thoughtsService: ThoughtsService) {}
+        private thoughtsService: ThoughtsService,
+        private seoService: SEOService) {}
 
     ngOnInit() {
+        // add specific meta tags for Home page
+        this.seoService.updateMetaTags(this.metaTags);
+
         this.casesService
             .getCases()
             .then(data => {

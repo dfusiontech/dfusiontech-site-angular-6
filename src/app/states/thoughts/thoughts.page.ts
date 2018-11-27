@@ -1,8 +1,9 @@
 // outsource
 import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
-
+// local dependencies
 import { ThoughtsService } from '../../services/Thoughts.service';
+import {SEOService} from '../../services/Seo.service';
 
 @Component({
     selector: '[id="thoughts"]',
@@ -20,14 +21,29 @@ export class ThoughtsPageComponent implements OnInit {
     public thoughtsList;
     public headingThought;
 
+    private metaTags = [
+        {
+            title: 'Thoughts page. dFusiontech inc.'
+        },
+        {
+            name: 'description',
+            content: 'THOUGHTS PAGE OF THE SITE, DFT IS OUR PRIDE'
+        }
+    ];
+
     /**
      * constructor holder to define what exactly past in public vm object
      *
      *
      */
-    constructor (private state: StateService, private thoughtsService: ThoughtsService) {}
+    constructor (
+        private state: StateService,
+        private thoughtsService: ThoughtsService,
+        private seoService: SEOService) {}
 
     ngOnInit() {
+        this.seoService.updateMetaTags(this.metaTags);
+
         this.thoughtsService
             .getThoughts()
             .then((data: Array<Object>) => {

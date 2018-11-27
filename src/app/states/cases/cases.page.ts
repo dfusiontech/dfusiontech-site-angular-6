@@ -1,8 +1,9 @@
 // outsource
 import { Component, HostListener, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
-// services
+// local dependencies
 import { CasesService } from '../../services/Cases.service';
+import {SEOService} from '../../services/Seo.service';
 
 @Component({
     selector: '[id="cases"]',
@@ -25,9 +26,24 @@ export class CasesPageComponent implements OnInit {
     public caseRestructuringPointDesktop = 992;
     public caseRestructuringPointLgDesktop =  1200;
 
-    constructor ( private state: StateService, private casesService: CasesService) {}
+    private metaTags = [
+        {
+            title: 'Cases. dFusiontech inc.'
+        },
+        {
+            name: 'description',
+            content: 'CASES PAGE OF THE SITE, DFT IS OUR PRIDE'
+        },
+    ];
+
+    constructor (
+        private state: StateService,
+        private casesService: CasesService,
+        private seoService: SEOService) {}
 
     ngOnInit() {
+        this.seoService.updateMetaTags(this.metaTags);
+
         this.casesService
             .getCases()
             .then(data => {

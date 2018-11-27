@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 // services
 import { CasesService } from '../services/Cases.service';
 import { ThoughtsService } from '../services/Thoughts.service';
+import { SEOService } from '../services/Seo.service';
 // app states
 import { homeState } from './home/home.state';
 import { casesState } from './cases/cases.state';
@@ -87,7 +88,8 @@ export const routing: RootModule = {
     ],
     providers: [
         CasesService,
-        ThoughtsService
+        ThoughtsService,
+        SEOService
     ],
     // define outgoing modules
     exports: [
