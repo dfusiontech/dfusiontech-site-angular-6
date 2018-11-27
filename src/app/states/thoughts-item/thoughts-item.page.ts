@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 // local dependencies
 import { ThoughtsService } from '../../services/Thoughts.service';
-import {SEOService} from '../../services/Seo.service';
+import { SEOService } from '../../services/Seo.service';
 
 @Component({
     selector: '[id="thoughts-item"]',

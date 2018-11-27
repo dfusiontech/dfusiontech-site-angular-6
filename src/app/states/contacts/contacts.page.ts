@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 // local dependencies
-import {SEOService} from '../../services/Seo.service';
+import { SEOService } from '../../services/Seo.service';
 
 @Component({
     selector: '[id="contacts"]',

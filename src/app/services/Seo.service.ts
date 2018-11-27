@@ -109,11 +109,9 @@ export class SEOService {
             tag.name ? 'name=\'' + tag.name + '\''
                 : tag.itemprop ? 'itemprop=\'' + tag.itemprop + '\''
                     : tag.property ? 'property=\'' + tag.property + '\''
-                        : tag.charset ? 'charset'
-                            : tag.httpEquiv ? 'http-equiv'
-                                : tag.id ? 'id=\'' + tag.id + '\''
-                                    : tag.class ? 'class=\'' + tag.class + '\''
-                                        : null);
+                        : tag.id ? 'id=\'' + tag.id + '\''
+                            : tag.class ? 'class=\'' + tag.class + '\''
+                                : null);
     }
 
     _addTag(tag: MetaDefinition) {

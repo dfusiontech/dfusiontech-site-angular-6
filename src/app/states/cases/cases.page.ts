@@ -3,7 +3,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 // local dependencies
 import { CasesService } from '../../services/Cases.service';
-import {SEOService} from '../../services/Seo.service';
+import { SEOService } from '../../services/Seo.service';
 
 @Component({
     selector: '[id="cases"]',
