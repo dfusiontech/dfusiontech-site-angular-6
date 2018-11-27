@@ -5,22 +5,20 @@
                 data-error-message
                 *ngIf="errorOccurred"
                 [errorResponse]="errorResponse"
-            >
+                    >
             </div>
             <div
                 data-preloader
                 *ngIf="!casesListLoaded && !thoughtsListLoaded  && !errorOccurred"
-            >
+                    >
             </div>
             <div
                 class="container"
                 *ngIf="casesListLoaded && thoughtsListLoaded "
-            >
+                    >
                 <section class="heading-block grey-rectangle">
                     <div class="heading-title">
-                        <h1>
-                            it doesn’t matter where you start — try us and we’ll bring you up
-                        </h1>
+                        <h1>it doesn’t matter where you start — try us and we’ll bring you up</h1>
                     </div>
                     <a
                         pageScroll
@@ -29,7 +27,7 @@
                         data-pageScrollOffset="77"
                         data-pageScrolllTarget="#letsChat"
                         pageScrollSpeed="2500"
-                    >
+                            >
                         <i class="dft dft-arrow-down"></i>
                     </a>
                 </section>
@@ -41,26 +39,27 @@
                             <ng-container
                                 [ngSwitch]="cases.type"
                                 *ngFor="let items of cases.cols"
-                            >
+                                    >
                                 <ng-container
                                     [ngSwitch]="items.order"
                                     *ngSwitchCase="'single'"
-                                >
+                                        >
                                     <ng-container
-                                        *ngFor="let caseItems of items.caseModels; let odd = odd; let even = even; let i = index">
+                                        *ngFor="let caseItems of items.caseModels; let odd = odd; let even = even; let i = index"
+                                            >
                                         <div
                                             class="row"
                                             *ngSwitchCase="'first'"
-                                        >
+                                                >
                                             <div
                                                 class="col-12"
                                                 *ngFor="let caseItem of caseItems"
-                                            >
+                                                    >
                                                 <a
                                                     uiSref="case-page"
                                                     class="d-block case-item"
                                                     [uiParams]="{ caseId: caseItem.caseId }"
-                                                >
+                                                        >
                                                     <div class="row align-items-center">
                                                         <div
                                                             class="col-md-7 col-lg-8"
@@ -68,13 +67,13 @@
                                                                     'order-last': !caseMobileBehavior && odd,
                                                                     'order-first': caseMobileBehavior && odd
                                                                         }"
-                                                        >
+                                                                >
                                                             <div class="case-img-block">
                                                                 <img
                                                                     class="case-img"
                                                                     [src]="caseItem.overviewImg"
                                                                     [alt]="caseItem.title"
-                                                                />
+                                                                        />
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5 col-lg-4">
@@ -90,9 +89,11 @@
                                                                         'hover-green-bg': caseItem.contentBackground === 'green',
                                                                         'hover-orange-bg': caseItem.contentBackground === 'orange'
                                                                             }"
-                                                            >
-                                                                <h2 class="text-uppercase h3">{{ caseItem.title }}</h2>
-                                                                <p class="m-0 pb-4 pt-2">{{ caseItem.description }}</p>
+                                                                    >
+                                                                <div class="case-content-line">
+                                                                    <h2 class="text-uppercase h3">{{ caseItem.title }}</h2>
+                                                                    <p class="m-0 pb-4 pt-2">{{ caseItem.description }}</p>
+                                                                </div>
                                                             </section>
                                                         </div>
                                                     </div>
@@ -102,13 +103,13 @@
                                         <div
                                             class="row"
                                             *ngSwitchCase="'odd'"
-                                        >
+                                                >
                                             <div class="col-12">
                                                 <a
                                                     uiSref="case-page"
                                                     class="d-block case-item"
                                                     [uiParams]="{ caseId: caseItems.caseId }"
-                                                >
+                                                        >
                                                     <div class="row align-items-center">
                                                         <div
                                                             class="col-md-7 col-lg-8"
@@ -116,13 +117,13 @@
                                                                     'order-last': ( !caseMobileBehavior && odd && !cases.revers ) || ( caseMediumDesktopBehavior && cases.revers && i === 0 && !caseMobileBehavior ),
                                                                     'order-first': ( caseMobileBehavior && odd && cases.revers ) || ( caseMediumDesktopBehavior && cases.revers && i === 0 )
                                                                             }"
-                                                        >
+                                                                >
                                                             <div class="case-img-block">
                                                                 <img
                                                                     class="case-img"
                                                                     [src]="caseItems.overviewImg"
                                                                     [alt]="caseItems.title"
-                                                                />
+                                                                        />
                                                             </div>
                                                         </div>
                                                         <div
@@ -131,7 +132,7 @@
                                                                     'order-first': !caseMediumDesktopBehavior &&  i===1,
                                                                     'order-last': items.lastCase
                                                                         }"
-                                                        >
+                                                                >
                                                             <section
                                                                 class="case-content case-content-medium"
                                                                 [ngClass]="{
@@ -143,9 +144,11 @@
                                                                         'hover-green-bg': caseItems.contentBackground === 'green',
                                                                         'hover-orange-bg': caseItems.contentBackground === 'orange'
                                                                             }"
-                                                            >
-                                                                <h2 class="text-uppercase h3">{{ caseItems.title }}</h2>
-                                                                <p class="m-0 pb-4 pt-2">{{ caseItems.description }}</p>
+                                                                    >
+                                                                <div class="case-content-line">
+                                                                    <h2 class="text-uppercase h3">{{ caseItems.title }}</h2>
+                                                                    <p class="m-0 pb-4 pt-2">{{ caseItems.description }}</p>
+                                                                </div>
                                                             </section>
                                                         </div>
                                                     </div>
@@ -158,22 +161,22 @@
                                     <div
                                         class="row"
                                         *ngSwitchCase="'group'"
-                                    >
+                                            >
                                         <ng-container *ngFor="let caseItems of cases.cols">
                                             <ng-container
                                                 [ngSwitch]="caseItem.colSize"
                                                 *ngFor="let caseItem of caseItems.items"
-                                            >
+                                                    >
                                                 <div
                                                     class="col-lg-8"
                                                     *ngSwitchCase="'8'"
-                                                >
+                                                        >
                                                     <a
                                                         uiSref="case-page"
                                                         class="d-block case-item"
                                                         [uiParams]="{ caseId: caseItemHorizontal.caseId }"
                                                         *ngFor="let caseItemHorizontal of caseItem.caseModels; let odd = odd; let even = even"
-                                                    >
+                                                            >
                                                         <div class="row align-items-center">
                                                             <div class="col-md-5">
                                                                 <section
@@ -187,23 +190,27 @@
                                                                             'hover-orange-bg': caseItemHorizontal.contentBackground === 'orange'
                                                                                 }"
                                                                     class="case-content move-right case-content-small hover-green-bg"
-                                                                >
-                                                                    <h2 class="text-uppercase h3">{{
-                                                                        caseItemHorizontal.title }}</h2>
-                                                                    <p class="m-0 pb-4 pt-2">{{
-                                                                        caseItemHorizontal.description }}</p>
+                                                                        >
+                                                                    <div class="case-content-line">
+                                                                        <h2 class="text-uppercase h3">
+                                                                            {{ caseItemHorizontal.title }}
+                                                                        </h2>
+                                                                        <p class="m-0 pb-4 pt-2">
+                                                                            {{ caseItemHorizontal.description }}
+                                                                        </p>
+                                                                    </div>
                                                                 </section>
                                                             </div>
                                                             <div
                                                                 class="col-md-7"
                                                                 [ngClass]="{ 'order-first': caseMobileBehavior || odd }"
-                                                            >
+                                                                    >
                                                                 <div class="case-img-block">
                                                                     <img
                                                                         class="case-img"
                                                                         [src]="caseItemHorizontal.overviewImg"
                                                                         [alt]="caseItemHorizontal.title"
-                                                                    />
+                                                                            />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -218,24 +225,24 @@
                                                             'align-items-start': caseItems.revers,
                                                             'order-first': caseItems.revers
                                                                 }"
-                                                >
+                                                        >
                                                     <a
                                                         uiSref="case-page"
                                                         class="d-block case-item"
                                                         [uiParams]="{ caseId: caseItemVertical.caseId }"
                                                         *ngFor="let caseItemVertical of caseItem.caseModels"
-                                                    >
+                                                            >
                                                         <div
                                                             class="row"
                                                             [ngClass]="{ 'align-items-center': caseMediumDesktopBehavior }"
-                                                        >
+                                                                >
                                                             <div
                                                                 class="col-md-5 col-lg-12 d-flex"
                                                                 [ngClass]="{
                                                                         'justify-content-end': !caseItems.revers,
                                                                         'justify-content-start': caseItems.revers
                                                                             }"
-                                                            >
+                                                                    >
                                                                 <section
                                                                     class="case-content compresed-case-content case-content-wider"
                                                                     [ngClass]="{
@@ -248,17 +255,21 @@
                                                                             'hover-green-bg': caseItemVertical.contentBackground === 'green',
                                                                             'hover-orange-bg': caseItemVertical.contentBackground === 'orange'
                                                                                 }"
-                                                                >
-                                                                    <h2 class="text-uppercase h3">{{
-                                                                        caseItemVertical.title }}</h2>
-                                                                    <p class="m-0 pb-4 pt-2">{{
-                                                                        caseItemVertical.description }}</p>
+                                                                        >
+                                                                    <div class="case-content-line">
+                                                                        <h2 class="text-uppercase h3">
+                                                                            {{ caseItemVertical.title }}
+                                                                        </h2>
+                                                                        <p class="m-0 pb-4 pt-2">
+                                                                            {{ caseItemVertical.description }}
+                                                                        </p>
+                                                                    </div>
                                                                 </section>
                                                             </div>
                                                             <div
                                                                 class="col-md-7 col-lg-12"
                                                                 [ngClass]="{ 'order-first': caseItems.revers || caseMobileBehavior || caseItems.revers && caseMediumDesktopBehavior }"
-                                                            >
+                                                                    >
                                                                 <div class="case-img-block">
                                                                     <img
                                                                         class="case-img"
@@ -285,7 +296,7 @@
                         <li
                             class="col-lg-4 col-sm-6"
                             *ngFor="let thought of thoughtsList"
-                        >
+                                >
                             <div class="thought">
                                 <div class="thought-title">
                                     <a
@@ -294,7 +305,7 @@
                                         [attr.title]="thought.title"
                                         style="background-image: url('../../../assets/images/thoughts-page/business-1.png');"
                                         [ngStyle]="{ 'background-image': 'url(' + thought.img + ')'}"
-                                    >
+                                            >
                                     </a>
                                 </div>
                                 <div class="thought-description">
@@ -303,7 +314,7 @@
                                             uiSref="thoughts-item"
                                             [uiParams]="{ thoughtId: thought.thoughtId }"
                                             [attr.title]="thought.title"
-                                        >
+                                                >
                                             {{ thought.title }}
                                         </a>
                                     </h3>

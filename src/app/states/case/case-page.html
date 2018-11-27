@@ -72,12 +72,15 @@
                                 <p class="mb-5">{{ case.solution }}</p>
                                 <dl class="row text-center align-items-center justify-content-center">
                                     <dt class="h2 col-12 mb-3">Technology Stack</dt>
-                                    <dd class="p-5" *ngFor="let technology of case.technologyStackPathes; let i = index">
+                                    <dd
+                                        class="p-5"
+                                        *ngFor="let technology of case.technologyStackPathes; let i = index"
+                                            >
                                         <img
                                             [alt]="case.technologyStack[i]"
                                             class="img-fluid"
                                             [src]="technology"
-                                        />
+                                                />
                                     </dd>
                                 </dl>
                             </div>

@@ -75,8 +75,10 @@
                                                                     'hover-orange-bg': caseItem.contentBackground === 'orange'
                                                                         }"
                                                                 >
-                                                            <h2 class="text-uppercase h3">{{ caseItem.title }}</h2>
-                                                            <p class="m-0 pb-4 pt-2">{{ caseItem.description }}</p>
+                                                            <div class="case-content-line">
+                                                                <h2 class="text-uppercase h3">{{ caseItem.title }}</h2>
+                                                                <p class="m-0 pb-4 pt-2">{{ caseItem.description }}</p>
+                                                            </div>
                                                         </section>
                                                     </div>
                                                 </div>
@@ -128,8 +130,10 @@
                                                                     'hover-orange-bg': caseItems.contentBackground === 'orange'
                                                                         }"
                                                                 >
-                                                            <h2 class="text-uppercase h3">{{ caseItems.title }}</h2>
-                                                            <p class="m-0 pb-4 pt-2">{{ caseItems.description }}</p>
+                                                            <div class="case-content-line">
+                                                                <h2 class="text-uppercase h3">{{ caseItems.title }}</h2>
+                                                                <p class="m-0 pb-4 pt-2">{{ caseItems.description }}</p>
+                                                            </div>
                                                         </section>
                                                     </div>
                                                 </div>
@@ -172,12 +176,15 @@
                                                                             }"
                                                                 class="case-content move-right case-content-small hover-green-bg"
                                                                     >
-                                                                <h2 class="text-uppercase h3">
-                                                                    {{ caseItemHorizontal.title }}
-                                                                </h2>
-                                                                <p class="m-0 pb-4 pt-2">
-                                                                    {{ caseItemHorizontal.description }}
-                                                                </p>
+
+                                                                <div class="case-content-line">
+                                                                    <h2 class="text-uppercase h3">
+                                                                        {{ caseItemHorizontal.title }}
+                                                                    </h2>
+                                                                    <p class="m-0 pb-4 pt-2">
+                                                                        {{ caseItemHorizontal.description }}
+                                                                    </p>
+                                                                </div>
                                                             </section>
                                                         </div>
                                                         <div
@@ -234,8 +241,10 @@
                                                                         'hover-orange-bg': caseItemVertical.contentBackground === 'orange'
                                                                             }"
                                                                     >
-                                                                <h2 class="text-uppercase h3">{{ caseItemVertical.title }}</h2>
-                                                                <p class="m-0 pb-4 pt-2">{{ caseItemVertical.description }}</p>
+                                                                <div class="case-content-line">
+                                                                    <h2 class="text-uppercase h3">{{ caseItemVertical.title }}</h2>
+                                                                    <p class="m-0 pb-4 pt-2">{{ caseItemVertical.description }}</p>
+                                                                </div>
                                                             </section>
                                                         </div>
                                                         <div

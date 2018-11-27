@@ -85,6 +85,32 @@
                 position: relative;
                 z-index: 1;
                 .transition(@dft-cases-transition-behavior);
+                // on this view segment we implement case content wrapper animation
+                @media @lsmscreen and (min-width: 576px) {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: -14px;
+                        right: 0;
+                        border-width: 14px 0 0 14px;
+                        border-style: solid;
+                        border-color: transparent #000;
+                        .transition(@dft-cases-transition-behavior);
+                        .opacity(0);
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: -14px;
+                        left: 0;
+                        border-width: 14px 14px 0 0;
+                        border-style: solid;
+                        border-color: transparent #000;
+                        .transition(@dft-cases-transition-behavior);
+                        .opacity(0);
+                    }
+                }
                 // indent on mobile corresponding to design
                 @media @lsmscreen {
                     > p {
@@ -95,7 +121,7 @@
                     padding: 30px 21px 38px;
                     // set indent on mobile corresponding to design
                     @media @lsmscreen {
-                        padding: 30px 3px 38px;
+                        padding: 30px 14px 38px;
                     }
                     &.case-content-medium-reversed {
                         padding: 20px 27px;
@@ -105,7 +131,7 @@
                     padding: 20px 27px;
                     // set indent on mobile corresponding to design
                     @media @lsmscreen {
-                        padding: 30px 3px 38px;
+                        padding: 30px 14px 38px;
                     }
                 }
                 // compressing content corresponding to design
@@ -122,14 +148,17 @@
                     padding: 18px 27px;
                     // set indent on mobile corresponding to design
                     @media @lsmscreen {
-                        padding: 30px 3px 38px;
+                        padding: 30px 14px 38px;
                     }
                 }
-                &:after {
+                .case-content-line:after {
                     display: block;
                     width: 103px;
                     content: '';
                     border-bottom: 3px solid black;
+                    @media @lsmscreen {
+                        padding-bottom: 40px;
+                    }
                 }
             }
             &:hover {
@@ -162,8 +191,16 @@
                     h2 {
                         color: @white;
                     }
+
+                    // animate wrapper effect on sm screen
+                    @media @lsmscreen and (min-width: 576px) {
+                        &:before, &:after {
+                            .transition(@dft-cases-transition-behavior);
+                            .opacity(0.6);
+                        }
+                    }
                     // set white color of line under case content
-                    &:after {
+                    .case-content-line:after {
                         border-bottom: 3px solid white;
                     }
                     &.move-right {
