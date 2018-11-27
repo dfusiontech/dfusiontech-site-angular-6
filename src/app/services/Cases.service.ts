@@ -172,6 +172,15 @@ export class CasesService {
                         casesList.push( new CaseModel( CasesConstant[i] ) );
                         casesList[i].caseId = 'case-' + (i + 1);
                     }
+                    // forming a list of paths to technology stack images depending on technology stack list
+                    const technologyStackPath = 'assets/images/pages/case-page/technology-stack/';
+                    for ( let i = 0; i < casesList.length; i++ ) {
+                        let technologyStackUnit = '';
+                        for ( let j = 0; j < casesList[i].technologyStack.length; j++ ) {
+                            technologyStackUnit = casesList[i].technologyStack[j];
+                            casesList[i].technologyStackPathes[j] = `${technologyStackPath}${technologyStackUnit}.png`;
+                        }
+                    }
                     resolve(casesList.find(fcase => fcase.caseId === link));
                 } else {
                     reject('error');
