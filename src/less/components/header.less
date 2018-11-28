@@ -9,21 +9,11 @@
     @social-link-hover: @icon-hover-grey;
     @navbar-bg-on-scroll: @white;
     @navbar-bg-on-toggle: @white;
-    @dft-navbar-transition-behavior: opacity 250ms ease-out;
-    // implement animation on lines behavior
-    .wrap-lines {
-        visibility: visible;
-        opacity: 1;
-        .transition(@dft-navbar-transition-behavior);
-        &.hide-lines {
-            visibility: hidden;
-            opacity: 0;
-            .transition(@dft-navbar-transition-behavior);
-        }
-    }
+    @dft-navbar-transition-behavior: opacity 250ms ease-out, box-shadow 0.3s;
     // set navbar properties ( navbar fixed )
     .dft-navbar {
-        background-color: @white;
+        transition: box-shadow 0.3s;
+
         height: @header-height;
         // animate change of bg after toggling menu
         .transition(@dft-navbar-transition-behavior);
