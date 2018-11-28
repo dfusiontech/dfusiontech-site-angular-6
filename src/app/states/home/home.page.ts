@@ -45,32 +45,10 @@ export class HomePageComponent implements OnInit {
     ngOnInit() {
         // add specific meta tags for Home page
         this.seoService.updateMetaTags(this.metaTags);
+        this.casesList = this.casesService.getCases().slice(0, 2);
 
-        this.casesService
-            .getCases()
-            .then(data => {
-                this.casesList = data;
-                // corresponding to design cases list consist only of two elements
-                this.casesList = this.casesList.slice(0, 2);
-                this.casesListLoaded = true;
-            })
-            .catch(error => {
-                this.errorResponse = error;
-                this.errorOccurred = true;
-            });
+        this.thoughtsList = this.thoughtsService.getThoughts().slice(0, 3);
 
-        this.thoughtsService
-            .getThoughts()
-            .then(data => {
-                this.thoughtsList = data;
-                // corresponding to design thoughts list consist only of three elements
-                this.thoughtsList = this.thoughtsList.slice(0, 3);
-                this.thoughtsListLoaded = true;
-            })
-            .catch(error => {
-                this.errorResponse = error;
-                this.errorOccurred = true;
-            });
         // changing cases content order on mobile
         if ( window.innerWidth < this.caseRestructuringPointMobile ) {
             this.caseMobileBehavior = true;

@@ -7,11 +7,6 @@
                 [errorResponse]="errorResponse"
                     >
             </div>
-            <div
-                data-preloader
-                *ngIf="!casesListLoaded && !errorOccurred"
-                    >
-            </div>
             <!-- Adding grey background area on big desktops -->
             <div
                 *ngIf="casesList"
@@ -274,4 +269,3 @@
         </div>
     </div>
 </div>
-

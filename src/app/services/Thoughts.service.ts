@@ -9,37 +9,18 @@ export class ThoughtsService {
     constructor() {}
     public getThoughts() {
         const thoughtsList = [];
-        const promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if ( ThoughtsConstant ) {
-                    for ( let i = 0; i < ThoughtsConstant.length; i++ ) {
-                        thoughtsList.push(new ThoughtModel( ThoughtsConstant[i] ));
-                        thoughtsList[i].thoughtId = 'thought-' + (i + 1);
-                    }
-                    resolve( thoughtsList );
-                } else {
-                    reject( 'ThoughtsSvc: ' + this.errorResponse );
-                }
-            }, 1000);
-        });
-        return promise;
+        for ( let i = 0; i < ThoughtsConstant.length; i++ ) {
+            thoughtsList.push(new ThoughtModel( ThoughtsConstant[i] ));
+            thoughtsList[i].thoughtId = 'thought-' + (i + 1);
+        }
+        return thoughtsList
     }
     public getThoughtByLink(link) {
         const thoughtsList = [];
-        const promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if (ThoughtsConstant) {
-                    for (let i = 0; i < ThoughtsConstant.length; i++) {
-                        thoughtsList.push(new ThoughtModel(ThoughtsConstant[i]));
-                        thoughtsList[i].thoughtId = 'thought-' + (i + 1);
-                    }
-                    resolve(thoughtsList.find(thought => thought.thoughtId === link));
-                } else {
-                    reject( 'ThoughtsSvc: ' + this.errorResponse );
-                }
-            }, 500);
-        });
-        return promise;
+        for (let i = 0; i < ThoughtsConstant.length; i++) {
+            thoughtsList.push(new ThoughtModel(ThoughtsConstant[i]));
+            thoughtsList[i].thoughtId = 'thought-' + (i + 1);
+        }
+        return thoughtsList.find(thought => thought.thoughtId === link);
     }
-
 }

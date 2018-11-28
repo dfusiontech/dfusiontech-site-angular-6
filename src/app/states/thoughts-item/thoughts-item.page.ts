@@ -42,20 +42,10 @@ export class ThoughtsItemPageComponent implements OnInit {
 
     ngOnInit() {
         this.seoService.updateMetaTags(this.metaTags);
-
-        this.thoughtsService
-            .getThoughtByLink(this.thoughtId)
-            .then(data => {
-                this.thought = data;
-                this.thoughtItemLoaded = true;
-                // update meta tags with new information on current thought
-                this.metaTags.push({title: this.thought.title + '. dFusiontech inc.'});
-                this.metaTags.push({name: 'description', content: this.thought.description});
-                this.seoService.updateMetaTags(this.metaTags);
-            })
-            .catch(error => {
-                this.errorResponse = error;
-                this.errorOccurred = true;
-            });
+        
+        this.thought = this.thoughtsService.getThoughtByLink(this.thoughtId);
+        this.metaTags.push({title: this.thought.title + '. dFusiontech inc.'});
+        this.metaTags.push({name: 'description', content: this.thought.description});
+        this.seoService.updateMetaTags(this.metaTags);
     }
 }
