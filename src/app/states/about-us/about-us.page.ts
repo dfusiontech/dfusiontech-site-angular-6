@@ -1,6 +1,8 @@
 // outsource
 import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
+// local dependencies
+import { SEOService } from '../../services/Seo.service';
 
 @Component({
     selector: '[id="about-us"]',
@@ -12,10 +14,22 @@ export class AboutUsPageComponent implements OnInit {
      *
      *
      */
-    constructor ( private state: StateService ) {
 
-    }
+    private metaTags = [
+        {
+            title: 'About us. dFusiontech inc.'
+        },
+        {
+            name: 'description',
+            content: 'ABOUT US PAGE OF THE SITE, DFT IS OUR PRIDE'
+        },
+    ];
+
+    constructor (
+        private state: StateService,
+        private seoService: SEOService) {}
 
     ngOnInit() {
+        this.seoService.updateMetaTags(this.metaTags);
     }
 }

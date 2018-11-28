@@ -14,7 +14,7 @@ export class CaseModel {
     solution: string;
     projectLink: string;
     technologyStack: any;
-    technologyStackPathes: any;
+    technologyStackPaths: any;
     contentBackground: string;
     permalinkId: string;
     constructor ( data ) {
@@ -30,7 +30,7 @@ export class CaseModel {
         this.projectLink = data.projectLink || '';
         this.technologyStack = data.technologyStack || [];
         // holder for paths to images of technology, will be filled in service
-        this.technologyStackPathes = [];
+        this.technologyStackPaths = [];
         // this property will be filled in cases service, need this property to set unique value of bg color of case
         // content on hover
         this.contentBackground = '';
