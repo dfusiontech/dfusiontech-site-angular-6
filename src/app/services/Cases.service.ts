@@ -178,7 +178,7 @@ export class CasesService {
                         let technologyStackUnit = '';
                         for ( let j = 0; j < casesList[i].technologyStack.length; j++ ) {
                             technologyStackUnit = casesList[i].technologyStack[j];
-                            casesList[i].technologyStackPathes[j] = `${technologyStackPath}${technologyStackUnit}.png`;
+                            casesList[i].technologyStackPaths[j] = `${technologyStackPath}${technologyStackUnit}.png`;
                         }
                     }
                     resolve(casesList.find(fcase => fcase.caseId === link));
