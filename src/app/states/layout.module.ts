@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { RootModule, UIRouterModule } from '@uirouter/angular';
+import { routerConfig } from './router.config';
 import { PreventParentScrollModule } from 'ngx-prevent-parent-scroll';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { FormsModule } from '@angular/forms';
@@ -39,6 +40,7 @@ import { ContactsPageComponent } from './contacts/contacts.page';
  *
  */
 export const routing: RootModule = {
+    config: routerConfig,
     useHash: false, // html5mode - without #
     // useHash: true, // with #
     otherwise: homeState.url,
