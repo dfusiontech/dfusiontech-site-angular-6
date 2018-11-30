@@ -43,17 +43,8 @@ export class CasesPageComponent implements OnInit {
 
     ngOnInit() {
         this.seoService.updateMetaTags(this.metaTags);
-
-        this.casesService
-            .getCases()
-            .then(data => {
-                this.casesList = data;
-                this.casesListLoaded = true;
-            })
-            .catch(error => {
-                this.errorResponse = error;
-                this.errorOccurred = true;
-            });
+        this.casesList = this.casesService.getCases()
+        
         // changing cases content order on mobile
         if ( window.innerWidth < this.caseRestructuringPointMobile ) {
             this.caseMobileBehavior = true;

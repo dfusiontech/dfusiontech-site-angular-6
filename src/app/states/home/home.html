@@ -2,19 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <div
-                data-error-message
-                *ngIf="errorOccurred"
-                [errorResponse]="errorResponse"
-                    >
-            </div>
-            <div
-                data-preloader
-                *ngIf="!casesListLoaded && !thoughtsListLoaded  && !errorOccurred"
-                    >
-            </div>
-            <div
                 class="container"
-                *ngIf="casesListLoaded && thoughtsListLoaded "
                     >
                 <section class="heading-block grey-rectangle">
                     <div class="heading-title">
@@ -333,4 +321,3 @@
         </div>
     </div>
 </div>
-

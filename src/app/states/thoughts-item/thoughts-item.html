@@ -2,19 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <div
-                data-error-message
-                *ngIf="errorOccurred"
-                [errorResponse]="errorResponse"
-            >
-            </div>
-            <div
-                data-preloader
-                *ngIf="!thoughtItemLoaded && !errorOccurred"
-            >
-            </div>
-            <div
                 class="container"
-                *ngIf="thoughtItemLoaded"
             >
                 <section class="heading-block grey-rectangle">
                     <div class="heading-title inner-img">
@@ -144,4 +132,3 @@
         </div>
     </div>
 </div>
-
