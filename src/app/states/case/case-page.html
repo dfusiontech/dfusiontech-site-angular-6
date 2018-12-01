@@ -10,11 +10,16 @@
                     <!-- Setting place for absolutely positioned heading description content on big desktop -->
                     <div class="row" [ngClass]="{ 'heading-case-size': !caseMobileDesktopBehavior }">
                         <div class="col-12">
-                            <img
-                                [alt]="case.title"
+                            <div class="img-holder">
+                              <div
+                                class="img-placeholder"
+                                [ngClass]="{ 'placeholder-loaded': placeholderLoaded }"
+                                [style.backgroundImage]="'url('+ caseImgPlaceholder +')'"></div>
+                              <div
                                 class="heading-case-img"
-                                [src]="case.headingImg"
-                                    />
+                                [ngClass]="{ 'heading-case-img-loaded': caseImgLoaded }"
+                                [style.backgroundImage]="'url('+ case.headingImg +')'"></div>
+                            </div>
                         </div>
                         <!-- Changing behavior of this content on small desktops corresponding to design -->
                         <div [ngClass]="{ 'col-12': caseMobileDesktopBehavior }">

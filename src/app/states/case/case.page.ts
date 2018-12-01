@@ -24,6 +24,10 @@ export class CasePageComponent implements OnInit {
     public caseMobileDesktopBehavior;
     public caseRestructuringPointMobile = 768;
     public caseRestructuringPointLarge = 1199;
+    public caseImgPlaceholder = '';
+    public caseImgLoaded = false;
+    public placeholderLoaded = false;
+
     constructor (
         private state: StateService,
         private casesService: CasesService,
@@ -38,6 +42,22 @@ export class CasePageComponent implements OnInit {
             content: 'CASE PAGE OF THE SITE, DFT IS OUR PRIDE'
         }
     ];
+
+    private setPlaceholder() {
+      this.caseImgPlaceholder = this.case.headingImg.replace('heading.jpg', 'heading.placeholder.jpg')
+    }
+
+    private preloadHeading() {
+      const img = new Image();
+      img.src = this.case.headingImg;
+      img.addEventListener('load', () => this.caseImgLoaded = true)
+    }
+
+    private preloadPlaceholder() {
+      const img = new Image();
+      img.src = this.caseImgPlaceholder;
+      img.addEventListener('load', () => this.placeholderLoaded = true)
+    }
 
     ngOnInit() {
         this.seoService.updateMetaTags(this.metaTags);
@@ -58,7 +78,10 @@ export class CasePageComponent implements OnInit {
         this.metaTags.push({title: this.case.title + '. dFusiontech inc.'});
         this.metaTags.push({name: 'description', content: this.case.description});
         this.seoService.updateMetaTags(this.metaTags);
-        
+        this.setPlaceholder();
+        this.preloadHeading();
+        this.preloadPlaceholder();
+
     }
 
     @HostListener('window:resize') onResize() {
