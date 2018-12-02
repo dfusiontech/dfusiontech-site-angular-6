@@ -101,22 +101,24 @@
                     content: "";
                     display: block;
                     height: 4px;
-                    left: 50%;
+                    left: 0;
                     position: absolute;
                     background: @nav-item-border-hover;
-                    .transition(@dft-nav-tab-after-transition);
-                    width: 0;
+                    transition: opacity 0.3s, transform 0.3s;
+                    opacity: 0;
+                    width: 100%;
+                    transform: scaleX(0);
                 }
 
                 &:hover:after {
-                    width: 100%;
-                    left: 0;
+                    opacity: 1;
+                    transform: scaleX(1);
                 }
 
                 &.active:after, &:active:after {
                     .transition(none);
-                    width: 100%;
-                    left: 0;
+                    opacity: 1;
+                    transform: scaleX(1);
                 }
             }
         }
