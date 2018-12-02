@@ -11,14 +11,17 @@
                     <div class="row" [ngClass]="{ 'heading-case-size': !caseMobileDesktopBehavior }">
                         <div class="col-12">
                             <div class="img-holder">
-                              <div
+                              <img
                                 class="img-placeholder"
                                 [ngClass]="{ 'placeholder-loaded': placeholderLoaded }"
-                                [style.backgroundImage]="'url('+ caseImgPlaceholder +')'"></div>
-                              <div
+                                [src]="caseImgPlaceholder"
+                                (load)="placeholderLoaded = true"
+                                alt="case.title">
+                              <img
                                 class="heading-case-img"
-                                [ngClass]="{ 'heading-case-img-loaded': caseImgLoaded }"
-                                [style.backgroundImage]="'url('+ case.headingImg +')'"></div>
+                                [ngClass]="{ 'heading-case-img-loaded': caseImgLoaded}"
+                                (load)="caseImgLoaded = true"
+                                [src]="case.headingImg" alt="case.title">
                             </div>
                         </div>
                         <!-- Changing behavior of this content on small desktops corresponding to design -->
