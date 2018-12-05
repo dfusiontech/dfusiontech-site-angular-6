@@ -36,6 +36,6 @@ export class HeaderComponent implements OnInit {
 
     // listening to scroll event, changing background color after header height quantity of pixels were scrolled
     @HostListener('window:scroll') onScroll() {
-        this.isScrolled = !!window.pageYOffset
+        this.isScrolled = !!window.pageYOffset;
     }
 }
