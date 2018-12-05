@@ -44,49 +44,27 @@ html {
             top: 0;
             left: 0;
             opacity: 1;
-            padding: 0 1.667%;
+            padding: 0 8px;
             display: flex;
             justify-content: space-between;
+            @when700: ~"(min-width: 700px)";
+            @when1000: ~"(min-width: 1000px)";
+
+            @media @when700 {
+                padding: 0 20px;
+            }
+
+            @media @when1000 {
+                padding: 0 24px;
+            }
 
             .line-bg {
                 width: 1px;
                 height: 100%;
                 background: @lines-grey;
 
-                @when700: ~"(min-width: 700px)";
-                @when1000: ~"(min-width: 1000px)";
-
-
-                &.line2 {
-                    display: none;
-                }
-                &.line3 {
-                    display: none;
-                }
-
-                &.line5 {
-                    display: none;
-                }
-                &.line6 {
-                    display: none;
-                }
-                &.line7 {
-                    display: none;
-                }
-                &.line9 {
-                    display: none;
-                }
-                &.line10 {
-                    display: none;
-                }
-                &.line11 {
-                    display: none;
-                }
-                &.line13 {
-                    display: none;
-                }
-                &.line14 {
-                    display: none;
+                &.hide {
+                  display: none;
                 }
 
                 &.show700 {
