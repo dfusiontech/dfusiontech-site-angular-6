@@ -11,28 +11,18 @@
     &:before {
         content: '';
         position: absolute;
-
-        right: 52%;
+        right: calc(50% + 55px);
+        width: calc(50vw - 55px);
         top: 0;
         background-color: @rectangle-grey;
-        left: -135px;
         height: 100%;
         .transition(@dft-grey-rectangle-before-transition);
 
         @media @mdscreen {
-            right: 55%;
-            left: -135px;
+          right: calc(50% + 55px);
+          width: calc(50vw - 55px);
         }
 
-        @media @lsmscreen {
-            right: 55%;
-            left: -135px;
-        }
-
-        @media @mobile-point {
-            right: 55%;
-            left: -135px;
-        }
     }
     &.left {
         &:before {
