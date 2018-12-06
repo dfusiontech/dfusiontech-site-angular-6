@@ -136,11 +136,7 @@ export const CasesConstant = [
         description: 'Almentor is a cutting-edge online video marketplace for e-learning and professional ' +
         'business development throughout the Middle East and Africa.',
         overviewImg: 'assets/images/pages/cases/almentor.jpg',
-        headingImg: 'assets/images/pages/case-page/almentor/heading-lg.jpg',
-        headingImgXS: 'assets/images/pages/case-page/almentor/heading-xs.jpg',
-        headingImgSM: 'assets/images/pages/case-page/almentor/heading-sm.jpg',
-        headingImgMD: 'assets/images/pages/case-page/almentor/heading-md.jpg',
-        headingImgLG: 'assets/images/pages/case-page/almentor/heading-lg.jpg',
+        headingImg: 'assets/images/pages/case-page/almentor/heading.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/almentor/courses-en-version.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/almentor/courses-arabic-version.jpg',
         wholeDescription: 'This project is a cutting-edge online video marketplace for e-learning and professional ' +

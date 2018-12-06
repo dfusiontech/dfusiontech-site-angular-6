@@ -11,10 +11,8 @@
                     <div class="row" [ngClass]="{ 'heading-case-size': !caseMobileDesktopBehavior }">
                         <div class="col-12">
                             <picture class="heading-img-wrapper">
-                                <source media="(max-width: 576px)" [srcset]="case.headingImgXS">
-                                <source media="(max-width: 768px)" [srcset]="case.headingImgSM">
-                                <source media="(max-width: 992px)" [srcset]="case.headingImgMD">
-                                <source media="(max-width: 1200px)" [srcset]="case.headingImgLG">
+                                <source media="(max-width: 768px)" [srcset]="case.headingImg.replace('.jpg', '-sm.jpg')">
+                                <source media="(max-width: 992px)" [srcset]="case.headingImg.replace('.jpg', '-md.jpg')">
                                 <img
                                     [alt]="case.title"
                                     class="heading-case-img"
