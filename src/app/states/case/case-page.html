@@ -22,11 +22,17 @@
                     <!-- Setting place for absolutely positioned heading description content on big desktop -->
                     <div class="row" [ngClass]="{ 'heading-case-size': !caseMobileDesktopBehavior }">
                         <div class="col-12">
-                            <img
-                                [alt]="case.title"
-                                class="heading-case-img"
-                                [src]="case.headingImg"
-                                    />
+                            <picture class="heading-img-wrapper">
+                                <source media="(max-width: 576px)" [srcset]="case.headingImgXS">
+                                <source media="(max-width: 768px)" [srcset]="case.headingImgSM">
+                                <source media="(max-width: 992px)" [srcset]="case.headingImgMD">
+                                <source media="(max-width: 1200px)" [srcset]="case.headingImgLG">
+                                <img
+                                    [alt]="case.title"
+                                    class="heading-case-img"
+                                    [srcset]="case.headingImg"
+                                        />
+                            </picture>
                         </div>
                         <!-- Changing behavior of this content on small desktops corresponding to design -->
                         <div [ngClass]="{ 'col-12': caseMobileDesktopBehavior }">

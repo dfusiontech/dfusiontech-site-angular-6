@@ -7,6 +7,10 @@ export class CaseModel {
     description: string;
     overviewImg: string;
     headingImg: string;
+    headingImgXS: string;
+    headingImgSM: string;
+    headingImgMD: string;
+    headingImgLG: string;
     firstProjectViewImg: string;
     secondProjectViewImg: string;
     wholeDescription: string;
@@ -22,6 +26,10 @@ export class CaseModel {
         this.description = data.description || '';
         this.overviewImg = data.overviewImg || '';
         this.headingImg = data.headingImg || '';
+        this.headingImgXS = data.headingImgXS || '';
+        this.headingImgSM = data.headingImgSM || '';
+        this.headingImgMD = data.headingImgMD || '';
+        this.headingImgLG = data.headingImgLG || '';
         this.firstProjectViewImg = data.firstProjectViewImg || '';
         this.secondProjectViewImg = data.secondProjectViewImg || '';
         this.wholeDescription = data.wholeDescription || '';

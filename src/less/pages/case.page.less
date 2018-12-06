@@ -14,6 +14,11 @@
             margin: 0 -15px;
             width: calc(100% + 30px);
         }
+        .heading-img-wrapper {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
         .heading-case-img {
             max-width: 100%;
             @media ( max-width: 1200px ) and ( min-width: 992px ) {
@@ -25,6 +30,7 @@
             }
             @media @lsmscreen {
                 height: 247px;
+                max-width: none;
             }
         }
         .heading-case-description {
