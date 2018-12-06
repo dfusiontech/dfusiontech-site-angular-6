@@ -1,21 +1,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <div
-                data-error-message
-                *ngIf="errorOccurred"
-                [errorResponse]="errorResponse"
-                    >
-            </div>
-            <div
-                data-preloader
-                *ngIf="!caseItemLoaded && !errorOccurred"
-                    >
-            </div>
             <!-- Adding grey background area on large desktops -->
             <div
                 class="container"
-                *ngIf="caseItemLoaded"
                 [ngClass]="{ 'grey-rectangle': caseXlgDesktopBehavior }"
                     >
                 <div class="case-wrapper">
@@ -109,5 +97,3 @@
         </div>
     </div>
 </div>
-
-

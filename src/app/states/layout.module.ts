@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { RootModule, UIRouterModule } from '@uirouter/angular';
+import { routerConfig } from './router.config';
 import { PreventParentScrollModule } from 'ngx-prevent-parent-scroll';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +15,6 @@ import { SEOService } from '../services/Seo.service';
 import { homeState } from './home/home.state';
 import { casesState } from './cases/cases.state';
 import { casePageState } from './case/case-page.state';
-import { thoughtsState } from './thoughts/thoughts.state';
 import { aboutUsState } from './about-us/about-us.state';
 import { contactsState } from './contacts/contacts.state';
 import { thoughtsItemState } from './thoughts-item/thoughts-item.state';
@@ -29,7 +29,6 @@ import { PreloaderComponent } from '../components/preloader/preloader.component'
 import { HomePageComponent } from './home/home.page';
 import { CasesPageComponent } from './cases/cases.page';
 import { CasePageComponent } from './case/case.page';
-import { ThoughtsPageComponent } from './thoughts/thoughts.page';
 import { ThoughtsItemPageComponent } from './thoughts-item/thoughts-item.page';
 import { AboutUsPageComponent } from './about-us/about-us.page';
 import { ContactsPageComponent } from './contacts/contacts.page';
@@ -41,6 +40,7 @@ import { ContactsPageComponent } from './contacts/contacts.page';
  *
  */
 export const routing: RootModule = {
+    config: routerConfig,
     useHash: false, // html5mode - without #
     // useHash: true, // with #
     otherwise: homeState.url,
@@ -48,7 +48,6 @@ export const routing: RootModule = {
         homeState,
         casesState,
         casePageState,
-        thoughtsState,
         thoughtsItemState,
         aboutUsState,
         contactsState
@@ -72,7 +71,6 @@ export const routing: RootModule = {
         HomePageComponent,
         CasesPageComponent,
         CasePageComponent,
-        ThoughtsPageComponent,
         ThoughtsItemPageComponent,
         AboutUsPageComponent,
         ContactsPageComponent

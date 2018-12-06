@@ -9,21 +9,9 @@
     @social-link-hover: @icon-hover-grey;
     @navbar-bg-on-scroll: @white;
     @navbar-bg-on-toggle: @white;
-    @dft-navbar-transition-behavior: opacity 250ms ease-out;
-    // implement animation on lines behavior
-    .wrap-lines {
-        visibility: visible;
-        opacity: 1;
-        .transition(@dft-navbar-transition-behavior);
-        &.hide-lines {
-            visibility: hidden;
-            opacity: 0;
-            .transition(@dft-navbar-transition-behavior);
-        }
-    }
+    @dft-navbar-transition-behavior: opacity 250ms ease-out, box-shadow 0.3s;
     // set navbar properties ( navbar fixed )
     .dft-navbar {
-        background-color: @white;
         height: @header-height;
         // animate change of bg after toggling menu
         .transition(@dft-navbar-transition-behavior);
@@ -87,7 +75,7 @@
         // prevent overwriting of lines corresponding to design
         z-index: 3;
         // set width corresponding to design
-        min-width: 80%;
+        min-width: 60%;
         // menu behaviour
         @media @gsmscreen {
             &>li>.dft-link {
@@ -101,22 +89,24 @@
                     content: "";
                     display: block;
                     height: 4px;
-                    left: 50%;
+                    left: 0;
                     position: absolute;
                     background: @nav-item-border-hover;
-                    .transition(@dft-nav-tab-after-transition);
-                    width: 0;
+                    transition: opacity 0.3s, transform 0.3s;
+                    opacity: 0;
+                    width: 100%;
+                    transform: scaleX(0);
                 }
 
                 &:hover:after {
-                    width: 100%;
-                    left: 0;
+                    opacity: 1;
+                    transform: scaleX(1);
                 }
 
                 &.active:after, &:active:after {
                     .transition(none);
-                    width: 100%;
-                    left: 0;
+                    opacity: 1;
+                    transform: scaleX(1);
                 }
             }
         }
