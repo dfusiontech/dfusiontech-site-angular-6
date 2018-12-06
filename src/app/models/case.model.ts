@@ -7,8 +7,6 @@ export class CaseModel {
     description: string;
     overviewImg: string;
     headingImg: string;
-    headingImgSM: string;
-    headingImgMD: string;
     firstProjectViewImg: string;
     secondProjectViewImg: string;
     wholeDescription: string;
@@ -24,8 +22,6 @@ export class CaseModel {
         this.description = data.description || '';
         this.overviewImg = data.overviewImg || '';
         this.headingImg = data.headingImg || '';
-        this.headingImgSM = data.headingImgSM || '';
-        this.headingImgMD = data.headingImgMD || '';
         this.firstProjectViewImg = data.firstProjectViewImg || '';
         this.secondProjectViewImg = data.secondProjectViewImg || '';
         this.wholeDescription = data.wholeDescription || '';
