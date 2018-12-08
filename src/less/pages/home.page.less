@@ -20,7 +20,7 @@
 
     .heading-block {
         .heading-title {
-            min-height: 600px;
+            height: calc(100vh - 172px);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -28,12 +28,14 @@
             padding-top: 0;
             padding-bottom: 0;
             @media @lsmscreen {
-                min-height: 300px;
-            }
-            @media @xxsscreen {
-                min-height: 250px;
+                height: auto;
+                padding: 45px;
             }
         }
+    }
+
+    #cases .grey-rectangle:before {
+      display: none;
     }
 
     .cases-list {
