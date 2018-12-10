@@ -9,6 +9,10 @@ export const CasesConstant = [
         'Unreel’s OTT offerings put you in control of your video distribution destiny.',
         overviewImg: 'assets/images/pages/cases/unreel-me.jpg',
         headingImg: 'assets/images/pages/case-page/unreel-me/heading.jpg',
+        headingImgXS: 'assets/images/pages/case-page/unreel-me/heading-xs.jpg',
+        headingImgSM: 'assets/images/pages/case-page/unreel-me/heading-sm.jpg',
+        headingImgMD: 'assets/images/pages/case-page/unreel-me/heading-md.jpg',
+        headingImgLG: 'assets/images/pages/case-page/unreel-me/heading-lg.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/unreel-me/about-unreel-me.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/unreel-me/product-unreel-me.jpg',
         wholeDescription: 'This project is a complex of Back-End and Front- End applications that manage different ' +
@@ -64,6 +68,10 @@ export const CasesConstant = [
         'want. View the clubs layout and pick table you want.',
         overviewImg: 'assets/images/pages/cases/bottles-waiting.jpg',
         headingImg: 'assets/images/pages/case-page/bottles-waiting/heading.jpg',
+        headingImgXS: 'assets/images/pages/case-page/bottles-waiting/heading-xs.jpg',
+        headingImgSM: 'assets/images/pages/case-page/bottles-waiting/heading-sm.jpg',
+        headingImgMD: 'assets/images/pages/case-page/bottles-waiting/heading-md.jpg',
+        headingImgLG: 'assets/images/pages/case-page/bottles-waiting/heading-lg.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/bottles-waiting/nightlife.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/bottles-waiting/DJ-version.jpg',
         wholeDescription: 'This project is a complex of Back-End and Front-End applications that manage different ' +
@@ -89,15 +97,25 @@ export const CasesConstant = [
     {
         title: 'Lincoln Center',
         'caseId': 'case-',
-        description: 'This is a platform to collect, store, aggregate, share videos, create your own TV channel' +
-        ' out of YouTube videos, broadcast live from your mobile phone.',
+        description: 'The Lincoln Center project provides customers with buying tickets and monitor forthcoming events ' +
+        'devoted to music, dance and theater which take place in the places included in Lincoln Center.',
         overviewImg: 'assets/images/pages/cases/lincoln-center.jpg',
         headingImg: 'assets/images/pages/case-page/lincoln-center/heading.jpg',
+        headingImgXS: 'assets/images/pages/case-page/lincoln-center/heading-sm.jpg',
+        headingImgSM: 'assets/images/pages/case-page/lincoln-center/heading-sm.jpg',
+        headingImgMD: 'assets/images/pages/case-page/lincoln-center/heading-md.jpg',
+        headingImgLG: 'assets/images/pages/case-page/lincoln-center/heading-lg.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/lincoln-center/score-lincoln-center.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/lincoln-center/video-lincoln-center.jpg',
-        wholeDescription: 'empty',
-        challenge: 'empty',
-        solution: 'empty',
+        wholeDescription: 'The Lincoln Center project provides customers with buying tickets and monitor forthcoming events ' +
+        'devoted to music, dance and theater which take place in the places included in Lincoln Center such as: the' +
+        'Metropolitan Opera, the Lincoln Center Theater, the New York Philharmonic and the New York City Ballet.',
+        challenge: 'Our team worked on supporting, improving and functional extension of Lincoln Center application. ' +
+        'Our main challenge was to create back office responsible for providing all business functions related to it\`s' +
+        'operations such as: maintain the databases of all institutions included in Lincoln Center, handle the company finances',
+        solution: 'For our purposes we used MongoDB data storage. To create database-driven application and API in ' +
+        'Node.js we used KeystoneJS which is built on Express and MongoDB. On the Front- End, there is a web application ' +
+        'built with Backbone.js, Bootstrap.',
         projectLink: 'http://www.lincolncenter.org/',
         technologyStack: [],
     },
@@ -108,6 +126,10 @@ export const CasesConstant = [
         'through competition and making eSports for everyone.',
         overviewImg: 'assets/images/pages/cases/skillz.jpg',
         headingImg: 'assets/images/pages/case-page/skillz/heading.jpg',
+        headingImgXS: 'assets/images/pages/case-page/skillz/heading-sm.jpg',
+        headingImgSM: 'assets/images/pages/case-page/skillz/heading-sm.jpg',
+        headingImgMD: 'assets/images/pages/case-page/skillz/heading-md.jpg',
+        headingImgLG: 'assets/images/pages/case-page/skillz/heading-lg.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/skillz/about-skillz.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/skillz/products-skillz.jpg',
         wholeDescription: 'This project is a complex mobile gaming streaming and competition platform that manage ' +
@@ -136,8 +158,8 @@ export const CasesConstant = [
         description: 'Almentor is a cutting-edge online video marketplace for e-learning and professional ' +
         'business development throughout the Middle East and Africa.',
         overviewImg: 'assets/images/pages/cases/almentor.jpg',
-        headingImg: 'assets/images/pages/case-page/almentor/heading-lg.jpg',
-        headingImgXS: 'assets/images/pages/case-page/almentor/heading-xs.jpg',
+        headingImg: 'assets/images/pages/case-page/almentor/heading.jpg',
+        headingImgXS: 'assets/images/pages/case-page/almentor/heading-sm.jpg',
         headingImgSM: 'assets/images/pages/case-page/almentor/heading-sm.jpg',
         headingImgMD: 'assets/images/pages/case-page/almentor/heading-md.jpg',
         headingImgLG: 'assets/images/pages/case-page/almentor/heading-lg.jpg',
@@ -165,6 +187,10 @@ export const CasesConstant = [
         'management and automated monitoring.',
         overviewImg: 'assets/images/pages/cases/flaskdata.jpg',
         headingImg: 'assets/images/pages/case-page/flaskdata/heading.jpg',
+        headingImgXS: 'assets/images/pages/case-page/flaskdata/heading-md.jpg',
+        headingImgSM: 'assets/images/pages/case-page/flaskdata/heading-sm.jpg',
+        headingImgMD: 'assets/images/pages/case-page/flaskdata/heading-md.jpg',
+        headingImgLG: 'assets/images/pages/case-page/flaskdata/heading-lg.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/flaskdata/about-flask.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/flaskdata/products-flask.jpg',
         wholeDescription: 'This project is part of an open-source software for clinical research and it`s a complex of ' +
