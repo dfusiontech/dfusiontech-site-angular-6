@@ -58,7 +58,7 @@
                             <div class="case-content hide-border">
                                 <h2 class="mb-3">Solution</h2>
                                 <p class="mb-5">{{ case.solution }}</p>
-                                <dl class="row text-center align-items-center justify-content-center">
+                                <dl class="row text-center align-items-center justify-content-center" *ngIf="case.technologyStack.length>0">
                                     <dt class="h2 col-12 mb-3">Technology Stack</dt>
                                     <dd
                                         class="p-5"
