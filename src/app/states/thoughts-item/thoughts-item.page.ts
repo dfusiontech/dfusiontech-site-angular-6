@@ -42,7 +42,6 @@ export class ThoughtsItemPageComponent implements OnInit {
 
     ngOnInit() {
         this.seoService.updateMetaTags(this.metaTags);
-        
         this.thought = this.thoughtsService.getThoughtByLink(this.thoughtId);
         this.metaTags.push({title: this.thought.title + '. dFusiontech inc.'});
         this.metaTags.push({name: 'description', content: this.thought.description});

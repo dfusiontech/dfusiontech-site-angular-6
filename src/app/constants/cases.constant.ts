@@ -12,7 +12,7 @@ export const CasesConstant = [
         'lineup of customized apps for each of the brands, Unreel’s OTT offerings put the user in control of ' +
         'his video publishing journey.',
         overviewImg: 'assets/images/pages/cases/unreel-me.jpg',
-        headingImg: 'assets/images/pages/case-page/unreel-me/heading.jpg',
+        headingImg: 'assets/images/pages/case-page/unreel-me/heading2.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/unreel-me/about-unreel-me.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/unreel-me/product-unreel-me.jpg',
         wholeDescription: 'This project is a combination of back-end and front-end applications integrated with a ' +
@@ -71,7 +71,7 @@ export const CasesConstant = [
         description: 'BottlesWaiting is an app for your best experience with nightclubs and day clubs. See which ' +
         'event or club you want to go to, view clubs’ layouts and pick the table you like.',
         overviewImg: 'assets/images/pages/cases/bottles-waiting.jpg',
-        headingImg: 'assets/images/pages/case-page/bottles-waiting/heading.jpg',
+        headingImg: 'assets/images/pages/case-page/bottles-waiting/heading2.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/bottles-waiting/nightlife.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/bottles-waiting/DJ-version.jpg',
         wholeDescription: 'This project is a combination of back-end and front-end applications managing different ' +
@@ -112,7 +112,7 @@ export const CasesConstant = [
         description: 'Lincoln Center is a platform to collect, store, aggregate, and share videos. The engine allows ' +
         'users to create their own TV channel out of YouTube videos and broadcast live from mobile phone.',
         overviewImg: 'assets/images/pages/cases/lincoln-center.jpg',
-        headingImg: 'assets/images/pages/case-page/lincoln-center/heading.jpg',
+        headingImg: 'assets/images/pages/case-page/lincoln-center/heading2.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/lincoln-center/score-lincoln-center.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/lincoln-center/video-lincoln-center.jpg',
         wholeDescription: 'The Lincoln Center offers event tickets for sale and monitors forthcoming music, dance, and ' +
@@ -151,7 +151,7 @@ export const CasesConstant = [
         description: 'Skillz is a leading mobile eSports platform connecting the world’s 2.6 billion mobile gamers and ' +
         'making eSports accessible for everyone.',
         overviewImg: 'assets/images/pages/cases/skillz.jpg',
-        headingImg: 'assets/images/pages/case-page/skillz/heading.jpg',
+        headingImg: 'assets/images/pages/case-page/skillz/heading2.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/skillz/about-skillz.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/skillz/products-skillz.jpg',
         wholeDescription: 'This project is a synthesis of live streaming mobile games and  a competition platform ' +
@@ -182,7 +182,7 @@ export const CasesConstant = [
         description: 'This project is a cutting-edge online video marketplace for e-learning and professional business ' +
         'development throughout the Middle East and Africa.',
         overviewImg: 'assets/images/pages/cases/almentor.jpg',
-        headingImg: 'assets/images/pages/case-page/almentor/heading.jpg',
+        headingImg: 'assets/images/pages/case-page/almentor/heading2.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/almentor/courses-en-version.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/almentor/courses-arabic-version.jpg',
         wholeDescription: 'Almentor.net offers video courses and top-rated training programs of expert-generated ' +
@@ -206,7 +206,7 @@ export const CasesConstant = [
         description: 'The Flaskdata.io is patient compliance automation platform for clinical data management and ' +
         'automated monitoring.',
         overviewImg: 'assets/images/pages/cases/flaskdata.jpg',
-        headingImg: 'assets/images/pages/case-page/flaskdata/heading.jpg',
+        headingImg: 'assets/images/pages/case-page/flaskdata/heading2.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/flaskdata/about-flask.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/flaskdata/products-flask.jpg',
         wholeDescription: 'This project is a part of an open-source software for clinical research and consists of ' +
