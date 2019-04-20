@@ -18,7 +18,8 @@ export class ThoughtsService {
     public getThoughtByLink(link) {
         const thoughtsList = [];
         for (let i = 0; i < ThoughtsConstant.length; i++) {
-            thoughtsList.push(new ThoughtModel(ThoughtsConstant[i]));
+            // thoughtsList.push(new ThoughtModel(ThoughtsConstant[i]));
+            thoughtsList.push(ThoughtsConstant[i]);
             thoughtsList[i].thoughtId = 'thought-' + (i + 1);
         }
         return thoughtsList.find(thought => thought.thoughtId === link);
