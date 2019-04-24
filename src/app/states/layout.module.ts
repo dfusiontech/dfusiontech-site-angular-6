@@ -1,6 +1,7 @@
 // outsource
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RootModule, UIRouterModule } from '@uirouter/angular';
 import { routerConfig } from './router.config';
@@ -11,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { CasesService } from '../services/Cases.service';
 import { ThoughtsService } from '../services/Thoughts.service';
 import { SEOService } from '../services/Seo.service';
+import { APIService } from '../services/API.service';
 // app states
 import { homeState } from './home/home.state';
 import { casesState } from './cases/cases.state';
@@ -82,12 +84,14 @@ export const routing: RootModule = {
         PreventParentScrollModule,
         NgbModule.forRoot(),
         UIRouterModule.forRoot(routing),
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
     providers: [
         CasesService,
         ThoughtsService,
-        SEOService
+        SEOService,
+        APIService
     ],
     // define outgoing modules
     exports: [
