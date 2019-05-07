@@ -78,6 +78,31 @@
                 white-space: pre-line;
             }
         }
+
+        .technologies {
+            display: grid;
+            grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+            justify-items: center;
+            align-items: center;
+
+            dd {
+                margin-bottom: 0;
+            }
+
+            @media @lsmscreen {
+                grid-template-columns: 20% 20% 20% 20% 20%;
+            }
+
+            @media @xsscreen {
+                grid-template-columns: 25% 25% 25% 25%;
+            }
+
+            @media @xxsscreen {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+            }
+        }
     }
 
     .grey-rectangle {
