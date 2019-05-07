@@ -1,3 +1,4 @@
+<ui-view>
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
@@ -36,7 +37,7 @@
                                             *ngFor="let caseItem of caseItems"
                                                 >
                                             <a
-                                                uiSref="case-page"
+                                                uiSref="cases.case-page"
                                                 [uiParams]="{ caseId: caseItem.caseId }"
                                                 class="d-block case-item"
                                                     >
@@ -86,7 +87,7 @@
                                             >
                                         <div class="col-12">
                                             <a
-                                                uiSref="case-page"
+                                                uiSref="cases.case-page"
                                                 [uiParams]="{ caseId: caseItems.caseId }"
                                                 class="d-block case-item"
                                                     >
@@ -152,7 +153,7 @@
                                                 *ngSwitchCase="'8'"
                                                     >
                                                 <a
-                                                    uiSref="case-page"
+                                                    uiSref="cases.case-page"
                                                     [uiParams]="{ caseId: caseItemHorizontal.caseId }"
                                                     class="d-block case-item"
                                                     *ngFor="let caseItemHorizontal of caseItem.caseModels; let odd = odd; let even = even"
@@ -207,7 +208,7 @@
                                                             }"
                                                     >
                                                 <a
-                                                    uiSref="case-page"
+                                                    uiSref="cases.case-page"
                                                     [uiParams]="{ caseId: caseItemVertical.caseId }"
                                                     class="d-block case-item"
                                                     *ngFor="let caseItemVertical of caseItem.caseModels"
@@ -269,3 +270,4 @@
         </div>
     </div>
 </div>
+</ui-view>

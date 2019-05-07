@@ -21,16 +21,22 @@
                         <!--<h4 class="headline-4" *ngSwitchCase="'h4'"></h4>-->
                         <!--<h5 class="headline-5" *ngSwitchCase="'h5'"></h5>-->
                         <p class="paragraph" *ngSwitchCase="'p'">{{section.text}}</p>
-                        <ol class="dft-list" *ngSwitchCase="'ol'">
-                            <li class="dft-li" *ngFor="let item of section.items">
-                                <span class="dft-li-text">{{item}}</span>
-                            </li>
-                        </ol>
-                        <ul class="dft-list" *ngSwitchCase="'ul'">
-                            <li class="dft-li" *ngFor="let item of section.items">
-                                <span class="dft-li-text">{{item}}</span>
-                            </li>
-                        </ul>
+                        <ng-container *ngSwitchCase="'ol'">
+                            <span class="dft-list-premise" *ngIf="section.text">{{section.text}}</span>
+                            <ol class="dft-list">
+                                <li class="dft-li" *ngFor="let item of section.items">
+                                    <span class="dft-li-text">{{item}}</span>
+                                </li>
+                            </ol>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'ul'">
+                            <span class="dft-list-premise" *ngIf="section.text">{{section.text}}</span>
+                            <ul class="dft-list">
+                                <li class="dft-li" *ngFor="let item of section.items">
+                                    <span class="dft-li-text">{{item}}</span>
+                                </li>
+                            </ul>
+                        </ng-container>
                         <ng-container *ngSwitchCase="'img'">
                             <div
                                 class="thought-image-wrapper"
