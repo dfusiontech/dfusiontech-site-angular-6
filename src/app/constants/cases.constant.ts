@@ -43,27 +43,27 @@ export const CasesConstant = [
         'AndularJS, Node.js, Bootstrap, and a set of mobile applications for most popular platforms.',
         projectLink: 'https://www.unreel.me',
         technologyStack: [
-            'java',
+            'Java',
             'spring',
             'swagger',
             'jUnit',
             'jraw',
-            'mockito',
+            'Mockito',
             'node-js',
             'mongoose',
             'express',
-            'ffmpeg',
+            'FFmpeg',
             'angular-js',
             'angular-ui-router',
             'bootstrap',
-            'rabbitMQ',
+            'rabbitmq',
             'predictionIO',
             'algolia',
             'AWS',
             'api-google',
             'restfb',
         ],
-        technologyStackPathes: []
+        technologyStackPaths: []
     },
     {
         title: 'Bottles Waiting',
@@ -100,11 +100,11 @@ export const CasesConstant = [
         'there is a web application built with Angular.js, Bootstrap and Cocoa Touch for OS X and iOS.',
         projectLink: 'https://www.bottleswaiting.com/#!',
         technologyStack: [
-            'AngularJS 1.3.11.x',
-            'Angular UI-Router',
-            'Bootstrap 3.x'
+            'angular-js',
+            'angular-ui-router',
+            'bootstrap'
         ],
-        technologyStackPathes: []
+        technologyStackPaths: []
     },
     {
         title: 'Lincoln Center',
@@ -134,16 +134,16 @@ export const CasesConstant = [
         projectLink: 'http://www.lincolncenter.org/',
         technologyStack: [
             'mongoose',
-            'Express',
-            '​Keystone',
-            '​StrongLoop',
-            'AWS SDK',
-            'Google API',
+            'express',
+            // '​Keystone',
+            // '​StrongLoop',
+            'AWS',
+            'api-google',
             'swagger',
-            'Backbone.js',
-            'Bootstrap 3.x',
+            // 'Backbone.js',
+            'bootstrap',
         ],
-        technologyStackPathes: []
+        technologyStackPaths: []
     },
     {
         title: 'Skillz',
@@ -174,7 +174,7 @@ export const CasesConstant = [
         'languages and frameworks for the platforms.',
         projectLink: 'https://corp.skillz.com',
         technologyStack: [],
-        technologyStackPathes: []
+        technologyStackPaths: []
     },
     {
         title: 'Almentor',
@@ -198,7 +198,7 @@ export const CasesConstant = [
         'set of mobile applications for most popular platforms.',
         projectLink: 'https://www.almentor.net/en/home',
         technologyStack: [],
-        technologyStackPathes: []
+        technologyStackPaths: []
     },
     {
         title: 'Flaskdata',
@@ -227,7 +227,7 @@ export const CasesConstant = [
         'Bootstrap, Material, and a set of mobile applications for most popular platforms.',
         projectLink: 'https://www.flaskdata.io/',
         technologyStack: [],
-        technologyStackPathes: []
+        technologyStackPaths: []
     },
     // {
     //     title: 'HATOLOGY',

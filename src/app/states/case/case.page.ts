@@ -54,11 +54,10 @@ export class CasePageComponent implements OnInit {
             this.caseMobileDesktopBehavior = false;
         }
 
-        this.case = this.casesService.getCaseByLink(this.caseId)
+        this.case = this.casesService.getCaseByLink(this.caseId);
         this.metaTags.push({title: this.case.title + '. dFusiontech inc.'});
         this.metaTags.push({name: 'description', content: this.case.description});
         this.seoService.updateMetaTags(this.metaTags);
-        
     }
 
     @HostListener('window:resize') onResize() {

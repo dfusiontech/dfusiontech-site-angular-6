@@ -150,7 +150,7 @@ export class CasesService {
                 }
             }
         }
-        return casesListOrdered
+        return casesListOrdered;
     }
     public getCaseByLink( link ) {
         const casesList = [];

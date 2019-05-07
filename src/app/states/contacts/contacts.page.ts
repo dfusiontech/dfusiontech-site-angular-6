@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { StateService } from '@uirouter/angular';
 // local dependencies
 import { SEOService } from '../../services/Seo.service';
+import { APIService } from '../../services/API.service';
 
 @Component({
     selector: '[id="contacts"]',
@@ -31,7 +32,8 @@ export class ContactsPageComponent implements OnInit {
      */
     constructor(
         private state: StateService,
-        private seoService: SEOService) {}
+        private seoService: SEOService,
+        private apiService: APIService) {}
 
     ngOnInit() {
         this.seoService.updateMetaTags(this.metaTags);
@@ -42,6 +44,9 @@ export class ContactsPageComponent implements OnInit {
      * to the server side
      */
     onSubmit() {
-        console.log(JSON.stringify(this.contactMessage));
+        // console.log(JSON.stringify(this.contactMessage));
+        this.apiService.sendContact(this.contactMessage).subscribe(data => {
+            console.log(data);
+        });
     }
 }
