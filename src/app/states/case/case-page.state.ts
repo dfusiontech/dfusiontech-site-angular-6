@@ -17,8 +17,8 @@ export function caseIdResolve ($transition$) {
  *
  */
 export const casePageState = {
-    name: 'case-page',
-    url: '/case/:caseId', // there should be single case name or number
+    name: 'cases.case-page',
+    url: '/:caseId', // there should be single case name or number,
     views: {
         header: { component: HeaderComponent },
         $default: { component: CasePageComponent },

@@ -37,7 +37,25 @@
                         <div class="col-12">
                             <div class="case-content">
                                 <h2 class="mb-3">Challenge</h2>
-                                <p class="mb-4">{{ case.challenge }}</p>
+                                <ng-container *ngFor="let section of case.challenge" [ngSwitch]="section.type">
+                                    <p class="mb-4" *ngSwitchCase="'p'">{{ section.text }}</p>
+                                    <ng-container *ngSwitchCase="'ol'">
+                                        <span class="dft-list-premise" *ngIf="section.text">{{section.text}}</span>
+                                        <ol class="dft-list mb-4">
+                                            <li class="dft-li" *ngFor="let item of section.items">
+                                                <span class="dft-li-text">{{item}}</span>
+                                            </li>
+                                        </ol>
+                                    </ng-container>
+                                    <ng-container *ngSwitchCase="'ul'">
+                                        <span class="dft-list-premise" *ngIf="section.text">{{section.text}}</span>
+                                        <ul class="dft-list mb-4">
+                                            <li class="dft-li" *ngFor="let item of section.items">
+                                                <span class="dft-li-text">{{item}}</span>
+                                            </li>
+                                        </ul>
+                                    </ng-container>
+                                </ng-container>
                             </div>
                         </div>
                     </div>
@@ -57,8 +75,26 @@
                             <!-- Removing border corresponding to design -->
                             <div class="case-content hide-border">
                                 <h2 class="mb-3">Solution</h2>
-                                <p class="mb-5">{{ case.solution }}</p>
-                                <h2 class="mb-3">Technology Stack</h2>
+                                <ng-container *ngFor="let section of case.solution" [ngSwitch]="section.type">
+                                    <p class="mb-4" *ngSwitchCase="'p'">{{ section.text }}</p>
+                                    <ng-container *ngSwitchCase="'ol'">
+                                        <span class="dft-list-premise" *ngIf="section.text">{{section.text}}</span>
+                                        <ol class="dft-list mb-4">
+                                            <li class="dft-li" *ngFor="let item of section.items">
+                                                <span class="dft-li-text">{{item}}</span>
+                                            </li>
+                                        </ol>
+                                    </ng-container>
+                                    <ng-container *ngSwitchCase="'ul'">
+                                        <span class="dft-list-premise" *ngIf="section.text">{{section.text}}</span>
+                                        <ul class="dft-list mb-4">
+                                            <li class="dft-li" *ngFor="let item of section.items">
+                                                <span class="dft-li-text">{{item}}</span>
+                                            </li>
+                                        </ul>
+                                    </ng-container>
+                                </ng-container>
+                                <h2 class="mb-3" *ngIf="case.technologyStack.length>0">Technology Stack</h2>
                                 <dl class="row technologies" *ngIf="case.technologyStack.length>0">
                                     <dd
                                         class="p-3"
@@ -68,6 +104,7 @@
                                             [alt]="case.technologyStack[i]"
                                             class="img-fluid"
                                             [src]="technology"
+                                            [title]="case.technologyStack[i]"
                                                 />
                                     </dd>
                                 </dl>

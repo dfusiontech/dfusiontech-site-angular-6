@@ -1,6 +1,11 @@
 #case-page {
     // need set overflow hidden to prevent mistakes from grey
     overflow: hidden;
+
+    h2 {
+        line-height: 1.2;
+    }
+
     .case-wrapper {
         position: relative;
         // indent on mobile corresponding to design
@@ -75,6 +80,19 @@
             }
 
             p {
+                white-space: pre-line;
+                line-height: 2;
+            }
+
+            .dft-list-premise {
+                display: inline-block;
+                margin-bottom: 10px;
+                white-space: pre-line;
+                line-height: 2;
+            }
+
+            .dft-li-text {
+                font-size: 15px;
                 white-space: pre-line;
             }
         }
