@@ -11,8 +11,8 @@ export const CasesConstant = [
         description: 'Unreel is a video streaming service that aims at reaching fans everywhere they watch! With a ' +
             'lineup of customized apps for each of the brands, Unreel’s OTT offerings put the user in control of ' +
             'his video publishing journey.',
-        overviewImg: 'assets/images/pages/cases/unreel-me.jpg',
-        headingImg: 'assets/images/pages/case-page/unreel-me/heading2.jpg',
+        overviewImg: 'assets/images/pages/cases/unreel-me2.jpg',
+        headingImg: 'assets/images/pages/case-page/unreel-me/heading3.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/unreel-me/about-unreel-me.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/unreel-me/product-unreel-me.jpg',
         wholeDescription: 'This project is a combination of back-end and front-end applications integrated with a ' +
@@ -91,8 +91,8 @@ export const CasesConstant = [
         'caseId': 'case-',
         description: 'BottlesWaiting is an app for your best experience with nightclubs and day clubs. See which ' +
             'event or club you want to go to, view clubs’ layouts and pick the table you like.',
-        overviewImg: 'assets/images/pages/cases/bottles-waiting.jpg',
-        headingImg: 'assets/images/pages/case-page/bottles-waiting/heading2.jpg',
+        overviewImg: 'assets/images/pages/cases/bottles-waiting2.jpg',
+        headingImg: 'assets/images/pages/case-page/bottles-waiting/heading3.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/bottles-waiting/nightlife.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/bottles-waiting/DJ-version.jpg',
         wholeDescription: 'This project is a combination of back-end and front-end applications managing different ' +
@@ -161,8 +161,8 @@ export const CasesConstant = [
         'caseId': 'case-',
         description: 'Lincoln Center is a platform to collect, store, aggregate, and share videos. The engine allows ' +
             'users to create their own TV channel out of YouTube videos and broadcast live from mobile phone.',
-        overviewImg: 'assets/images/pages/cases/lincoln-center.jpg',
-        headingImg: 'assets/images/pages/case-page/lincoln-center/heading2.jpg',
+        overviewImg: 'assets/images/pages/cases/lincoln-center2.jpg',
+        headingImg: 'assets/images/pages/case-page/lincoln-center/heading3.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/lincoln-center/score-lincoln-center.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/lincoln-center/video-lincoln-center.jpg',
         wholeDescription: 'The Lincoln Center offers event tickets for sale and monitors forthcoming music, dance, and ' +
@@ -226,8 +226,8 @@ export const CasesConstant = [
         'caseId': 'case-',
         description: 'Skillz is a leading mobile eSports platform connecting the world’s 2.6 billion mobile gamers and ' +
         'making eSports accessible for everyone.',
-        overviewImg: 'assets/images/pages/cases/skillz.jpg',
-        headingImg: 'assets/images/pages/case-page/skillz/heading2.jpg',
+        overviewImg: 'assets/images/pages/cases/skillz2.jpg',
+        headingImg: 'assets/images/pages/case-page/skillz/heading3.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/skillz/about-skillz.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/skillz/products-skillz.jpg',
         wholeDescription: 'This project is a synthesis of live streaming mobile games and  a competition platform ' +
@@ -269,7 +269,12 @@ export const CasesConstant = [
             }
         ],
         projectLink: 'https://corp.skillz.com',
-        technologyStack: [],
+        technologyStack: [
+            // 'objective-c',
+            // 'swift',
+            // 'java-android',
+            // 'react-native'
+        ],
         technologyStackPaths: []
     },
     {
@@ -277,8 +282,8 @@ export const CasesConstant = [
         'caseId': 'case-',
         description: 'This project is a cutting-edge online video marketplace for e-learning and professional business ' +
             'development throughout the Middle East and Africa.',
-        overviewImg: 'assets/images/pages/cases/almentor.jpg',
-        headingImg: 'assets/images/pages/case-page/almentor/heading2.jpg',
+        overviewImg: 'assets/images/pages/cases/almentor2.jpg',
+        headingImg: 'assets/images/pages/case-page/almentor/heading3.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/almentor/courses-en-version.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/almentor/courses-arabic-version.jpg',
         wholeDescription: 'Almentor.net offers video courses and top-rated training programs of expert-generated ' +
@@ -315,7 +320,21 @@ export const CasesConstant = [
             }
         ],
         projectLink: 'https://www.almentor.net/en/home',
-        technologyStack: [],
+        technologyStack: [
+            // 'elastic-search',
+            'predictionIO',
+            'Java',
+            'spring',
+            'AWS',
+            'api-google',
+            // 'mail-jet',
+            'jraw',
+            'swagger',
+            'jUnit',
+            'angular-js',
+            'angular-ui-router',
+            'bootstrap',
+        ],
         technologyStackPaths: []
     },
     {
@@ -323,8 +342,8 @@ export const CasesConstant = [
         'caseId': 'case-',
         description: 'The Flaskdata.io is patient compliance automation platform for clinical data management and ' +
             'automated monitoring.',
-        overviewImg: 'assets/images/pages/cases/flaskdata.jpg',
-        headingImg: 'assets/images/pages/case-page/flaskdata/heading2.jpg',
+        overviewImg: 'assets/images/pages/cases/flaskdata2.jpg',
+        headingImg: 'assets/images/pages/case-page/flaskdata/heading3.jpg',
         firstProjectViewImg: 'assets/images/pages/case-page/flaskdata/about-flask.jpg',
         secondProjectViewImg: 'assets/images/pages/case-page/flaskdata/products-flask.jpg',
         wholeDescription: 'This project is a part of an open-source software for clinical research and consists of ' +
@@ -360,7 +379,17 @@ export const CasesConstant = [
             }
         ],
         projectLink: 'https://www.flaskdata.io/',
-        technologyStack: [],
+        technologyStack: [
+            // 'cake-php',
+            // 'jwt-authorization',
+            'node-js',
+            'mongoose',
+            'express',
+            // 'jwt',
+            'AWS',
+            'api-google',
+            'swagger'
+        ],
         technologyStackPaths: []
     },
     // {
