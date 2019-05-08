@@ -14,11 +14,12 @@
                                 [alt]="case.title"
                                 class="heading-case-img"
                                 [src]="case.headingImg"
+                                #headingImg
                                     />
                         </div>
                         <!-- Changing behavior of this content on small desktops corresponding to design -->
                         <div [ngClass]="{ 'col-12': caseMobileDesktopBehavior }">
-                            <div class="heading-case-description">
+                            <div class="heading-case-description" #headingDescription>
                                 <h2 class="h1 mb-2">
                                     {{ case.title }}
                                 </h2>
@@ -28,7 +29,7 @@
                                     [href]="case.projectLink"
                                     target="_blank"
                                         >
-                                    {{ case.title | lowercase }}
+                                    {{ case.projectLinkText | lowercase }}
                                 </a>
                             </div>
                         </div>
@@ -94,7 +95,7 @@
                                         </ul>
                                     </ng-container>
                                 </ng-container>
-                                <h2 class="mb-3" *ngIf="case.technologyStack.length>0">Technology Stack</h2>
+                                <h2 class="mb-3 technologies-headline" *ngIf="case.technologyStack.length>0">Technology Stack</h2>
                                 <dl class="row technologies" *ngIf="case.technologyStack.length>0">
                                     <dd
                                         class="p-3"
