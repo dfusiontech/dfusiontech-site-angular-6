@@ -4,10 +4,10 @@
 export const ThoughtsConstant = [
     {
         title: 'Top 3 Conferences for Beginners',
-        description: 'It’s always hard to start something new, regardless of how many articles or answers to relevant ' +
-        'questions you have.',
+        description: 'Here are our top 3 conferences which can be a start for great upskill yourselves to the best possible level.',
         date: 'april 12, 2019',
-        img: '../../../assets/images/thoughts-page/heading-bg.png',
+        overviewImg: '../../../assets/images/thoughts-item-page/top-3-conferences.jpg',
+        headingImg: 'assets/images/thoughts-item-page/top-3-conferences.jpg',
         sections: [
             {
                 type: 'h1',
@@ -116,10 +116,10 @@ export const ThoughtsConstant = [
     },
     {
         title: 'Why Is Website Design Important for any Business?',
-        description: 'Mr. Watson said it and we strongly support his point of view. Everyone interprets these words in ' +
-        'their own way...',
+        description: 'Our industry is full of issues such as a huge problem of sameness. So does the design resolve that?',
         date: 'april 15, 2019',
-        img: '../../../assets/images/thoughts-page/heading-bg.png',
+        overviewImg: '../../../assets/images/thoughts-item-page/website-design.jpg',
+        headingImg: 'assets/images/thoughts-item-page/website-design.jpg',
         sections: [
             {
                 type: 'h1',
@@ -262,26 +262,27 @@ export const ThoughtsConstant = [
         ]
     },
     {
-        title: 'Lincoln Center',
-        description: 'Lincoln Center - The world’s leading performing arts center. Located in the heart of New York City on a 16-acr…',
+        title: 'Our Story',
+        description: 'dFusionTech is all about people and our achievements. And we\'re always glad to share our brightest moments.',
         date: 'may 1, 2018',
-        img: '../../../assets/images/thoughts-page/heading-bg.png',
+        overviewImg: '../../../assets/images/thoughts-item-page/story-of-us.jpg',
+        headingImg: 'assets/images/thoughts-item-page/story-of-us.jpg',
         sections: [
             {
                 type: 'h1',
-                text: 'DFT HB Day'
+                text: 'Our Story'
             },
             {
               type: 'p',
-              text: 'In such situations, it’s always hard to reach a final agreement because humans make decisions ' +
-              'based on their subjective points of view. But, based on personal experience, we’ve came to conclusion ' +
-              'that only a designer with outlined technical specification should be responsible for creating a beauty. ' +
-              'Other decision makers from a mentioned chain must consider the final mockup without interfering in the ' +
-              'design creation process itself.'
+              text: 'Every company has its own story full of achievements and failures. The dFusionTech team is no ' +
+                  'different from others. However, no matter how many failures we had on the road to success, we always ' +
+                  'focus only on the brightest moments of our journey and on the most significant results of our team. ' +
+                  'This approach makes us stronger than our competitors, more knowledgeable, mature, and professional. ' +
+                  'Step by step, mile after mile, here are our best moments which push us further and further with each day.'
             },
             {
                 type: 'img',
-                src: 'DFT-HB-Day.png'
+                src: 'brief-history-of-dft.png'
             }
         ]
     }

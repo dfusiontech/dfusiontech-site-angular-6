@@ -27,9 +27,13 @@
        .transition(@dft-page-heading-transition);
 
 
-        // additional class for heading which contain img as bg
+        // additional class for heading which contain overviewImg as bg
         &.inner-img {
             padding: 0;
+            display: flex;
+            align-items: center;
+            max-height: 510px;
+            overflow: hidden;
 
             img {
                 width: 100%;

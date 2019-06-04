@@ -9,7 +9,7 @@ import {FooterComponent} from '../../components/footer/footer.component';
  */
 export const  aboutUsState = {
     name: 'aboutUs',
-    url: '/aboutUs',
+    url: '/about-us',
     views: {
         header: { component: HeaderComponent },
         $default: { component: AboutUsPageComponent },
