@@ -270,10 +270,10 @@ export const CasesConstant = [
         ],
         projectLink: 'https://corp.skillz.com',
         technologyStack: [
-            // 'objective-c',
-            // 'swift',
-            // 'java-android',
-            // 'react-native'
+            'objective-c',
+            'swift',
+            'java-android',
+            'react'
         ],
         technologyStackPaths: []
     },
@@ -321,13 +321,13 @@ export const CasesConstant = [
         ],
         projectLink: 'https://www.almentor.net/en/home',
         technologyStack: [
-            // 'elastic-search',
+            'elastic-search',
             'predictionIO',
             'Java',
             'spring',
             'AWS',
             'api-google',
-            // 'mail-jet',
+            'mail-jet',
             'jraw',
             'swagger',
             'jUnit',
@@ -338,9 +338,9 @@ export const CasesConstant = [
         technologyStackPaths: []
     },
     {
-        title: 'Flaskdata',
+        title: 'FlaskData',
         'caseId': 'case-',
-        description: 'The Flaskdata.io is patient compliance automation platform for clinical data management and ' +
+        description: 'The FlaskData.io is patient compliance automation platform for clinical data management and ' +
             'automated monitoring.',
         overviewImg: 'assets/images/pages/cases/flaskdata2.jpg',
         headingImg: 'assets/images/pages/case-page/flaskdata/heading3.jpg',
@@ -350,7 +350,7 @@ export const CasesConstant = [
             'back-end and front-end applications.\nOur client’s patient compliance automation platform is a comprehensive ' +
             'solution for clinical data management and automated monitoring. \nThe platform includes Cloud EDC, ' +
             'eSource/eSource, study portfolio management, and cloud-based remote risk-based monitoring of patient and ' +
-            'doctor compliance. \nFlaskdata.io cloud services are HIPAA and 21 CFR Part 11-compliant and enable healthcare ' +
+            'doctor compliance. \nFlaskData.io cloud services are HIPAA and 21 CFR Part 11-compliant and enable healthcare ' +
             'companies to reduce monitoring costs and accelerate their time to statistical report.\n',
         challenge: [
             {
@@ -380,12 +380,12 @@ export const CasesConstant = [
         ],
         projectLink: 'https://www.flaskdata.io/',
         technologyStack: [
-            // 'cake-php',
+            'cake-php',
             // 'jwt-authorization',
             'node-js',
             'mongoose',
             'express',
-            // 'jwt',
+            'jwt',
             'AWS',
             'api-google',
             'swagger'
@@ -395,7 +395,7 @@ export const CasesConstant = [
     // {
     //     title: 'HATOLOGY',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor ' +
     //     'adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation' +
     //     ' ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -403,7 +403,7 @@ export const CasesConstant = [
     // {
     //     'title': 'INVENTURE',
     //     'caseId': 'case-',
-    //     'img': 'http://placehold.it/870x376',
+    //     'overviewImg': 'http://placehold.it/870x376',
     //     'description': 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor ' +
     //     'adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ' +
     //     'ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -411,7 +411,7 @@ export const CasesConstant = [
     // {
     //     title: 'GLUKGLUK',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor ' +
     //     'adipisicing ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ' +
     //     'ipsum veniam ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -419,7 +419,7 @@ export const CasesConstant = [
     // {
     //     title: 'PODUNK',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
     //     ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam' +
     //     ' ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -427,7 +427,7 @@ export const CasesConstant = [
     // {
     //     title: 'XLEEN',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
     //     ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -435,7 +435,7 @@ export const CasesConstant = [
     // {
     //     title: 'EMPIRICA',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
     //     ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ' +
     //     'ad. Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -443,7 +443,7 @@ export const CasesConstant = [
     // {
     //     title: 'DATAGEN',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
     //     'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -451,7 +451,7 @@ export const CasesConstant = [
     // {
     //     title: 'ZAGGLE',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
     //     ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -459,7 +459,7 @@ export const CasesConstant = [
     // {
     //     title: 'XURBAN',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
     //     'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. ' +
     //     'Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -467,7 +467,7 @@ export const CasesConstant = [
     // {
     //     title: 'JIMBIES',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
     //     ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -475,7 +475,7 @@ export const CasesConstant = [
     // {
     //     title: 'NSPIRE',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
     //     'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -483,7 +483,7 @@ export const CasesConstant = [
     // {
     //     title: 'MAGNAFONE',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
     //     'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -491,7 +491,7 @@ export const CasesConstant = [
     // {
     //     title: 'ANIMALIA',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
     //     ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -499,7 +499,7 @@ export const CasesConstant = [
     // {
     //     title: 'SONGLINES',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
     //     ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -507,7 +507,7 @@ export const CasesConstant = [
     // {
     //     title: 'HIVEDOM',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
     //     ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -515,7 +515,7 @@ export const CasesConstant = [
     // {
     //     title: 'ORBOID',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
     //     'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -523,7 +523,7 @@ export const CasesConstant = [
     // {
     //     title: 'CONJURICA',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
     //     ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -531,7 +531,7 @@ export const CasesConstant = [
     // {
     //     title: 'WARETEL',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
     //     'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad. ' +
     //     'Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -539,7 +539,7 @@ export const CasesConstant = [
     // {
     //     title: 'FOSSIEL',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
     //     ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -547,7 +547,7 @@ export const CasesConstant = [
     // {
     //     title: 'KIGGLE',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing ' +
     //     'ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
@@ -556,7 +556,7 @@ export const CasesConstant = [
     // {
     //     title: 'QWERTY LOREM IPSUM',
     //     'caseId': 'case-',
-    //     img: 'http://placehold.it/870x376',
+    //     overviewImg: 'http://placehold.it/870x376',
     //     description: 'Non velit irure qui elit ex nulla incididunt ullamco non. Nostrud ipsum laborum dolor adipisicing' +
     //     ' ut aute minim. Tempor non sint exercitation proident excepteur exercitation nulla exercitation ipsum veniam ad.' +
     //     ' Aliqua proident et occaecat occaecat tempor nisi ex fugiat velit consectetur.'
