@@ -30,11 +30,11 @@
     "font-awesome": "^4.7.0",
     "ngx-page-scroll": "^5.0.0",
     "ngx-prevent-parent-scroll": "0.0.5",
-    "rxjs": "^6.3.2",
+    "rxjs": "6.0.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.7.0",
+    "@angular-devkit/build-angular": "0.7.0",
     "@angular/cli": "~6.2.1",
     "@angular/compiler-cli": "^6.1.7",
     "@angular/language-service": "^6.1.7",
