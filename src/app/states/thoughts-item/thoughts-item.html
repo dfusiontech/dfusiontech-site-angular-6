@@ -8,7 +8,8 @@
                     <div class="heading-title inner-img">
                         <img
                             alt="Heading title"
-                            [src]="thought.headingImg"
+                            sizes="(max-width: 1400px) 100vw, 1400px"
+                            [srcset]="thought.headingImg"
                         />
                     </div>
                 </section>
@@ -41,12 +42,12 @@
                             <div
                                 class="thought-image-wrapper"
                                 [title]="section.description||''"
-                                [ngStyle]="{'background-image': 'url(../../../assets/images/thoughts-item-page/' + section.src + ')'}"
+                                [ngStyle]="{'background-image': 'url(../../../assets/images/thoughts-item-page/' + section.src[currentPoint] + ')'}"
                             >
                                 <img
                                     class="thought-image"
                                     [alt]="section.description||''"
-                                    [src]="'../../../assets/images/thoughts-item-page/' + section.src"
+                                    [src]="'../../../assets/images/thoughts-item-page/' + section.src[currentPoint]"
                                 />
                             </div>
                             <div class="image-description" *ngIf="section.text">

@@ -11,10 +11,30 @@ export const CasesConstant = [
         description: 'Unreel is a video streaming service that aims at reaching fans everywhere they watch! With a ' +
             'lineup of customized apps for each of the brands, Unreel’s OTT offerings put the user in control of ' +
             'his video publishing journey.',
-        overviewImg: 'assets/images/pages/cases/unreel-me2.jpg',
-        headingImg: 'assets/images/pages/case-page/unreel-me/heading3.jpg',
-        firstProjectViewImg: 'assets/images/pages/case-page/unreel-me/about-unreel-me.jpg',
-        secondProjectViewImg: 'assets/images/pages/case-page/unreel-me/product-unreel-me.jpg',
+        overviewImg: [
+            'assets/images/pages/case-page/unreel-me/unreel-me2_bmjswj_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/unreel-me/unreel-me2_bmjswj_c_scale,w_608.jpg 608w',
+            'assets/images/pages/case-page/unreel-me/unreel-me2_bmjswj_c_scale,w_738.jpg 738w',
+            'assets/images/pages/case-page/unreel-me/unreel-me2_bmjswj_c_scale,w_765.jpg 765w'
+        ],
+        headingImg: [
+            'assets/images/pages/case-page/unreel-me/heading3_ukx6fr_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/unreel-me/heading3_ukx6fr_c_scale,w_874.jpg 874w',
+            'assets/images/pages/case-page/unreel-me/heading3_ukx6fr_c_scale,w_1169.jpg 1169w',
+            'assets/images/pages/case-page/unreel-me/heading3_ukx6fr_c_scale,w_1400.jpg 1400w'
+        ],
+        firstProjectViewImg: [
+            'assets/images/pages/case-page/unreel-me/about-unreel-me_jnrkec_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/unreel-me/about-unreel-me_jnrkec_c_scale,w_859.jpg 859w',
+            'assets/images/pages/case-page/unreel-me/about-unreel-me_jnrkec_c_scale,w_1148.jpg 1148w',
+            'assets/images/pages/case-page/unreel-me/about-unreel-me_jnrkec_c_scale,w_1400.jpg 1400w'
+        ],
+        secondProjectViewImg: [
+            'assets/images/pages/case-page/unreel-me/product-unreel-me_xeaulk_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/unreel-me/product-unreel-me_xeaulk_c_scale,w_876.jpg 876w',
+            'assets/images/pages/case-page/unreel-me/product-unreel-me_xeaulk_c_scale,w_1174.jpg 1174w',
+            'assets/images/pages/case-page/unreel-me/product-unreel-me_xeaulk_c_scale,w_1400.jpg 1400w'
+        ],
         wholeDescription: 'This project is a combination of back-end and front-end applications integrated with a ' +
             'couple of 3rd party media content providers. On the one hand, the main purpose of the system is to build ' +
             'next-generation tool for content owners to distribute and monetize their media. On the other hand, the ' +
@@ -91,10 +111,30 @@ export const CasesConstant = [
         'caseId': 'case-',
         description: 'BottlesWaiting is an app for your best experience with nightclubs and day clubs. See which ' +
             'event or club you want to go to, view clubs’ layouts and pick the table you like.',
-        overviewImg: 'assets/images/pages/cases/bottles-waiting2.jpg',
-        headingImg: 'assets/images/pages/case-page/bottles-waiting/heading3.jpg',
-        firstProjectViewImg: 'assets/images/pages/case-page/bottles-waiting/nightlife.jpg',
-        secondProjectViewImg: 'assets/images/pages/case-page/bottles-waiting/DJ-version.jpg',
+        overviewImg: [
+            'assets/images/pages/case-page/bottles-waiting/bottles-waiting_f5fm8j_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/bottles-waiting/bottles-waiting_f5fm8j_c_scale,w_612.jpg 612w',
+            'assets/images/pages/case-page/bottles-waiting/bottles-waiting_f5fm8j_c_scale,w_737.jpg 737w',
+            'assets/images/pages/case-page/bottles-waiting/bottles-waiting_f5fm8j_c_scale,w_765.jpg 765w'
+        ],
+        headingImg: [
+            'assets/images/pages/case-page/bottles-waiting/heading_cn0fua_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/bottles-waiting/heading_cn0fua_c_scale,w_865.jpg 865w',
+            'assets/images/pages/case-page/bottles-waiting/heading_cn0fua_c_scale,w_1149.jpg 1149w',
+            'assets/images/pages/case-page/bottles-waiting/heading_cn0fua_c_scale,w_1400.jpg 1400w'
+        ],
+        firstProjectViewImg: [
+            'assets/images/pages/case-page/bottles-waiting/nightlife_khnlhm_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/bottles-waiting/nightlife_khnlhm_c_scale,w_862.jpg 862w',
+            'assets/images/pages/case-page/bottles-waiting/nightlife_khnlhm_c_scale,w_1157.jpg 1157w',
+            'assets/images/pages/case-page/bottles-waiting/nightlife_khnlhm_c_scale,w_1400.jpg 1400w'
+        ],
+        secondProjectViewImg: [
+            'assets/images/pages/case-page/bottles-waiting/DJ-version_zqm4bz_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/bottles-waiting/DJ-version_zqm4bz_c_scale,w_855.jpg 855w',
+            'assets/images/pages/case-page/bottles-waiting/DJ-version_zqm4bz_c_scale,w_1146.jpg 1146w',
+            'assets/images/pages/case-page/bottles-waiting/DJ-version_zqm4bz_c_scale,w_1400.jpg 1400w'
+        ],
         wholeDescription: 'This project is a combination of back-end and front-end applications managing different ' +
             'parts of the ecosystem. Bottles Waiting is an innovative Software as a Service (SaaS) company in the booming ' +
             'nightlife industry. It helps day clubs and nightclubs operate more effectively and tap into new revenue ' +
@@ -161,10 +201,30 @@ export const CasesConstant = [
         'caseId': 'case-',
         description: 'Lincoln Center is a platform to collect, store, aggregate, and share videos. The engine allows ' +
             'users to create their own TV channel out of YouTube videos and broadcast live from mobile phone.',
-        overviewImg: 'assets/images/pages/cases/lincoln-center2.jpg',
-        headingImg: 'assets/images/pages/case-page/lincoln-center/heading3.jpg',
-        firstProjectViewImg: 'assets/images/pages/case-page/lincoln-center/score-lincoln-center.jpg',
-        secondProjectViewImg: 'assets/images/pages/case-page/lincoln-center/video-lincoln-center.jpg',
+        overviewImg: [
+            'assets/images/pages/case-page/lincoln-center/lincoln-center_jjziuo_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/lincoln-center/lincoln-center_jjziuo_c_scale,w_604.jpg 604w',
+            'assets/images/pages/case-page/lincoln-center/lincoln-center_jjziuo_c_scale,w_735.jpg 735w',
+            'assets/images/pages/case-page/lincoln-center/lincoln-center_jjziuo_c_scale,w_765.jpg 765w'
+        ],
+        headingImg: [
+            'assets/images/pages/case-page/lincoln-center/heading3_uwxzcc_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/lincoln-center/heading3_uwxzcc_c_scale,w_871.jpg 871w',
+            'assets/images/pages/case-page/lincoln-center/heading3_uwxzcc_c_scale,w_1169.jpg 1169w',
+            'assets/images/pages/case-page/lincoln-center/heading3_uwxzcc_c_scale,w_1400.jpg 1400w'
+        ],
+        firstProjectViewImg: [
+            'assets/images/pages/case-page/lincoln-center/score-lincoln-center_rbbjpi_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/lincoln-center/score-lincoln-center_rbbjpi_c_scale,w_859.jpg 859w',
+            'assets/images/pages/case-page/lincoln-center/score-lincoln-center_rbbjpi_c_scale,w_1160.jpg 1160w',
+            'assets/images/pages/case-page/lincoln-center/score-lincoln-center_rbbjpi_c_scale,w_1400.jpg 1400w'
+        ],
+        secondProjectViewImg: [
+            'assets/images/pages/case-page/lincoln-center/video-lincoln-center_jgktma_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/lincoln-center/video-lincoln-center_jgktma_c_scale,w_865.jpg 865w',
+            'assets/images/pages/case-page/lincoln-center/video-lincoln-center_jgktma_c_scale,w_1159.jpg 1159w',
+            'assets/images/pages/case-page/lincoln-center/video-lincoln-center_jgktma_c_scale,w_1400.jpg 1400w'
+        ],
         wholeDescription: 'The Lincoln Center offers event tickets for sale and monitors forthcoming music, dance, and ' +
             'theater performances which take place at the Metropolitan Opera, the Lincoln Center Theater, the New York ' +
             'Philharmonic, and the New York City Ballet.',
@@ -226,10 +286,30 @@ export const CasesConstant = [
         'caseId': 'case-',
         description: 'Skillz is a leading mobile eSports platform connecting the world’s 2.6 billion mobile gamers and ' +
         'making eSports accessible for everyone.',
-        overviewImg: 'assets/images/pages/cases/skillz2.jpg',
-        headingImg: 'assets/images/pages/case-page/skillz/heading3.jpg',
-        firstProjectViewImg: 'assets/images/pages/case-page/skillz/about-skillz.jpg',
-        secondProjectViewImg: 'assets/images/pages/case-page/skillz/products-skillz.jpg',
+        overviewImg: [
+            'assets/images/pages/case-page/skillz/skillz_vazn81_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/skillz/skillz_vazn81_c_scale,w_623.jpg 623w',
+            'assets/images/pages/case-page/skillz/skillz_vazn81_c_scale,w_744.jpg 744w',
+            'assets/images/pages/case-page/skillz/skillz_vazn81_c_scale,w_765.jpg 765w'
+        ],
+        headingImg: [
+            'assets/images/pages/case-page/skillz/heading_jchwxg_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/skillz/heading_jchwxg_c_scale,w_914.jpg 914w',
+            'assets/images/pages/case-page/skillz/heading_jchwxg_c_scale,w_1212.jpg 1212w',
+            'assets/images/pages/case-page/skillz/heading_jchwxg_c_scale,w_1400.jpg 1400w'
+        ],
+        firstProjectViewImg: [
+            'assets/images/pages/case-page/skillz/about-skillz_eufqd7_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/skillz/about-skillz_eufqd7_c_scale,w_863.jpg 863w',
+            'assets/images/pages/case-page/skillz/about-skillz_eufqd7_c_scale,w_1148.jpg 1148w',
+            'assets/images/pages/case-page/skillz/about-skillz_eufqd7_c_scale,w_1400.jpg 1400w'
+        ],
+        secondProjectViewImg: [
+            'assets/images/pages/case-page/skillz/products-skillz_brx1iu_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/skillz/products-skillz_brx1iu_c_scale,w_854.jpg 854w',
+            'assets/images/pages/case-page/skillz/products-skillz_brx1iu_c_scale,w_1149.jpg 1149w',
+            'assets/images/pages/case-page/skillz/products-skillz_brx1iu_c_scale,w_1400.jpg 1400w'
+        ],
         wholeDescription: 'This project is a synthesis of live streaming mobile games and  a competition platform ' +
             'that’s fueled by different technologies. The main purpose of the system is to enable users to host streaming ' +
             'video game tournaments and interact with other fans of live sporting events. Skillz, the leading mobile ' +
@@ -282,10 +362,30 @@ export const CasesConstant = [
         'caseId': 'case-',
         description: 'This project is a cutting-edge online video marketplace for e-learning and professional business ' +
             'development throughout the Middle East and Africa.',
-        overviewImg: 'assets/images/pages/cases/almentor2.jpg',
-        headingImg: 'assets/images/pages/case-page/almentor/heading3.jpg',
-        firstProjectViewImg: 'assets/images/pages/case-page/almentor/courses-en-version.jpg',
-        secondProjectViewImg: 'assets/images/pages/case-page/almentor/courses-arabic-version.jpg',
+        overviewImg: [
+            'assets/images/pages/case-page/almentor/almentor_b6zswt_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/almentor/almentor_b6zswt_c_scale,w_622.jpg 622w',
+            'assets/images/pages/case-page/almentor/almentor_b6zswt_c_scale,w_738.jpg 738w',
+            'assets/images/pages/case-page/almentor/almentor_b6zswt_c_scale,w_765.jpg 765w'
+        ],
+        headingImg: [
+            'assets/images/pages/case-page/almentor/heading_a3oa8u_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/almentor/heading_a3oa8u_c_scale,w_934.jpg 934w',
+            'assets/images/pages/case-page/almentor/heading_a3oa8u_c_scale,w_1227.jpg 1227w',
+            'assets/images/pages/case-page/almentor/heading_a3oa8u_c_scale,w_1400.jpg 1400w'
+        ],
+        firstProjectViewImg: [
+            'assets/images/pages/case-page/almentor/courses-en-version_o12ayn_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/almentor/courses-en-version_o12ayn_c_scale,w_855.jpg 855w',
+            'assets/images/pages/case-page/almentor/courses-en-version_o12ayn_c_scale,w_1161.jpg 1161w',
+            'assets/images/pages/case-page/almentor/courses-en-version_o12ayn_c_scale,w_1400.jpg 1400w'
+        ],
+        secondProjectViewImg: [
+            'assets/images/pages/case-page/almentor/courses-arabic-version_rkjwws_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/almentor/courses-arabic-version_rkjwws_c_scale,w_854.jpg 854w',
+            'assets/images/pages/case-page/almentor/courses-arabic-version_rkjwws_c_scale,w_1160.jpg 1160w',
+            'assets/images/pages/case-page/almentor/courses-arabic-version_rkjwws_c_scale,w_1400.jpg 1400w'
+        ],
         wholeDescription: 'Almentor.net offers video courses and top-rated training programs of expert-generated ' +
             'content and guided curriculum in Arabic and English.',
         challenge: [
@@ -342,10 +442,30 @@ export const CasesConstant = [
         'caseId': 'case-',
         description: 'The FlaskData.io is patient compliance automation platform for clinical data management and ' +
             'automated monitoring.',
-        overviewImg: 'assets/images/pages/cases/flaskdata2.jpg',
-        headingImg: 'assets/images/pages/case-page/flaskdata/heading3.jpg',
-        firstProjectViewImg: 'assets/images/pages/case-page/flaskdata/about-flask.jpg',
-        secondProjectViewImg: 'assets/images/pages/case-page/flaskdata/products-flask.jpg',
+        overviewImg: [
+            'assets/images/pages/case-page/flaskdata/flaskdata_fpgiig_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/flaskdata/flaskdata_fpgiig_c_scale,w_604.jpg 604w',
+            'assets/images/pages/case-page/flaskdata/flaskdata_fpgiig_c_scale,w_733.jpg 733w',
+            'assets/images/pages/case-page/flaskdata/flaskdata_fpgiig_c_scale,w_765.jpg 765w'
+        ],
+        headingImg: [
+            'assets/images/pages/case-page/flaskdata/heading_okpsqw_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/flaskdata/heading_okpsqw_c_scale,w_872.jpg 872w',
+            'assets/images/pages/case-page/flaskdata/heading_okpsqw_c_scale,w_1172.jpg 1172w',
+            'assets/images/pages/case-page/flaskdata/heading_okpsqw_c_scale,w_1400.jpg 1400w'
+        ],
+        firstProjectViewImg: [
+            'assets/images/pages/case-page/flaskdata/about-flask_nopgqm_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/flaskdata/about-flask_nopgqm_c_scale,w_855.jpg 855w',
+            'assets/images/pages/case-page/flaskdata/about-flask_nopgqm_c_scale,w_1148.jpg 1148w',
+            'assets/images/pages/case-page/flaskdata/about-flask_nopgqm_c_scale,w_1400.jpg 1400w'
+        ],
+        secondProjectViewImg: [
+            'assets/images/pages/case-page/flaskdata/products-flask_izhqu9_c_scale,w_480.jpg 480w',
+            'assets/images/pages/case-page/flaskdata/products-flask_izhqu9_c_scale,w_865.jpg 865w',
+            'assets/images/pages/case-page/flaskdata/products-flask_izhqu9_c_scale,w_1165.jpg 1165w',
+            'assets/images/pages/case-page/flaskdata/products-flask_izhqu9_c_scale,w_1400.jpg 1400w'
+        ],
         wholeDescription: 'This project is a part of an open-source software for clinical research and consists of ' +
             'back-end and front-end applications.\nOur client’s patient compliance automation platform is a comprehensive ' +
             'solution for clinical data management and automated monitoring. \nThe platform includes Cloud EDC, ' +

@@ -13,7 +13,8 @@
                             <img
                                 [alt]="case.title"
                                 class="heading-case-img"
-                                [src]="case.headingImg"
+                                [srcset]="case.headingImg"
+                                sizes="(max-width: 1400px) 100vw, 1400px"
                                 #headingImg
                                     />
                         </div>
@@ -66,7 +67,8 @@
                                 <img
                                     [alt]="case.title"
                                     class="img-fluid w-100"
-                                    [src]="case.firstProjectViewImg"
+                                    sizes="(max-width: 1400px) 100vw, 1400px"
+                                    [srcset]="case.firstProjectViewImg"
                                         />
                             </div>
                         </div>
@@ -118,7 +120,8 @@
                                 <img
                                     [alt]="case.title"
                                     class="img-fluid w-100"
-                                    [src]="case.secondProjectViewImg"
+                                    sizes="(max-width: 1400px) 100vw, 1400px"
+                                    [srcset]="case.secondProjectViewImg"
                                         />
                             </div>
                         </div>

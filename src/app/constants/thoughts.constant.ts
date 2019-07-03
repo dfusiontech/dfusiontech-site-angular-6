@@ -7,7 +7,12 @@ export const ThoughtsConstant = [
         description: 'Here are our top 3 conferences which can be a start for great upskill yourselves to the best possible level.',
         date: 'april 12, 2019',
         overviewImg: '../../../assets/images/thoughts-item-page/top-3-conferences.jpg',
-        headingImg: 'assets/images/thoughts-item-page/top-3-conferences.jpg',
+        headingImg: [
+            'assets/images/thoughts-item-page/top-3-conferences_ijulpo_c_scale,w_480.jpg 480w',
+            'assets/images/thoughts-item-page/top-3-conferences_ijulpo_c_scale,w_863.jpg 863w',
+            'assets/images/thoughts-item-page/top-3-conferences_ijulpo_c_scale,w_1157.jpg 1157w',
+            'assets/images/thoughts-item-page/top-3-conferences_ijulpo_c_scale,w_1400.jpg 1400w',
+        ],
         sections: [
             {
                 type: 'h1',
@@ -55,7 +60,12 @@ export const ThoughtsConstant = [
             },
             {
                 type: 'img',
-                src: 'WebSummit.png'
+                src: {
+                    sm: 'WebSummit.png',
+                    md: 'WebSummit.png',
+                    lg: 'WebSummit.png',
+                    xl: 'WebSummit.png'
+                }
             },
             {
                 type: 'h2',
@@ -76,7 +86,12 @@ export const ThoughtsConstant = [
             },
             {
                 type: 'img',
-                src: 'TheNextWeb.png'
+                src:  {
+                    sm: 'TheNextWeb.png',
+                    md: 'TheNextWeb.png',
+                    lg: 'TheNextWeb.png',
+                    xl: 'TheNextWeb.png'
+                }
             },
             {
                 type: 'h2',
@@ -100,7 +115,12 @@ export const ThoughtsConstant = [
             },
             {
                 type: 'img',
-                src: 'Slush.png'
+                src: {
+                    sm: 'Slush.png',
+                    md: 'Slush.png',
+                    lg: 'Slush.png',
+                    xl: 'Slush.png'
+                }
             },
             {
                 type: 'h2',
@@ -282,7 +302,12 @@ export const ThoughtsConstant = [
             },
             {
                 type: 'img',
-                src: 'brief-history-of-dft.png'
+                src: {
+                    sm: 'brief-history-of-dft_m2tmct_c_scale,w_480.png',
+                    md: 'brief-history-of-dft_m2tmct_c_scale,w_773.png',
+                    lg: 'brief-history-of-dft_m2tmct_c_scale,w_1028.png',
+                    xl: 'brief-history-of-dft_m2tmct_c_scale,w_1400.png'
+                }
             }
         ]
     }

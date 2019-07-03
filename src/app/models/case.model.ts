@@ -5,10 +5,10 @@
 export class CaseModel {
     title: string;
     description: string;
-    overviewImg: string;
-    headingImg: string;
-    firstProjectViewImg: string;
-    secondProjectViewImg: string;
+    overviewImg: string|string[];
+    headingImg: string|string[];
+    firstProjectViewImg: string|string[];
+    secondProjectViewImg: string|string[];
     wholeDescription: string;
     challenge: string;
     solution: string;
@@ -21,9 +21,9 @@ export class CaseModel {
         this.title = data.title || '';
         this.description = data.description || '';
         this.overviewImg = data.overviewImg || '';
-        this.headingImg = data.headingImg || '';
-        this.firstProjectViewImg = data.firstProjectViewImg || '';
-        this.secondProjectViewImg = data.secondProjectViewImg || '';
+        this.headingImg = data.headingImg || [];
+        this.firstProjectViewImg = data.firstProjectViewImg || [];
+        this.secondProjectViewImg = data.secondProjectViewImg || [];
         this.wholeDescription = data.wholeDescription || '';
         this.challenge = data.challenge || '';
         this.solution = data.solution || '';
