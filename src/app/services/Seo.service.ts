@@ -11,21 +11,21 @@ import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 export class SEOService {
     private defaultValues = [
         {
-            title: 'dFusiontech inc.'
+            title: 'dFusionTech Inc.'
         },
         {
             name: 'description',
-            content: '"dFusiontech inc." is your better choice in nowadays IT community. We have strong ' +
+            content: '"dFusionTech Inc." is your better choice in nowadays IT community. We have strong ' +
             'experience in the development of all kinds of applications and web projects.'
         },
         // Schema.org markup for Google+
         {
             itemprop: 'name',
-            content: 'dFusiontech inc.'
+            content: 'dFusionTech Inc.'
         },
         {
             itemprop: 'description',
-            content: '"dFusiontech inc." is your better choice in nowadays IT community. We have strong ' +
+            content: '"dFusionTech Inc." is your better choice in nowadays IT community. We have strong ' +
             'experience in the development of all kinds of applications and web projects.'
         },
         // Twitter Card data
@@ -39,11 +39,11 @@ export class SEOService {
         },
         {
             name: 'twitter:title',
-            content: 'dFusiontech inc.'
+            content: 'dFusionTech Inc.'
         },
         {
             name: 'twitter:description',
-            content: '"dFusiontech inc." is your better choice in nowadays IT community. We have strong ' +
+            content: '"dFusionTech Inc." is your better choice in nowadays IT community. We have strong ' +
             'experience in the development of all kinds of applications and web projects.'
         },
         {
@@ -58,11 +58,11 @@ export class SEOService {
         // Open Graph data
         {
             property: 'og:title',
-            content: 'dFusiontech inc.'
+            content: 'dFusionTech Inc.'
         },
         {
             property: 'og:description',
-            content: '"dFusiontech inc." is your better choice in nowadays IT community. We have strong ' +
+            content: '"dFusionTech Inc." is your better choice in nowadays IT community. We have strong ' +
             'experience in the development of all kinds of applications and web projects.'
         },
         {

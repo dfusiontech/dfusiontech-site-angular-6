@@ -17,7 +17,7 @@ export class AboutUsPageComponent implements OnInit {
 
     private metaTags = [
         {
-            title: 'About us. dFusiontech inc.'
+            title: 'About us. dFusionTech Inc.'
         },
         {
             name: 'description',

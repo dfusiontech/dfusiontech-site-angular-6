@@ -18,7 +18,7 @@ export class ContactsPageComponent implements OnInit {
 
     private metaTags = [
         {
-            title: 'Contact us. dFusiontech inc.'
+            title: 'Contact us. dFusionTech Inc.'
         },
         {
             name: 'description',
