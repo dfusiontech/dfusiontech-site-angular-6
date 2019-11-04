@@ -41,7 +41,7 @@ export class CasePageComponent implements OnInit, AfterViewChecked {
 
     private metaTags = [
         {
-            title: 'Case page. dFusiontech inc.'
+            title: 'Case page. dFusionTech Inc.'
         },
         {
             name: 'description',
@@ -65,7 +65,7 @@ export class CasePageComponent implements OnInit, AfterViewChecked {
         }
 
         this.case = this.casesService.getCaseByLink(this.caseId);
-        this.metaTags.push({title: this.case.title + '. dFusiontech inc.'});
+        this.metaTags.push({title: this.case.title + '. dFusionTech Inc.'});
         this.metaTags.push({name: 'description', content: this.case.description});
         this.seoService.updateMetaTags(this.metaTags);
         this.case.projectLinkText = this.case.projectLink

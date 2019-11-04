@@ -28,7 +28,7 @@ export class CasesPageComponent implements OnInit {
 
     private metaTags = [
         {
-            title: 'Cases. dFusiontech inc.'
+            title: 'Cases. dFusionTech Inc.'
         },
         {
             name: 'description',

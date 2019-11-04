@@ -28,7 +28,7 @@ export class HomePageComponent implements OnInit {
 
     private metaTags = [
         {
-            title: 'Home page. dFusiontech inc.'
+            title: 'Home page. dFusionTech Inc.'
         },
         {
             name: 'description',
