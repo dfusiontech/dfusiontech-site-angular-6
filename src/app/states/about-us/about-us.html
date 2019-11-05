@@ -121,8 +121,9 @@
                         <div class="col-12 offset-lg-1 col-lg-4">
                             <div class="row">
                                 <div class="col-12 order-3 order-lg-1">
-                                    <div class="horizontal reverse" #horizontal
-                                         [ngStyle]="{'height.px' : vertical.getBoundingClientRect().width}">
+                                    <div class="horizontal reverse"
+                                         id="horizontal"
+                                         [ngStyle]="{'height.px' : horizontalCardWidth}">
                                         <div class="leader-img">
                                             <img
                                                 src="../../../assets/images/pages/about-us/leaders/igor1.jpg"
@@ -139,7 +140,7 @@
                                 </div>
                                 <div class="col-6 order-1 order-lg-2">
                                     <div class="vertical d-flex d-lg-none reverse"
-                                         [ngStyle]="{'height.px' : horizontal.getBoundingClientRect().width}">
+                                         [ngStyle]="{'height.px' : verticalCardWidth}">
                                         <div class="leader-img">
                                             <img
                                                 src="../../../assets/images/pages/about-us/leaders/eugene1.jpg"
@@ -155,8 +156,9 @@
                                     </div>
                                 </div>
                                 <div class="col-6 order-2 order-lg-3">
-                                    <div class="vertical" #vertical
-                                         [ngStyle]="{'height.px' : horizontal.getBoundingClientRect().width - 1}">
+                                    <div class="vertical"
+                                         id="vertical"
+                                         [ngStyle]="{'height.px' : verticalCardWidth - 1}">
                                         <div class="leader-img">
                                             <img
                                                 src="../../../assets/images/pages/about-us/leaders/oleg1.jpg"
@@ -177,7 +179,7 @@
                             <div class="row">
                                 <div class="col-4 d-none d-lg-flex">
                                     <div class="vertical reverse"
-                                         [ngStyle]="{'height.px' : horizontal.getBoundingClientRect().width - 1 }">
+                                         [ngStyle]="{'height.px' : verticalCardWidth - 1 }">
                                         <div class="leader-img">
                                             <img
                                                 src="../../../assets/images/pages/about-us/leaders/eugene1.jpg"
@@ -195,7 +197,7 @@
                                 <div class="col-12 col-lg-8">
                                     <div class="row">
                                         <div class="col-12">
-                                            <div class="horizontal" [ngStyle]="{'height.px' : vertical.getBoundingClientRect().width}">
+                                            <div class="horizontal" [ngStyle]="{'height.px' : horizontalCardWidth}">
                                                 <div class="leader-img">
                                                     <img
                                                         src="../../../assets/images/pages/about-us/leaders/marina1.jpg"
@@ -212,7 +214,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="horizontal reverse-md"
-                                                 [ngStyle]="{'height.px' : vertical.getBoundingClientRect().width}">
+                                                 [ngStyle]="{'height.px' : horizontalCardWidth}">
                                                 <div class="leader-img">
                                                     <img
                                                         src="../../../assets/images/pages/about-us/leaders/vadim1.jpg"
@@ -230,7 +232,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-8">
-                                    <div class="horizontal" [ngStyle]="{'height.px' : vertical.getBoundingClientRect().width}">
+                                    <div class="horizontal" [ngStyle]="{'height.px' : horizontalCardWidth}">
                                         <div class="leader-img">
                                             <img
                                                 class="leader-img"
