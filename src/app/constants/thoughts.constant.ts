@@ -5,7 +5,7 @@ export const ThoughtsConstant = [
     {
         title: 'Top 3 Conferences for Beginners',
         description: 'Here are our top 3 conferences which can be a start for great upskill yourselves to the best possible level.',
-        date: 'april 12, 2019',
+        date: 'september 20, 2020',
         overviewImg: '../../../assets/images/thoughts-item-page/top-3-conferences.jpg',
         headingImg: 'assets/images/thoughts-item-page/top-3-conferences.jpg',
         sections: [
@@ -117,7 +117,7 @@ export const ThoughtsConstant = [
     {
         title: 'Why Is Website Design Important for any Business?',
         description: 'Our industry is full of issues such as a huge problem of sameness. So does the design resolve that?',
-        date: 'april 15, 2019',
+        date: 'may 20, 2020',
         overviewImg: '../../../assets/images/thoughts-item-page/website-design.jpg',
         headingImg: 'assets/images/thoughts-item-page/website-design.jpg',
         sections: [
@@ -264,7 +264,7 @@ export const ThoughtsConstant = [
     {
         title: 'Our Story',
         description: 'dFusionTech is all about people and our achievements. And we\'re always glad to share our brightest moments.',
-        date: 'may 1, 2018',
+        date: 'march 24, 2020',
         overviewImg: '../../../assets/images/thoughts-item-page/story-of-us.jpg',
         headingImg: 'assets/images/thoughts-item-page/story-of-us.jpg',
         sections: [

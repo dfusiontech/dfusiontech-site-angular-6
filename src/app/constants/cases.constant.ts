@@ -6,7 +6,7 @@
  */
 export const CasesConstant = [
     {
-        title: 'Unreel.me',
+        title: `Unreel.me (currently Powr.tv)`,
         'caseId': 'case-',
         description: 'Unreel is a video streaming service that aims at reaching fans everywhere they watch! With a ' +
             'lineup of customized apps for each of the brands, Unreel’s OTT offerings put the user in control of ' +
@@ -59,7 +59,7 @@ export const CasesConstant = [
                 text: 'At first, we used MongoDB as the main data storage. Then, we used a set of distributed back-end ' +
                     'applications in the cloud. Some of them are powered by Java, others by Node.js, Scala, etc. For a messaging ' +
                     'system between the components we used RabbitMQ. On the front-end, there is a web application built with ' +
-                    'AndularJS, Node.js, Bootstrap, and a set of mobile applications for most popular platforms.'
+                    'AngularJS, Node.js, Bootstrap, and a set of mobile applications for most popular platforms.'
             }
         ],
         projectLink: 'https://www.unreel.me',
@@ -114,7 +114,7 @@ export const CasesConstant = [
                     'ordering bottles, mixers, presentations from phone for all customers;',
                     'viewing DJs’ profiles and listening to their tracks at Soundcloud;',
                     'browsing events without logging in;',
-                    'viewing all the charges before committing (including taxes, tip, etc.);'
+                    'viewing all the charges before committing (including taxes, tip, etc.).'
                 ]
             },
             {
