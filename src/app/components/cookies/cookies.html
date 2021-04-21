@@ -1,0 +1,17 @@
+<div *ngFor="let alert of cookie" class="cookie-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <p class="cookie-text">
+                    {{alert.message}}
+                </p>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="cookie-btn" (click)="closeAlert()">
+                    {{alert.buttonText.toUpperCase()}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

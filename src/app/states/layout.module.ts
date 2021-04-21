@@ -23,6 +23,7 @@ import { thoughtsItemState } from './thoughts-item/thoughts-item.state';
 // Components
 import { HeaderComponent } from '../components/header/header.component';
 import { LayoutComponent } from './layout.component';
+import { CookiesComponent } from '../components/cookies/cookies.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { LetsChatComponent } from '../components/lets-chat/lets-chat.component';
 import { ErrorMessageComponent } from '../components/error-message/error-message.component';
@@ -73,6 +74,7 @@ export const routing: RootModule = {
         HomePageComponent,
         CasesPageComponent,
         CasePageComponent,
+        CookiesComponent,
         ThoughtsItemPageComponent,
         AboutUsPageComponent,
         ContactsPageComponent
