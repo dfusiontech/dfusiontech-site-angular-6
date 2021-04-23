@@ -125,7 +125,7 @@ export const CasesConstant = [
                 items: [
                     'email alerts;',
                     'payment system;',
-                    'third-party authentication;'
+                    'third-party authentication.'
                 ]
             },
             {
@@ -179,7 +179,7 @@ export const CasesConstant = [
                     'its operations such as:',
                 items: [
                     'maintaining the databases of all institutions that are a part of Lincoln Center;',
-                    'handling the company finances;'
+                    'handling the company finances.'
                 ]
             },
             {
@@ -195,7 +195,7 @@ export const CasesConstant = [
                 text: 'The server-side app is a multi-purpose application that is used to:',
                 items: [
                     'fill the project\'s knowledge base with media content from the Cloud;',
-                    'prepare new media content automatically or on a user’s request;'
+                    'prepare new media content automatically or on a user’s request.'
                 ]
             }
         ],
@@ -258,7 +258,7 @@ export const CasesConstant = [
                     'and UWP applications. The benefits of the approach are the following:',
                 items: [
                     'building native mobile apps using JavaScript and React, a React Native app is a real mobile app;',
-                    'using native code when it needed;'
+                    'using native code when it needed.'
                 ]
             },
             {
@@ -296,7 +296,7 @@ export const CasesConstant = [
                 items: [
                     'project administrators;',
                     'mentors;',
-                    'end customers (online learners);'
+                    'end customers (online learners).'
                 ]
             },
             {
@@ -307,7 +307,7 @@ export const CasesConstant = [
                 items: [
                     'email alerts;',
                     'payment system;',
-                    'third-party authentication;'
+                    'third-party authentication.'
                 ]
             }
         ],
@@ -366,7 +366,7 @@ export const CasesConstant = [
                     'Flask API;',
                     'Flask Forms;',
                     'Flask Forms Viewer;',
-                    'Flask Mobile ( in progress );'
+                    'Flask Mobile ( in progress ).'
                 ]
             }
         ],
